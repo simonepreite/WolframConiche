@@ -1,9 +1,9 @@
 (* ::Package:: *)
 
-BeginPackage["Progetto`"]
+BeginPackage["PackageProgetto`"]
 
-Unprotect["Progetto`*"] (* toglie temporaneamente la protezione per ridefinire le funzioni *)
-ClearAll["Progetto`*"];
+Unprotect["PackageProgetto`*"] (* toglie temporaneamente la protezione per ridefinire le funzioni *)
+ClearAll["PackageProgetto`*"];
 (*USAGE*)
 (*Here are the names and usage messages for the functions and parameters that will be publicly exported from the package.*)
 
@@ -87,7 +87,7 @@ buildGraphicEccentricity:=(
 buildAnimation:=(Animate[RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,2 Pi},{b,0,theta}],{theta,0.,2*Pi}]);
 
 End[]; (* Fine spazio privato *)
-Protect["Progetto`*"] (* protegge i nomi del package *)
+Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
 
 
