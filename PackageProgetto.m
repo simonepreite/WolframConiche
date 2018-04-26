@@ -14,6 +14,7 @@ buildGraphicPlaneCone::usage = "Builds an interactive Panel with the equation of
 buildGraphicEccentricity::usage = "Builds an interactive Panel with the equation of a curve base on its eccentricity";
 buildAnimation::usage = "Creates the animation of a Line rotating generating a Cone";
 printExercise::usage="Prints the text, equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct";
+rFile::usage="Print all exercices into a passed file";
 Begin["Private`"];
 
 (* disabilito alcuni warning *)
@@ -104,6 +105,21 @@ Module[{z},
 	}]
 	]
 );
+(* Open exercices file, parse row by row the exercices and call to printExercise to show it in the slideshow *)
+rFile[filename_]:=(
+	exerc=ReadList[filename, String];
+	Print[exerc]
+	Length[exerc]
+	For[i=1, i<=Length[exerc], i++, 
+		Print[exerc[[i]]]
+		(*rowl=3 StringSplit[exerc[[i]],";"]*)
+		
+		ciao=5
+		For[j=1, j<=ciao,j++, Print[j]]
+	]
+);
+
+rFile["exercices/first.txt"]
 
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
