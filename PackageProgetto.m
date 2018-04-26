@@ -13,7 +13,7 @@ buildGraphicConicalEquation::usage = "Builds an interactive Panel with the plots
 buildGraphicPlaneCone::usage = "Builds an interactive Panel with the equation of a Plane and a Cone, highligthing te intersection and plotting it inside another plot";
 buildGraphicEccentricity::usage = "Builds an interactive Panel with the equation of a curve base on its eccentricity";
 buildAnimation::usage = "Creates the animation of a Line rotating generating a Cone";
-
+printExercise::usage="Prints the text, equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct";
 Begin["Private`"];
 
 (* disabilito alcuni warning *)
@@ -22,8 +22,12 @@ Off[General::shdw]; (* warning di definizioni oscurate *)
 SetDirectory[NotebookDirectory[]]; (* imposto la cartella attuale come base in cui cercare i file *)
 
 (*Checks which kind of Shape is defined by the equations parameter*)
-(*AAA: We could rewrite this function as a Switch statement, so that we can further refine the recognition*)
-recognizeShape[a_, b_, c_]:=( If[b^2 -(4*a*c)<0 && a==c && b==0, "Cerchio", If[b^2-(4*a*c)==0,"Parabola",If[b^2 -(4*a*c)<0 && a!= c && b!=0,"Ellisse",If[b^2 -(4*a*c)>0,"Iperbole", If[b^2 -(4*a*c)>0 && a+c==0, text="Iperbole Equilatera",If[a==b && b==c && c==0, "Retta"]]]]]] );
+recognizeShape[a_,b_,c_]:=(
+	flag=b^2-(4*a*c);
+	Which[flag==0,If[a==b && b==c && c==0, "Retta","Parabola"] ,
+		LessThan[0][flag], If[a==c && b==0,"Circonferenza","Ellisse"], 
+		GreaterThan[0][flag], If[a+c==0,"Iperbole Equilatera","Iperbole"]
+		]);
 
 (*Assigns a color to the shape*)
 (*AAA: We could choose better colors by using RGB[]*)
@@ -85,6 +89,21 @@ buildGraphicEccentricity:=(
 	
 (*Creates the animation of a Line rotating generating a Cone*)
 buildAnimation:=(Animate[RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,2 Pi},{b,0,theta}],{theta,0.,2*Pi}]);
+
+(*Prints the text, equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct*)
+printExercise[expr_, text_, values_, answer_ ]:=(
+Module[{z},
+	Column[{
+	Row[{Text[text]}],
+	Row[{ToExpression[expr]} ],
+	"",
+	Row[{
+	RadioButtonBar[Dynamic[z],{1->HoldForm[Evaluate[values[[1]]]],2->HoldForm[Evaluate[values[[2]]]],3->HoldForm[Evaluate[values[[3]]]],4-> HoldForm[Evaluate[values[[4]]]], 5->HoldForm[Evaluate[values[[5]]]]}]
+	}],"",
+	Row[{Dynamic[If[z==answer,True, False]]}]
+	}]
+	]
+);
 
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
