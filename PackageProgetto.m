@@ -82,7 +82,7 @@ Dynamic[
 buildGraphicEccentricity:=(
 	Manipulate[
 		Dynamic[
-			ContourPlot[(1-e^2)*x^2+y^2 -2*(1+e)*x==0,{x,-10,20},{y,-10,20},ImageSize->Medium],
+			ContourPlot[(1-e^2)*x^2+y^2 -2*(1+e)*x==0,{x,-10,20},{y,-10,20},ImageSize->Medium]
 			]
 	Text[((1-e^2)*x^2)+(y^2) -2*(1+e)*x==0],
 	{{e,0,"eccentricit\[AGrave]"},0,3,0.1,Appearance->"Labeled"}
@@ -108,22 +108,21 @@ Module[{z},
 (* Open exercices file, parse row by row the exercices and call to printExercise to show it in the slideshow *)
 rFile[filename_]:=(
 	exerc=ReadList[filename, String];
-	Print[exerc]
-	Length[exerc]
 	For[i=1, i<=Length[exerc], i++, 
-		Print[exerc[[i]]]
-		(*rowl=3 StringSplit[exerc[[i]],";"]*)
-		
-		ciao=5
-		For[j=1, j<=ciao,j++, Print[j]]
+		rowl=StringSplit[exerc[[i]],";"];
+		val3=StringSplit[rowl[[3]]," "];
+		printExercise[rowl[[2]],rowl[[1]],val3,rowl[[4]]]
 	]
 );
 
-rFile["exercices/first.txt"]
+rFile["exercises/first.txt"]
 
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
 
 
 
