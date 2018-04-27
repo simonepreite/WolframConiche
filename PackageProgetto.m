@@ -92,11 +92,11 @@ buildGraphicEccentricity:=(
 buildAnimation:=(Animate[RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,2 Pi},{b,0,theta}],{theta,0.,2*Pi}]);
 
 (*Prints the text, equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct*)
-printExercise[expr_, text_, values_, answer_ ]:=(
+printExercise[expr_, text_, values_, answer_ ]:=
 Module[{z},
 	Column[{
 	Row[{Text[text]}],
-	Row[{ToExpression[expr]} ],
+	Row[{ToExpression[expr, TraditionalForm]}],
 	"",
 	Row[{
 	RadioButtonBar[Dynamic[z],{1->HoldForm[Evaluate[values[[1]]]],2->HoldForm[Evaluate[values[[2]]]],3->HoldForm[Evaluate[values[[3]]]],4-> HoldForm[Evaluate[values[[4]]]], 5->HoldForm[Evaluate[values[[5]]]]}]
@@ -104,11 +104,11 @@ Module[{z},
 	Row[{Dynamic[If[z==answer,True, False]]}]
 	}]
 	]
-);
+
 (* Open exercices file, parse row by row the exercices and call to printExercise to show it in the slideshow *)
 rFile[filename_]:=(
 	exerc=ReadList[filename, String];
-	For[i=1, i<=Length[exerc], i++, 
+	For[i=1, i<=Length[exerc], i++,
 		rowl=StringSplit[exerc[[i]],";"];
 		val3=StringSplit[rowl[[3]]," "];
 		printExercise[rowl[[2]],rowl[[1]],val3,rowl[[4]]]
@@ -120,6 +120,12 @@ rFile["exercises/first.txt"]
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
+
+
+
 
 
 
