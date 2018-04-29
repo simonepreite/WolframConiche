@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     32504,        736]
-NotebookOptionsPosition[     31540,        716]
-NotebookOutlinePosition[     31878,        731]
-CellTagsIndexPosition[     31835,        728]
+NotebookDataLength[     51316,       1159]
+NotebookOptionsPosition[     49607,       1128]
+NotebookOutlinePosition[     49945,       1143]
+CellTagsIndexPosition[     49902,       1140]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -620,9 +620,9 @@ Cell[BoxData[
     RowBox[{"printExercise", "[", 
      RowBox[{
      "expr_", ",", " ", "text_", ",", " ", "values_", ",", " ", "answer_"}], 
-     " ", "]"}], ":=", 
+     "]"}], ":=", 
     RowBox[{"(", "\[IndentingNewLine]", 
-     RowBox[{"Module", "[", 
+     RowBox[{"DynamicModule", "[", 
       RowBox[{
        RowBox[{"{", "z", "}"}], ",", "\[IndentingNewLine]", "\t", 
        RowBox[{"Column", "[", 
@@ -669,18 +669,25 @@ Cell[BoxData[
                  RowBox[{"HoldForm", "[", 
                   RowBox[{"Evaluate", "[", 
                    RowBox[{"values", "[", 
-                    RowBox[{"[", "5", "]"}], "]"}], "]"}], "]"}]}]}], "}"}]}],
-              "]"}], "\[IndentingNewLine]", "\t", "}"}], "]"}], ",", 
-          "\"\<\>\"", ",", "\[IndentingNewLine]", "\t", 
+                    RowBox[{"[", "5", "]"}], "]"}], "]"}], "]"}]}]}], "}"}], 
+              ",", " ", 
+              RowBox[{"Appearance", "\[Rule]", "\"\<Vertical\>\""}]}], "]"}], 
+            "\[IndentingNewLine]", "\t", "}"}], "]"}], ",", 
+          "\[IndentingNewLine]", "\t", "\"\<\>\"", ",", "\[IndentingNewLine]",
+           "\t", 
           RowBox[{"Row", "[", 
            RowBox[{"{", 
-            RowBox[{"Dynamic", "[", 
-             RowBox[{"If", "[", 
-              RowBox[{
-               RowBox[{"z", "\[Equal]", "answer"}], ",", "True", ",", " ", 
-               "False"}], "]"}], "]"}], "}"}], "]"}]}], "\[IndentingNewLine]",
-          "\t", "}"}], "]"}]}], "\[IndentingNewLine]", "\t", "]"}], 
-     "\[IndentingNewLine]", ")"}]}], ";"}]}]], "Input",
+            RowBox[{"Button", "[", 
+             RowBox[{
+             "\"\<Clicca per controllare il risultato\>\"", ",", " ", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"z", "\[Equal]", "answer"}], ",", 
+                RowBox[{"Print", "[", "True", "]"}], ",", " ", 
+                RowBox[{"Print", "[", "False", "]"}]}], "]"}]}], "]"}], "}"}],
+            "]"}]}], "\[IndentingNewLine]", "\t", "}"}], "]"}]}], 
+      "\[IndentingNewLine]", "\t", "]"}], "\[IndentingNewLine]", ")"}]}], 
+   ";"}]}]], "Input",
  CellChangeTimes->{{3.733726486808942*^9, 3.733726487672872*^9}, {
    3.733726770501933*^9, 3.733726773538991*^9}, {3.733726858474165*^9, 
    3.7337268730435762`*^9}, {3.7337270309862022`*^9, 
@@ -690,8 +697,31 @@ Cell[BoxData[
    3.733727601598102*^9, {3.7337276594781513`*^9, 3.733727709313731*^9}, 
    3.733727747393852*^9, {3.7337279304755707`*^9, 3.733727962315979*^9}, {
    3.733727999662304*^9, 3.7337280482570868`*^9}, {3.733728207533742*^9, 
-   3.733728208497663*^9}, {3.733728241960696*^9, 
-   3.733728331439704*^9}},ExpressionUUID->"a3fbd905-7453-432b-ac23-\
+   3.733728208497663*^9}, {3.733728241960696*^9, 3.733728331439704*^9}, {
+   3.733994460517953*^9, 3.7339944710227957`*^9}, {3.7339948946118193`*^9, 
+   3.733994895100376*^9}, {3.7339949446921186`*^9, 3.733994945506357*^9}, 
+   3.733995171905534*^9, {3.733995211988168*^9, 3.733995252431654*^9}, {
+   3.73399570022865*^9, 3.733995740811653*^9}, {3.733995794634479*^9, 
+   3.7339958249396687`*^9}, {3.7339960494006968`*^9, 3.733996053713303*^9}, {
+   3.733996152496551*^9, 3.733996152985382*^9}, {3.733996232520277*^9, 
+   3.73399623769028*^9}, {3.7339964149438047`*^9, 3.7339964320151243`*^9}, {
+   3.733996751384184*^9, 3.7339967867712603`*^9}, {3.733996930916411*^9, 
+   3.733997038320079*^9}, {3.733998662455145*^9, 3.733998719814065*^9}, {
+   3.73399875218521*^9, 3.733998765666535*^9}, {3.733998993068964*^9, 
+   3.733998993217827*^9}, {3.733999079474292*^9, 3.7339990834993267`*^9}, {
+   3.733999186296871*^9, 3.733999254883873*^9}, {3.733999294424204*^9, 
+   3.7339993142945538`*^9}, {3.733999357819594*^9, 3.7339993975101624`*^9}, {
+   3.73399944019204*^9, 3.7339994476284723`*^9}, {3.7340012354784327`*^9, 
+   3.734001276065938*^9}, {3.734001389862063*^9, 3.734001397119645*^9}, {
+   3.7340014580755987`*^9, 3.7340014954593363`*^9}, {3.734001568853859*^9, 
+   3.73400157246673*^9}, {3.7340021838588657`*^9, 3.7340021995320377`*^9}, {
+   3.7340022304287577`*^9, 3.734002248144966*^9}, {3.734002507117997*^9, 
+   3.734002512973955*^9}, {3.734002568962455*^9, 3.734002574959635*^9}, {
+   3.734002623594755*^9, 3.734002626469836*^9}, {3.734005607468883*^9, 
+   3.734005610098155*^9}, {3.734005675682987*^9, 3.734005785641445*^9}, {
+   3.7340058262717743`*^9, 3.734005827281672*^9}, {3.73400598945436*^9, 
+   3.734006015091501*^9}, {3.73400714359772*^9, 
+   3.7340072210424757`*^9}},ExpressionUUID->"a3fbd905-7453-432b-ac23-\
 98267782a609"],
 
 Cell[BoxData[
@@ -706,13 +736,395 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{
   RowBox[{
-   RowBox[{"readFile", "[", "filename_", "]"}], ":=", 
-   RowBox[{"(", "\[IndentingNewLine]", "\[IndentingNewLine]", ")"}]}], 
-  ";"}]], "Input",
+   RowBox[{"rFile", "[", "filename_", "]"}], ":=", 
+   RowBox[{"(", "\n", "\t", 
+    RowBox[{
+     RowBox[{"exerc", "=", 
+      RowBox[{"ReadList", "[", 
+       RowBox[{"filename", ",", " ", "String"}], "]"}]}], ";", "\n", "\t", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", " ", 
+       RowBox[{"i", "<=", 
+        RowBox[{"Length", "[", "exerc", "]"}]}], ",", " ", 
+       RowBox[{"i", "++"}], ",", "\n", "\t\t", 
+       RowBox[{
+        RowBox[{"rowl", "=", 
+         RowBox[{"StringSplit", "[", 
+          RowBox[{
+           RowBox[{"exerc", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<;\>\""}], "]"}]}], ";", 
+        "\n", "\t\t", 
+        RowBox[{"val3", "=", 
+         RowBox[{"StringSplit", "[", 
+          RowBox[{
+           RowBox[{"rowl", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], ",", "\"\< \>\""}], "]"}]}], ";", 
+        "\n", "\t\t", 
+        RowBox[{"Print", "[", 
+         RowBox[{"printExercise", "[", 
+          RowBox[{
+           RowBox[{"rowl", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", 
+           RowBox[{"rowl", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], ",", "val3", ",", 
+           RowBox[{"rowl", "[", 
+            RowBox[{"[", "4", "]"}], "]"}]}], "]"}], "]"}]}]}], "\n", "\t", 
+      "]"}]}], "\n", ")"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.733728341453845*^9, 3.733728347244226*^9}, {
-  3.733728410832793*^9, 
-  3.733728424996399*^9}},ExpressionUUID->"5c7a49ea-38d5-4d67-879f-\
-bd9135031550"]
+   3.733728410832793*^9, 3.733728424996399*^9}, 3.733994296227027*^9, {
+   3.7339946374224567`*^9, 3.733994673847206*^9}, {3.733995092913621*^9, 
+   3.733995130799631*^9}, 3.733995772809123*^9, 3.73399582147058*^9, {
+   3.733996218109777*^9, 3.733996247938757*^9}, {3.7339962833781147`*^9, 
+   3.733996285646124*^9}, {3.7339963892313147`*^9, 3.73399638965245*^9}, {
+   3.7339964534235287`*^9, 3.7339964938598843`*^9}, {3.733996637423675*^9, 
+   3.733996648370452*^9}, {3.73399691907777*^9, 3.733996922557949*^9}, {
+   3.733998795785336*^9, 3.7339988134401217`*^9}, {3.7339988769728107`*^9, 
+   3.733998899602188*^9}, {3.733999158027726*^9, 3.733999169636985*^9}, {
+   3.734001309926091*^9, 
+   3.734001356938143*^9}},ExpressionUUID->"5c7a49ea-38d5-4d67-879f-\
+bd9135031550"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"rFile", "[", "\"\<exercises/first.txt\>\"", "]"}]}], "Input",
+ CellChangeTimes->{{3.733994389192984*^9, 3.733994424037705*^9}, {
+   3.733996164838251*^9, 3.733996165341724*^9}, {3.733996355370208*^9, 
+   3.733996357606308*^9}, {3.733996651049011*^9, 3.733996652386088*^9}, 
+   3.7339967640790453`*^9, {3.733999281820325*^9, 3.7339992827331057`*^9}, 
+   3.734002206067788*^9, 
+   3.7340025197763042`*^9},ExpressionUUID->"d7ac13df-024c-4a26-a08e-\
+19373a0554ff"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`z$$ = 2}, 
+  TagBox[GridBox[{
+     {
+      TemplateBox[{InterpretationBox[
+         Cell[
+          BoxData[
+           FormBox[
+           "\"che tipo di conica rappresenta la seguente equazione\"", 
+            TextForm]], "InlineText"], 
+         Text["che tipo di conica rappresenta la seguente equazione"]]},
+       "RowDefault"]},
+     {
+      TemplateBox[{RowBox[{
+          RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            SuperscriptBox["x", "2"], "+", 
+            RowBox[{"2", " ", 
+              SuperscriptBox["y", "2"]}]}], "\[Equal]", "0"}]},
+       "RowDefault"]},
+     {"\<\"\"\>"},
+     {
+      TemplateBox[{InterpretationBox[
+         StyleBox[
+          GridBox[{{
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {1}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"parabola\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {2}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"ellisse\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {3}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"iperbole\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {4}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"circonferenza\"", HoldForm], "RadioButtonBarLabel",
+                  StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {5}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"nessuna\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}}, 
+           ColumnAlignments -> Left], "Deploy"], 
+         RadioButtonBar[
+          Dynamic[$CellContext`z$$], {
+          1 -> HoldForm["parabola"], 2 -> HoldForm["ellisse"], 3 -> 
+           HoldForm["iperbole"], 4 -> HoldForm["circonferenza"], 5 -> 
+           HoldForm["nessuna"]}, Appearance -> "Vertical"]]},
+       "RowDefault"]},
+     {"\<\"\"\>"},
+     {
+      TemplateBox[{
+       ButtonBox[
+        "\"Clicca per controllare il risultato\"", ButtonFunction :> 
+         If[$CellContext`z$$ == "2", 
+           Print[True], 
+           Print[False]], Appearance -> Automatic, Evaluator -> Automatic, 
+         Method -> "Preemptive"]},
+       "RowDefault"]}
+    },
+    DefaultBaseStyle->"Column",
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Column"],
+  DynamicModuleValues:>{}]], "Print",
+ CellChangeTimes->{
+  3.734007239690299*^9},ExpressionUUID->"07335e75-9655-4b48-b381-\
+a8d9c519ff6f"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`z$$ = 3}, 
+  TagBox[GridBox[{
+     {
+      TemplateBox[{InterpretationBox[
+         Cell[
+          BoxData[
+           FormBox[
+           "\"che tipo di conica rappresenta la seguente equazione\"", 
+            TextForm]], "InlineText"], 
+         Text["che tipo di conica rappresenta la seguente equazione"]]},
+       "RowDefault"]},
+     {
+      TemplateBox[{RowBox[{
+          RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            SuperscriptBox["x", "2"], "+", 
+            RowBox[{"2", " ", 
+              SuperscriptBox["y", "2"]}]}], "\[Equal]", "0"}]},
+       "RowDefault"]},
+     {"\<\"\"\>"},
+     {
+      TemplateBox[{InterpretationBox[
+         StyleBox[
+          GridBox[{{
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {1}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"parabola\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {2}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"ellisse\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {3}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"iperbole\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {4}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"circonferenza\"", HoldForm], "RadioButtonBarLabel",
+                  StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {5}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"nessuna\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}}, 
+           ColumnAlignments -> Left], "Deploy"], 
+         RadioButtonBar[
+          Dynamic[$CellContext`z$$], {
+          1 -> HoldForm["parabola"], 2 -> HoldForm["ellisse"], 3 -> 
+           HoldForm["iperbole"], 4 -> HoldForm["circonferenza"], 5 -> 
+           HoldForm["nessuna"]}, Appearance -> "Vertical"]]},
+       "RowDefault"]},
+     {"\<\"\"\>"},
+     {
+      TemplateBox[{
+       ButtonBox[
+        "\"Clicca per controllare il risultato\"", ButtonFunction :> 
+         If[$CellContext`z$$ == "3", 
+           Print[True], 
+           Print[False]], Appearance -> Automatic, Evaluator -> Automatic, 
+         Method -> "Preemptive"]},
+       "RowDefault"]}
+    },
+    DefaultBaseStyle->"Column",
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Column"],
+  DynamicModuleValues:>{}]], "Print",
+ CellChangeTimes->{
+  3.7340072396922483`*^9},ExpressionUUID->"4dd902a0-cd31-4b46-a049-\
+50eda234d9b0"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`z$$ = 1}, 
+  TagBox[GridBox[{
+     {
+      TemplateBox[{InterpretationBox[
+         Cell[
+          BoxData[
+           FormBox[
+           "\"che tipo di conica rappresenta la seguente equazione\"", 
+            TextForm]], "InlineText"], 
+         Text["che tipo di conica rappresenta la seguente equazione"]]},
+       "RowDefault"]},
+     {
+      TemplateBox[{RowBox[{
+          RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            SuperscriptBox["x", "2"], "+", 
+            RowBox[{"2", " ", 
+              SuperscriptBox["y", "2"]}]}], "\[Equal]", "0"}]},
+       "RowDefault"]},
+     {"\<\"\"\>"},
+     {
+      TemplateBox[{InterpretationBox[
+         StyleBox[
+          GridBox[{{
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {1}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"parabola\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {2}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"ellisse\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {3}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"iperbole\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {4}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"circonferenza\"", HoldForm], "RadioButtonBarLabel",
+                  StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}, {
+             GridBox[{{
+                RadioButtonBox[
+                 Dynamic[$CellContext`z$$], {5}, DefaultBaseStyle -> 
+                 "RadioButtonBar", Appearance -> Inherited], 
+                StyleBox[
+                 TagBox["\"nessuna\"", HoldForm], "RadioButtonBarLabel", 
+                 StripOnInput -> False]}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}}, 
+           ColumnAlignments -> Left], "Deploy"], 
+         RadioButtonBar[
+          Dynamic[$CellContext`z$$], {
+          1 -> HoldForm["parabola"], 2 -> HoldForm["ellisse"], 3 -> 
+           HoldForm["iperbole"], 4 -> HoldForm["circonferenza"], 5 -> 
+           HoldForm["nessuna"]}, Appearance -> "Vertical"]]},
+       "RowDefault"]},
+     {"\<\"\"\>"},
+     {
+      TemplateBox[{
+       ButtonBox[
+        "\"Clicca per controllare il risultato\"", ButtonFunction :> 
+         If[$CellContext`z$$ == "4", 
+           Print[True], 
+           Print[False]], Appearance -> Automatic, Evaluator -> Automatic, 
+         Method -> "Preemptive"]},
+       "RowDefault"]}
+    },
+    DefaultBaseStyle->"Column",
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Column"],
+  DynamicModuleValues:>{}]], "Print",
+ CellChangeTimes->{
+  3.734007239697124*^9},ExpressionUUID->"65c64bb9-67c1-4b51-8de5-\
+3c2a1a630d22"],
+
+Cell[BoxData["False"], "Print",
+ CellChangeTimes->{
+  3.7340072409882193`*^9},ExpressionUUID->"f62826e7-e6c8-41ff-a09f-\
+3dd8d43d637a"],
+
+Cell[BoxData["False"], "Print",
+ CellChangeTimes->{
+  3.7340072593727694`*^9},ExpressionUUID->"87ec5e3f-fac7-49b7-ab77-\
+96fed574023c"],
+
+Cell[BoxData["False"], "Print",
+ CellChangeTimes->{
+  3.734007267239109*^9},ExpressionUUID->"914bb9f4-66aa-4b27-9d51-\
+31563c1a07cc"]
+}, Open  ]]
+}, Open  ]]
 },
 WindowSize->{1366, 716},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
@@ -735,9 +1147,20 @@ Cell[4636, 109, 8277, 174, 469, "Input",ExpressionUUID->"909b6632-3879-4651-a192
 Cell[12916, 285, 7737, 186, 354, "Input",ExpressionUUID->"b564c50e-bb3b-4f64-9fdb-ab251e599c1b"],
 Cell[20656, 473, 2664, 66, 193, "Input",ExpressionUUID->"caf19ed3-3822-4db0-a0d9-a41c45dde700"],
 Cell[23323, 541, 3369, 63, 55, "Input",ExpressionUUID->"0cd1ad74-3dcc-4ac1-9b36-f916cb6efcef"],
-Cell[26695, 606, 4154, 88, 354, "Input",ExpressionUUID->"a3fbd905-7453-432b-ac23-98267782a609"],
-Cell[30852, 696, 326, 7, 31, "Input",ExpressionUUID->"703b2c47-7a0a-4608-80c8-11042e61852b"],
-Cell[31181, 705, 355, 9, 78, "Input",ExpressionUUID->"5c7a49ea-38d5-4d67-879f-bd9135031550"]
+Cell[26695, 606, 6181, 118, 377, "Input",ExpressionUUID->"a3fbd905-7453-432b-ac23-98267782a609"],
+Cell[32879, 726, 326, 7, 31, "Input",ExpressionUUID->"703b2c47-7a0a-4608-80c8-11042e61852b"],
+Cell[33208, 735, 2212, 50, 193, "Input",ExpressionUUID->"5c7a49ea-38d5-4d67-879f-bd9135031550"],
+Cell[CellGroupData[{
+Cell[35445, 789, 612, 12, 55, "Input",ExpressionUUID->"d7ac13df-024c-4a26-a08e-19373a0554ff"],
+Cell[CellGroupData[{
+Cell[36082, 805, 4359, 100, 217, "Print",ExpressionUUID->"07335e75-9655-4b48-b381-a8d9c519ff6f"],
+Cell[40444, 907, 4361, 100, 217, "Print",ExpressionUUID->"4dd902a0-cd31-4b46-a049-50eda234d9b0"],
+Cell[44808, 1009, 4359, 100, 217, "Print",ExpressionUUID->"65c64bb9-67c1-4b51-8de5-3c2a1a630d22"],
+Cell[49170, 1111, 135, 3, 25, "Print",ExpressionUUID->"f62826e7-e6c8-41ff-a09f-3dd8d43d637a"],
+Cell[49308, 1116, 135, 3, 25, "Print",ExpressionUUID->"87ec5e3f-fac7-49b7-ab77-96fed574023c"],
+Cell[49446, 1121, 133, 3, 25, "Print",ExpressionUUID->"914bb9f4-66aa-4b27-9d51-31563c1a07cc"]
+}, Open  ]]
+}, Open  ]]
 }
 ]
 *)

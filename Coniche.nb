@@ -10,31 +10,41 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    141754,       2340]
-NotebookOptionsPosition[    138605,       2272]
-NotebookOutlinePosition[    139474,       2298]
-CellTagsIndexPosition[    139394,       2293]
+NotebookDataLength[    142184,       2351]
+NotebookOptionsPosition[    138940,       2282]
+NotebookOutlinePosition[    139809,       2308]
+CellTagsIndexPosition[    139729,       2303]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
-  RowBox[{"SetDirectory", "[", 
-   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";", " ", 
+  RowBox[{
+   RowBox[{"SetDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], " ", 
   RowBox[{"(*", " ", 
    RowBox[{
    "imposto", " ", "la", " ", "cartella", " ", "attuale", " ", "come", " ", 
     "base", " ", "in", " ", "cui", " ", "cercare", " ", "i", " ", "file"}], 
-   " ", "*)"}], "\[IndentingNewLine]", 
+   " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"Once", "[", 
-   RowBox[{"Get", "[", "\"\<Package2`\>\"", "]"}], "]"}]}]], "Input",
+   RowBox[{"Get", "[", "\"\<PackageProgetto`\>\"", "]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"rFile", "[", "\"\<exercises/first.txt\>\"", "]"}]}], "Input",
  CellChangeTimes->{{3.733575651380777*^9, 3.733575676596402*^9}, {
   3.733576201492465*^9, 3.733576206770547*^9}, {3.733576426730955*^9, 
   3.733576427062296*^9}, {3.733576550872473*^9, 3.733576555909587*^9}, {
   3.7335769390890102`*^9, 3.733576958063315*^9}, {3.733577008967886*^9, 
-  3.733577027687656*^9}},ExpressionUUID->"a0ed46f3-6fdc-40a5-b35f-\
+  3.733577027687656*^9}, {3.7338378745529127`*^9, 
+  3.733837892908053*^9}},ExpressionUUID->"a0ed46f3-6fdc-40a5-b35f-\
 60be58401837"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.733837877000983*^9, 
+  3.733837878217208*^9}},ExpressionUUID->"c2e2651b-259b-438c-ad7f-\
+45b4ec05f239"],
 
 Cell[CellGroupData[{
 
@@ -2271,7 +2281,7 @@ delenit augue duis dolore te feugait nulla facilisi.\
 }, Open  ]]
 },
 WindowSize->{683, 716},
-WindowMargins->{{0, Automatic}, {1, Automatic}},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
 TaggingRules->{"SlideShow" -> True},
 FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
 StyleDefinitions->"Default.nb"
@@ -2282,64 +2292,65 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "SlideShowHeader"->{
-  Cell[1389, 40, 4492, 100, 75, "SlideShowNavigationBar",ExpressionUUID->"1313adaf-5da5-4ad3-ac5c-12443ad61ea5",
+  Cell[1724, 50, 4492, 100, 75, "SlideShowNavigationBar",ExpressionUUID->"1313adaf-5da5-4ad3-ac5c-12443ad61ea5",
    CellTags->"SlideShowHeader"],
-  Cell[6282, 156, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"080e2943-0c46-47d3-b06f-4c5924a10f9d",
+  Cell[6617, 166, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"080e2943-0c46-47d3-b06f-4c5924a10f9d",
    CellTags->"SlideShowHeader"],
-  Cell[8289, 210, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"7d8014ee-4f13-4d1c-b686-9328ce9c83f8",
+  Cell[8624, 220, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"7d8014ee-4f13-4d1c-b686-9328ce9c83f8",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 138936, 2283}
+ {"SlideShowHeader", 139271, 2293}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 806, 16, 55, "Input",ExpressionUUID->"a0ed46f3-6fdc-40a5-b35f-60be58401837"],
+Cell[558, 20, 986, 21, 158, "Input",ExpressionUUID->"a0ed46f3-6fdc-40a5-b35f-60be58401837"],
+Cell[1547, 43, 152, 3, 31, "Input",ExpressionUUID->"c2e2651b-259b-438c-ad7f-45b4ec05f239"],
 Cell[CellGroupData[{
-Cell[1389, 40, 4492, 100, 75, "SlideShowNavigationBar",ExpressionUUID->"1313adaf-5da5-4ad3-ac5c-12443ad61ea5",
+Cell[1724, 50, 4492, 100, 75, "SlideShowNavigationBar",ExpressionUUID->"1313adaf-5da5-4ad3-ac5c-12443ad61ea5",
  CellTags->"SlideShowHeader"],
-Cell[5884, 142, 176, 4, 98, "Title",ExpressionUUID->"b11bf5f5-fd81-4b0c-a371-ded5d4a93133"],
-Cell[6063, 148, 182, 3, 54, "Subtitle",ExpressionUUID->"4dbcbb21-65fe-4590-b995-ed2586bb651f"]
+Cell[6219, 152, 176, 4, 98, "Title",ExpressionUUID->"b11bf5f5-fd81-4b0c-a371-ded5d4a93133"],
+Cell[6398, 158, 182, 3, 54, "Subtitle",ExpressionUUID->"4dbcbb21-65fe-4590-b995-ed2586bb651f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6282, 156, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"080e2943-0c46-47d3-b06f-4c5924a10f9d",
- CellTags->"SlideShowHeader"],
-Cell[CellGroupData[{
-Cell[6429, 162, 101, 0, 68, "Section",ExpressionUUID->"b0989e5b-7bc2-4024-8423-3fd8e16171dd"],
-Cell[6533, 164, 362, 5, 58, "Text",ExpressionUUID->"30dc2bc6-1e4b-4ef5-adc7-15c8de993ae8"],
-Cell[CellGroupData[{
-Cell[6920, 173, 359, 5, 53, "Item",ExpressionUUID->"bec5998e-e6fa-48b8-befa-2c974941b44f"],
-Cell[CellGroupData[{
-Cell[7304, 182, 214, 3, 27, "Subitem",ExpressionUUID->"dc7435f0-847e-4d13-bafd-5d8e5f39fbec"],
-Cell[7521, 187, 179, 3, 27, "Subitem",ExpressionUUID->"bd4d38e7-6737-44d2-9992-75c5b177c5b1"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[7749, 196, 105, 0, 55, "Subsection",ExpressionUUID->"dfa0ee10-cc22-4b46-ae2c-9cf8f916d04a"],
-Cell[7857, 198, 371, 5, 58, "Text",ExpressionUUID->"3cade15b-8484-47db-9da8-499b95366c18"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[8289, 210, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"7d8014ee-4f13-4d1c-b686-9328ce9c83f8",
+Cell[6617, 166, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"080e2943-0c46-47d3-b06f-4c5924a10f9d",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[8436, 216, 105, 0, 55, "Subsection",ExpressionUUID->"263fc1fa-56d3-4ae2-8af0-3126fc4142a4"],
-Cell[8544, 218, 362, 5, 58, "Text",ExpressionUUID->"49ecd2c6-849f-4c39-9f2b-dfa09ad27e41"],
+Cell[6764, 172, 101, 0, 68, "Section",ExpressionUUID->"b0989e5b-7bc2-4024-8423-3fd8e16171dd"],
+Cell[6868, 174, 362, 5, 104, "Text",ExpressionUUID->"30dc2bc6-1e4b-4ef5-adc7-15c8de993ae8"],
 Cell[CellGroupData[{
-Cell[8931, 227, 107, 0, 45, "Subsubsection",ExpressionUUID->"c0de52b4-33c2-45c9-8798-b145ab60eeae"],
+Cell[7255, 183, 359, 5, 95, "Item",ExpressionUUID->"bec5998e-e6fa-48b8-befa-2c974941b44f"],
 Cell[CellGroupData[{
-Cell[9063, 231, 463, 13, 31, "Input",ExpressionUUID->"6aa81563-5a0d-400b-ba4f-a07fbe27dca3"],
-Cell[9529, 246, 68617, 1019, 236, "Output",ExpressionUUID->"1fdfe842-e393-441e-9ea9-349540665c57"]
+Cell[7639, 192, 214, 3, 47, "Subitem",ExpressionUUID->"dc7435f0-847e-4d13-bafd-5d8e5f39fbec"],
+Cell[7856, 197, 179, 3, 47, "Subitem",ExpressionUUID->"bd4d38e7-6737-44d2-9992-75c5b177c5b1"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8084, 206, 105, 0, 55, "Subsection",ExpressionUUID->"dfa0ee10-cc22-4b46-ae2c-9cf8f916d04a"],
+Cell[8192, 208, 371, 5, 104, "Text",ExpressionUUID->"3cade15b-8484-47db-9da8-499b95366c18"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[78207, 1272, 105, 0, 55, "Subsection",ExpressionUUID->"d5c17ad1-8803-4436-adac-58eee5cdb3ed"],
-Cell[78315, 1274, 60262, 994, 181, "SideCaptionArray",ExpressionUUID->"331b412b-833d-442b-aa93-08b09871c87c"]
+Cell[8624, 220, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"7d8014ee-4f13-4d1c-b686-9328ce9c83f8",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[8771, 226, 105, 0, 55, "Subsection",ExpressionUUID->"263fc1fa-56d3-4ae2-8af0-3126fc4142a4"],
+Cell[8879, 228, 362, 5, 58, "Text",ExpressionUUID->"49ecd2c6-849f-4c39-9f2b-dfa09ad27e41"],
+Cell[CellGroupData[{
+Cell[9266, 237, 107, 0, 45, "Subsubsection",ExpressionUUID->"c0de52b4-33c2-45c9-8798-b145ab60eeae"],
+Cell[CellGroupData[{
+Cell[9398, 241, 463, 13, 31, "Input",ExpressionUUID->"6aa81563-5a0d-400b-ba4f-a07fbe27dca3"],
+Cell[9864, 256, 68617, 1019, 236, "Output",ExpressionUUID->"1fdfe842-e393-441e-9ea9-349540665c57"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[78542, 1282, 105, 0, 55, "Subsection",ExpressionUUID->"d5c17ad1-8803-4436-adac-58eee5cdb3ed"],
+Cell[78650, 1284, 60262, 994, 181, "SideCaptionArray",ExpressionUUID->"331b412b-833d-442b-aa93-08b09871c87c"]
 }, Open  ]]
 }, Open  ]]
 }

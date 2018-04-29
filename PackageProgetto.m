@@ -114,20 +114,7 @@ rFile[filename_]:=(
 	]
 );
 
-rFile["exercises/first.txt"]
-
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
-
-
-
-
-
-
-
-
-
-
-
 
