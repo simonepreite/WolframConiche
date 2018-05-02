@@ -15,6 +15,7 @@ buildGraphicEccentricity::usage = "Builds an interactive Panel with the equation
 buildAnimation::usage = "Creates the animation of a Line rotating generating a Cone";
 printExercise::usage="Prints the text, equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct";
 rFile::usage="Print all exercices into a passed file";
+NotebookOpeners::usage="Displays different buttons, each one opens a different .nb file";
 
 Begin["Private`"];
 
@@ -119,9 +120,24 @@ rFile[filename_]:=(
 	]
 );
 
+(*Displays different buttons, each one opens a different .nb file*)
+(*We coul impreove the display of the buttons and put this into a ChoiceDialog*)
+NotebookOpeners[]:=(
+For[i=1, i<=3, i++,
+		Print[
+		DynamicModule[{text=Evaluate["notebooks/app"<>ToString[i]<>".nb"]},
+			Row[{Button["Approccio"<>ToString[i],NotebookOpen[text]]}]
+	]
+		];
+	]);
+
+
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
 
 
 
