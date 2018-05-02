@@ -15,6 +15,7 @@ buildGraphicEccentricity::usage = "Builds an interactive Panel with the equation
 buildAnimation::usage = "Creates the animation of a Line rotating generating a Cone";
 printExercise::usage="Prints the text, equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct";
 rFile::usage="Print all exercices into a passed file";
+
 Begin["Private`"];
 
 (* disabilito alcuni warning *)
@@ -92,29 +93,36 @@ buildGraphicEccentricity:=(
 buildAnimation:=(Animate[RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,2 Pi},{b,0,theta}],{theta,0.,2*Pi}]);
 
 (*Prints the text, equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct*)
-printExercise[text_, expr_, values_, answer_ ]:=
-Module[{z},
+(*Needs a default value for the RadioButtonBar, and the interface needs to be improved*)
+printExercise[expr_, text_, values_, answer_]:=(
+DynamicModule[{z=10, txt="Ancora da valutare"},
 	Column[{
 	Row[{Text[text]}],
-	Row[{ToExpression[expr]}],
+	Row[{ToExpression[expr]} ],
 	"",
 	Row[{
-	RadioButtonBar[Dynamic[z],{1->HoldForm[Evaluate[values[[1]]]],2->HoldForm[Evaluate[values[[2]]]],3->HoldForm[Evaluate[values[[3]]]],4-> HoldForm[Evaluate[values[[4]]]], 5->HoldForm[Evaluate[values[[5]]]]}]
-	}],"",
-	Row[{Dynamic[If[z==answer,True, False]]}]
+	RadioButtonBar[Dynamic[z],{1->HoldForm[Evaluate[values[[1]]]],2->HoldForm[Evaluate[values[[2]]]],3->HoldForm[Evaluate[values[[3]]]],4-> HoldForm[Evaluate[values[[4]]]], 5->HoldForm[Evaluate[values[[5]]]]}, Appearance->"Vertical"]
+	}],
+	"",
+	Row[{Button["Clicca per controllare il risultato", If[z==answer,txt="Giusto",txt="Sbagliato!" ]],Spacer[20],Dynamic[Text["Risultato:"<>txt]] }]
 	}]
 	]
-(* Open exercices file, parse row by row the exercices and call to printExercise to show it in the slideshow *)
+);
+
+(*Reads the text of the exercises from a file*)
 rFile[filename_]:=(
 	exerc=ReadList[filename, String];
 	For[i=1, i<=Length[exerc], i++,
 		rowl=StringSplit[exerc[[i]],";"];
 		val3=StringSplit[rowl[[3]]," "];
-		printExercise[rowl[[1]],rowl[[2]],val3,rowl[[4]]]
+		Print[printExercise[rowl[[2]],rowl[[1]],val3,rowl[[4]]]]
 	]
 );
 
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
 
