@@ -10,49 +10,44 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10326,        252]
-NotebookOptionsPosition[      8836,        218]
-NotebookOutlinePosition[      9307,        236]
-CellTagsIndexPosition[      9264,        233]
+NotebookDataLength[     10605,        249]
+NotebookOptionsPosition[      9150,        217]
+NotebookOutlinePosition[      9621,        235]
+CellTagsIndexPosition[      9578,        232]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
-  RowBox[{"SetDirectory", "[", 
-   RowBox[{"ParentDirectory", "[", 
-    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], "]"}], ";", " ", 
+  RowBox[{
+   RowBox[{"SetDirectory", "[", 
+    RowBox[{"ParentDirectory", "[", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], "]"}], ";"}], " ", 
   RowBox[{"(*", " ", 
    RowBox[{
    "imposto", " ", "la", " ", "cartella", " ", "attuale", " ", "come", " ", 
     "base", " ", "in", " ", "cui", " ", "cercare", " ", "i", " ", "file"}], 
-   " ", "*)"}], "\n", 
-  RowBox[{"Get", "[", "\"\<PackageProgetto`\>\"", "]"}], ";"}]], "Code",
+   " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<PackageProgetto`\>\"", "]"}], ";"}]}], "Code",
  CellChangeTimes->{{3.7343230989134007`*^9, 3.734323113611484*^9}, {
   3.734338788539892*^9, 3.7343387896759787`*^9}, {3.734338832762272*^9, 
   3.734338876777012*^9}},ExpressionUUID->"9a4d125a-8988-4dd0-b89b-\
 e942ab0dbba5"],
 
-Cell[BoxData[
- TemplateBox[{
-  "Get","noopen",
-   "\"Cannot open \\!\\(\\*RowBox[{\\\"\\\\\\\"PackageProgetto`\\\\\\\"\\\"}]\
-\\).\"",2,10,10,19035646358575135349,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.734338877664447*^9},ExpressionUUID->"53274cf2-7ed6-43e2-9470-\
-aa27183f3e04"]
-}, Open  ]],
-
 Cell[CellGroupData[{
 
 Cell["Approccio Grafico", "Subsection",
- CellChangeTimes->{{3.734323259735836*^9, 
-  3.734323265556988*^9}},ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-\
+ CellChangeTimes->{{3.734323259735836*^9, 3.734323265556988*^9}, {
+  3.734349797453429*^9, 3.734349800805328*^9}, {3.734349854890674*^9, 
+  3.734349855054966*^9}},ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-\
 d60eedc060f7"],
+
+Cell["Il cono e le sue componenti", "Text",
+ CellChangeTimes->{{3.7343498636380157`*^9, 
+  3.734349925825243*^9}},ExpressionUUID->"96557508-74ee-4f36-bc3f-\
+d26323acf2f2"],
 
 Cell[CellGroupData[{
 
@@ -65,12 +60,12 @@ ac7d65750bcc"],
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Private`theta$$ = 2.6160256687878713`, Typeset`show$$ = 
+   DynamicModuleBox[{Private`theta$$ = 5.839701874021923, Typeset`show$$ = 
     True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[Private`theta$$], 0., 2 Pi}}, Typeset`size$$ = {
-    270., {149., 153.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    270., {149., 154.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = True, Private`theta$2334$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {Private`theta$$ = 0.}, 
@@ -92,7 +87,7 @@ Cell[BoxData[
        ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
         "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
         True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
-     ImageSizeCache->{311., {179., 185.}},
+     ImageSizeCache->{311., {181., 187.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -111,11 +106,16 @@ bfc7a6099c1e"]
 Cell["\<\
 Grafico che illustra le componenti che consentono la generazione del cono
 
-testo da coniche.\
+\[CapitalEGrave] possibile ricavare le coniche tramite \
+l\[CloseCurlyQuote]intersezione di un cono e di un piano. mediante l\
+\[CloseCurlyQuote]angolazione del piano rispetto alla direttrice del cono e \
+ad altri parametri della sua equazione \[EGrave] possibile capire di che \
+forma sar\[AGrave] la curva risultante.\
 \>", "Text",
  CellChangeTimes->{{3.734324142251129*^9, 3.734324182784775*^9}, {
-  3.734324904939226*^9, 
-  3.7343249617434683`*^9}},ExpressionUUID->"f97cf7d1-697a-4321-8381-\
+  3.734324904939226*^9, 3.7343249617434683`*^9}, {3.734349931085579*^9, 
+  3.734350010962253*^9}, {3.734350285126603*^9, 
+  3.734350327290328*^9}},ExpressionUUID->"f97cf7d1-697a-4321-8381-\
 0fac5da3162a"],
 
 Cell["\<\
@@ -137,9 +137,9 @@ Cell[BoxData["buildGraphicPlaneCone"], "Input",
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Private`d$$ = 3.9000000000000004`, Private`e$$ = 5.9, 
-    Private`f$$ = 2.3, Private`g$$ = 1.7000000000000002`, Typeset`show$$ = 
-    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+   DynamicModuleBox[{Private`d$$ = 3.9000000000000004`, Private`e$$ = 2.7, 
+    Private`f$$ = 6.2, Private`g$$ = 4.1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Private`d$$], 1, "Coefficiente x Piano:"}, 1, 10, 0.1}, {{
@@ -172,7 +172,6 @@ Cell[BoxData[
             Opacity[0.8]}, ImageSize -> Medium, Mesh -> None, 
           BoundaryStyle -> {2 -> None, {1, 2} -> {Red, Thick}}]] Dynamic[
          Show[{
-           
            ContourPlot[(-(Private`d$$ Private`x + Private`e$$ Private`y + 
                Private`g$$))/Private`f$$ == 
             Sqrt[Private`x^2/1 + Private`y^2/1], {Private`x, -2, 2}, {
@@ -235,24 +234,22 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 700, 16, 70, "Code",ExpressionUUID->"9a4d125a-8988-4dd0-b89b-e942ab0dbba5"],
 Cell[CellGroupData[{
-Cell[580, 22, 670, 14, 70, "Code",ExpressionUUID->"9a4d125a-8988-4dd0-b89b-e942ab0dbba5"],
-Cell[1253, 38, 315, 8, 28, "Message",ExpressionUUID->"53274cf2-7ed6-43e2-9470-aa27183f3e04"]
+Cell[1283, 40, 260, 4, 69, "Subsection",ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-d60eedc060f7"],
+Cell[1546, 46, 171, 3, 48, "Text",ExpressionUUID->"96557508-74ee-4f36-bc3f-d26323acf2f2"],
+Cell[CellGroupData[{
+Cell[1742, 53, 189, 4, 44, "Code",ExpressionUUID->"453dd2f8-a659-418a-975e-ac7d65750bcc"],
+Cell[1934, 59, 2103, 43, 386, "Output",ExpressionUUID->"20d3dfa0-fbc5-41a0-a344-bfc7a6099c1e"]
 }, Open  ]],
+Cell[4052, 105, 690, 13, 161, "Text",ExpressionUUID->"f97cf7d1-697a-4321-8381-0fac5da3162a"],
+Cell[4745, 120, 325, 7, 36, "Text",ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-8dd2dfb59700"],
 Cell[CellGroupData[{
-Cell[1605, 51, 165, 3, 69, "Subsection",ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-d60eedc060f7"],
-Cell[CellGroupData[{
-Cell[1795, 58, 189, 4, 44, "Code",ExpressionUUID->"453dd2f8-a659-418a-975e-ac7d65750bcc"],
-Cell[1987, 64, 2105, 43, 382, "Output",ExpressionUUID->"20d3dfa0-fbc5-41a0-a344-bfc7a6099c1e"]
+Cell[5095, 131, 151, 3, 27, "Input",ExpressionUUID->"301b1722-6f51-44f4-8759-92cdf8e27af9"],
+Cell[5249, 136, 3530, 67, 349, "Output",ExpressionUUID->"394e7303-1b93-42df-b8ea-a986ced18d07"]
 }, Open  ]],
-Cell[4107, 110, 293, 8, 105, "Text",ExpressionUUID->"f97cf7d1-697a-4321-8381-0fac5da3162a"],
-Cell[4403, 120, 325, 7, 48, "Text",ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-8dd2dfb59700"],
-Cell[CellGroupData[{
-Cell[4753, 131, 151, 3, 36, "Input",ExpressionUUID->"301b1722-6f51-44f4-8759-92cdf8e27af9"],
-Cell[4907, 136, 3558, 68, 466, "Output",ExpressionUUID->"394e7303-1b93-42df-b8ea-a986ced18d07"]
-}, Open  ]],
-Cell[8480, 207, 180, 3, 48, "Text",ExpressionUUID->"06b51eca-b155-473c-9682-9a698c13fc06"],
-Cell[8663, 212, 157, 3, 48, "Text",ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-d7cb89ebff7e"]
+Cell[8794, 206, 180, 3, 36, "Text",ExpressionUUID->"06b51eca-b155-473c-9682-9a698c13fc06"],
+Cell[8977, 211, 157, 3, 36, "Text",ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-d7cb89ebff7e"]
 }, Open  ]]
 }
 ]

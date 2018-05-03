@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     49812,       1108]
-NotebookOptionsPosition[     48457,       1084]
-NotebookOutlinePosition[     48795,       1099]
-CellTagsIndexPosition[     48752,       1096]
+NotebookDataLength[     51910,       1162]
+NotebookOptionsPosition[     50202,       1131]
+NotebookOutlinePosition[     50540,       1146]
+CellTagsIndexPosition[     50497,       1143]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -914,14 +914,14 @@ Cell[BoxData[
   RowBox[{
    RowBox[{
     RowBox[{"NotebookOpeners", "[", "]"}], ":=", 
-    RowBox[{"(", "\[IndentingNewLine]", 
+    RowBox[{"(", "\n", 
      RowBox[{"For", "[", 
       RowBox[{
        RowBox[{"i", "=", "1"}], ",", " ", 
-       RowBox[{"i", "\[LessEqual]", "3"}], ",", " ", 
-       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", "\t\t", 
+       RowBox[{"i", "<=", "3"}], ",", " ", 
+       RowBox[{"i", "++"}], ",", "\n", "\t\t", 
        RowBox[{
-        RowBox[{"Print", "[", "\[IndentingNewLine]", "\t\t", 
+        RowBox[{"Print", "[", "\n", "\t\t", 
          RowBox[{"DynamicModule", "[", 
           RowBox[{
            RowBox[{"{", 
@@ -929,7 +929,7 @@ Cell[BoxData[
              RowBox[{"Evaluate", "[", 
               RowBox[{"\"\<notebooks/app\>\"", "<>", 
                RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.nb\>\""}], 
-              "]"}]}], "}"}], ",", "\[IndentingNewLine]", "\t\t\t", 
+              "]"}]}], "}"}], ",", "\n", "\t\t\t", 
            RowBox[{"Row", "[", 
             RowBox[{"{", 
              RowBox[{"Button", "[", 
@@ -937,9 +937,8 @@ Cell[BoxData[
                RowBox[{"\"\<Approccio\>\"", "<>", 
                 RowBox[{"ToString", "[", "i", "]"}]}], ",", 
                RowBox[{"NotebookOpen", "[", "text", "]"}]}], "]"}], "}"}], 
-            "]"}]}], "\[IndentingNewLine]", "\t", "]"}], 
-         "\[IndentingNewLine]", "\t\t", "]"}], ";"}]}], "\[IndentingNewLine]",
-       "\t", "]"}], ")"}]}], ";"}]}]], "Input",
+            "]"}]}], "\n", "\t", "]"}], "\n", "\t\t", "]"}], ";"}]}], "\n", 
+      "\t", "]"}], ")"}]}], ";"}]}]], "Input",
  CellChangeTimes->{{3.734279633934972*^9, 3.7342796586754827`*^9}, {
    3.7342797693759212`*^9, 3.734279854550745*^9}, {3.7342798868000402`*^9, 
    3.734280141905386*^9}, {3.7342801725344677`*^9, 3.7342801903215933`*^9}, {
@@ -949,9 +948,15 @@ Cell[BoxData[
    3.7342809272731543`*^9, {3.734280958705127*^9, 3.734281062689205*^9}, {
    3.734281095101305*^9, 3.734281281964877*^9}, {3.734281318134069*^9, 
    3.734281342071725*^9}, 3.7342814017095633`*^9, {3.734320575345736*^9, 
-   3.734320590362527*^9}, 
-   3.734327917831381*^9},ExpressionUUID->"2cbe992a-82a4-4d27-bd5b-\
+   3.734320590362527*^9}, 3.734327917831381*^9, {3.734350580527768*^9, 
+   3.734350640952573*^9}, {3.73435069843232*^9, 3.7343507141715307`*^9}, {
+   3.734350751259894*^9, 3.734350763101348*^9}, {3.7343507960440607`*^9, 
+   3.7343509055110397`*^9}, {3.73435099532649*^9, 3.734350997526484*^9}, 
+   3.734351135043519*^9, {3.734351279703917*^9, 3.734351295123781*^9}, 
+   3.7343514388937387`*^9},ExpressionUUID->"2cbe992a-82a4-4d27-bd5b-\
 c7eb94d00704"],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
@@ -962,13 +967,55 @@ Cell[BoxData[
     RowBox[{"SetDirectory", "[", 
      RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
    "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"NotebookOpeners", "[", "]"}], ";"}]}]}]], "Input",
+   RowBox[{"NotebookOpeners", "[", "]"}]}]}]], "Input",
  CellChangeTimes->{
   3.734281246002419*^9, {3.7342812927752666`*^9, 3.734281310437601*^9}, 
-   3.734322797413224*^9, 
-   3.7343293868033953`*^9},ExpressionUUID->"95c149ed-2c7c-4717-bb78-\
+   3.734322797413224*^9, 3.7343293868033953`*^9, 3.734350547432438*^9, {
+   3.734350908659758*^9, 3.7343509116480083`*^9}, {3.734351036655488*^9, 
+   3.734351051176238*^9}, {3.734351090263857*^9, 3.7343511194773283`*^9}, {
+   3.734351357012959*^9, 
+   3.734351358792692*^9}},ExpressionUUID->"95c149ed-2c7c-4717-bb78-\
 4fe1da3b5508"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`text$$ = "notebooks/app1.nb"}, 
+  TemplateBox[{
+   ButtonBox[
+    "\"Approccio1\"", ButtonFunction :> NotebookOpen[$CellContext`text$$], 
+     Appearance -> Automatic, Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"],
+  DynamicModuleValues:>{}]], "Print",
+ CellChangeTimes->{
+  3.734351460745899*^9},ExpressionUUID->"7025299d-c944-4577-ac96-\
+ffbc5563fe39"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`text$$ = "notebooks/app2.nb"}, 
+  TemplateBox[{
+   ButtonBox[
+    "\"Approccio2\"", ButtonFunction :> NotebookOpen[$CellContext`text$$], 
+     Appearance -> Automatic, Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"],
+  DynamicModuleValues:>{}]], "Print",
+ CellChangeTimes->{
+  3.734351460747377*^9},ExpressionUUID->"f0916250-5c18-4a4f-b6db-\
+8182ca3208b9"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`text$$ = "notebooks/app3.nb"}, 
+  TemplateBox[{
+   ButtonBox[
+    "\"Approccio3\"", ButtonFunction :> NotebookOpen[$CellContext`text$$], 
+     Appearance -> Automatic, Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"],
+  DynamicModuleValues:>{}]], "Print",
+ CellChangeTimes->{
+  3.734351460749175*^9},ExpressionUUID->"5e20b27a-d66e-4109-b41b-\
+601a569e7c82"]
+}, Open  ]]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -1107,9 +1154,16 @@ Cell[26372, 607, 3593, 66, 55, "Input",ExpressionUUID->"0cd1ad74-3dcc-4ac1-9b36-
 Cell[29968, 675, 7422, 145, 446, "Input",ExpressionUUID->"a3fbd905-7453-432b-ac23-98267782a609"],
 Cell[37393, 822, 2489, 55, 216, "Input",ExpressionUUID->"5c7a49ea-38d5-4d67-879f-bd9135031550"],
 Cell[39885, 879, 851, 18, 78, "Input",ExpressionUUID->"d7ac13df-024c-4a26-a08e-19373a0554ff"],
-Cell[40739, 899, 2618, 54, 239, "Input",ExpressionUUID->"2cbe992a-82a4-4d27-bd5b-c7eb94d00704"],
-Cell[43360, 955, 535, 15, 78, "Input",ExpressionUUID->"95c149ed-2c7c-4717-bb78-4fe1da3b5508"],
-Cell[43898, 972, 4555, 110, 262, "Input",ExpressionUUID->"28cca064-be27-492b-a6cf-11be9a1bac41"]
+Cell[40739, 899, 2821, 57, 239, "Input",ExpressionUUID->"2cbe992a-82a4-4d27-bd5b-c7eb94d00704"],
+Cell[CellGroupData[{
+Cell[43585, 960, 737, 17, 78, "Input",ExpressionUUID->"95c149ed-2c7c-4717-bb78-4fe1da3b5508"],
+Cell[CellGroupData[{
+Cell[44347, 981, 421, 10, 33, "Print",ExpressionUUID->"7025299d-c944-4577-ac96-ffbc5563fe39"],
+Cell[44771, 993, 421, 10, 33, "Print",ExpressionUUID->"f0916250-5c18-4a4f-b6db-8182ca3208b9"],
+Cell[45195, 1005, 421, 10, 33, "Print",ExpressionUUID->"5e20b27a-d66e-4109-b41b-601a569e7c82"]
+}, Open  ]]
+}, Open  ]],
+Cell[45643, 1019, 4555, 110, 262, "Input",ExpressionUUID->"28cca064-be27-492b-a6cf-11be9a1bac41"]
 }
 ]
 *)
