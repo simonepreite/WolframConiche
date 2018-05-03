@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     22582,        552]
-NotebookOptionsPosition[     19912,        499]
-NotebookOutlinePosition[     20250,        514]
-CellTagsIndexPosition[     20207,        511]
+NotebookDataLength[     23455,        570]
+NotebookOptionsPosition[     20784,        517]
+NotebookOutlinePosition[     21122,        532]
+CellTagsIndexPosition[     21079,        529]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -83,8 +83,8 @@ Cell[BoxData["buildGraphicConicalEquation"], "Input",
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Private`a$$ = 0, Private`b$$ = 0, Private`c$$ = 3, 
-    Private`d$$ = 4, Private`e$$ = 0, Typeset`show$$ = True, 
+   DynamicModuleBox[{Private`a$$ = 0, Private`b$$ = 0, Private`c$$ = 0, 
+    Private`d$$ = 0, Private`e$$ = 0, Private`f$$ = 0, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -92,49 +92,66 @@ Cell[BoxData[
        Hold[Private`b$$], 0, "b"}, -10, 10, 1}, {{
        Hold[Private`c$$], 0, "c"}, -10, 10, 1}, {{
        Hold[Private`d$$], 0, "d"}, -10, 10, 1}, {{
-       Hold[Private`e$$], 0, "e"}, -10, 10, 1}}, Typeset`size$$ = {
-    602.890625, {621., 180.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, Private`a$6160$$ = 0, Private`b$6161$$ = 0,
-     Private`c$6162$$ = 0, Private`d$6163$$ = 0, Private`e$6164$$ = 0}, 
+       Hold[Private`e$$], 0, "e"}, -10, 10, 1}, {{
+       Hold[Private`f$$], 0, "f"}, -10, 10, 1}}, Typeset`size$$ = {
+    1031., {222.5, 227.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, Private`a$3364$$ = 0, Private`b$3365$$ = 0,
+     Private`c$3366$$ = 0, Private`d$3367$$ = 0, Private`e$3368$$ = 0, 
+    Private`f$3369$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {
        Private`a$$ = 0, Private`b$$ = 0, Private`c$$ = 0, Private`d$$ = 0, 
-        Private`e$$ = 0}, "ControllerVariables" :> {
-        Hold[Private`a$$, Private`a$6160$$, 0], 
-        Hold[Private`b$$, Private`b$6161$$, 0], 
-        Hold[Private`c$$, Private`c$6162$$, 0], 
-        Hold[Private`d$$, Private`d$6163$$, 0], 
-        Hold[Private`e$$, Private`e$6164$$, 0]}, 
+        Private`e$$ = 0, Private`f$$ = 0}, "ControllerVariables" :> {
+        Hold[Private`a$$, Private`a$3364$$, 0], 
+        Hold[Private`b$$, Private`b$3365$$, 0], 
+        Hold[Private`c$$, Private`c$3366$$, 0], 
+        Hold[Private`d$$, Private`d$3367$$, 0], 
+        Hold[Private`e$$, Private`e$3368$$, 0], 
+        Hold[Private`f$$, Private`f$3369$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> 
-      Dynamic[Private`text = 
-         PackageProgetto`recognizeShape[
-          Private`a$$, Private`b$$, Private`c$$]; 
-        ContourPlot[
-          Private`a$$ Private`x^2 + 2 Private`b$$ Private`x Private`y + 
-            Private`c$$ Private`y^2 + 2 Private`d$$ Private`x + 
-            2 Private`e$$ Private`y == 0, {Private`x, -20, 20}, {
-           Private`y, -20, 20}, ImageSize -> Medium] 
-         ContourPlot3D[
-          Private`a$$ Private`x^2 + 2 Private`b$$ Private`x Private`y + 
-            Private`c$$ Private`y^2 + 2 Private`d$$ Private`x + 
-            2 Private`e$$ Private`y == 0, {Private`x, -20, 20}, {
-           Private`y, -20, 20}, {Private`z, -20, 20}, ImageSize -> Medium, 
-           Mesh -> None, ContourStyle -> PackageProgetto`color[Private`text]] 
-         Text[
-           StringJoin["La funzone sta disegnando:", Private`text]]], 
+      Column[{Private`text = 
+          PackageProgetto`recognizeShape[
+           Private`a$$, Private`b$$, Private`c$$, Private`d$$, Private`e$$, 
+            Private`f$$]; Null, 
+         Row[{
+           Text[
+            StringJoin["La funzone sta disegnando: ", Private`text]], 
+           Spacer[20], "Equazione: ", 
+           
+           With[{Private`a = Private`a$$, Private`b = Private`b$$, Private`c = 
+             Private`c$$, Private`d = Private`d$$, Private`e = Private`e$$, 
+             Private`f = Private`f$$}, 
+            HoldForm[
+            Private`a Private`x^2 + 2 Private`b Private`x Private`y + 
+              Private`c Private`y^2 + 2 Private`d Private`x + 
+              2 Private`e Private`y + Private`f == 0]]}], 
+         Row[{
+           ContourPlot[
+           Private`a$$ Private`x^2 + 2 Private`b$$ Private`x Private`y + 
+             Private`c$$ Private`y^2 + 2 Private`d$$ Private`x + 
+             2 Private`e$$ Private`y + Private`f$$ == 0, {
+            Private`x, -20, 20}, {Private`y, -20, 20}, ImageSize -> Medium], 
+           ContourPlot3D[
+           Private`a$$ Private`x^2 + 2 Private`b$$ Private`x Private`y + 
+             Private`c$$ Private`y^2 + 2 Private`d$$ Private`x + 
+             2 Private`e$$ Private`y + Private`f$$ == 0, {
+            Private`x, -20, 20}, {Private`y, -20, 20}, {Private`z, -20, 20}, 
+            ImageSize -> Medium, Mesh -> None, ContourStyle -> 
+            PackageProgetto`color[Private`text]]}]}], 
       "Specifications" :> {{{Private`a$$, 0, "a"}, -10, 10, 1, Appearance -> 
          "Labeled"}, {{Private`b$$, 0, "b"}, -10, 10, 1, Appearance -> 
          "Labeled"}, {{Private`c$$, 0, "c"}, -10, 10, 1, Appearance -> 
          "Labeled"}, {{Private`d$$, 0, "d"}, -10, 10, 1, Appearance -> 
          "Labeled"}, {{Private`e$$, 0, "e"}, -10, 10, 1, Appearance -> 
-         "Labeled"}}, "Options" :> {ControlPlacement -> Left}, 
+         "Labeled"}, {{Private`f$$, 0, "f"}, -10, 10, 1, Appearance -> 
+         "Labeled"}}, "Options" :> {ControlPlacement -> Top}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{1221., {429., 434.}},
+     ImageSizeCache->{1078., {331., 336.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -147,8 +164,9 @@ Cell[BoxData[
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{
   3.734325115669125*^9, 3.734325875170535*^9, {3.734340661594659*^9, 
-   3.734340686504814*^9}},ExpressionUUID->"84916aaa-e123-4e31-84af-\
-468bd3a1ae15"]
+   3.734340686504814*^9}, 
+   3.734356964003693*^9},ExpressionUUID->"8ffebac6-df28-4289-9f97-\
+a9c62edcc793"]
 }, Open  ]],
 
 Cell["\<\
@@ -524,34 +542,34 @@ Cell[CellGroupData[{
 Cell[2217, 69, 252, 4, 68, "Section",ExpressionUUID->"91249406-1ef7-4fe6-a09e-cc43bbee4da8"],
 Cell[CellGroupData[{
 Cell[2494, 77, 157, 3, 31, "Input",ExpressionUUID->"ff49abe8-1c91-46c1-af32-7cc948e76746"],
-Cell[2654, 82, 3527, 68, 882, "Output",ExpressionUUID->"84916aaa-e123-4e31-84af-468bd3a1ae15"]
+Cell[2654, 82, 4399, 86, 719, "Output",ExpressionUUID->"8ffebac6-df28-4289-9f97-a9c62edcc793"]
 }, Open  ]],
-Cell[6196, 153, 637, 11, 58, "Text",ExpressionUUID->"58c4bdda-1e96-453a-b76f-46e29682bcf9"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[6870, 169, 233, 4, 68, "Section",ExpressionUUID->"85950cc6-5dea-45af-ba49-2ed92ac748db"],
-Cell[7106, 175, 716, 12, 104, "Text",ExpressionUUID->"7c9fde7b-590d-44c3-b4fc-4ed1370e9540"]
+Cell[7068, 171, 637, 11, 58, "Text",ExpressionUUID->"58c4bdda-1e96-453a-b76f-46e29682bcf9"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7859, 192, 289, 4, 68, "Section",ExpressionUUID->"1cad8bef-345d-4434-8be2-377896680055"],
-Cell[8151, 198, 564, 12, 127, "Text",ExpressionUUID->"e0013e71-7b00-4189-8396-2da735c2796d"]
+Cell[7742, 187, 233, 4, 68, "Section",ExpressionUUID->"85950cc6-5dea-45af-ba49-2ed92ac748db"],
+Cell[7978, 193, 716, 12, 104, "Text",ExpressionUUID->"7c9fde7b-590d-44c3-b4fc-4ed1370e9540"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8752, 215, 418, 7, 68, "Section",ExpressionUUID->"a83ab051-6db0-40a1-bf10-7a4c0218d651"],
-Cell[9173, 224, 1047, 19, 127, "Text",ExpressionUUID->"e7c64d98-e4a8-41f6-8b98-5b9035be8c36"],
-Cell[10223, 245, 1291, 29, 449, "Text",ExpressionUUID->"806d2acf-4f13-4aa8-92e2-e7f7819f355c"],
-Cell[11517, 276, 2370, 62, 147, "Input",ExpressionUUID->"f234dfa9-3bd6-438f-88bd-560e369f1588"],
-Cell[13890, 340, 1040, 21, 219, "Text",ExpressionUUID->"3eade9f8-dbbb-4678-ab8b-e51519df1f2b"],
-Cell[14933, 363, 1109, 26, 403, "Text",ExpressionUUID->"d18c4f67-2ee6-428f-a543-82e3777ab763"],
-Cell[16045, 391, 2294, 62, 147, "Input",ExpressionUUID->"83dff630-70b7-422c-9c49-09fdf9af298c"]
+Cell[8731, 210, 289, 4, 68, "Section",ExpressionUUID->"1cad8bef-345d-4434-8be2-377896680055"],
+Cell[9023, 216, 564, 12, 127, "Text",ExpressionUUID->"e0013e71-7b00-4189-8396-2da735c2796d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18376, 458, 403, 6, 68, "Section",ExpressionUUID->"d7ab4492-7178-4995-b469-38e2aef0a751"],
-Cell[18782, 466, 456, 12, 150, "Text",ExpressionUUID->"a9100429-28f8-4809-92d4-14f5f2bec321"]
+Cell[9624, 233, 418, 7, 68, "Section",ExpressionUUID->"a83ab051-6db0-40a1-bf10-7a4c0218d651"],
+Cell[10045, 242, 1047, 19, 127, "Text",ExpressionUUID->"e7c64d98-e4a8-41f6-8b98-5b9035be8c36"],
+Cell[11095, 263, 1291, 29, 449, "Text",ExpressionUUID->"806d2acf-4f13-4aa8-92e2-e7f7819f355c"],
+Cell[12389, 294, 2370, 62, 147, "Input",ExpressionUUID->"f234dfa9-3bd6-438f-88bd-560e369f1588"],
+Cell[14762, 358, 1040, 21, 219, "Text",ExpressionUUID->"3eade9f8-dbbb-4678-ab8b-e51519df1f2b"],
+Cell[15805, 381, 1109, 26, 403, "Text",ExpressionUUID->"d18c4f67-2ee6-428f-a543-82e3777ab763"],
+Cell[16917, 409, 2294, 62, 147, "Input",ExpressionUUID->"83dff630-70b7-422c-9c49-09fdf9af298c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19275, 483, 447, 7, 68, "Section",ExpressionUUID->"8698e793-ec9e-4895-8330-4a9be4a6c5b8"],
-Cell[19725, 492, 159, 3, 35, "Text",ExpressionUUID->"c7aa1ccd-8fde-40dc-b93b-5b2185bfbe3f"]
+Cell[19248, 476, 403, 6, 68, "Section",ExpressionUUID->"d7ab4492-7178-4995-b469-38e2aef0a751"],
+Cell[19654, 484, 456, 12, 150, "Text",ExpressionUUID->"a9100429-28f8-4809-92d4-14f5f2bec321"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20147, 501, 447, 7, 68, "Section",ExpressionUUID->"8698e793-ec9e-4895-8330-4a9be4a6c5b8"],
+Cell[20597, 510, 159, 3, 35, "Text",ExpressionUUID->"c7aa1ccd-8fde-40dc-b93b-5b2185bfbe3f"]
 }, Open  ]]
 }, Open  ]]
 }
