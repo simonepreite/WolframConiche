@@ -1,0 +1,115 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4089,        107]
+NotebookOptionsPosition[      3488,         89]
+NotebookOutlinePosition[      3826,        104]
+CellTagsIndexPosition[      3783,        101]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"ParentDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], "]"}], ";", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "imposto", " ", "la", " ", "cartella", " ", "attuale", " ", "come", " ", 
+    "base", " ", "in", " ", "cui", " ", "cercare", " ", "i", " ", "file"}], 
+   " ", "*)"}], "\n", 
+  RowBox[{"Get", "[", "\"\<PackageProgetto`\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{
+  3.734338991085784*^9},ExpressionUUID->"2d5febae-4090-4681-9820-\
+f59f6a0e411c"],
+
+Cell["Coniche ed Eccentricit\[AGrave]", "Text",
+ CellChangeTimes->{{3.734326452515956*^9, 
+  3.734326479745064*^9}},ExpressionUUID->"a95e00ed-c43d-4d31-a453-\
+f98bd61ffd28"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["buildGraphicEccentricity"], "Input",
+ CellChangeTimes->{{3.734326482290908*^9, 
+  3.73432648391362*^9}},ExpressionUUID->"984ff5ab-5b2a-4e46-a479-\
+b43041613b5a"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{Private`e$$ = 0.9, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[Private`e$$], 0, "eccentricit\[AGrave]"}, 0, 3, 0.1}}, 
+    Typeset`size$$ = {660., {176., 180.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, Private`e$54783$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {Private`e$$ = 0}, "ControllerVariables" :> {
+        Hold[Private`e$$, Private`e$54783$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Dynamic[
+         ContourPlot[(1 - Private`e$$^2) Private`x^2 + 
+           Private`y^2 - (2 (1 + Private`e$$)) Private`x == 0, {
+          Private`x, -10, 20}, {Private`y, -10, 20}, ImageSize -> Medium]] 
+       Text[(1 - Private`e$$^2) Private`x^2 + 
+          Private`y^2 - (2 (1 + Private`e$$)) Private`x == 0], 
+      "Specifications" :> {{{Private`e$$, 0, "eccentricit\[AGrave]"}, 0, 3, 
+         0.1, Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{707., {220., 225.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.734326484380733*^9, 
+  3.734326692095748*^9},ExpressionUUID->"8d7104ec-ada9-420f-a63f-\
+8b342b227c23"]
+}, Open  ]]
+},
+WindowSize->{1366, 716},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 548, 13, 55, "Input",ExpressionUUID->"2d5febae-4090-4681-9820-f59f6a0e411c"],
+Cell[1109, 35, 173, 3, 35, "Text",ExpressionUUID->"a95e00ed-c43d-4d31-a453-f98bd61ffd28"],
+Cell[CellGroupData[{
+Cell[1307, 42, 175, 3, 31, "Input",ExpressionUUID->"984ff5ab-5b2a-4e46-a479-b43041613b5a"],
+Cell[1485, 47, 1987, 39, 464, "Output",ExpressionUUID->"8d7104ec-ada9-420f-a63f-8b342b227c23"]
+}, Open  ]]
+}
+]
+*)
+

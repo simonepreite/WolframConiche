@@ -1,0 +1,156 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6080,        148]
+NotebookOptionsPosition[      5441,        129]
+NotebookOutlinePosition[      5779,        144]
+CellTagsIndexPosition[      5736,        141]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"ParentDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], "]"}], ";", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "imposto", " ", "la", " ", "cartella", " ", "attuale", " ", "come", " ", 
+    "base", " ", "in", " ", "cui", " ", "cercare", " ", "i", " ", "file"}], 
+   " ", "*)"}], "\n", 
+  RowBox[{"Get", "[", "\"\<PackageProgetto`\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.734325045716722*^9, 3.734325065026848*^9}, 
+   3.7343389607434177`*^9},ExpressionUUID->"f280e4b4-76eb-4054-be13-\
+e1ac0e4bc41f"],
+
+Cell["Approccio Matematico/Equazione", "Text",
+ CellChangeTimes->{{3.734325071375626*^9, 3.734325108982003*^9}, {
+  3.734326058548774*^9, 
+  3.734326065965364*^9}},ExpressionUUID->"95d1a414-3754-4795-830a-\
+9fb748b16103"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["buildGraphicConicalEquation"], "Input",
+ CellChangeTimes->{
+  3.7343251135065937`*^9},ExpressionUUID->"ff49abe8-1c91-46c1-af32-\
+7cc948e76746"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{Private`a$$ = 0, Private`b$$ = -2, Private`c$$ = 0, 
+    Private`d$$ = 0, Private`e$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[Private`a$$], 0, "a"}, -10, 10, 1}, {{
+       Hold[Private`b$$], 0, "b"}, -10, 10, 1}, {{
+       Hold[Private`c$$], 0, "c"}, -10, 10, 1}, {{
+       Hold[Private`d$$], 0, "d"}, -10, 10, 1}, {{
+       Hold[Private`e$$], 0, "e"}, -10, 10, 1}}, Typeset`size$$ = {
+    664.890625, {621., 180.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, Private`a$51859$$ = 0, Private`b$51860$$ = 
+    0, Private`c$51861$$ = 0, Private`d$51862$$ = 0, Private`e$51863$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {
+       Private`a$$ = 0, Private`b$$ = 0, Private`c$$ = 0, Private`d$$ = 0, 
+        Private`e$$ = 0}, "ControllerVariables" :> {
+        Hold[Private`a$$, Private`a$51859$$, 0], 
+        Hold[Private`b$$, Private`b$51860$$, 0], 
+        Hold[Private`c$$, Private`c$51861$$, 0], 
+        Hold[Private`d$$, Private`d$51862$$, 0], 
+        Hold[Private`e$$, Private`e$51863$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Dynamic[Private`text = 
+         PackageProgetto`recognizeShape[
+          Private`a$$, Private`b$$, Private`c$$]; (
+          ContourPlot[
+           Private`a$$ Private`x^2 + ((2 Private`b$$) Private`x) Private`y + 
+             Private`c$$ Private`y^2 + (2 Private`d$$) 
+              Private`x + (2 Private`e$$) Private`y == 0, {
+            Private`x, -20, 20}, {Private`y, -20, 20}, ImageSize -> Medium] 
+          ContourPlot3D[
+           Private`a$$ Private`x^2 + ((2 Private`b$$) Private`x) Private`y + 
+             Private`c$$ Private`y^2 + (2 Private`d$$) 
+              Private`x + (2 Private`e$$) Private`y == 0, {
+            Private`x, -20, 20}, {Private`y, -20, 20}, {Private`z, -20, 20}, 
+            ImageSize -> Medium, Mesh -> None, ContourStyle -> 
+            PackageProgetto`color[Private`text]]) Text[
+           StringJoin["La funzone sta disegnando:", Private`text]]], 
+      "Specifications" :> {{{Private`a$$, 0, "a"}, -10, 10, 1, Appearance -> 
+         "Labeled"}, {{Private`b$$, 0, "b"}, -10, 10, 1, Appearance -> 
+         "Labeled"}, {{Private`c$$, 0, "c"}, -10, 10, 1, Appearance -> 
+         "Labeled"}, {{Private`d$$, 0, "d"}, -10, 10, 1, Appearance -> 
+         "Labeled"}, {{Private`e$$, 0, "e"}, -10, 10, 1, Appearance -> 
+         "Labeled"}}, "Options" :> {ControlPlacement -> Left}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{1235., {429., 434.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.734325115669125*^9, 
+  3.734325875170535*^9},ExpressionUUID->"ff58e9d7-46f1-43e3-ab22-\
+dea2f513857f"]
+}, Open  ]],
+
+Cell["\<\
+Tutte le coniche sono legate da un unica equazione di secondo grado e ogni \
+figura ha le seguenti propriet\[AGrave] di b^2-4ac
+
+Equazione implicita ed esplicita
+\
+\>", "Text",
+ CellChangeTimes->{{3.734326105676132*^9, 3.734326188427062*^9}, 
+   3.734326386648261*^9},ExpressionUUID->"58c4bdda-1e96-453a-b76f-\
+46e29682bcf9"]
+},
+WindowSize->{1366, 716},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 597, 13, 55, "Input",ExpressionUUID->"f280e4b4-76eb-4054-be13-e1ac0e4bc41f"],
+Cell[1158, 35, 221, 4, 35, "Text",ExpressionUUID->"95d1a414-3754-4795-830a-9fb748b16103"],
+Cell[CellGroupData[{
+Cell[1404, 43, 157, 3, 31, "Input",ExpressionUUID->"ff49abe8-1c91-46c1-af32-7cc948e76746"],
+Cell[1564, 48, 3523, 67, 882, "Output",ExpressionUUID->"ff58e9d7-46f1-43e3-ab22-dea2f513857f"]
+}, Open  ]],
+Cell[5102, 118, 335, 9, 104, "Text"]
+}
+]
+*)
+
