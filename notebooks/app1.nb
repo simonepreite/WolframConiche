@@ -61,7 +61,7 @@ ac7d65750bcc"],
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Private`theta$$ = 2.8114002929411823`, Typeset`show$$ = 
+   DynamicModuleBox[{Private`theta$$ = 3.2542144071378813`, Typeset`show$$ = 
     True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
@@ -88,7 +88,7 @@ Cell[BoxData[
        ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
         "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
         True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
-     ImageSizeCache->{311., {179., 185.}},
+     ImageSizeCache->{311., {181., 187.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -783,7 +783,7 @@ Cell[1334, 41, 260, 4, 69, "Subsection",ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84
 Cell[1597, 47, 171, 3, 48, "Text",ExpressionUUID->"96557508-74ee-4f36-bc3f-d26323acf2f2"],
 Cell[CellGroupData[{
 Cell[1793, 54, 189, 4, 44, "Code",ExpressionUUID->"453dd2f8-a659-418a-975e-ac7d65750bcc"],
-Cell[1985, 60, 2080, 42, 382, "Output",ExpressionUUID->"3b3402c8-f553-4ecb-bde8-1ce883f77317"]
+Cell[1985, 60, 2080, 42, 386, "Output",ExpressionUUID->"3b3402c8-f553-4ecb-bde8-1ce883f77317"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[4102, 107, 171, 3, 36, "Input",ExpressionUUID->"7b4c5c44-8cb4-4e9d-8dc2-147229e0a8f1"],
