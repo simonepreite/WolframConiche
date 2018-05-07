@@ -100,7 +100,7 @@ Show[c1,c2, l1,l2, l3]
 );
 
 (*Creates the animation of a Line rotating generating a Cone*)
-buildAnimation:=(Animate[RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,2 Pi},{b,0,theta}],{theta,0.,2*Pi}]);
+buildAnimation:=(Animate[RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,2 Pi},{b,0,theta}],{theta,0.,2*Pi},AnimationRunning-> False,AnimationRepetitions ->  10]);
 
 (*Prints the text, equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct*)
 (*Needs a default value for the RadioButtonBar, and the interface needs to be improved*)
@@ -148,6 +148,26 @@ For[i=1, i<=3, i++,
 	ItemSize->Fit, Frame->None, Alignment->{Left,Center, Right},Spacings->3
 	]
 	);
+	
+	(*print corner functions modificare i colori delle due curve*)
+	ShowEllisse:=(Manipulate[
+		ContourPlot[{y==(b/a)*Sqrt[(a^2)-(x^2)],y==-(b/a)*Sqrt[(a^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True],
+		{{a,1,"a"},1,10,1,Appearance->"Labeled"},
+		{{b,1,"b"},1,10,1,Appearance->"Labeled"}
+	]);
+	
+	ShowCirconferenza:=(Manipulate[
+		ContourPlot[{y==Sqrt[(r^2)-(x^2)],y==-Sqrt[(r^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True],
+		{{r,1,"raggio"},1,10,1,Appearance->"Labeled"}
+	]);
+	
+	ShowIperbole:=(Manipulate[
+		ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)],y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True],
+		{{a,1,"a"},1,10,1,Appearance->"Labeled"},
+		{{b,1,"b"},1,10,1,Appearance->"Labeled"}
+	]);
+	
+	
 	
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
