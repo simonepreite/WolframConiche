@@ -147,34 +147,6 @@ For[i=1, i<=3, i++,
 	},
 	ItemSize->Fit, Frame->None, Alignment->{Left,Center, Right},Spacings->3
 	]
-	(*Grid[{
-	{Column[{}],Column[
-	{bList[[1]]},Frame\[Rule]None,Spacings\[Rule]1
-	],Column[{}]},
-	{Column[
-	{bList[[2]]},Frame\[Rule]None,Spacings\[Rule]1
-	]},
-	{Column[
-	{bList[[3]]},Frame\[Rule]None,Spacings\[Rule]1
-	]}
-	},
-	ItemSize\[Rule]Fit, Frame\[Rule]None, Alignment\[Rule]{{Left, Center, Right}},Spacings\[Rule]3
-	]
-	Grid[{{
-	 Column[
-	{bList[[1]]},Frame\[Rule]None,Spacings\[Rule]1
-	]
-	}},ItemSize\[Rule]Fit, Frame\[Rule]None, Alignment\[Rule]{{Left}},Spacings\[Rule]3]
-	Grid[{{
-	 Column[
-	{bList[[2]]},Frame\[Rule]None,Spacings\[Rule]1
-	]
-	}},ItemSize\[Rule]Fit, Frame\[Rule]None, Alignment\[Rule]{{Center}},Spacings\[Rule]3]
-	Grid[{{
-	 Column[
-	{bList[[3]]},Frame\[Rule]None,Spacings\[Rule]1
-	]
-	}},ItemSize\[Rule]Fit, Frame\[Rule]None, Alignment\[Rule]{{Right}},Spacings\[Rule]3]*)
 	);
 	
 End[]; (* Fine spazio privato *)
