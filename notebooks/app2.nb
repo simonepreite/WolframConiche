@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     23455,        570]
-NotebookOptionsPosition[     20784,        517]
-NotebookOutlinePosition[     21122,        532]
-CellTagsIndexPosition[     21079,        529]
+NotebookDataLength[     53947,       1543]
+NotebookOptionsPosition[     43311,       1354]
+NotebookOutlinePosition[     43649,       1369]
+CellTagsIndexPosition[     43606,       1366]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -50,19 +50,139 @@ Cell["L\[CloseCurlyQuote]equazione delle coniche", "Section",
   3.734340796184581*^9}},ExpressionUUID->"31f5e90a-97da-45f1-9158-\
 6af02bf4a456"],
 
+Cell["Ogni punto della conica deve appartenere :", "Text",
+ CellChangeTimes->{{3.734340803699922*^9, 3.7343410654345827`*^9}, {
+  3.734671319522757*^9, 3.734671346345896*^9}, {3.734671404326881*^9, 
+  3.734671596044998*^9}},ExpressionUUID->"02a82ad7-8b6a-47e9-bd55-\
+a429e92b9e4b"],
+
+Cell["Alla superficie conica", "Item",
+ CellChangeTimes->{{3.734671593382968*^9, 
+  3.7346716216962748`*^9}},ExpressionUUID->"d678e849-b8d8-4abd-90a7-\
+f98ccdd7bd6f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "+", 
+    RowBox[{"y", "^", "2"}]}], "\[Equal]", 
+   RowBox[{
+    RowBox[{"k", "^", "2"}], "*", 
+    RowBox[{"z", "^", "2"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7346714398572483`*^9, 
+  3.7346714517560368`*^9}},ExpressionUUID->"b0b5e6ea-554a-4ed2-ad97-\
+91b97a318ee9"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", "2"], "+", 
+    SuperscriptBox["y", "2"]}], "\[Equal]", 
+   RowBox[{
+    SuperscriptBox["k", "2"], " ", 
+    SuperscriptBox["z", "2"]}]}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.734671452430653*^9},ExpressionUUID->"06f3ef87-9d75-49b5-acd6-\
+0fdc44e92b1f"]
+}, {2}]],
+
+Cell["Al piano:", "Item",
+ CellChangeTimes->{{3.734671480068199*^9, 3.734671506349039*^9}, {
+  3.734671617234865*^9, 
+  3.734671619111478*^9}},ExpressionUUID->"375486b6-833b-467c-a3bf-\
+5bf71522219e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{
+   RowBox[{"Ax", "+", "By", "+", "Cz", "+", "D"}], "\[Equal]", "0"}], "]"}]], \
+"Input",
+ CellChangeTimes->{{3.73467144373146*^9, 3.734671443768468*^9}, {
+  3.734671477704414*^9, 3.734671498639698*^9}},
+ FontSize->12,ExpressionUUID->"7d04a492-081a-4bd7-9dd8-d7453aeb35dd"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{
+   RowBox[{"Ax", "+", "By", "+", "Cz", "+", "D"}], "\[Equal]", "0"}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.734671498858917*^9},ExpressionUUID->"96a50fa9-c418-4345-95b6-\
+f9bf17b67a0e"]
+}, {2}]],
+
 Cell["\<\
-Ogni punto della conica deve appartenere :
-\t* alla superficie conica x^2+y^2 == k^2z^2
-\t* al piano Ax+By+Cz+D == 0
 Ricavando dalla seconda una delle inognite dalla seconda equazione, per \
 esempio z, e sostituendo nella prima equazione si ottiene la seguente \
-espressione:
-ax^2+bxy+cy^2+dx+ey+f == 0 dove a!=0 || b!=0 || c!=0
-\
-\>", "Text",
- CellChangeTimes->{{3.734340803699922*^9, 
-  3.7343410654345827`*^9}},ExpressionUUID->"02a82ad7-8b6a-47e9-bd55-\
-a429e92b9e4b"]
+espressione:\
+\>", "Item",
+ CellChangeTimes->{
+  3.7346715203531837`*^9},ExpressionUUID->"d13ee059-b70d-496e-be92-\
+e6d25a3b6640"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ax", "^", "2"}], "+", "bxy", "+", 
+    RowBox[{"cy", "^", "2"}], "+", "dx", "+", "ey", "+", "f"}], "\[Equal]", 
+   "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7346715304428873`*^9, 
+  3.734671544004534*^9}},ExpressionUUID->"1b6311d3-1b91-4371-9246-\
+d52ed28e395d"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["ax", "2"], "+", "bxy", "+", 
+    SuperscriptBox["cy", "2"], "+", "dx", "+", "ey", "+", "f"}], "\[Equal]", 
+   "0"}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.7346715448702307`*^9},ExpressionUUID->"413bc7d9-54cc-47e0-a5d6-\
+f0b8864d1f69"]
+}, {2}]],
+
+Cell["Dove:", "Text",
+ CellChangeTimes->{{3.73467155186896*^9, 3.734671553042207*^9}, {
+  3.734671642508617*^9, 
+  3.7346716628227158`*^9}},ExpressionUUID->"e6ab8cac-8e38-415d-a550-\
+dcee4ab6247a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{
+   RowBox[{"a", "\[NotEqual]", "0"}], "||", 
+   RowBox[{"b", "\[NotEqual]", "0"}], "||", 
+   RowBox[{"c", "\[NotEqual]", "0"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.734671562830402*^9, 3.7346715719582453`*^9}, {
+  3.734671644946176*^9, 
+  3.734671656950317*^9}},ExpressionUUID->"dbf9a836-e5d9-4902-b961-\
+a284ce83f290"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{
+   RowBox[{"a", "\[NotEqual]", "0"}], "||", 
+   RowBox[{"b", "\[NotEqual]", "0"}], "||", 
+   RowBox[{"c", "\[NotEqual]", "0"}]}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.7346716547424994`*^9},ExpressionUUID->"6bd818d9-71e8-4ae5-81a3-\
+566ba023927b"]
+}, {2}]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -73,101 +193,11 @@ Cell["Il Grafico dell\[CloseCurlyQuote]equazione delle coniche", "Section",
   3.734341094381901*^9}},ExpressionUUID->"91249406-1ef7-4fe6-a09e-\
 cc43bbee4da8"],
 
-Cell[CellGroupData[{
-
-Cell[BoxData["buildGraphicConicalEquation"], "Input",
- CellChangeTimes->{
-  3.7343251135065937`*^9},ExpressionUUID->"ff49abe8-1c91-46c1-af32-\
-7cc948e76746"],
-
 Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{Private`a$$ = 0, Private`b$$ = 0, Private`c$$ = 0, 
-    Private`d$$ = 0, Private`e$$ = 0, Private`f$$ = 0, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[Private`a$$], 0, "a"}, -10, 10, 1}, {{
-       Hold[Private`b$$], 0, "b"}, -10, 10, 1}, {{
-       Hold[Private`c$$], 0, "c"}, -10, 10, 1}, {{
-       Hold[Private`d$$], 0, "d"}, -10, 10, 1}, {{
-       Hold[Private`e$$], 0, "e"}, -10, 10, 1}, {{
-       Hold[Private`f$$], 0, "f"}, -10, 10, 1}}, Typeset`size$$ = {
-    1031., {222.5, 227.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, Private`a$3364$$ = 0, Private`b$3365$$ = 0,
-     Private`c$3366$$ = 0, Private`d$3367$$ = 0, Private`e$3368$$ = 0, 
-    Private`f$3369$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {
-       Private`a$$ = 0, Private`b$$ = 0, Private`c$$ = 0, Private`d$$ = 0, 
-        Private`e$$ = 0, Private`f$$ = 0}, "ControllerVariables" :> {
-        Hold[Private`a$$, Private`a$3364$$, 0], 
-        Hold[Private`b$$, Private`b$3365$$, 0], 
-        Hold[Private`c$$, Private`c$3366$$, 0], 
-        Hold[Private`d$$, Private`d$3367$$, 0], 
-        Hold[Private`e$$, Private`e$3368$$, 0], 
-        Hold[Private`f$$, Private`f$3369$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> 
-      Column[{Private`text = 
-          PackageProgetto`recognizeShape[
-           Private`a$$, Private`b$$, Private`c$$, Private`d$$, Private`e$$, 
-            Private`f$$]; Null, 
-         Row[{
-           Text[
-            StringJoin["La funzone sta disegnando: ", Private`text]], 
-           Spacer[20], "Equazione: ", 
-           
-           With[{Private`a = Private`a$$, Private`b = Private`b$$, Private`c = 
-             Private`c$$, Private`d = Private`d$$, Private`e = Private`e$$, 
-             Private`f = Private`f$$}, 
-            HoldForm[
-            Private`a Private`x^2 + 2 Private`b Private`x Private`y + 
-              Private`c Private`y^2 + 2 Private`d Private`x + 
-              2 Private`e Private`y + Private`f == 0]]}], 
-         Row[{
-           ContourPlot[
-           Private`a$$ Private`x^2 + 2 Private`b$$ Private`x Private`y + 
-             Private`c$$ Private`y^2 + 2 Private`d$$ Private`x + 
-             2 Private`e$$ Private`y + Private`f$$ == 0, {
-            Private`x, -20, 20}, {Private`y, -20, 20}, ImageSize -> Medium], 
-           ContourPlot3D[
-           Private`a$$ Private`x^2 + 2 Private`b$$ Private`x Private`y + 
-             Private`c$$ Private`y^2 + 2 Private`d$$ Private`x + 
-             2 Private`e$$ Private`y + Private`f$$ == 0, {
-            Private`x, -20, 20}, {Private`y, -20, 20}, {Private`z, -20, 20}, 
-            ImageSize -> Medium, Mesh -> None, ContourStyle -> 
-            PackageProgetto`color[Private`text]]}]}], 
-      "Specifications" :> {{{Private`a$$, 0, "a"}, -10, 10, 1, Appearance -> 
-         "Labeled"}, {{Private`b$$, 0, "b"}, -10, 10, 1, Appearance -> 
-         "Labeled"}, {{Private`c$$, 0, "c"}, -10, 10, 1, Appearance -> 
-         "Labeled"}, {{Private`d$$, 0, "d"}, -10, 10, 1, Appearance -> 
-         "Labeled"}, {{Private`e$$, 0, "e"}, -10, 10, 1, Appearance -> 
-         "Labeled"}, {{Private`f$$, 0, "f"}, -10, 10, 1, Appearance -> 
-         "Labeled"}}, "Options" :> {ControlPlacement -> Top}, 
-      "DefaultOptions" :> {}],
-     ImageSizeCache->{1078., {331., 336.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.734325115669125*^9, 3.734325875170535*^9, {3.734340661594659*^9, 
-   3.734340686504814*^9}, 
-   3.734356964003693*^9},ExpressionUUID->"8ffebac6-df28-4289-9f97-\
-a9c62edcc793"]
-}, Open  ]],
+ RowBox[{"buildGraphicConicalEquation", ";"}]], "Input",
+ CellChangeTimes->{3.7343251135065937`*^9, 
+  3.734684257670329*^9},ExpressionUUID->"ff49abe8-1c91-46c1-af32-\
+7cc948e76746"],
 
 Cell["\<\
 qua ci serve una tabella che esplichi le propriet\[AGrave] delle coniche in \
@@ -195,38 +225,224 @@ Cell["\<\
 Come \[EGrave] deducibile dal grafico precedente, non tutte le figure \
 rappresentate dall\[CloseCurlyQuote]equazione delle coniche sono \
 effettivamente delle coniche, e si tratta di quelle che non hanno soluzione \
-reali come ad esempio x^2+y^2+4==0
-Nel caso dell\[CloseCurlyQuote]ellisse o di una circonferenza, l\
-\[CloseCurlyQuote]equazione delle coniche corrisponde ad una di esse quando \
-vale la seguente propriet\[AGrave]:\[LineSeparator]d^2/4a + e^2/4c - f >= 0\
+reali come ad esempio \
 \>", "Text",
  CellChangeTimes->{{3.734341207419319*^9, 3.734341315964183*^9}, {
   3.734341433403493*^9, 3.734341485332459*^9}, {3.734341521135314*^9, 
-  3.734341568389494*^9}},ExpressionUUID->"7c9fde7b-590d-44c3-b4fc-\
-4ed1370e9540"]
+  3.734341568389494*^9}, {3.734671900947599*^9, 
+  3.734671953915469*^9}},ExpressionUUID->"7c9fde7b-590d-44c3-b4fc-\
+4ed1370e9540"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "+", 
+    RowBox[{"y", "^", "2"}], "+", "4"}], "\[Equal]", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.734671904617161*^9, 
+  3.734671914496112*^9}},ExpressionUUID->"372a18c0-edb6-429c-961b-\
+9e3d279a2dfd"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", "2"], "+", 
+    SuperscriptBox["y", "2"], "+", "4"}], "\[Equal]", "0"}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.7346719571467743`*^9},ExpressionUUID->"fae858a3-faaa-4023-866b-\
+733b569f23de"]
+}, {2}]],
+
+Cell["\<\
+Nel caso dell\[CloseCurlyQuote]ellisse o di una circonferenza, l\
+\[CloseCurlyQuote]equazione delle coniche corrisponde ad una di esse quando \
+vale la seguente propriet\[AGrave]:\
+\>", "Text",
+ CellChangeTimes->{
+  3.7346719268363953`*^9},ExpressionUUID->"d85460eb-7d87-4fef-a655-\
+b03ce3968059"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"d", "^", "2"}], "/", "4"}], "a"}], "+", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"e", "^", "2"}], "/", "4"}], "c"}], "-", "f"}], 
+   "\[GreaterEqual]", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7346719350357857`*^9, 
+  3.7346719502234297`*^9}},ExpressionUUID->"4107950e-8a7b-42ff-be6b-\
+8f08e7978287"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["d", "2"], " ", "a"}], "4"], "+", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["e", "2"], " ", "c"}], "4"], "-", "f"}], 
+   "\[GreaterEqual]", "0"}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.734671958655274*^9},ExpressionUUID->"a0feb004-96c6-4892-ae61-\
+47b5d81d7d00"]
+}, {2}]]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell["Come riconoscere una conica dalla sua Equazione", "Section",
  CellChangeTimes->{{3.7343407871712923`*^9, 3.734340796184581*^9}, {
-  3.734341348888039*^9, 3.734341361916066*^9}, {3.734341990058075*^9, 
-  3.734342021376275*^9}},ExpressionUUID->"1cad8bef-345d-4434-8be2-\
+   3.734341348888039*^9, 3.734341361916066*^9}, {3.734341990058075*^9, 
+   3.734342021376275*^9}, 
+   3.734671911489106*^9},ExpressionUUID->"1cad8bef-345d-4434-8be2-\
 377896680055"],
 
 Cell["\<\
 Per riconoscere una conica dalla sua equazione \[EGrave] sufficiente \
-calcolare il valore D == b^2 - 4*ac
-A questo punto :
-\t*D<0 allora l\[CloseCurlyQuote]equazione rappresenta un ellisse, o una \
-circonferenza se a=c= && b==0
-\t*D==0 allora l\[CloseCurlyQuote]equazione rappresenta una Parabola
-\t*D>0 allora l\[CloseCurlyQuote]equazione rappresenta un Iperbole\
+calcolare il valore D:\
 \>", "Text",
  CellChangeTimes->{{3.73434202654818*^9, 3.7343420375195312`*^9}, {
-  3.734342073299512*^9, 
-  3.734342218885075*^9}},ExpressionUUID->"e0013e71-7b00-4189-8396-\
-2da735c2796d"]
+   3.734342073299512*^9, 3.734342218885075*^9}, 3.734671976429847*^9, {
+   3.734672057699437*^9, 3.734672076691442*^9}, 3.734672216429553*^9, {
+   3.734672273293418*^9, 
+   3.734672301462796*^9}},ExpressionUUID->"e0013e71-7b00-4189-8396-\
+2da735c2796d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{"D", "\[Equal]", 
+   RowBox[{
+    RowBox[{"b", "^", "2"}], "-", 
+    RowBox[{"4", "*", "ac"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.734671972058153*^9, 
+  3.73467197821671*^9}},ExpressionUUID->"3503f617-8d6c-4bd1-a66c-\
+b637ee87941f"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"D", "\[Equal]", 
+   RowBox[{
+    SuperscriptBox["b", "2"], "-", 
+    RowBox[{"4", " ", "ac"}]}]}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.734671981953539*^9},ExpressionUUID->"1df80a37-8bdd-4a88-8f32-\
+9c6b6e70bbf8"]
+}, {2}]],
+
+Cell["A questo punto :", "Text",
+ CellChangeTimes->{
+  3.734672059375499*^9},ExpressionUUID->"346dd2d0-afb7-46a7-8b0e-\
+6c989dc8297f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{"D", "<", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7346720071111794`*^9, 
+  3.7346720102919493`*^9}},ExpressionUUID->"868b60e2-d9d1-48dc-9cfc-\
+551b76557fc2"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"D", "<", "0"}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.734672044402481*^9},ExpressionUUID->"04ace6b5-ef31-414c-bf4e-\
+207854c7091a"]
+}, {2}]],
+
+Cell["\<\
+ allora l\[CloseCurlyQuote]equazione rappresenta un ellisse, o una \
+circonferenza se:\
+\>", "Text",
+ CellChangeTimes->{
+  3.734672073599245*^9, {3.734672201712785*^9, 
+   3.7346722035854177`*^9}},ExpressionUUID->"babbe1af-4169-4a46-9aff-\
+d78c3aa17659"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{
+   RowBox[{"a", "\[Equal]", "c"}], " ", "&&", " ", 
+   RowBox[{"b", "\[Equal]", "0"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.734672213538953*^9, 
+  3.7346722490835733`*^9}},ExpressionUUID->"0ca6f081-8d3b-43de-85f1-\
+70a90f21e39e"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{
+   RowBox[{"a", "\[Equal]", "c"}], "&&", 
+   RowBox[{"b", "\[Equal]", "0"}]}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.7346722492542152`*^9},ExpressionUUID->"0253dc4a-d051-469a-91d1-\
+b8a6dcb56940"]
+}, {2}]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{"D", "\[Equal]", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7346720159240294`*^9, 
+  3.734672019822729*^9}},ExpressionUUID->"90ab8dcf-845a-451d-b45f-\
+dca4fdec0823"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"D", "\[Equal]", "0"}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.734672043127644*^9},ExpressionUUID->"932b1675-ab9f-4027-b49e-\
+bfaba4c037f5"]
+}, {2}]],
+
+Cell["allora l\[CloseCurlyQuote]equazione rappresenta una Parabola", "Text",
+ CellChangeTimes->{
+  3.734672275467607*^9},ExpressionUUID->"b27a4f5f-7cc7-4786-b917-\
+5f2b3a0e9aa1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{"D", ">", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.734672023809826*^9, 
+  3.734672033727498*^9}},ExpressionUUID->"c27b39d3-41ca-4193-866a-\
+0291c9f9c8ff"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"D", ">", "0"}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.73467204064607*^9},ExpressionUUID->"9577f4c3-9cc5-4949-84e1-36bf220d94f9"]
+}, {2}]],
+
+Cell["allora l\[CloseCurlyQuote]equazione rappresenta un Iperbole", "Text",
+ CellChangeTimes->{
+  3.7346722888834257`*^9},ExpressionUUID->"2fbe5410-57d7-4bef-9701-\
+22c24eacfa43"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -242,14 +458,7 @@ Coniche", "Section",
 
 Cell["\<\
 Illustriamo come compiere questo passaggio mediante il metodo del \
-completamento del quadrato, riferendoci all\[CloseCurlyQuote]equazione \
-ax^2+bxy+cy^2+dx+ey+f == 0 nel caso in b == 0
-(*Dimostrazione e calcoli su appunti di aliona*)
-In questo modo possiamo quindi riscrivere l\[CloseCurlyQuote]equazione come \
-a(x-x0)^2 + b(y-y0)^2==m
-
-Anche dall\[CloseCurlyQuote]equazione esplicita \[EGrave] possibile \
-riconoscere le coniche mediante un valore di soglia:\
+completamento del quadrato, riferendoci all\[CloseCurlyQuote]equazione:  \
 \>", "Text",
  CellChangeTimes->{{3.734342321319084*^9, 3.734342411739252*^9}, {
   3.73434247267107*^9, 3.734342529254108*^9}, {3.7343425691911383`*^9, 
@@ -257,40 +466,526 @@ riconoscere le coniche mediante un valore di soglia:\
   3.734343002301701*^9, 3.734343256722663*^9}, {3.73434328776329*^9, 
   3.734343340446409*^9}, {3.734343387679166*^9, 3.7343433892590837`*^9}, {
   3.734343425407799*^9, 3.734343559526037*^9}, {3.734345271109846*^9, 
-  3.73434528253944*^9}, {3.734345314139586*^9, 
-  3.7343453178032722`*^9}},ExpressionUUID->"e7c64d98-e4a8-41f6-8b98-\
+  3.73434528253944*^9}, {3.734345314139586*^9, 3.7343453178032722`*^9}, {
+  3.73467231485273*^9, 3.734672316622408*^9}, {3.73467254759378*^9, 
+  3.7346726250280867`*^9}},ExpressionUUID->"e7c64d98-e4a8-41f6-8b98-\
 5b9035be8c36"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ax", "^", "2"}], "+", "bxy", "+", 
+    RowBox[{"cy", "^", "2"}], "+", "dx", "+", "ey", "+", "f"}], "\[Equal]", 
+   "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.734672538535994*^9, 
+  3.734672550163815*^9}},ExpressionUUID->"b9f342c8-fa3a-478f-8a78-\
+7a20d35f98cb"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["ax", "2"], "+", "bxy", "+", 
+    SuperscriptBox["cy", "2"], "+", "dx", "+", "ey", "+", "f"}], "\[Equal]", 
+   "0"}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.734673991975542*^9},ExpressionUUID->"dfb36aec-efa5-4a5c-9443-\
+04cdee3bba48"]
+}, {2}]],
+
+Cell["Nel caso in cui:", "Text",
+ CellChangeTimes->{{3.73467256586034*^9, 
+  3.734672569440446*^9}},ExpressionUUID->"6e96e8d0-4899-4331-b57e-\
+e74d93a7224d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{"b", "\[Equal]", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.734672576606752*^9, 3.7346725847459593`*^9}, {
+  3.73467291068675*^9, 
+  3.7346729201916847`*^9}},ExpressionUUID->"9f8da068-489f-4222-a7bf-\
+abf01297ee01"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"b", "\[Equal]", "0"}],
+  HoldForm]], "Output",
+ CellChangeTimes->{3.73467292088548*^9, 
+  3.734673994427182*^9},ExpressionUUID->"ea000643-b26b-42a0-919b-\
+a3f7b9ededcd"]
+}, {2}]],
+
+Cell["In questo modo possiamo quindi riscrivere l\[CloseCurlyQuote]equazione \
+come:", "Text",
+ CellChangeTimes->{3.7346725948976583`*^9, 
+  3.734673961758295*^9},ExpressionUUID->"2f445f6b-4763-4923-adbf-\
+5c36518d5e0e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HoldForm", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"x", "-", "x0"}], ")"}], "^", "2"}]}], "+", 
+    RowBox[{"b", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"y", "-", "y0"}], ")"}], "^", "2"}]}]}], "\[Equal]", "m"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.73467260335148*^9, 
+  3.734672609975113*^9}},ExpressionUUID->"0e18c691-1b5a-45de-b25a-\
+d6b4c7d865b1"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"x", "-", "x0"}], ")"}], "2"]}], "+", 
+    RowBox[{"b", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"y", "-", "y0"}], ")"}], "2"]}]}], "\[Equal]", "m"}],
+  HoldForm]], "Output",
+ CellChangeTimes->{
+  3.734673995864555*^9},ExpressionUUID->"ba4108bd-75fa-43b1-92c9-\
+9a3d3cbb1db0"]
+}, {2}]],
+
+Cell["\<\
+Anche dall\[CloseCurlyQuote]equazione esplicita \[EGrave] possibile \
+riconoscere le coniche mediante un valore di soglia:\
+\>", "Text",
+ CellChangeTimes->{
+  3.734672623371944*^9},ExpressionUUID->"863a53f8-1e56-4899-9130-\
+38ff1c090bd0"],
 
 Cell["\<\
 (*RR significa che va scritto in rosso, BB significa che va scritto in blu, i \
-colori possono essere cambiari, basta che siano consistenti e distinguibili*)
-*CASO ac>0
-\tla conica rappresentata \[EGrave] un ellisse (o una circonferenza) di \
-centro (x0,y0)
-\t\tse a=c \[EGrave] una circonferenza di raggio r =Sqrt[m/a]
-\t\tse a!=c la conica \[EGrave] un ellisse con le seguenti caratteristiche
-\t\t\tsemiassi: Sqrt[m/a] , Sqrt[m/c]
-\t\t\teccentricit\[AGrave]: Sqrt[a-c/a] RR oppure Sqrt[c-a/c] BB
-\t\t\tvertici: (x0 +- Sqrt[m/a]; y0)  (x0; y0 +- Sqrt[m/c])
-\t\t\tfuochi:  (x0 ; y0 +- Sqrt[m(a-c)/ac]) RR oppure (x0+- Sqrt[m(c-a)/ac; \
-y0 )BB
-ESEMPI
-su appunti di aliona
+colori possono essere cambiari, basta che siano consistenti e distinguibili*)\
+\
+\>", "Item",
+ CellChangeTimes->{{3.7346727714191093`*^9, 3.7346728142687817`*^9}, {
+  3.7346769041144114`*^9, 
+  3.7346769175353193`*^9}},ExpressionUUID->"d1a6d73b-2801-4ead-b9cd-\
+dd63516de00e"]
+}, Open  ]],
 
-OSSERVAZIONE 1
-se a e c sono concordi allora m deve avere il loro stesso segno oppure essere \
-nullo altrimenti l\[CloseCurlyQuote]equazione non ha soluzioni!
- 
-OSSERVAZIONE 2
- sia k: x^2/a^2 + y^2/b^2==1, esplicitando rispetto alla variabile y possiamo \
-dire che l\[CloseCurlyQuote]ellisse \[EGrave] l\[CloseCurlyQuote]unione di \
-due funzioni seguenti definite per -a<=x<=a
- y=b/a*Sqrt[a^2-x^2] e y=-b/a*Sqrt[a^2-x^2]
- con a,b>0 semiassi dell\[CloseCurlyQuote]ellisse\
+Cell[CellGroupData[{
+
+Cell["CASO ac>0", "Subtitle",
+ CellChangeTimes->{{3.734676907327282*^9, 
+  3.7346769286102858`*^9}},ExpressionUUID->"9cc62f43-130e-41b3-ae39-\
+0c5390c8af3f"],
+
+Cell["\<\
+la conica rappresentata \[EGrave] un ellisse (o una circonferenza) di centro \
+(x0,y0)\
 \>", "Text",
- CellChangeTimes->{{3.734345329933735*^9, 
-  3.73434533873143*^9}},ExpressionUUID->"806d2acf-4f13-4aa8-92e2-\
-e7f7819f355c"],
+ CellChangeTimes->{
+  3.734672832286463*^9, {3.734674923499452*^9, 3.734674941372851*^9}, {
+   3.734675918635841*^9, 
+   3.7346759226063004`*^9}},ExpressionUUID->"189d3fb2-def1-4865-8fbb-\
+ce86e36a15cb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+    "Text", "[", 
+     "\"\<se \!\(TraditionalForm\`a = c\) \[EGrave] una circonferenza di \
+raggio \>\"", "]"}], ",", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{"r", "=", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"m", "/", "a"}], "]"}]}], "]"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.734674965307869*^9, 3.7346749827599373`*^9}, {
+  3.7346758834966393`*^9, 
+  3.734675939184025*^9}},ExpressionUUID->"d25ce8b0-ba6a-40e9-b341-\
+416a805082f1"],
+
+Cell[BoxData[
+ TemplateBox[{InterpretationBox[
+    Cell[
+     BoxData[
+      FormBox[
+      "\"se \\!\\(TraditionalForm\\`a = c\\) \[EGrave] una circonferenza di \
+raggio \"", TextForm]], "InlineText"], 
+    Text["se \!\(TraditionalForm\`a = c\) \[EGrave] una circonferenza di \
+raggio "]],TagBox[
+    RowBox[{"r", "=", 
+      SqrtBox[
+       FractionBox["m", "a"]]}], HoldForm]},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{
+  3.7346749837615967`*^9, {3.73467589627827*^9, 
+   3.7346759400992603`*^9}},ExpressionUUID->"7504cac8-5346-4135-866c-\
+14e51b5c2f51"]
+}, {2}]],
+
+Cell[TextData[{
+ "se ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "!=", "c"}], TraditionalForm]],ExpressionUUID->
+  "32075e75-0814-4b79-9443-87ce8d29434f"],
+ " la conica \[EGrave] un ellisse con le seguenti caratteristiche:"
+}], "Text",
+ CellChangeTimes->{3.734675005305134*^9, 
+  3.734676947679059*^9},ExpressionUUID->"b0b1db5d-7710-4065-97d7-\
+bff069bc44c8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Text", "[", "\"\<Semiassi: \>\"", "]"}], ",", " ", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"m", "/", "a"}], "]"}], "]"}], ",", 
+    RowBox[{"HoldForm", "[", 
+     FormBox[
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"m", "/", "c"}], "]"}],
+      TraditionalForm], "]"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7346750311947002`*^9, 3.734675102670025*^9}, {
+   3.734675860495859*^9, 3.73467587715623*^9}, 
+   3.734676353790406*^9},ExpressionUUID->"76a89a48-2722-4a52-a8b4-\
+49153ecfd057"],
+
+Cell[BoxData[
+ TemplateBox[{InterpretationBox[
+    Cell[
+     BoxData[
+      FormBox["\"Semiassi: \"", TextForm]], "InlineText"], 
+    Text["Semiassi: "]],TagBox[
+    SqrtBox[
+     FractionBox["m", "a"]], HoldForm],TagBox[
+    SqrtBox[
+     FractionBox["m", "c"]], HoldForm]},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{{3.734675080567292*^9, 3.734675103915679*^9}, {
+   3.734675870007266*^9, 3.734675874087297*^9}, 3.734676291948526*^9, 
+   3.7346763546848803`*^9},ExpressionUUID->"b29dc2f6-91a5-41cb-adf6-\
+97dbda0cf47b"]
+}, {2}]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Text", "[", "\"\<Eccentricit\[AGrave]: \>\"", "]"}], ",", " ", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"a", "-", 
+       RowBox[{"c", "/", "a"}]}], "]"}], "]"}], ",", "\"\< RR\>\"", ",", " ", 
+    "\"\< oppure \>\"", ",", " ", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"c", "-", 
+       RowBox[{"a", "/", "c"}]}], "]"}], "]"}], ",", " ", "\"\< BB\>\""}], 
+   "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.734676314850843*^9, 3.734676478854114*^9}, {
+  3.734676528075287*^9, 
+  3.734676529828476*^9}},ExpressionUUID->"2defe5b8-3c94-42b8-b447-\
+889acb7d0e83"],
+
+Cell[BoxData[
+ TemplateBox[{InterpretationBox[
+    Cell[
+     BoxData[
+      FormBox["\"Eccentricit\[AGrave]: \"", TextForm]], "InlineText"], 
+    Text["Eccentricit\[AGrave]: "]],TagBox[
+    SqrtBox[
+     RowBox[{"a", "-", 
+       FractionBox["c", "a"]}]], HoldForm],"\" RR\"","\" oppure \"",TagBox[
+    SqrtBox[
+     RowBox[{"c", "-", 
+       FractionBox["a", "c"]}]], HoldForm],"\" BB\""},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{
+  3.73467639712267*^9, {3.73467644285443*^9, 3.734676480039433*^9}, 
+   3.734676534173378*^9},ExpressionUUID->"be5ecfb2-0563-4a9e-be04-\
+295ef728483b"]
+}, {2}]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Text", "[", "\"\<Vertici: \>\"", "]"}], ",", " ", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x0", "+", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"m", "/", "a"}], "]"}]}]}], ",", "y0"}], "}"}], "]"}], ",", 
+    "\"\< RR\>\"", ",", " ", "\"\< oppure \>\"", ",", " ", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{"{", 
+      RowBox[{"x0", ",", 
+       RowBox[{"y0", "+", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"m", "/", "c"}], "]"}]}]}]}], "}"}], "]"}], ",", " ", 
+    "\"\< BB\>\""}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.734676501057564*^9, 
+  3.7346765813476763`*^9}},ExpressionUUID->"4ef024ab-2f66-4edb-8b23-\
+e92481a2826e"],
+
+Cell[BoxData[
+ TemplateBox[{InterpretationBox[
+    Cell[
+     BoxData[
+      FormBox["\"Vertici: \"", TextForm]], "InlineText"], 
+    Text["Vertici: "]],TagBox[
+    RowBox[{"{", 
+      RowBox[{
+        RowBox[{"x0", "-", 
+          SqrtBox[
+           FractionBox["m", "a"]]}], ",", "y0"}], "}"}], HoldForm],"\" RR\"",
+   "\" oppure \"",TagBox[
+    RowBox[{"{", 
+      RowBox[{"x0", ",", 
+        RowBox[{"y0", "-", 
+          SqrtBox[
+           FractionBox["m", "c"]]}]}], "}"}], HoldForm],"\" BB\""},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{
+  3.734676583044608*^9},ExpressionUUID->"515924fc-e183-4f29-9a53-\
+6d6a67e12d5a"]
+}, {2}]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Text", "[", "\"\<Fuochi: \>\"", "]"}], ",", " ", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{"{", 
+      RowBox[{"x0", ",", 
+       RowBox[{"y0", "+", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"m", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"a", "-", "c"}], ")"}], "/", "ac"}]}], "]"}]}]}]}], 
+      "}"}], "]"}], ",", "\"\< RR\>\"", ",", " ", "\"\< oppure \>\"", ",", 
+    " ", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x0", "+", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"m", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"c", "-", "a"}], ")"}], "/", "ac"}]}], "]"}]}]}], ",", 
+       "y0"}], "}"}], "]"}], ",", " ", "\"\< BB\>\""}], "}"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.734676602588167*^9, 
+  3.734676649551807*^9}},ExpressionUUID->"a1c0190d-7acd-42a9-bdfe-\
+4c525ef71054"],
+
+Cell[BoxData[
+ TemplateBox[{InterpretationBox[
+    Cell[
+     BoxData[
+      FormBox["\"Fuochi: \"", TextForm]], "InlineText"], 
+    Text["Fuochi: "]],TagBox[
+    RowBox[{"{", 
+      RowBox[{"x0", ",", 
+        RowBox[{"y0", "-", 
+          SqrtBox[
+           FractionBox[
+            RowBox[{"m", " ", 
+              RowBox[{"(", 
+                RowBox[{"a", "-", "c"}], ")"}]}], "ac"]]}]}], "}"}], 
+    HoldForm],"\" RR\"","\" oppure \"",TagBox[
+    RowBox[{"{", 
+      RowBox[{
+        RowBox[{"x0", "-", 
+          SqrtBox[
+           FractionBox[
+            RowBox[{"m", " ", 
+              RowBox[{"(", 
+                RowBox[{"c", "-", "a"}], ")"}]}], "ac"]]}], ",", "y0"}], 
+      "}"}], HoldForm],"\" BB\""},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{
+  3.734676650356504*^9},ExpressionUUID->"067d1a73-da15-413e-8072-\
+b453d3742f92"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ESEMPI", "Subtitle",
+ CellChangeTimes->{
+  3.734676795202221*^9},ExpressionUUID->"57fc3bf9-d1a5-40c0-aad1-\
+8bcddf078f0b"],
+
+Cell["su appunti di aliona", "Text",
+ CellChangeTimes->{
+  3.734676843574375*^9},ExpressionUUID->"82a4c35b-2d89-4c52-bc61-\
+df65159ec8f5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["OSSERVAZIONE 1", "Subtitle",
+ CellChangeTimes->{
+  3.734676858190827*^9},ExpressionUUID->"ee061305-e355-42b5-a754-\
+8201b62cacb5"],
+
+Cell["\<\
+se a e c sono concordi allora m deve avere il loro stesso segno oppure essere \
+nullo altrimenti l\[CloseCurlyQuote]equazione non ha soluzioni!\
+\>", "Text",
+ CellChangeTimes->{
+  3.7346769685348587`*^9},ExpressionUUID->"2d244afb-b040-4f4c-b1ad-\
+381cd0eebbc6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["OSSERVAZIONE 2", "Subtitle",
+ CellChangeTimes->{
+  3.734676979145824*^9},ExpressionUUID->"8e1e1cdb-c16f-47f8-9e30-\
+cd677b5a2ad7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<Sia \>\"", ",", " ", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "/", 
+        RowBox[{"a", "^", "2"}]}], "+", 
+       RowBox[{
+        RowBox[{"y", "^", "2"}], "/", 
+        RowBox[{"b", "^", "2"}]}]}], "\[Equal]", "1"}], "]"}], ",", " ", 
+    "\"\< esplicitando rispetto alla variabile y possiamo dire che l'ellisse \
+\[EGrave] l'unione di due funzioni definite per \>\"", ",", " ", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{
+      RowBox[{"-", "a"}], "\[LessEqual]", " ", "x", " ", "\[LessEqual]", " ", 
+      "a"}], "]"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.734683822406425*^9, 3.734683833944875*^9}, {
+   3.734683963800337*^9, 3.734684042470374*^9}, 
+   3.7346842962021713`*^9},ExpressionUUID->"5a9ced9e-5cd7-4faa-8385-\
+ccce68441bfd"],
+
+Cell[BoxData[
+ TemplateBox[{"\"Sia \"",TagBox[
+    RowBox[{
+      RowBox[{
+        FractionBox[
+         SuperscriptBox["x", "2"], 
+         SuperscriptBox["a", "2"]], "+", 
+        FractionBox[
+         SuperscriptBox["y", "2"], 
+         SuperscriptBox["b", "2"]]}], "\[Equal]", "1"}], HoldForm],
+   "\" esplicitando rispetto alla variabile y possiamo dire che l'ellisse \
+\[EGrave] l'unione di due funzioni definite per \"",TagBox[
+    RowBox[{
+      RowBox[{"-", "a"}], "\[LessEqual]", "x", "\[LessEqual]", "a"}], 
+    HoldForm]},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{{3.734684033790406*^9, 3.734684043704114*^9}, 
+   3.7346842974183893`*^9},ExpressionUUID->"702e967c-f718-4c33-bcf8-\
+0fc857d20fd0"]
+}, {2}]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"HoldForm", "[", 
+     RowBox[{"y", "=", 
+      RowBox[{
+       RowBox[{"b", "/", "a"}], "*", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{
+         RowBox[{"a", "^", "2"}], "-", 
+         RowBox[{"x", "^", "2"}]}], "]"}]}]}], "]"}], ",", " ", "\"\< e \>\"",
+     ",", " ", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{"y", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "b"}], "/", "a"}], "*", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{
+         RowBox[{"a", "^", "2"}], "-", 
+         RowBox[{"x", "^", "2"}]}], "]"}]}]}], "]"}], ",", " ", 
+    "\"\< con \>\"", ",", " ", 
+    RowBox[{
+     RowBox[{"a", ">", "0"}], " ", "&&", " ", 
+     RowBox[{"b", ">", "0"}]}], ",", " ", "\"\< assi dell'ellisse\>\""}], 
+   "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7346840685114098`*^9, 
+  3.734684158761778*^9}},ExpressionUUID->"41153a45-0b1f-4daa-98ed-\
+d2cdeb9e0808"],
+
+Cell[BoxData[
+ TemplateBox[{TagBox[
+    RowBox[{"y", "=", 
+      FractionBox[
+       RowBox[{"b", " ", 
+         SqrtBox[
+          RowBox[{
+            SuperscriptBox["a", "2"], "-", 
+            SuperscriptBox["x", "2"]}]]}], "a"]}], HoldForm],"\" e \"",TagBox[
+   
+    RowBox[{"y", "=", 
+      RowBox[{"-", 
+        FractionBox[
+         RowBox[{"b", " ", 
+           SqrtBox[
+            RowBox[{
+              SuperscriptBox["a", "2"], "-", 
+              SuperscriptBox["x", "2"]}]]}], "a"]}]}], HoldForm],"\" con \"",
+   RowBox[{
+     RowBox[{"a", ">", "0"}], "&&", 
+     RowBox[{"b", ">", "0"}]}],"\" assi dell'ellisse\""},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{3.734684119789361*^9, 
+  3.734684160729806*^9},ExpressionUUID->"fe28691f-d357-432f-94b4-\
+d7193babe3ea"]
+}, {2}]],
 
 Cell[BoxData[
  RowBox[{
@@ -301,111 +996,244 @@ Cell[BoxData[
     "i", " ", "colori", " ", "delle", " ", "due", " ", "curve"}], "*)"}], 
   "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"ContourPlot", "[", 
+   RowBox[{"ShowEllisse", ":=", 
+    RowBox[{"(", 
+     RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
       RowBox[{
+       RowBox[{"ContourPlot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"y", "==", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"b", "/", "a"}], ")"}], "*", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"a", "^", "2"}], ")"}], "-", 
+               RowBox[{"(", 
+                RowBox[{"x", "^", "2"}], ")"}]}], "]"}]}]}], ",", 
+           RowBox[{"y", "\[Equal]", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{"b", "/", "a"}], ")"}]}], "*", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"a", "^", "2"}], ")"}], "-", 
+               RowBox[{"(", 
+                RowBox[{"x", "^", "2"}], ")"}]}], "]"}]}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", 
+           RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", 
+           RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", " ", 
+         RowBox[{"Axes", "\[Rule]", "True"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
        RowBox[{"{", 
         RowBox[{
-         RowBox[{"y", "==", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{"b", "/", "a"}], ")"}], "*", 
-           RowBox[{"Sqrt", "[", 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"a", "^", "2"}], ")"}], "-", 
-             RowBox[{"(", 
-              RowBox[{"x", "^", "2"}], ")"}]}], "]"}]}]}], ",", 
-         RowBox[{"y", "\[Equal]", 
-          RowBox[{
-           RowBox[{"-", 
-            RowBox[{"(", 
-             RowBox[{"b", "/", "a"}], ")"}]}], "*", 
-           RowBox[{"Sqrt", "[", 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"a", "^", "2"}], ")"}], "-", 
-             RowBox[{"(", 
-              RowBox[{"x", "^", "2"}], ")"}]}], "]"}]}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"a", ",", "1", ",", "\"\<a\>\""}], "}"}], ",", "1", ",", 
+         "10", ",", "1", ",", 
+         RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+       "\[IndentingNewLine]", 
        RowBox[{"{", 
-        RowBox[{"x", ",", 
-         RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"y", ",", 
-         RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
-       RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", " ", 
-       RowBox[{"Axes", "\[Rule]", "True"}]}], "]"}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"a", ",", "1", ",", "\"\<a\>\""}], "}"}], ",", "1", ",", "10",
-        ",", "1", ",", 
-       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"b", ",", "1", ",", "\"\<b\>\""}], "}"}], ",", "1", ",", "10",
-        ",", "1", ",", 
-       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
-    "\[IndentingNewLine]", "]"}], ";"}]}]], "Input",
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"b", ",", "1", ",", "\"\<b\>\""}], "}"}], ",", "1", ",", 
+         "10", ",", "1", ",", 
+         RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+      "\[IndentingNewLine]", "]"}], ")"}]}], ";"}]}]], "Input",
  CellChangeTimes->{{3.7343448210686073`*^9, 3.734344852121242*^9}, {
    3.7343450869356537`*^9, 3.7343452466031513`*^9}, 3.734345323898638*^9, 
-   3.734345355058792*^9},ExpressionUUID->"f234dfa9-3bd6-438f-88bd-\
-560e369f1588"],
+   3.734345355058792*^9, {3.734668121218729*^9, 3.734668135366394*^9}, {
+   3.7346770190654507`*^9, 
+   3.734677035676996*^9}},ExpressionUUID->"f234dfa9-3bd6-438f-88bd-\
+560e369f1588"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["OSSERVAZIONE 3", "Subtitle",
+ CellChangeTimes->{{3.7346771839069223`*^9, 
+  3.7346771872675457`*^9}},ExpressionUUID->"509c4350-cf34-42c1-a684-\
+40e5a2bf1820"],
+
+Cell["\<\
+sia V: x^2+y^2=r^2 esplicitando rispetto alla variabile y possiamo dire che \
+la circonferenza \[EGrave] dunque l\[CloseCurlyQuote]unione di due \
+semicirconferenze, quella di equazione y=Sqrt[r^2-x^2] e che appartiene al \
+semipiano delle ordinate positiva o nulle, e a quella simmetrica alla \
+precedente risperro all\[CloseCurlyQuote]asse x, ossia  y=-Sqrt[r^2-x^2]\
+\>", "Text",
+ CellChangeTimes->{{3.7346759766222773`*^9, 3.73467598100214*^9}, {
+  3.734676090444087*^9, 3.734676133290614*^9}, {3.734676165735757*^9, 
+  3.7346762570663853`*^9}, {3.73467718215763*^9, 
+  3.734677196385702*^9}},ExpressionUUID->"5b03f957-3efa-47f2-afd4-\
+0fede5c53619"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ShowCirconferenza", ":=", 
+   RowBox[{"(", 
+    RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"ContourPlot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"y", "==", 
+           RowBox[{"Sqrt", "[", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"r", "^", "2"}], ")"}], "-", 
+             RowBox[{"(", 
+              RowBox[{"x", "^", "2"}], ")"}]}], "]"}]}], ",", 
+          RowBox[{"y", "\[Equal]", 
+           RowBox[{"-", 
+            RowBox[{"Sqrt", "[", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"r", "^", "2"}], ")"}], "-", 
+              RowBox[{"(", 
+               RowBox[{"x", "^", "2"}], ")"}]}], "]"}]}]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"y", ",", 
+          RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+        RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", " ", 
+        RowBox[{"Axes", "\[Rule]", "True"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"r", ",", "1", ",", "\"\<raggio\>\""}], "}"}], ",", "1", ",",
+         "10", ",", "1", ",", 
+        RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+     "\[IndentingNewLine]", "]"}], ")"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7346759900256844`*^9, 3.734676015266932*^9}, {
+   3.73467604651721*^9, 3.73467607728074*^9}, 3.7346762676083117`*^9, {
+   3.734677041008338*^9, 
+   3.734677054060452*^9}},ExpressionUUID->"3d76f4bf-d48a-4d8e-b780-\
+b0f1e121e2ca"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["CASO ac==0", "Subtitle",
+ CellChangeTimes->{{3.734677449753715*^9, 
+  3.73467745220461*^9}},ExpressionUUID->"a847f8e7-579d-47fe-9203-\
+50c7e320187f"],
 
 Cell["\<\
 (*RR significa che va scritto in rosso, BB significa che va scritto in blu, i \
 colori possono essere cambiari, basta che siano consistenti e distinguibili*)
-*CASO ac==0
 la conica rappresentata \[EGrave] una parabola con asse parallelo all\
 \[CloseCurlyQuote]asse delle ascisse se a==0 o a quello delle ordinate se \
 c==0
 \t\t\tasse: x=-b/2a RR , y=-b/2a BB
 \t\t\tdirettrice: x= -1+D/4a RR oppure y= -1+D/4a BB
 \t\t\tvertice:  (-b/2a;-D/4a) RR oppure (-D/4a;-b/2a)BB
-\t\t\tfuoco: (-b/2a;1-D/4a) RR oppure (1-D/4a;-b/2a)BB
-
-ESEMPI  su appunti aliona\
+\t\t\tfuoco: (-b/2a;1-D/4a) RR oppure (1-D/4a;-b/2a)BB\
 \>", "Text",
+ CellChangeTimes->{
+  3.7346772178693943`*^9, {3.734677448279729*^9, 
+   3.73467746105156*^9}},ExpressionUUID->"f4d5b9c7-1f13-45a0-91bc-\
+9b4187aa381b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ESEMPI  ", "Subtitle",
+ CellChangeTimes->{
+  3.734677229402562*^9},ExpressionUUID->"f60fed91-296b-4afe-9f61-\
+ac6df1068d5e"],
+
+Cell["su appunti aliona", "Text",
  CellChangeTimes->{{3.734345365405908*^9, 3.7343454961444674`*^9}, {
   3.73434560916098*^9, 3.7343456341954813`*^9}, {3.734345969240519*^9, 
   3.734345975069541*^9}, {3.734346030406301*^9, 3.7343460694571743`*^9}, {
   3.734346119482335*^9, 3.734346147072075*^9}, {3.734346218395338*^9, 
   3.734346258141588*^9}, {3.734346409810817*^9, 3.734346525235005*^9}, {
-  3.734346565582922*^9, 
-  3.734346652488332*^9}},ExpressionUUID->"3eade9f8-dbbb-4678-ab8b-\
-e51519df1f2b"],
+  3.734346565582922*^9, 3.734346652488332*^9}, {3.7346772074795723`*^9, 
+  3.734677249350132*^9}},ExpressionUUID->"3eade9f8-dbbb-4678-ab8b-\
+e51519df1f2b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["CASO ac<0", "Subtitle",
+ CellChangeTimes->{{3.734677276086021*^9, 
+  3.734677288294427*^9}},ExpressionUUID->"f7727d6d-f9bb-4f92-b259-\
+3af36ccd457e"],
 
 Cell["\<\
 (*RR significa che va scritto in rosso, BB significa che va scritto in blu, i \
 colori possono essere cambiari, basta che siano consistenti e distinguibili*)
 (*ricontrollare con aliona le formule di eccentricit\[AGrave] e fuochi*)
-*CASO ac<0
 la conica rappresentata \[EGrave] un iperbole con le seguenti caratteristiche
 \t\t\tcentro: O(x0,y0)
 \t\t\tsemiassi: Sqrt[m/a] , Sqrt[m/c]
 \t\t\teccentricit\[AGrave]: Sqrt[c-a/c] RR oppure Sqrt[c-a/a] BB
 \t\t\tvertici: (x0 +- Sqrt[m/a]; y0)  (x0; y0 +- Sqrt[m/c])
 \t\t\tfuochi:  (x0 ; y0 +- Sqrt[m(a-c)/ac]) RR oppure (x0+- Sqrt[m(c-a)/ac; \
-y0 )BB
+y0 )BB\
+\>", "Text",
+ CellChangeTimes->{
+  3.734677316436064*^9},ExpressionUUID->"6beba734-37ae-48aa-b49b-\
+ee900050a454"]
+}, Open  ]],
 
-ESEMPI  su appunti aliona
+Cell[CellGroupData[{
 
-OSSERVAZIONE 1
-se a e c sono discordi allora l\[CloseCurlyQuote]equazione ha soluzioni
+Cell["ESEMPI ", "Subtitle",
+ CellChangeTimes->{
+  3.734677326530477*^9},ExpressionUUID->"102c25af-5210-4782-8c2c-\
+9db4f191f9ef"],
 
-OSSERVAZIONE 2
+Cell[" su appunti aliona", "Text",
+ CellChangeTimes->{
+  3.7346773404988413`*^9},ExpressionUUID->"2c735599-6b8c-4ce3-94d0-\
+0d7061cffc17"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["OSSERVAZIONE 1", "Subtitle",
+ CellChangeTimes->{{3.7346773767192*^9, 
+  3.734677390060226*^9}},ExpressionUUID->"146ce749-3edf-4512-a59b-\
+eb206728b950"],
+
+Cell["se a e c sono discordi allora l\[CloseCurlyQuote]equazione ha \
+soluzioni", "Text",
+ CellChangeTimes->{{3.734346012490822*^9, 3.7343460224305773`*^9}, {
+  3.7346772739872704`*^9, 
+  3.734677425909565*^9}},ExpressionUUID->"d18c4f67-2ee6-428f-a543-\
+82e3777ab763"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["OSSERVAZIONE 2", "Subtitle",
+ CellChangeTimes->{
+  3.734677406019207*^9},ExpressionUUID->"b96b83eb-37b4-4a76-9bc9-\
+1fa7b85f0edf"],
+
+Cell["\<\
 sia k: x^2/a^2 - y^2/b^2==1, esplicitando questa espressione rispetto alla \
 variabile y possiamo dire che l\[CloseCurlyQuote]IPERBOLE \[EGrave] l\
 \[CloseCurlyQuote]unione dei grafici delle due seguenti funzioni, definite \
 per |x|<=a\
 \>", "Text",
- CellChangeTimes->{{3.734346012490822*^9, 
-  3.7343460224305773`*^9}},ExpressionUUID->"d18c4f67-2ee6-428f-a543-\
-82e3777ab763"],
+ CellChangeTimes->{
+  3.734677423969555*^9},ExpressionUUID->"3400afe4-4528-478c-a095-\
+16a0e8dcc26b"],
 
 Cell[BoxData[
  RowBox[{
@@ -417,60 +1245,68 @@ Cell[BoxData[
     " ", "essere", " ", "sempre", " ", "minore", " ", "di", " ", "a"}], 
    "*)"}], "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"ContourPlot", "[", 
+   RowBox[{"ShowIperbole", ":=", 
+    RowBox[{"(", 
+     RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
       RowBox[{
+       RowBox[{"ContourPlot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"y", "==", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"b", "/", "a"}], ")"}], "*", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{
+               RowBox[{"-", 
+                RowBox[{"(", 
+                 RowBox[{"a", "^", "2"}], ")"}]}], "+", 
+               RowBox[{"(", 
+                RowBox[{"x", "^", "2"}], ")"}]}], "]"}]}]}], ",", 
+           RowBox[{"y", "\[Equal]", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{"b", "/", "a"}], ")"}]}], "*", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{
+               RowBox[{"-", 
+                RowBox[{"(", 
+                 RowBox[{"a", "^", "2"}], ")"}]}], "+", 
+               RowBox[{"(", 
+                RowBox[{"x", "^", "2"}], ")"}]}], "]"}]}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", 
+           RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", 
+           RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", " ", 
+         RowBox[{"Axes", "\[Rule]", "True"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
        RowBox[{"{", 
         RowBox[{
-         RowBox[{"y", "==", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{"b", "/", "a"}], ")"}], "*", 
-           RowBox[{"Sqrt", "[", 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"a", "^", "2"}], ")"}], "-", 
-             RowBox[{"(", 
-              RowBox[{"x", "^", "2"}], ")"}]}], "]"}]}]}], ",", 
-         RowBox[{"y", "\[Equal]", 
-          RowBox[{
-           RowBox[{"-", 
-            RowBox[{"(", 
-             RowBox[{"b", "/", "a"}], ")"}]}], "*", 
-           RowBox[{"Sqrt", "[", 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"a", "^", "2"}], ")"}], "-", 
-             RowBox[{"(", 
-              RowBox[{"x", "^", "2"}], ")"}]}], "]"}]}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"a", ",", "1", ",", "\"\<a\>\""}], "}"}], ",", "1", ",", 
+         "10", ",", "1", ",", 
+         RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+       "\[IndentingNewLine]", 
        RowBox[{"{", 
-        RowBox[{"x", ",", 
-         RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"y", ",", 
-         RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
-       RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", " ", 
-       RowBox[{"Axes", "\[Rule]", "True"}]}], "]"}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"a", ",", "1", ",", "\"\<a\>\""}], "}"}], ",", "1", ",", "10",
-        ",", "1", ",", 
-       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"b", ",", "1", ",", "\"\<b\>\""}], "}"}], ",", "1", ",", "10",
-        ",", "1", ",", 
-       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
-    "\[IndentingNewLine]", "]"}], ";"}]}]], "Input",
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"b", ",", "1", ",", "\"\<b\>\""}], "}"}], ",", "1", ",", 
+         "10", ",", "1", ",", 
+         RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+      "\[IndentingNewLine]", "]"}], ")"}]}], ";"}]}]], "Input",
  CellChangeTimes->{
-  3.7343462428743887`*^9},ExpressionUUID->"83dff630-70b7-422c-9c49-\
-09fdf9af298c"]
-}, Open  ]],
+  3.7343462428743887`*^9, {3.7346681744005537`*^9, 3.7346681792334023`*^9}, {
+   3.734673519342638*^9, 3.734673538382978*^9}, {3.734673570393879*^9, 
+   3.734673577574872*^9}, {3.734673730432763*^9, 3.734673745578434*^9}, {
+   3.734673899001122*^9, 3.73467393213702*^9}, {3.734675956875166*^9, 
+   3.7346759616075563`*^9}, {3.734677065566737*^9, 
+   3.734677073158943*^9}},ExpressionUUID->"83dff630-70b7-422c-9c49-\
+09fdf9af298c"],
 
 Cell[CellGroupData[{
 
@@ -514,6 +1350,7 @@ Cell["su appunti aliona", "Text",
 5b2185bfbe3f"]
 }, Open  ]]
 }, Open  ]]
+}, Open  ]]
 },
 WindowSize->{1366, 716},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
@@ -536,40 +1373,176 @@ Cell[CellGroupData[{
 Cell[1210, 39, 272, 4, 98, "Title",ExpressionUUID->"95d1a414-3754-4795-830a-9fb748b16103"],
 Cell[CellGroupData[{
 Cell[1507, 47, 189, 3, 68, "Section",ExpressionUUID->"31f5e90a-97da-45f1-9158-6af02bf4a456"],
-Cell[1699, 52, 481, 12, 150, "Text",ExpressionUUID->"02a82ad7-8b6a-47e9-bd55-a429e92b9e4b"]
+Cell[1699, 52, 281, 4, 35, "Text",ExpressionUUID->"02a82ad7-8b6a-47e9-bd55-a429e92b9e4b"],
+Cell[1983, 58, 166, 3, 32, "Item",ExpressionUUID->"d678e849-b8d8-4abd-90a7-f98ccdd7bd6f"],
+Cell[CellGroupData[{
+Cell[2174, 65, 369, 11, 31, "Input",ExpressionUUID->"b0b5e6ea-554a-4ed2-ad97-91b97a318ee9"],
+Cell[2546, 78, 334, 12, 37, "Output",ExpressionUUID->"06f3ef87-9d75-49b5-acd6-0fdc44e92b1f"]
+}, {2}]],
+Cell[2892, 93, 200, 4, 32, "Item",ExpressionUUID->"375486b6-833b-467c-a3bf-5bf71522219e"],
+Cell[CellGroupData[{
+Cell[3117, 101, 324, 7, 30, "Input",ExpressionUUID->"7d04a492-081a-4bd7-9dd8-d7453aeb35dd"],
+Cell[3444, 110, 229, 7, 35, "Output",ExpressionUUID->"96a50fa9-c418-4345-95b6-f9bf17b67a0e"]
+}, {2}]],
+Cell[3685, 120, 286, 7, 32, "Item",ExpressionUUID->"d13ee059-b70d-496e-be92-e6d25a3b6640"],
+Cell[CellGroupData[{
+Cell[3996, 131, 343, 9, 31, "Input",ExpressionUUID->"1b6311d3-1b91-4371-9246-d52ed28e395d"],
+Cell[4342, 142, 310, 10, 37, "Output",ExpressionUUID->"413bc7d9-54cc-47e0-a5d6-f0b8864d1f69"]
+}, {2}]],
+Cell[4664, 155, 197, 4, 35, "Text",ExpressionUUID->"e6ab8cac-8e38-415d-a550-dcee4ab6247a"],
+Cell[CellGroupData[{
+Cell[4886, 163, 375, 9, 31, "Input",ExpressionUUID->"dbf9a836-e5d9-4902-b961-a284ce83f290"],
+Cell[5264, 174, 291, 9, 35, "Output",ExpressionUUID->"6bd818d9-71e8-4ae5-81a3-566ba023927b"]
+}, {2}]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2217, 69, 252, 4, 68, "Section",ExpressionUUID->"91249406-1ef7-4fe6-a09e-cc43bbee4da8"],
-Cell[CellGroupData[{
-Cell[2494, 77, 157, 3, 31, "Input",ExpressionUUID->"ff49abe8-1c91-46c1-af32-7cc948e76746"],
-Cell[2654, 82, 4399, 86, 719, "Output",ExpressionUUID->"8ffebac6-df28-4289-9f97-a9c62edcc793"]
-}, Open  ]],
-Cell[7068, 171, 637, 11, 58, "Text",ExpressionUUID->"58c4bdda-1e96-453a-b76f-46e29682bcf9"]
+Cell[5601, 189, 252, 4, 68, "Section",ExpressionUUID->"91249406-1ef7-4fe6-a09e-cc43bbee4da8"],
+Cell[5856, 195, 196, 4, 31, "Input",ExpressionUUID->"ff49abe8-1c91-46c1-af32-7cc948e76746"],
+Cell[6055, 201, 637, 11, 58, "Text",ExpressionUUID->"58c4bdda-1e96-453a-b76f-46e29682bcf9"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7742, 187, 233, 4, 68, "Section",ExpressionUUID->"85950cc6-5dea-45af-ba49-2ed92ac748db"],
-Cell[7978, 193, 716, 12, 104, "Text",ExpressionUUID->"7c9fde7b-590d-44c3-b4fc-4ed1370e9540"]
+Cell[6729, 217, 233, 4, 68, "Section",ExpressionUUID->"85950cc6-5dea-45af-ba49-2ed92ac748db"],
+Cell[6965, 223, 533, 10, 58, "Text",ExpressionUUID->"7c9fde7b-590d-44c3-b4fc-4ed1370e9540"],
+Cell[CellGroupData[{
+Cell[7523, 237, 301, 8, 31, "Input",ExpressionUUID->"372a18c0-edb6-429c-961b-9e3d279a2dfd"],
+Cell[7827, 247, 270, 9, 37, "Output",ExpressionUUID->"fae858a3-faaa-4023-866b-733b569f23de"]
+}, {2}]],
+Cell[8109, 259, 307, 7, 35, "Text",ExpressionUUID->"d85460eb-7d87-4fef-a655-b03ce3968059"],
+Cell[CellGroupData[{
+Cell[8441, 270, 412, 13, 31, "Input",ExpressionUUID->"4107950e-8a7b-42ff-be6b-8f08e7978287"],
+Cell[8856, 285, 381, 14, 58, "Output",ExpressionUUID->"a0feb004-96c6-4892-ae61-47b5d81d7d00"]
+}, {2}]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8731, 210, 289, 4, 68, "Section",ExpressionUUID->"1cad8bef-345d-4434-8be2-377896680055"],
-Cell[9023, 216, 564, 12, 127, "Text",ExpressionUUID->"e0013e71-7b00-4189-8396-2da735c2796d"]
+Cell[9283, 305, 317, 5, 68, "Section",ExpressionUUID->"1cad8bef-345d-4434-8be2-377896680055"],
+Cell[9603, 312, 439, 9, 35, "Text",ExpressionUUID->"e0013e71-7b00-4189-8396-2da735c2796d"],
+Cell[CellGroupData[{
+Cell[10067, 325, 291, 8, 31, "Input",ExpressionUUID->"3503f617-8d6c-4bd1-a66c-b637ee87941f"],
+Cell[10361, 335, 258, 9, 37, "Output",ExpressionUUID->"1df80a37-8bdd-4a88-8f32-9c6b6e70bbf8"]
+}, {2}]],
+Cell[10631, 347, 134, 3, 35, "Text",ExpressionUUID->"346dd2d0-afb7-46a7-8b0e-6c989dc8297f"],
+Cell[CellGroupData[{
+Cell[10790, 354, 214, 5, 31, "Input",ExpressionUUID->"868b60e2-d9d1-48dc-9cfc-551b76557fc2"],
+Cell[11007, 361, 175, 6, 35, "Output",ExpressionUUID->"04ace6b5-ef31-414c-bf4e-207854c7091a"]
+}, {2}]],
+Cell[11194, 370, 264, 7, 35, "Text",ExpressionUUID->"babbe1af-4169-4a46-9aff-d78c3aa17659"],
+Cell[CellGroupData[{
+Cell[11483, 381, 285, 7, 31, "Input",ExpressionUUID->"0ca6f081-8d3b-43de-85f1-70a90f21e39e"],
+Cell[11771, 390, 240, 8, 35, "Output",ExpressionUUID->"0253dc4a-d051-469a-91d1-b8a6dcb56940"]
+}, {2}]],
+Cell[CellGroupData[{
+Cell[12045, 403, 219, 5, 31, "Input",ExpressionUUID->"90ab8dcf-845a-451d-b45f-dca4fdec0823"],
+Cell[12267, 410, 182, 6, 35, "Output",ExpressionUUID->"932b1675-ab9f-4027-b49e-bfaba4c037f5"]
+}, {2}]],
+Cell[12461, 419, 178, 3, 35, "Text",ExpressionUUID->"b27a4f5f-7cc7-4786-b917-5f2b3a0e9aa1"],
+Cell[CellGroupData[{
+Cell[12664, 426, 210, 5, 31, "Input",ExpressionUUID->"c27b39d3-41ca-4193-866a-0291c9f9c8ff"],
+Cell[12877, 433, 172, 5, 35, "Output",ExpressionUUID->"9577f4c3-9cc5-4949-84e1-36bf220d94f9"]
+}, {2}]],
+Cell[13061, 441, 179, 3, 35, "Text",ExpressionUUID->"2fbe5410-57d7-4bef-9701-22c24eacfa43"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9624, 233, 418, 7, 68, "Section",ExpressionUUID->"a83ab051-6db0-40a1-bf10-7a4c0218d651"],
-Cell[10045, 242, 1047, 19, 127, "Text",ExpressionUUID->"e7c64d98-e4a8-41f6-8b98-5b9035be8c36"],
-Cell[11095, 263, 1291, 29, 449, "Text",ExpressionUUID->"806d2acf-4f13-4aa8-92e2-e7f7819f355c"],
-Cell[12389, 294, 2370, 62, 147, "Input",ExpressionUUID->"f234dfa9-3bd6-438f-88bd-560e369f1588"],
-Cell[14762, 358, 1040, 21, 219, "Text",ExpressionUUID->"3eade9f8-dbbb-4678-ab8b-e51519df1f2b"],
-Cell[15805, 381, 1109, 26, 403, "Text",ExpressionUUID->"d18c4f67-2ee6-428f-a543-82e3777ab763"],
-Cell[16917, 409, 2294, 62, 147, "Input",ExpressionUUID->"83dff630-70b7-422c-9c49-09fdf9af298c"]
+Cell[13277, 449, 418, 7, 68, "Section",ExpressionUUID->"a83ab051-6db0-40a1-bf10-7a4c0218d651"],
+Cell[13698, 458, 821, 13, 35, "Text",ExpressionUUID->"e7c64d98-e4a8-41f6-8b98-5b9035be8c36"],
+Cell[CellGroupData[{
+Cell[14544, 475, 341, 9, 31, "Input",ExpressionUUID->"b9f342c8-fa3a-478f-8a78-7a20d35f98cb"],
+Cell[14888, 486, 308, 10, 37, "Output",ExpressionUUID->"dfb36aec-efa5-4a5c-9443-04cdee3bba48"]
+}, {2}]],
+Cell[15208, 499, 157, 3, 35, "Text",ExpressionUUID->"6e96e8d0-4899-4331-b57e-e74d93a7224d"],
+Cell[CellGroupData[{
+Cell[15390, 506, 269, 6, 31, "Input",ExpressionUUID->"9f8da068-489f-4222-a7bf-abf01297ee01"],
+Cell[15662, 514, 203, 6, 35, "Output",ExpressionUUID->"ea000643-b26b-42a0-919b-a3f7b9ededcd"]
+}, {2}]],
+Cell[15877, 523, 220, 4, 35, "Text",ExpressionUUID->"2f445f6b-4763-4923-adbf-5c36518d5e0e"],
+Cell[CellGroupData[{
+Cell[16122, 531, 447, 15, 31, "Input",ExpressionUUID->"0e18c691-1b5a-45de-b25a-d6b4c7d865b1"],
+Cell[16572, 548, 422, 15, 37, "Output",ExpressionUUID->"ba4108bd-75fa-43b1-92c9-9a3d3cbb1db0"]
+}, {2}]],
+Cell[17006, 566, 248, 6, 35, "Text",ExpressionUUID->"863a53f8-1e56-4899-9130-38ff1c090bd0"],
+Cell[17257, 574, 366, 8, 32, "Item",ExpressionUUID->"d1a6d73b-2801-4ead-b9cd-dd63516de00e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19248, 476, 403, 6, 68, "Section",ExpressionUUID->"d7ab4492-7178-4995-b469-38e2aef0a751"],
-Cell[19654, 484, 456, 12, 150, "Text",ExpressionUUID->"a9100429-28f8-4809-92d4-14f5f2bec321"]
+Cell[17660, 587, 157, 3, 54, "Subtitle",ExpressionUUID->"9cc62f43-130e-41b3-ae39-0c5390c8af3f"],
+Cell[17820, 592, 314, 8, 35, "Text",ExpressionUUID->"189d3fb2-def1-4865-8fbb-ce86e36a15cb"],
+Cell[CellGroupData[{
+Cell[18159, 604, 531, 15, 34, "Input",ExpressionUUID->"d25ce8b0-ba6a-40e9-b341-416a805082f1"],
+Cell[18693, 621, 563, 16, 61, "Output",ExpressionUUID->"7504cac8-5346-4135-866c-14e51b5c2f51"]
+}, {2}]],
+Cell[19268, 640, 360, 10, 35, "Text",ExpressionUUID->"b0b1db5d-7710-4065-97d7-bff069bc44c8"],
+Cell[CellGroupData[{
+Cell[19653, 654, 604, 16, 31, "Input",ExpressionUUID->"76a89a48-2722-4a52-a8b4-49153ecfd057"],
+Cell[20260, 672, 527, 14, 61, "Output",ExpressionUUID->"b29dc2f6-91a5-41cb-adf6-97dbda0cf47b"]
+}, {2}]],
+Cell[CellGroupData[{
+Cell[20821, 691, 696, 18, 31, "Input",ExpressionUUID->"2defe5b8-3c94-42b8-b447-889acb7d0e83"],
+Cell[21520, 711, 591, 16, 61, "Output",ExpressionUUID->"be5ecfb2-0563-4a9e-be04-295ef728483b"]
+}, {2}]],
+Cell[CellGroupData[{
+Cell[22145, 732, 811, 23, 31, "Input",ExpressionUUID->"4ef024ab-2f66-4edb-8b23-e92481a2826e"],
+Cell[22959, 757, 633, 20, 61, "Output",ExpressionUUID->"515924fc-e183-4f29-9a53-6d6a67e12d5a"]
+}, {2}]],
+Cell[CellGroupData[{
+Cell[23626, 782, 1010, 31, 31, "Input",ExpressionUUID->"a1c0190d-7acd-42a9-bdfe-4c525ef71054"],
+Cell[24639, 815, 851, 27, 61, "Output",ExpressionUUID->"067d1a73-da15-413e-8072-b453d3742f92"]
+}, {2}]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20147, 501, 447, 7, 68, "Section",ExpressionUUID->"8698e793-ec9e-4895-8330-4a9be4a6c5b8"],
-Cell[20597, 510, 159, 3, 35, "Text",ExpressionUUID->"c7aa1ccd-8fde-40dc-b93b-5b2185bfbe3f"]
+Cell[25536, 848, 128, 3, 54, "Subtitle",ExpressionUUID->"57fc3bf9-d1a5-40c0-aad1-8bcddf078f0b"],
+Cell[25667, 853, 138, 3, 35, "Text",ExpressionUUID->"82a4c35b-2d89-4c52-bc61-df65159ec8f5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25842, 861, 136, 3, 54, "Subtitle",ExpressionUUID->"ee061305-e355-42b5-a754-8201b62cacb5"],
+Cell[25981, 866, 271, 6, 35, "Text",ExpressionUUID->"2d244afb-b040-4f4c-b1ad-381cd0eebbc6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26289, 877, 136, 3, 54, "Subtitle",ExpressionUUID->"8e1e1cdb-c16f-47f8-9e30-cd677b5a2ad7"],
+Cell[CellGroupData[{
+Cell[26450, 884, 888, 22, 59, "Input",ExpressionUUID->"5a9ced9e-5cd7-4faa-8385-ccce68441bfd"],
+Cell[27341, 908, 713, 18, 92, "Output",ExpressionUUID->"702e967c-f718-4c33-bcf8-0fc857d20fd0"]
+}, {2}]],
+Cell[CellGroupData[{
+Cell[28088, 931, 955, 29, 31, "Input",ExpressionUUID->"41153a45-0b1f-4daa-98ed-d2cdeb9e0808"],
+Cell[29046, 962, 783, 24, 64, "Output",ExpressionUUID->"fe28691f-d357-432f-94b4-d7193babe3ea"]
+}, {2}]],
+Cell[29841, 989, 2632, 66, 147, "Input",ExpressionUUID->"f234dfa9-3bd6-438f-88bd-560e369f1588"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32510, 1060, 164, 3, 54, "Subtitle",ExpressionUUID->"509c4350-cf34-42c1-a684-40e5a2bf1820"],
+Cell[32677, 1065, 664, 11, 58, "Text",ExpressionUUID->"5b03f957-3efa-47f2-afd4-0fede5c53619"],
+Cell[33344, 1078, 1713, 45, 101, "Input",ExpressionUUID->"3d76f4bf-d48a-4d8e-b780-b0f1e121e2ca"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35094, 1128, 155, 3, 54, "Subtitle",ExpressionUUID->"a847f8e7-579d-47fe-9203-50c7e320187f"],
+Cell[35252, 1133, 686, 14, 150, "Text",ExpressionUUID->"f4d5b9c7-1f13-45a0-91bc-9b4187aa381b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35975, 1152, 130, 3, 54, "Subtitle",ExpressionUUID->"f60fed91-296b-4afe-9f61-ac6df1068d5e"],
+Cell[36108, 1157, 549, 8, 35, "Text",ExpressionUUID->"3eade9f8-dbbb-4678-ab8b-e51519df1f2b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36694, 1170, 155, 3, 54, "Subtitle",ExpressionUUID->"f7727d6d-f9bb-4f92-b259-3af36ccd457e"],
+Cell[36852, 1175, 705, 14, 196, "Text",ExpressionUUID->"6beba734-37ae-48aa-b49b-ee900050a454"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37594, 1194, 129, 3, 54, "Subtitle",ExpressionUUID->"102c25af-5210-4782-8c2c-9db4f191f9ef"],
+Cell[37726, 1199, 138, 3, 35, "Text",ExpressionUUID->"2c735599-6b8c-4ce3-94d0-0d7061cffc17"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37901, 1207, 158, 3, 54, "Subtitle",ExpressionUUID->"146ce749-3edf-4512-a59b-eb206728b950"],
+Cell[38062, 1212, 268, 5, 35, "Text",ExpressionUUID->"d18c4f67-2ee6-428f-a543-82e3777ab763"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38367, 1222, 136, 3, 54, "Subtitle",ExpressionUUID->"b96b83eb-37b4-4a76-9bc9-1fa7b85f0edf"],
+Cell[38506, 1227, 361, 8, 35, "Text",ExpressionUUID->"3400afe4-4528-478c-a095-16a0e8dcc26b"],
+Cell[38870, 1237, 2868, 71, 147, "Input",ExpressionUUID->"83dff630-70b7-422c-9c49-09fdf9af298c"],
+Cell[CellGroupData[{
+Cell[41763, 1312, 403, 6, 68, "Section",ExpressionUUID->"d7ab4492-7178-4995-b469-38e2aef0a751"],
+Cell[42169, 1320, 456, 12, 150, "Text",ExpressionUUID->"a9100429-28f8-4809-92d4-14f5f2bec321"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42662, 1337, 447, 7, 68, "Section",ExpressionUUID->"8698e793-ec9e-4895-8330-4a9be4a6c5b8"],
+Cell[43112, 1346, 159, 3, 35, "Text",ExpressionUUID->"c7aa1ccd-8fde-40dc-b93b-5b2185bfbe3f"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }

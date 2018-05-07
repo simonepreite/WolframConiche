@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     43096,        796]
-NotebookOptionsPosition[     41372,        760]
-NotebookOutlinePosition[     41843,        778]
-CellTagsIndexPosition[     41800,        775]
+NotebookDataLength[     42792,        798]
+NotebookOptionsPosition[     40944,        759]
+NotebookOutlinePosition[     41415,        777]
+CellTagsIndexPosition[     41372,        774]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{
@@ -37,6 +39,17 @@ Cell[BoxData[{
   3.734356909364648*^9}},ExpressionUUID->"9a4d125a-8988-4dd0-b89b-\
 e942ab0dbba5"],
 
+Cell[BoxData[
+ TemplateBox[{
+  "Get","noopen",
+   "\"Cannot open \\!\\(\\*RowBox[{\\\"\\\\\\\"PackageProgetto`\\\\\\\"\\\"}]\
+\\).\"",2,300,47,19037798834823120594,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7346710191318903`*^9},ExpressionUUID->"038d4cfc-76ea-4d59-8a56-\
+dc879e11d872"]
+}, Open  ]],
+
 Cell[CellGroupData[{
 
 Cell["Approccio Grafico", "Subsection",
@@ -45,9 +58,18 @@ Cell["Approccio Grafico", "Subsection",
   3.734349855054966*^9}},ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-\
 d60eedc060f7"],
 
-Cell["Il cono e le sue componenti", "Text",
- CellChangeTimes->{{3.7343498636380157`*^9, 
-  3.734349925825243*^9}},ExpressionUUID->"96557508-74ee-4f36-bc3f-\
+Cell["\<\
+Il cono e le sue componenti
+definiamo SEZIONI CONICHE le curve che si possono ottenere sezionando un cono \
+indefinito con un piano
+si dice SUPERIFICIE CONICA  o CONO DI ROTAZIONE la superficie generata da una \
+RETTA che ruota intorno ad un ASSE formando con esso un angolo costante \
+ANGOLO DI APERTURA DEL CONO
+questra superficie \[EGrave] una superficie indefinita a due falde\
+\>", "Text",
+ CellChangeTimes->{{3.7343498636380157`*^9, 3.734349925825243*^9}, {
+  3.734677584064185*^9, 
+  3.734677666450001*^9}},ExpressionUUID->"96557508-74ee-4f36-bc3f-\
 d26323acf2f2"],
 
 Cell[CellGroupData[{
@@ -58,49 +80,10 @@ Cell[BoxData["buildAnimation"], "Code",
    3.73432385037434*^9}},ExpressionUUID->"453dd2f8-a659-418a-975e-\
 ac7d65750bcc"],
 
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{Private`theta$$ = 3.2542144071378813`, Typeset`show$$ = 
-    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{
-      Hold[Private`theta$$], 0., 2 Pi}}, Typeset`size$$ = {
-    270., {149., 153.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, Private`theta$2106$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, "Variables" :> {Private`theta$$ = 0.}, 
-      "ControllerVariables" :> {
-        Hold[Private`theta$$, Private`theta$2106$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> 
-      RevolutionPlot3D[{{Private`t, Private`t}, {-Private`t, -Private`t}}, {
-        Private`t, 0, 2 Pi}, {Private`b, 0, Private`theta$$}], 
-      "Specifications" :> {{
-        Private`theta$$, 0., 2 Pi, 
-         AppearanceElements -> {
-          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
-           "DirectionButton"}}}, 
-      "Options" :> {
-       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
-        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
-        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
-     ImageSizeCache->{311., {181., 187.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Animate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.73435691227297*^9},ExpressionUUID->"3b3402c8-f553-4ecb-bde8-1ce883f77317"]
+Cell[BoxData["buildAnimation"], "Output",
+ CellChangeTimes->{3.73435691227297*^9, 
+  3.734671019216837*^9},ExpressionUUID->"4c2ce06d-0d57-458d-9105-\
+82b9aa603db6"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -672,79 +655,95 @@ che si illumina con il colore della conica\.13*)\
 
 Cell[CellGroupData[{
 
-Cell[BoxData["buildGraphicPlaneCone"], "Input",
+Cell[BoxData[
+ RowBox[{"Style", "[", 
+  RowBox[{"buildGraphicPlaneCone", ",", " ", 
+   RowBox[{"Magnification", "\[Rule]", "1.4"}]}], "]"}]], "Input",
  CellChangeTimes->{
-  3.7343242320513906`*^9},ExpressionUUID->"301b1722-6f51-44f4-8759-\
+  3.7343242320513906`*^9, {3.734671001717767*^9, 
+   3.734671041864271*^9}},ExpressionUUID->"301b1722-6f51-44f4-8759-\
 92cdf8e27af9"],
 
 Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{Private`d$$ = 3.9000000000000004`, Private`e$$ = 2.7, 
-    Private`f$$ = 6.2, Private`g$$ = 4.1, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[Private`d$$], 1, "Coefficiente x Piano:"}, 1, 10, 0.1}, {{
-       Hold[Private`e$$], 1, "Coefficiente y Piano:"}, 1, 10, 0.1}, {{
-       Hold[Private`f$$], 1, "Coefficiente z Piano:"}, 1, 10, 0.1}, {{
-       Hold[Private`g$$], 1, "Profondit\[AGrave] del piano:"}, 1, 10, 0.1}}, 
-    Typeset`size$$ = {544., {154., 158.}}, Typeset`update$$ = 0, 
-    Typeset`initDone$$, Typeset`skipInitDone$$ = True, Private`d$39956$$ = 0, 
-    Private`e$39957$$ = 0, Private`f$39958$$ = 0, Private`g$39959$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {
-       Private`d$$ = 1, Private`e$$ = 1, Private`f$$ = 1, Private`g$$ = 1}, 
-      "ControllerVariables" :> {
-        Hold[Private`d$$, Private`d$39956$$, 0], 
-        Hold[Private`e$$, Private`e$39957$$, 0], 
-        Hold[Private`f$$, Private`f$39958$$, 0], 
-        Hold[Private`g$$, Private`g$39959$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Dynamic[
-         ContourPlot3D[{
-          Private`d$$ Private`x + Private`e$$ Private`y + 
-            Private`f$$ Private`z + Private`g$$ == 0, 
-           Private`x^2/1 + Private`y^2/1 - Private`z^2/1 == 0}, {
-          Private`x, -2, 2}, {Private`y, -2, 2}, {Private`z, -2, 2}, 
-          ContourStyle -> {Automatic, 
-            Opacity[0.8]}, ImageSize -> Medium, Mesh -> None, 
-          BoundaryStyle -> {2 -> None, {1, 2} -> {Red, Thick}}]] Dynamic[
-         Show[{
-           ContourPlot[(-(Private`d$$ Private`x + Private`e$$ Private`y + 
-               Private`g$$))/Private`f$$ == 
-            Sqrt[Private`x^2/1 + Private`y^2/1], {Private`x, -2, 2}, {
-            Private`y, -2, 2}, ImageSize -> Medium]}, {
-           
-           ContourPlot[(-(Private`d$$ Private`x + Private`e$$ Private`y + 
-               Private`g$$))/Private`f$$ == -
-             Sqrt[Private`x^2/1 + Private`y^2/1], {Private`x, -2, 2}, {
-            Private`y, -2, 2}, ImageSize -> Medium]}]], 
-      "Specifications" :> {{{Private`d$$, 1, "Coefficiente x Piano:"}, 1, 10, 
-         0.1, Appearance -> "Labeled"}, {{
-         Private`e$$, 1, "Coefficiente y Piano:"}, 1, 10, 0.1, Appearance -> 
-         "Labeled"}, {{Private`f$$, 1, "Coefficiente z Piano:"}, 1, 10, 0.1, 
-         Appearance -> "Labeled"}, {{
-         Private`g$$, 1, "Profondit\[AGrave] del piano:"}, 1, 10, 0.1, 
-         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{585., {221., 227.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
+ StyleBox[
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{$CellContext`d$$ = 1, $CellContext`e$$ = 
+     2.5, $CellContext`f$$ = 1, $CellContext`g$$ = 1, Typeset`show$$ = True, 
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+     "\"untitled\"", Typeset`specs$$ = {{{
+        Hold[$CellContext`d$$], 1, "Coefficiente x Piano:"}, 1, 10, 0.1}, {{
+        Hold[$CellContext`e$$], 1, "Coefficiente y Piano:"}, 1, 10, 0.1}, {{
+        Hold[$CellContext`f$$], 1, "Coefficiente z Piano:"}, 1, 10, 0.1}, {{
+        Hold[$CellContext`g$$], 1, "Profondit\[AGrave] del piano:"}, 1, 10, 
+       0.1}}, Typeset`size$$ = {1052., {290., 301.}}, Typeset`update$$ = 0, 
+     Typeset`initDone$$, Typeset`skipInitDone$$ = 
+     True, $CellContext`d$36718$$ = 0, $CellContext`e$36719$$ = 
+     0, $CellContext`f$36720$$ = 0, $CellContext`g$36721$$ = 0}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      1, StandardForm, 
+       "Variables" :> {$CellContext`d$$ = 1, $CellContext`e$$ = 
+         1, $CellContext`f$$ = 1, $CellContext`g$$ = 1}, 
+       "ControllerVariables" :> {
+         Hold[$CellContext`d$$, $CellContext`d$36718$$, 0], 
+         Hold[$CellContext`e$$, $CellContext`e$36719$$, 0], 
+         Hold[$CellContext`f$$, $CellContext`f$36720$$, 0], 
+         Hold[$CellContext`g$$, $CellContext`g$36721$$, 0]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Grid[{{
+           Dynamic[
+            
+            ContourPlot3D[{$CellContext`d$$ $CellContext`x + $CellContext`e$$ \
+$CellContext`y + $CellContext`f$$ $CellContext`z + $CellContext`g$$ == 
+              0, $CellContext`x^2 + $CellContext`y^2 - $CellContext`z^2 == 
+              0}, {$CellContext`x, -2, 2}, {$CellContext`y, -2, 
+              2}, {$CellContext`z, -2, 2}, ContourStyle -> {Automatic, 
+               Opacity[0.8]}, ImageSize -> Medium, Mesh -> None, 
+             BoundaryStyle -> {2 -> None, {1, 2} -> {Red, Thick}}]], 
+           Dynamic[
+            Show[{
+              
+              ContourPlot[(-($CellContext`d$$ $CellContext`x + \
+$CellContext`e$$ $CellContext`y + $CellContext`g$$))/$CellContext`f$$ == 
+               Sqrt[$CellContext`x^2/1 + $CellContext`y^2/
+                  1], {$CellContext`x, -2, 2}, {$CellContext`y, -2, 2}, 
+               ImageSize -> Medium]}, {
+              
+              ContourPlot[(-($CellContext`d$$ $CellContext`x + \
+$CellContext`e$$ $CellContext`y + $CellContext`g$$))/$CellContext`f$$ == -
+                Sqrt[$CellContext`x^2/1 + $CellContext`y^2/
+                   1], {$CellContext`x, -2, 2}, {$CellContext`y, -2, 2}, 
+               ImageSize -> Medium]}]]}}, Frame -> All], 
+       "Specifications" :> {{{$CellContext`d$$, 1, "Coefficiente x Piano:"}, 
+          1, 10, 0.1, Appearance -> 
+          "Labeled"}, {{$CellContext`e$$, 1, "Coefficiente y Piano:"}, 1, 10, 
+          0.1, Appearance -> 
+          "Labeled"}, {{$CellContext`f$$, 1, "Coefficiente z Piano:"}, 1, 10, 
+          0.1, Appearance -> 
+          "Labeled"}, {{$CellContext`g$$, 1, "Profondit\[AGrave] del piano:"},
+           1, 10, 0.1, Appearance -> "Labeled"}}, "Options" :> {}, 
+       "DefaultOptions" :> {}],
+      ImageSizeCache->{1121., {399., 410.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]],
+  StripOnInput->False,
+  Magnification->1.4]], "Output",
  CellChangeTimes->{
-  3.734324234557089*^9},ExpressionUUID->"394e7303-1b93-42df-b8ea-\
-a986ced18d07"]
+  3.734324234557089*^9, {3.734671019261841*^9, 
+   3.734671042402689*^9}},ExpressionUUID->"cede2dc2-637a-4c24-981d-\
+f1de03a51be1"]
 }, Open  ]],
 
 Cell["Tabella riguardante angolo Piano/Cono ", "Text",
@@ -777,26 +776,29 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 751, 17, 70, "Code",ExpressionUUID->"9a4d125a-8988-4dd0-b89b-e942ab0dbba5"],
 Cell[CellGroupData[{
-Cell[1334, 41, 260, 4, 69, "Subsection",ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-d60eedc060f7"],
-Cell[1597, 47, 171, 3, 48, "Text",ExpressionUUID->"96557508-74ee-4f36-bc3f-d26323acf2f2"],
-Cell[CellGroupData[{
-Cell[1793, 54, 189, 4, 44, "Code",ExpressionUUID->"453dd2f8-a659-418a-975e-ac7d65750bcc"],
-Cell[1985, 60, 2080, 42, 386, "Output",ExpressionUUID->"3b3402c8-f553-4ecb-bde8-1ce883f77317"]
+Cell[580, 22, 751, 17, 70, "Code",ExpressionUUID->"9a4d125a-8988-4dd0-b89b-e942ab0dbba5"],
+Cell[1334, 41, 318, 8, 28, "Message",ExpressionUUID->"038d4cfc-76ea-4d59-8a56-dc879e11d872"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4102, 107, 171, 3, 36, "Input",ExpressionUUID->"7b4c5c44-8cb4-4e9d-8dc2-147229e0a8f1"],
-Cell[4276, 112, 32007, 534, 352, 1159, 27, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"9b394261-37d1-49ea-b930-1c1498859910"]
-}, Open  ]],
-Cell[36298, 649, 666, 12, 105, "Text",ExpressionUUID->"f97cf7d1-697a-4321-8381-0fac5da3162a"],
-Cell[36967, 663, 325, 7, 48, "Text",ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-8dd2dfb59700"],
+Cell[1689, 54, 260, 4, 69, "Subsection",ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-d60eedc060f7"],
+Cell[1952, 60, 581, 12, 161, "Text",ExpressionUUID->"96557508-74ee-4f36-bc3f-d26323acf2f2"],
 Cell[CellGroupData[{
-Cell[37317, 674, 151, 3, 36, "Input",ExpressionUUID->"301b1722-6f51-44f4-8759-92cdf8e27af9"],
-Cell[37471, 679, 3530, 67, 466, "Output",ExpressionUUID->"394e7303-1b93-42df-b8ea-a986ced18d07"]
+Cell[2558, 76, 189, 4, 44, "Code",ExpressionUUID->"453dd2f8-a659-418a-975e-ac7d65750bcc"],
+Cell[2750, 82, 164, 3, 36, "Output",ExpressionUUID->"4c2ce06d-0d57-458d-9105-82b9aa603db6"]
 }, Open  ]],
-Cell[41016, 749, 180, 3, 48, "Text",ExpressionUUID->"06b51eca-b155-473c-9682-9a698c13fc06"],
-Cell[41199, 754, 157, 3, 48, "Text",ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-d7cb89ebff7e"]
+Cell[CellGroupData[{
+Cell[2951, 90, 171, 3, 36, "Input",ExpressionUUID->"7b4c5c44-8cb4-4e9d-8dc2-147229e0a8f1"],
+Cell[3125, 95, 32007, 534, 352, 1159, 27, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"9b394261-37d1-49ea-b930-1c1498859910"]
+}, Open  ]],
+Cell[35147, 632, 666, 12, 105, "Text",ExpressionUUID->"f97cf7d1-697a-4321-8381-0fac5da3162a"],
+Cell[35816, 646, 325, 7, 48, "Text",ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-8dd2dfb59700"],
+Cell[CellGroupData[{
+Cell[36166, 657, 304, 7, 36, "Input",ExpressionUUID->"301b1722-6f51-44f4-8759-92cdf8e27af9"],
+Cell[36473, 666, 4100, 79, 827, "Output",ExpressionUUID->"cede2dc2-637a-4c24-981d-f1de03a51be1"]
+}, Open  ]],
+Cell[40588, 748, 180, 3, 48, "Text",ExpressionUUID->"06b51eca-b155-473c-9682-9a698c13fc06"],
+Cell[40771, 753, 157, 3, 48, "Text",ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-d7cb89ebff7e"]
 }, Open  ]]
 }
 ]
