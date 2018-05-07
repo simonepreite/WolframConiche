@@ -1212,8 +1212,17 @@ Cell[BoxData[
       RowBox[{
        RowBox[{"i", "=", "1"}], ",", " ", 
        RowBox[{"i", "<=", "3"}], ",", " ", 
-       RowBox[{"i", "++"}], ",", "\n", "\t\t", 
+       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", "\t", 
        RowBox[{
+        RowBox[{"whitch", "[", 
+         RowBox[{
+          RowBox[{"i", "\[Equal]", "1"}], ",", 
+          RowBox[{"appr", "=", " ", "\"\<Grafico\>\""}], ",", 
+          RowBox[{"i", "\[Equal]", "2"}], ",", 
+          RowBox[{"appr", "=", " ", "\"\<Matematico\>\""}], ",", 
+          RowBox[{"i", "\[Equal]", "3"}], ",", " ", 
+          RowBox[{"appr", "=", " ", "\"\<Eccentricit\[AGrave]\>\""}]}], " ", 
+         "]"}], ";", "\n", "\t\t", 
         RowBox[{"Print", "[", "\n", "\t\t", 
          RowBox[{"DynamicModule", "[", 
           RowBox[{
@@ -1470,8 +1479,9 @@ Cell[BoxData[
    3.734670887488739*^9},ExpressionUUID->"df940354-2f61-4673-9a32-\
 13e7719ae0f4"]
 },
-WindowSize->{1366, 716},
+WindowSize->{3706, 2050},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
+Magnification:>2. Inherited,
 FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
 StyleDefinitions->"Default.nb"
 ]

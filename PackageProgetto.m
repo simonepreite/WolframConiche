@@ -130,17 +130,59 @@ rFile[filename_]:=(
 	]
 );
 
-(*Displays different buttons, each one opens a different .nb file*)
+(*Displays different buttons, each one opens a Subscript[differen, \[Placeholder]]t .nb file*)
 (*We could impreove the display of the buttons and put the output of this function into a ChoiceDialog*)
 NotebookOpeners[]:=(
+bList={};
 For[i=1, i<=3, i++,
-		Print[
-		DynamicModule[{text=Evaluate["notebooks/app"<>ToString[i]<>".nb"]},
-			Row[{Button["Approccio"<>ToString[i],NotebookOpen[text]]}]
+			text=Evaluate[Directory[]<>"/notebooks/app"<>ToString[i]<>".nb"];
+			Which[i==1,appr="Grafico";img=Import["img/approccioGrafico.png"],i==2,appr="Matematico";img=Import["img/approccioMatematico.png"], i==3,appr="Eccentricit\[AGrave]";img=Import["img/approccioEccentric.png"]];
+			bList=Append[bList, Button[img,NotebookOpen[text]]]
+			(*Row[{Button[img,NotebookOpen[text]]    Button["Approccio "<>appr,NotebookOpen[text]]}]*)
+	];
+	Grid[{
+	{bList[[1]],"",""},
+	{"",bList[[2]],""},
+	{"","",bList[[3]]}
+	},
+	ItemSize->Fit, Frame->None, Alignment->{Left,Center, Right},Spacings->3
 	]
-		];
-	]);
+	(*Grid[{
+	{Column[{}],Column[
+	{bList[[1]]},Frame\[Rule]None,Spacings\[Rule]1
+	],Column[{}]},
+	{Column[
+	{bList[[2]]},Frame\[Rule]None,Spacings\[Rule]1
+	]},
+	{Column[
+	{bList[[3]]},Frame\[Rule]None,Spacings\[Rule]1
+	]}
+	},
+	ItemSize\[Rule]Fit, Frame\[Rule]None, Alignment\[Rule]{{Left, Center, Right}},Spacings\[Rule]3
+	]
+	Grid[{{
+	 Column[
+	{bList[[1]]},Frame\[Rule]None,Spacings\[Rule]1
+	]
+	}},ItemSize\[Rule]Fit, Frame\[Rule]None, Alignment\[Rule]{{Left}},Spacings\[Rule]3]
+	Grid[{{
+	 Column[
+	{bList[[2]]},Frame\[Rule]None,Spacings\[Rule]1
+	]
+	}},ItemSize\[Rule]Fit, Frame\[Rule]None, Alignment\[Rule]{{Center}},Spacings\[Rule]3]
+	Grid[{{
+	 Column[
+	{bList[[3]]},Frame\[Rule]None,Spacings\[Rule]1
+	]
+	}},ItemSize\[Rule]Fit, Frame\[Rule]None, Alignment\[Rule]{{Right}},Spacings\[Rule]3]*)
+	);
 	
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
+
+
+
