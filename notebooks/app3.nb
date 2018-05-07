@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4089,        107]
-NotebookOptionsPosition[      3488,         89]
-NotebookOutlinePosition[      3826,        104]
-CellTagsIndexPosition[      3783,        101]
+NotebookDataLength[      5970,        156]
+NotebookOptionsPosition[      5022,        131]
+NotebookOutlinePosition[      5360,        146]
+CellTagsIndexPosition[      5317,        143]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,10 +33,25 @@ Cell[BoxData[
   3.734338991085784*^9},ExpressionUUID->"2d5febae-4090-4681-9820-\
 f59f6a0e411c"],
 
-Cell["Coniche ed Eccentricit\[AGrave]", "Text",
+Cell[CellGroupData[{
+
+Cell["Coniche ed Eccentricit\[AGrave]", "Chapter",
  CellChangeTimes->{{3.734326452515956*^9, 
   3.734326479745064*^9}},ExpressionUUID->"a95e00ed-c43d-4d31-a453-\
 f98bd61ffd28"],
+
+Cell["\<\
+Le coniche possono essere descritte mediante la loro eccentricit\[AGrave], \
+calcolata come rapporto tra la distanza di un punto dal fuoco e dalla \
+direttrice della conica.
+Ad esempio in questo grafico possiamo vedere come \
+l\[CloseCurlyQuote]equazione di un ellisse, superato l\[CloseCurlyQuote]1  si \
+trasformi nell\[CloseCurlyQuote]equazione della Parabola.\
+\>", "Text",
+ CellChangeTimes->{{3.734696130220722*^9, 3.7346962329084682`*^9}, {
+  3.7346963512466497`*^9, 
+  3.734696381799776*^9}},ExpressionUUID->"c03f99ce-dcf7-46d2-91a6-\
+6de644c0700e"],
 
 Cell[CellGroupData[{
 
@@ -54,7 +69,8 @@ Cell[BoxData[
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Private`e$$], 0, "eccentricit\[AGrave]"}, 0, 3, 0.1}}, 
     Typeset`size$$ = {660., {176., 180.}}, Typeset`update$$ = 0, 
-    Typeset`initDone$$, Typeset`skipInitDone$$ = True, Private`e$54783$$ = 0}, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, Private`e$54783$$ = 
+    Rational[31, 2] + Rational[31, 2] "X Axis"}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {Private`e$$ = 0}, "ControllerVariables" :> {
         Hold[Private`e$$, Private`e$54783$$, 0]}, 
@@ -85,6 +101,32 @@ Cell[BoxData[
  CellChangeTimes->{3.734326484380733*^9, 
   3.734326692095748*^9},ExpressionUUID->"8d7104ec-ada9-420f-a63f-\
 8b342b227c23"]
+}, {2}]],
+
+Cell[CellGroupData[{
+
+Cell["Calcolare l\[CloseCurlyQuote]eccentricit\[AGrave] di una conica ", \
+"Section",
+ CellChangeTimes->{{3.734696387460723*^9, 
+  3.73469641416366*^9}},ExpressionUUID->"124aad2d-da45-43c0-808d-\
+18e2bb156e50"],
+
+Cell["\<\
+Dati i seguenti punti:
+F = fuoco
+P = punto appartenente alla conica
+D = direttrice, una retta fissa nel piano
+Calcoliamo l\[CloseCurlyQuote]eccentricit\[AGrave] come E, numero reale che \
+riesce a caratterizzare ogni tipo di conica.
+Infatti possiamo descrivere una conica come il luogo dei punti del piano per \
+i quali e costante il rapporto tra distanza dal fuoco e dalla direttrice 
+ossia per ogni P Esiste un e tale che PF /PD == e  \
+\>", "Text",
+ CellChangeTimes->{{3.734696575261737*^9, 3.734696768631959*^9}, {
+  3.73469681489809*^9, 
+  3.734696852393808*^9}},ExpressionUUID->"4d7e10fb-eddb-464b-8c7c-\
+0c87a83fa0d4"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1366, 716},
@@ -104,10 +146,17 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 548, 13, 55, "Input",ExpressionUUID->"2d5febae-4090-4681-9820-f59f6a0e411c"],
-Cell[1109, 35, 173, 3, 35, "Text",ExpressionUUID->"a95e00ed-c43d-4d31-a453-f98bd61ffd28"],
 Cell[CellGroupData[{
-Cell[1307, 42, 175, 3, 31, "Input",ExpressionUUID->"984ff5ab-5b2a-4e46-a479-b43041613b5a"],
-Cell[1485, 47, 1987, 39, 464, "Output",ExpressionUUID->"8d7104ec-ada9-420f-a63f-8b342b227c23"]
+Cell[1131, 37, 176, 3, 69, "Chapter",ExpressionUUID->"a95e00ed-c43d-4d31-a453-f98bd61ffd28"],
+Cell[1310, 42, 566, 11, 58, "Text",ExpressionUUID->"c03f99ce-dcf7-46d2-91a6-6de644c0700e"],
+Cell[CellGroupData[{
+Cell[1901, 57, 175, 3, 31, "Input",ExpressionUUID->"984ff5ab-5b2a-4e46-a479-b43041613b5a"],
+Cell[2079, 62, 2033, 40, 464, "Output",ExpressionUUID->"8d7104ec-ada9-420f-a63f-8b342b227c23"]
+}, {2}]],
+Cell[CellGroupData[{
+Cell[4146, 107, 210, 4, 68, "Section",ExpressionUUID->"124aad2d-da45-43c0-808d-18e2bb156e50"],
+Cell[4359, 113, 635, 14, 173, "Text",ExpressionUUID->"4d7e10fb-eddb-464b-8c7c-0c87a83fa0d4"]
+}, Open  ]]
 }, Open  ]]
 }
 ]

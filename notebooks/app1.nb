@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14104,        331]
-NotebookOptionsPosition[     12527,        296]
-NotebookOutlinePosition[     12998,        314]
-CellTagsIndexPosition[     12955,        311]
+NotebookDataLength[     14321,        338]
+NotebookOptionsPosition[     12706,        301]
+NotebookOutlinePosition[     13177,        319]
+CellTagsIndexPosition[     13134,        316]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -58,11 +58,12 @@ indefinito con un piano
 si dice SUPERIFICIE CONICA  o CONO DI ROTAZIONE la superficie generata da una \
 RETTA che ruota intorno ad un ASSE formando con esso un angolo costante \
 ANGOLO DI APERTURA DEL CONO
-questra superficie \[EGrave] una superficie indefinita a due falde\
+questa superficie \[EGrave] una superficie indefinita a due falde. \
 \>", "Text",
  CellChangeTimes->{{3.7343498636380157`*^9, 3.734349925825243*^9}, {
-  3.734677584064185*^9, 3.734677666450001*^9}, {3.734690651379719*^9, 
-  3.7346906559766273`*^9}},ExpressionUUID->"96557508-74ee-4f36-bc3f-\
+   3.734677584064185*^9, 3.734677666450001*^9}, {3.734690651379719*^9, 
+   3.7346906559766273`*^9}, {3.734695329651417*^9, 3.73469533857437*^9}, 
+   3.7346953999915133`*^9},ExpressionUUID->"96557508-74ee-4f36-bc3f-\
 d26323acf2f2"],
 
 Cell[CellGroupData[{
@@ -88,12 +89,12 @@ Cell[BoxData[
  TemplateBox[{TagBox[
     StyleBox[
      DynamicModuleBox[{
-      Private`theta$$ = 4.2250061329762145`, Typeset`show$$ = True, 
+      Private`theta$$ = 1.3681586631376939`, Typeset`show$$ = True, 
        Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
        Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
        "\"untitled\"", Typeset`specs$$ = {{
           Hold[Private`theta$$], 0., 2 Pi}}, 
-       Typeset`size$$ = {270., {149., 153.}}, Typeset`update$$ = 0, 
+       Typeset`size$$ = {270., {149., 154.}}, Typeset`update$$ = 0, 
        Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
        Private`theta$21730$$ = 0}, 
       DynamicBox[
@@ -178,7 +179,15 @@ forma sar\[AGrave] la curva risultante.\
   3.734350010962253*^9}, {3.734350285126603*^9, 3.734350327290328*^9}, {
   3.7343560887535667`*^9, 
   3.734356116495666*^9}},ExpressionUUID->"f97cf7d1-697a-4321-8381-\
-0fac5da3162a"],
+0fac5da3162a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Il grafico dell\[CloseCurlyQuote]intersezione", "Section",
+ CellChangeTimes->{{3.734695828713888*^9, 
+  3.734695833592785*^9}},ExpressionUUID->"85a9090f-5dba-4719-a592-\
+a42d6fdd19b3"],
 
 Cell["\<\
 (*Tabella che mostra quali sono le propriet\[AGrave] della figura mostrata e \
@@ -204,9 +213,9 @@ Cell[BoxData[
  StyleBox[
   TagBox[
    StyleBox[
-    DynamicModuleBox[{$CellContext`d$$ = 1, $CellContext`e$$ = 
-     2.5, $CellContext`f$$ = 1, $CellContext`g$$ = 1, Typeset`show$$ = True, 
-     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    DynamicModuleBox[{$CellContext`d$$ = 2.3, $CellContext`e$$ = 
+     2.5, $CellContext`f$$ = 2.7, $CellContext`g$$ = 1, Typeset`show$$ = True,
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
      "\"untitled\"", Typeset`specs$$ = {{{
         Hold[$CellContext`d$$], 1, "Coefficiente x Piano:"}, 1, 10, 0.1}, {{
@@ -280,18 +289,14 @@ $CellContext`e$$ $CellContext`y + $CellContext`g$$))/$CellContext`f$$ == -
   3.734324234557089*^9, {3.734671019261841*^9, 
    3.734671042402689*^9}},ExpressionUUID->"cede2dc2-637a-4c24-981d-\
 f1de03a51be1"]
-}, {2}]],
+}, {2}]]
+}, Open  ]],
 
-Cell["Tabella riguardante angolo Piano/Cono ", "Text",
- CellChangeTimes->{{3.734324832768611*^9, 
-  3.734324857253365*^9}},ExpressionUUID->"06b51eca-b155-473c-9682-\
-9a698c13fc06"],
-
-Cell["Esercizi Esempi", "Text",
- CellChangeTimes->{{3.734324943656498*^9, 
-  3.734324947357657*^9}},ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-\
+Cell["Esercizi ed Esempi", "Section",
+ CellChangeTimes->{{3.734324943656498*^9, 3.734324947357657*^9}, {
+  3.734695846613337*^9, 
+  3.734695846946989*^9}},ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-\
 d7cb89ebff7e"]
-}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1366, 716},
@@ -318,20 +323,22 @@ Cell[CellGroupData[{
 Cell[1334, 41, 255, 4, 260, "Title",ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-d60eedc060f7"],
 Cell[CellGroupData[{
 Cell[1614, 49, 148, 3, 87, "Section",ExpressionUUID->"8a795f4f-4b14-4fb9-81f5-6c453a1e5c4a"],
-Cell[1765, 54, 601, 11, 133, "Text",ExpressionUUID->"96557508-74ee-4f36-bc3f-d26323acf2f2"],
+Cell[1765, 54, 677, 12, 133, "Text",ExpressionUUID->"96557508-74ee-4f36-bc3f-d26323acf2f2"],
 Cell[CellGroupData[{
-Cell[2391, 69, 697, 15, 44, "Code",ExpressionUUID->"453dd2f8-a659-418a-975e-ac7d65750bcc"],
-Cell[3091, 86, 3618, 79, 450, "Output",ExpressionUUID->"9135cdda-8bcb-43de-9348-f24ffd6683f6"]
+Cell[2467, 70, 697, 15, 33, "Code",ExpressionUUID->"453dd2f8-a659-418a-975e-ac7d65750bcc"],
+Cell[3167, 87, 3618, 79, 450, "Output",ExpressionUUID->"9135cdda-8bcb-43de-9348-f24ffd6683f6"]
 }, {2}]],
-Cell[6721, 168, 666, 12, 105, "Text",ExpressionUUID->"f97cf7d1-697a-4321-8381-0fac5da3162a"],
-Cell[7390, 182, 325, 7, 77, "Text",ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-8dd2dfb59700"],
+Cell[6797, 169, 666, 12, 105, "Text",ExpressionUUID->"f97cf7d1-697a-4321-8381-0fac5da3162a"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[7740, 193, 304, 7, 36, "Input",ExpressionUUID->"301b1722-6f51-44f4-8759-92cdf8e27af9"],
-Cell[8047, 202, 4100, 79, 827, "Output",ExpressionUUID->"cede2dc2-637a-4c24-981d-f1de03a51be1"]
-}, {2}]],
-Cell[12159, 284, 180, 3, 48, "Text",ExpressionUUID->"06b51eca-b155-473c-9682-9a698c13fc06"],
-Cell[12342, 289, 157, 3, 48, "Text",ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-d7cb89ebff7e"]
-}, Open  ]]
+Cell[7500, 186, 190, 3, 87, "Section",ExpressionUUID->"85a9090f-5dba-4719-a592-a42d6fdd19b3"],
+Cell[7693, 191, 325, 7, 77, "Text",ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-8dd2dfb59700"],
+Cell[CellGroupData[{
+Cell[8043, 202, 304, 7, 27, "Input",ExpressionUUID->"301b1722-6f51-44f4-8759-92cdf8e27af9"],
+Cell[8350, 211, 4104, 79, 827, "Output",ExpressionUUID->"cede2dc2-637a-4c24-981d-f1de03a51be1"]
+}, {2}]]
+}, Open  ]],
+Cell[12478, 294, 212, 4, 87, "Section",ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-d7cb89ebff7e"]
 }, Open  ]]
 }
 ]
