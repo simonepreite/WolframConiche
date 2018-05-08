@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     11640,        275]
-NotebookOptionsPosition[     10055,        240]
-NotebookOutlinePosition[     10527,        258]
-CellTagsIndexPosition[     10484,        255]
+NotebookDataLength[     11889,        278]
+NotebookOptionsPosition[     10304,        243]
+NotebookOutlinePosition[     10775,        261]
+CellTagsIndexPosition[     10732,        258]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -129,12 +129,15 @@ Cell["Il grafico dell\[CloseCurlyQuote]intersezione", "Section",
 a42d6fdd19b3"],
 
 Cell["\<\
+Nel grafico qua presente potrete provare a amodificare \
+l\[CloseCurlyQuote]angolo e le coordinate del piano in modo da creare una \
+nuova conica a seconda dell\[CloseCurlyQuote]intersezione risultante.
 (*Tabella che mostra quali sono le propriet\[AGrave] della figura mostrata e \
 che si illumina con il colore della conica\.13*)\
 \>", "Text",
  CellChangeTimes->{{3.734324269925609*^9, 3.734324290212998*^9}, {
-  3.73432497465687*^9, 
-  3.734324983607567*^9}},ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-\
+  3.73432497465687*^9, 3.734324983607567*^9}, {3.734753512483522*^9, 
+  3.7347535135574837`*^9}},ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-\
 8dd2dfb59700"],
 
 Cell[CellGroupData[{
@@ -161,7 +164,7 @@ Cell[BoxData[
         Hold[$CellContext`e$$], 1, "Coefficiente y Piano:"}, 1, 10, 0.1}, {{
         Hold[$CellContext`f$$], 1, "Coefficiente z Piano:"}, 1, 10, 0.1}, {{
         Hold[$CellContext`g$$], 1, "Profondit\[AGrave] del piano:"}, 1, 10, 
-       0.1}}, Typeset`size$$ = {1052., {292.5, 303.5}}, Typeset`update$$ = 0, 
+       0.1}}, Typeset`size$$ = {1052., {290., 301.}}, Typeset`update$$ = 0, 
      Typeset`initDone$$, Typeset`skipInitDone$$ = 
      True, $CellContext`d$36718$$ = 0, $CellContext`e$36719$$ = 
      0, $CellContext`f$36720$$ = 0, $CellContext`g$36721$$ = 0}, 
@@ -211,7 +214,7 @@ $CellContext`e$$ $CellContext`y + $CellContext`g$$))/$CellContext`f$$ == -
           "Labeled"}, {{$CellContext`g$$, 1, "Profondit\[AGrave] del piano:"},
            1, 10, 0.1, Appearance -> "Labeled"}}, "Options" :> {}, 
        "DefaultOptions" :> {}],
-      ImageSizeCache->{1121., {405., 416.}},
+      ImageSizeCache->{1121., {399., 410.}},
       SingleEvaluation->True],
      Deinitialization:>None,
      DynamicModuleValues:>{},
@@ -238,7 +241,7 @@ Cell["Esercizi ed Esempi", "Section",
 d7cb89ebff7e"]
 }, Open  ]]
 },
-WindowSize->{3706, 2050},
+WindowSize->{1366, 716},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
 TaggingRules->{"SlideShow" -> True},
 Magnification:>0.75 Inherited,
@@ -257,25 +260,25 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 751, 17, 81, "Code",ExpressionUUID->"9a4d125a-8988-4dd0-b89b-e942ab0dbba5"],
-Cell[1312, 39, 996, 21, 103, "Input",ExpressionUUID->"fcc4e822-052c-4101-98a2-6671775fc97d"],
+Cell[558, 20, 751, 17, 70, "Code",ExpressionUUID->"9a4d125a-8988-4dd0-b89b-e942ab0dbba5"],
+Cell[1312, 39, 996, 21, 137, "Input",ExpressionUUID->"fcc4e822-052c-4101-98a2-6671775fc97d"],
 Cell[CellGroupData[{
-Cell[2333, 64, 255, 4, 614, "Title",ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-d60eedc060f7"],
+Cell[2333, 64, 255, 4, 260, "Title",ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-d60eedc060f7"],
 Cell[CellGroupData[{
-Cell[2613, 72, 148, 3, 154, "Section",ExpressionUUID->"8a795f4f-4b14-4fb9-81f5-6c453a1e5c4a"],
-Cell[2764, 77, 677, 12, 111, "Text",ExpressionUUID->"96557508-74ee-4f36-bc3f-d26323acf2f2"],
-Cell[3444, 91, 697, 15, 51, "Code",ExpressionUUID->"453dd2f8-a659-418a-975e-ac7d65750bcc"],
-Cell[4144, 108, 666, 12, 50, "Text",ExpressionUUID->"f97cf7d1-697a-4321-8381-0fac5da3162a"]
+Cell[2613, 72, 148, 3, 87, "Section",ExpressionUUID->"8a795f4f-4b14-4fb9-81f5-6c453a1e5c4a"],
+Cell[2764, 77, 677, 12, 133, "Text",ExpressionUUID->"96557508-74ee-4f36-bc3f-d26323acf2f2"],
+Cell[3444, 91, 697, 15, 44, "Code",ExpressionUUID->"453dd2f8-a659-418a-975e-ac7d65750bcc"],
+Cell[4144, 108, 666, 12, 105, "Text",ExpressionUUID->"f97cf7d1-697a-4321-8381-0fac5da3162a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4847, 125, 190, 3, 154, "Section",ExpressionUUID->"85a9090f-5dba-4719-a592-a42d6fdd19b3"],
-Cell[5040, 130, 325, 7, 50, "Text",ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-8dd2dfb59700"],
+Cell[4847, 125, 190, 3, 87, "Section",ExpressionUUID->"85a9090f-5dba-4719-a592-a42d6fdd19b3"],
+Cell[5040, 130, 576, 10, 133, "Text",ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-8dd2dfb59700"],
 Cell[CellGroupData[{
-Cell[5390, 141, 304, 7, 20, "Input",ExpressionUUID->"301b1722-6f51-44f4-8759-92cdf8e27af9"],
-Cell[5697, 150, 4106, 79, 839, "Output",ExpressionUUID->"cede2dc2-637a-4c24-981d-f1de03a51be1"]
+Cell[5641, 144, 304, 7, 15, "Input",ExpressionUUID->"301b1722-6f51-44f4-8759-92cdf8e27af9"],
+Cell[5948, 153, 4104, 79, 827, "Output",ExpressionUUID->"cede2dc2-637a-4c24-981d-f1de03a51be1"]
 }, {2}]]
 }, Open  ]],
-Cell[9827, 233, 212, 4, 154, "Section",ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-d7cb89ebff7e"]
+Cell[10076, 236, 212, 4, 87, "Section",ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-d7cb89ebff7e"]
 }, Open  ]]
 }
 ]
