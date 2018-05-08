@@ -1,0 +1,19 @@
+Print[HoldForm[a*x^2 + d*x + c*y^2 + e*y + f] // TraditionalForm, "=",
+  0 // TraditionalForm]
+Print[HoldForm[
+  a*(x^2 + d*x/a + d^2/(4*a^2)) + 
+   c*(y^2 + e*y/c + e^2/(4*c^2))], "=", (d^2/(4*a) + e^2/(4 c) - f)]
+Print[HoldForm[
+  a*(x + d/(2 a))^2 + c*(y + e/(2 c))^2], "=", (d^2/(4*a) + 
+   e^2/(4 c) - f)]
+Print[HoldForm[m], "=", (d^2/(4*a) + e^2/(4 c) - f)]
+Print[HoldForm[x0], "=", (-d/(2 a))]
+Print[HoldForm[y0], "=", (-e/(2 c))]
+Print[HoldForm[a (x - x0)^2 + c (y - y0)^2], "=", m]
+Print[HoldForm[(x - x0)^2/(m/a) + (y - y0)^2/(m/c)], "=", 1]
+Print[HoldForm[m/a], "=", a^2]
+ Print[HoldForm[m/c], "=", b^2]
+Print[HoldForm[(x - x0)^2/(a^2) + (y - y0)^2/(b^2)], "=", 1]
+ Print[HoldForm[e], "=", c/a, "=", Sqrt[a^2 - b^2]/a, "=", 
+ Sqrt[m/a - m/c]/Sqrt[m/a], "=", Sqrt[(c - a)/c]]
+ Print[HoldForm[c], "=", Sqrt[m (c - a)/(ac)]]
