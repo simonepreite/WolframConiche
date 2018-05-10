@@ -10,25 +10,27 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5970,        156]
-NotebookOptionsPosition[      5022,        131]
-NotebookOutlinePosition[      5360,        146]
-CellTagsIndexPosition[      5317,        143]
+NotebookDataLength[      9558,        247]
+NotebookOptionsPosition[      8481,        219]
+NotebookOutlinePosition[      8819,        234]
+CellTagsIndexPosition[      8776,        231]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
-  RowBox[{"SetDirectory", "[", 
-   RowBox[{"ParentDirectory", "[", 
-    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], "]"}], ";", " ", 
+  RowBox[{
+   RowBox[{"SetDirectory", "[", 
+    RowBox[{"ParentDirectory", "[", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], "]"}], ";"}], " ", 
   RowBox[{"(*", " ", 
    RowBox[{
    "imposto", " ", "la", " ", "cartella", " ", "attuale", " ", "come", " ", 
     "base", " ", "in", " ", "cui", " ", "cercare", " ", "i", " ", "file"}], 
-   " ", "*)"}], "\n", 
-  RowBox[{"Get", "[", "\"\<PackageProgetto`\>\"", "]"}], ";"}]], "Input",
+   " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<PackageProgetto`\>\"", "]"}], ";"}]}], "Input",
  CellChangeTimes->{
   3.734338991085784*^9},ExpressionUUID->"2d5febae-4090-4681-9820-\
 f59f6a0e411c"],
@@ -63,12 +65,12 @@ b43041613b5a"],
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Private`e$$ = 0.9, Typeset`show$$ = True, 
+   DynamicModuleBox[{Private`e$$ = 1., Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Private`e$$], 0, "eccentricit\[AGrave]"}, 0, 3, 0.1}}, 
-    Typeset`size$$ = {660., {176., 180.}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {564., {176., 180.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, Private`e$54783$$ = 
     Rational[31, 2] + Rational[31, 2] "X Axis"}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -87,7 +89,7 @@ Cell[BoxData[
       "Specifications" :> {{{Private`e$$, 0, "eccentricit\[AGrave]"}, 0, 3, 
          0.1, Appearance -> "Labeled"}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{707., {220., 225.}},
+     ImageSizeCache->{611., {220., 225.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -111,21 +113,107 @@ Cell["Calcolare l\[CloseCurlyQuote]eccentricit\[AGrave] di una conica ", \
   3.73469641416366*^9}},ExpressionUUID->"124aad2d-da45-43c0-808d-\
 18e2bb156e50"],
 
-Cell["\<\
-Dati i seguenti punti:
-F = fuoco
-P = punto appartenente alla conica
-D = direttrice, una retta fissa nel piano
-Calcoliamo l\[CloseCurlyQuote]eccentricit\[AGrave] come E, numero reale che \
-riesce a caratterizzare ogni tipo di conica.
-Infatti possiamo descrivere una conica come il luogo dei punti del piano per \
-i quali e costante il rapporto tra distanza dal fuoco e dalla direttrice 
-ossia per ogni P Esiste un e tale che PF /PD == e  \
-\>", "Text",
- CellChangeTimes->{{3.734696575261737*^9, 3.734696768631959*^9}, {
-  3.73469681489809*^9, 
-  3.734696852393808*^9}},ExpressionUUID->"4d7e10fb-eddb-464b-8c7c-\
-0c87a83fa0d4"]
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Column", "[", 
+  RowBox[{"{", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Row", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Text", "[", "\"\<Dati i seguenti:\>\"", "]"}], ",", " ", 
+        RowBox[{"Tooltip", "[", 
+         RowBox[{
+         "\"\<F = Fuoco\>\"", ",", " ", "\"\<punto fisso nel piano\>\""}], 
+         "]"}], ",", " ", 
+        RowBox[{
+        "Text", "[", "\"\<P = punto appartenente alla conica\>\"", "]"}], ",",
+         " ", 
+        RowBox[{"Tooltip", "[", 
+         RowBox[{
+         "\"\<d = direttrice,una retta fissa nel piano\>\"", ",", " ", 
+          "\"\<retta fissa nel piano\>\""}], "]"}], ",", " ", 
+        RowBox[{"Tooltip", "[", 
+         RowBox[{
+         "\"\<e = eccentricit\[AGrave]\>\"", ",", " ", 
+          "\"\<numero reale positivo che caratterizza una conica\>\""}], 
+         "]"}]}], "\[IndentingNewLine]", "}"}], ",", " ", "\"\<\\n\>\""}], 
+     "]"}], ",", "\"\<\\n\>\"", ",", "\[IndentingNewLine]", 
+    RowBox[{"Row", "[", 
+     RowBox[{"{", " ", 
+      RowBox[{
+       RowBox[{
+       "Text", "[", 
+        "\"\<Definizione: una conica \[EGrave] il luogo geometrico dei punti \
+P del piano per i quali \[EGrave] costante il rapporto tra la distanza di P \
+da F e di P da d.\>\"", "]"}], ",", 
+       RowBox[{"Spacer", "[", "20", "]"}], ",", 
+       RowBox[{"HoldForm", "[", 
+        RowBox[{
+         RowBox[{"PF", "/", "Pd"}], "\[Equal]", "e"}], "]"}]}], " ", "}"}], 
+     "]"}]}], "\[IndentingNewLine]", "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.734941040566206*^9, 3.734941164003806*^9}, {
+  3.73494120505579*^9, 3.7349412261601152`*^9}, {3.7349412616261806`*^9, 
+  3.7349413145540333`*^9}, {3.734941351241996*^9, 
+  3.734941485475376*^9}},ExpressionUUID->"7322bc08-b0e7-4918-91ec-\
+3c6768a84c85"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{"\n","\"\\n\"",InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox["\"Dati i seguenti:\"", TextForm]], "InlineText"], 
+        Text["Dati i seguenti:"]],TagBox[
+        TooltipBox[
+        "\"F = Fuoco\"", "\"punto fisso nel piano\"", LabelStyle -> 
+         "TextStyling"], Annotation[#, "punto fisso nel piano", "Tooltip"]& ],
+       InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox["\"P = punto appartenente alla conica\"", TextForm]], 
+         "InlineText"], 
+        Text["P = punto appartenente alla conica"]],TagBox[
+        TooltipBox[
+        "\"d = direttrice,una retta fissa nel piano\"", 
+         "\"retta fissa nel piano\"", LabelStyle -> "TextStyling"], 
+        Annotation[#, "retta fissa nel piano", "Tooltip"]& ],TagBox[
+        TooltipBox[
+        "\"e = eccentricit\[AGrave]\"", 
+         "\"numero reale positivo che caratterizza una conica\"", LabelStyle -> 
+         "TextStyling"], 
+        Annotation[#, "numero reale positivo che caratterizza una conica", 
+         "Tooltip"]& ]},
+      "RowWithSeparators"]},
+    {"\<\"\\n\"\>"},
+    {
+     TemplateBox[{InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox[
+          "\"Definizione: una conica \[EGrave] il luogo geometrico dei punti \
+P del piano per i quali \[EGrave] costante il rapporto tra la distanza di P \
+da F e di P da d.\"", TextForm]], "InlineText"], 
+        Text[
+        "Definizione: una conica \[EGrave] il luogo geometrico dei punti P \
+del piano per i quali \[EGrave] costante il rapporto tra la distanza di P da \
+F e di P da d."]],TemplateBox[{20}, "Spacer1"],TagBox[
+        RowBox[{
+          FractionBox["PF", "Pd"], "\[Equal]", "e"}], HoldForm]},
+      "RowDefault"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.7349411500810347`*^9, 3.7349411653929443`*^9}, {
+  3.7349412960482388`*^9, 3.734941315882449*^9}, {3.734941405096813*^9, 
+  3.7349414918259974`*^9}},ExpressionUUID->"3dd177b1-87f1-4ce1-a106-\
+fc92c59654c9"]
+}, {2}]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -145,17 +233,20 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 548, 13, 55, "Input",ExpressionUUID->"2d5febae-4090-4681-9820-f59f6a0e411c"],
+Cell[558, 20, 578, 15, 55, "Input",ExpressionUUID->"2d5febae-4090-4681-9820-f59f6a0e411c"],
 Cell[CellGroupData[{
-Cell[1131, 37, 176, 3, 69, "Chapter",ExpressionUUID->"a95e00ed-c43d-4d31-a453-f98bd61ffd28"],
-Cell[1310, 42, 566, 11, 58, "Text",ExpressionUUID->"c03f99ce-dcf7-46d2-91a6-6de644c0700e"],
+Cell[1161, 39, 176, 3, 69, "Chapter",ExpressionUUID->"a95e00ed-c43d-4d31-a453-f98bd61ffd28"],
+Cell[1340, 44, 566, 11, 58, "Text",ExpressionUUID->"c03f99ce-dcf7-46d2-91a6-6de644c0700e"],
 Cell[CellGroupData[{
-Cell[1901, 57, 175, 3, 31, "Input",ExpressionUUID->"984ff5ab-5b2a-4e46-a479-b43041613b5a"],
-Cell[2079, 62, 2033, 40, 464, "Output",ExpressionUUID->"8d7104ec-ada9-420f-a63f-8b342b227c23"]
+Cell[1931, 59, 175, 3, 31, "Input",ExpressionUUID->"984ff5ab-5b2a-4e46-a479-b43041613b5a"],
+Cell[2109, 64, 2032, 40, 464, "Output",ExpressionUUID->"8d7104ec-ada9-420f-a63f-8b342b227c23"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[4146, 107, 210, 4, 68, "Section",ExpressionUUID->"124aad2d-da45-43c0-808d-18e2bb156e50"],
-Cell[4359, 113, 635, 14, 173, "Text",ExpressionUUID->"4d7e10fb-eddb-464b-8c7c-0c87a83fa0d4"]
+Cell[4175, 109, 210, 4, 68, "Section",ExpressionUUID->"124aad2d-da45-43c0-808d-18e2bb156e50"],
+Cell[CellGroupData[{
+Cell[4410, 117, 1838, 43, 272, "Input",ExpressionUUID->"7322bc08-b0e7-4918-91ec-3c6768a84c85"],
+Cell[6251, 162, 2193, 52, 177, "Output",ExpressionUUID->"3dd177b1-87f1-4ce1-a106-fc92c59654c9"]
+}, {2}]]
 }, Open  ]]
 }, Open  ]]
 }
