@@ -138,7 +138,7 @@ Column[{
 	Row[{
 	Text["Equazione dell'ellisse: "],With[{e=e},HoldForm[((1-e^2)*x^2)+(y^2) -2*(1+e)*x==0]]
 	}],Row[{
-	Text["Retta generata: "<>Which[e>=1,"Parabola",e<=-1,"Iperbole", -1<e<1,"Ellisse"]],,
+	Text["Retta generata: "<>Which[e>=1,"Parabola",e<=-1,"Iperbole", -1<e<1,"Ellisse"]],
 	}],
 	Row[{
 	Dynamic[ContourPlot[(1-e^2)*x^2+y^2 -(1+e)*x==0,{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True]]
