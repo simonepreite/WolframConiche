@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   2916208,      48098]
-NotebookOptionsPosition[   2914595,      48063]
-NotebookOutlinePosition[   2914934,      48078]
-CellTagsIndexPosition[   2914891,      48075]
+NotebookDataLength[   2915757,      48087]
+NotebookOptionsPosition[   2914474,      48057]
+NotebookOutlinePosition[   2914812,      48072]
+CellTagsIndexPosition[   2914769,      48069]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{
@@ -36,19 +34,6 @@ Cell[BoxData[{
  CellChangeTimes->{3.734338991085784*^9},
  EmphasizeSyntaxErrors->
   True,ExpressionUUID->"2d5febae-4090-4681-9820-f59f6a0e411c"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Syntax","com",
-   "\"Warning: comma encountered with no adjacent expression. The expression \
-will be treated as Null. \\!\\(\\*RowBox[{\\\"\\\\\\\" (line 142 of \
-\\\\\\\\\\\\\\\"PackageProgetto`\\\\\\\\\\\\\\\")\\\\\\\"\\\"}]\\).\"",2,63,
-   11,32458693630185817654,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.734951213010736*^9},ExpressionUUID->"dcdaf50b-6f71-468e-8d60-\
-6912552011ed"]
-}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -72,109 +57,59 @@ trasformi nell\[CloseCurlyQuote]equazione della Parabola.\
 
 Cell[CellGroupData[{
 
-Cell[BoxData["buildGraphicEccentricity"], "Input",
- CellChangeTimes->{{3.734326482290908*^9, 
-  3.73432648391362*^9}},ExpressionUUID->"984ff5ab-5b2a-4e46-a479-\
-b43041613b5a"],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{Private`e$$ = 1., Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[Private`e$$], 0, "eccentricit\[AGrave]"}, 0, 3, 0.1}}, 
-    Typeset`size$$ = {586., {173., 178.}}, Typeset`update$$ = 0, 
-    Typeset`initDone$$, Typeset`skipInitDone$$ = True, Private`e$54783$$ = 
-    Rational[31, 2] + Rational[31, 2] "X Axis"}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, "Variables" :> {Private`e$$ = 0}, "ControllerVariables" :> {
-        Hold[Private`e$$, Private`e$54783$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Dynamic[
-         ContourPlot[(1 - Private`e$$^2) Private`x^2 + 
-           Private`y^2 - (2 (1 + Private`e$$)) Private`x == 0, {
-          Private`x, -10, 20}, {Private`y, -10, 20}, ImageSize -> Medium]] 
-       Text[(1 - Private`e$$^2) Private`x^2 + 
-          Private`y^2 - (2 (1 + Private`e$$)) Private`x == 0], 
-      "Specifications" :> {{{Private`e$$, 0, "eccentricit\[AGrave]"}, 0, 3, 
-         0.1, Appearance -> "Labeled"}}, "Options" :> {}, 
-      "DefaultOptions" :> {}],
-     ImageSizeCache->{633., {218., 223.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.734326484380733*^9, 
-  3.734326692095748*^9},ExpressionUUID->"8d7104ec-ada9-420f-a63f-\
-8b342b227c23"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
 Cell["", "Section",
  CellChangeTimes->{{3.734696387460723*^9, 3.73469641416366*^9}, {
   3.7349448333389053`*^9, 
   3.734944836573629*^9}},ExpressionUUID->"124aad2d-da45-43c0-808d-\
 18e2bb156e50"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
-  RowBox[{
-   RowBox[{"Grid", "[", 
-    RowBox[{
-     RowBox[{"{", "\[IndentingNewLine]", 
-      RowBox[{"{", 
-       RowBox[{"buildGraphicEccentricity", ",", " ", 
-        RowBox[{"Row", "[", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{
-              "Text", "[", 
-               "\"\<Calcolare l'eccentricit\[AGrave] di una conica\\n\>\"", 
-               "]"}], ",", " ", "Italic", ",", "Orange", ",", " ", "32"}], 
-             "]"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"Text", "[", "\"\<Dati i seguenti:\>\"", "]"}], ",", " ", 
-            
-            RowBox[{"Tooltip", "[", 
-             RowBox[{
-             "\"\<F = Fuoco\>\"", ",", " ", "\"\<punto fisso nel piano\>\""}],
-              "]"}], ",", " ", 
+ RowBox[{
+  RowBox[{"Grid", "[", 
+   RowBox[{
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"buildGraphicEccentricity", ",", " ", 
+       RowBox[{"Row", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Style", "[", 
             RowBox[{
-            "Text", "[", "\"\<P = punto appartenente alla conica\>\"", "]"}], 
-            ",", " ", 
-            RowBox[{"Tooltip", "[", 
              RowBox[{
-             "\"\<d = direttrice,una retta fissa nel piano\>\"", ",", " ", 
-              "\"\<retta fissa nel piano\>\""}], "]"}], ",", " ", 
-            RowBox[{"Tooltip", "[", 
-             RowBox[{
-             "\"\<e = eccentricit\[AGrave]\>\"", ",", " ", 
-              "\"\<numero reale positivo che caratterizza una conica\>\""}], 
-             "]"}]}], "\[IndentingNewLine]", "}"}], ",", " ", "\"\<\\n\>\""}],
-          "]"}]}], "}"}], "\[IndentingNewLine]", "}"}], ",", 
-     RowBox[{"Alignment", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"Right", ",", "Right"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"Top", ",", "Right"}], "}"}]}], "}"}]}], ",", " ", 
-     RowBox[{"Spacings", "\[Rule]", "10"}]}], "]"}], 
-   "\[IndentingNewLine]"}]}]], "Input",
+             "Text", "[", 
+              "\"\<Calcolare l'eccentricit\[AGrave] di una conica\\n\>\"", 
+              "]"}], ",", " ", "Italic", ",", "Orange", ",", " ", "32"}], 
+            "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Text", "[", "\"\<Dati i seguenti:\>\"", "]"}], ",", " ", 
+           RowBox[{"Tooltip", "[", 
+            RowBox[{
+            "\"\<F = Fuoco\>\"", ",", " ", "\"\<punto fisso nel piano\>\""}], 
+            "]"}], ",", " ", 
+           RowBox[{
+           "Text", "[", "\"\<P = punto appartenente alla conica\>\"", "]"}], 
+           ",", " ", 
+           RowBox[{"Tooltip", "[", 
+            RowBox[{
+            "\"\<d = direttrice,una retta fissa nel piano\>\"", ",", " ", 
+             "\"\<retta fissa nel piano\>\""}], "]"}], ",", " ", 
+           RowBox[{"Tooltip", "[", 
+            RowBox[{
+            "\"\<e = eccentricit\[AGrave]\>\"", ",", " ", 
+             "\"\<numero reale positivo che caratterizza una conica\>\""}], 
+            "]"}]}], "\[IndentingNewLine]", "}"}], ",", " ", "\"\<\\n\>\""}], 
+        "]"}]}], "}"}], "\[IndentingNewLine]", "}"}], ",", 
+    RowBox[{"Alignment", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Right", ",", "Right"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Top", ",", "Right"}], "}"}]}], "}"}]}], ",", " ", 
+    RowBox[{"Spacings", "\[Rule]", "10"}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
  CellChangeTimes->{{3.734941040566206*^9, 3.734941164003806*^9}, {
    3.73494120505579*^9, 3.7349412261601152`*^9}, {3.7349412616261806`*^9, 
    3.7349413145540333`*^9}, {3.734941351241996*^9, 3.734941485475376*^9}, {
@@ -188,65 +123,124 @@ Cell[BoxData[
    3.7349451642210093`*^9}, {3.734945349722337*^9, 3.734945356804125*^9}, {
    3.734945423362137*^9, 3.734945511222295*^9}, {3.734945555508259*^9, 
    3.7349455882823067`*^9}, {3.734945640366943*^9, 3.734945675898251*^9}, 
-   3.734945801671425*^9, {3.734945908747253*^9, 
-   3.734945934164442*^9}},ExpressionUUID->"7322bc08-b0e7-4918-91ec-\
+   3.734945801671425*^9, {3.734945908747253*^9, 3.734945934164442*^9}, 
+   3.734967088251342*^9},ExpressionUUID->"7322bc08-b0e7-4918-91ec-\
 3c6768a84c85"],
 
 Cell[BoxData[
  TagBox[GridBox[{
     {
-     TagBox[
-      StyleBox[
-       DynamicModuleBox[{Private`e$$ = 3., Typeset`show$$ = True, 
-        Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-        Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-        "\"untitled\"", Typeset`specs$$ = {{{
-           Hold[Private`e$$], 0, "Eccentricit\[AGrave]"}, -3, 3, 1.*^-6}}, 
-        Typeset`size$$ = {594., {196., 201.}}, Typeset`update$$ = 0, 
-        Typeset`initDone$$, Typeset`skipInitDone$$ = True, Private`e$11757$$ =
-         0}, 
-        DynamicBox[Manipulate`ManipulateBoxes[
-         1, StandardForm, "Variables" :> {Private`e$$ = 0}, 
-          "ControllerVariables" :> {
-            Hold[Private`e$$, Private`e$11757$$, 0]}, 
-          "OtherVariables" :> {
-           Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-            Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-            Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
-            Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Column[{
-             Row[{
-               Text["Equazione dell'ellisse: "], 
-               With[{Private`e = Private`e$$}, 
-                
-                HoldForm[(1 - Private`e^2) Private`x^2 + Private`y^2 - 
-                  2 (1 + Private`e) Private`x == 0]]}], 
-             Row[{
-               Text[
-                StringJoin["Retta generata: ", 
-                 Which[
-                 Private`e$$ >= 1, "Parabola", Private`e$$ <= -1, 
-                  "Iperbole", -1 < Private`e$$ < 1, "Ellisse"]]], Null}], 
-             Row[{
-               Dynamic[
-                
-                ContourPlot[(1 - Private`e$$^2) Private`x^2 + 
-                  Private`y^2 - (1 + Private`e$$) Private`x == 0, {
-                 Private`x, -10, 10}, {Private`y, -10, 10}, ImageSize -> 
-                 Medium, Axes -> True]]}]}], 
-          "Specifications" :> {{{Private`e$$, 0, "Eccentricit\[AGrave]"}, -3, 
-             3, 1.*^-6, Appearance -> "Labeled"}}, "Options" :> {}, 
-          "DefaultOptions" :> {}],
-         ImageSizeCache->{641., {241., 246.}},
-         SingleEvaluation->True],
-        Deinitialization:>None,
-        DynamicModuleValues:>{},
-        SynchronousInitialization->True,
-        UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-        UnsavedVariables:>{Typeset`initDone$$},
-        UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-       Deployed->True,
-       StripOnInput->False],
-      Manipulate`InterpretManipulate[1]], 
+     DynamicModuleBox[{Private`elems$$ = {}}, 
+      TagBox[
+       StyleBox[
+        DynamicModuleBox[{Private`aaa$$ = 0, Private`e$$ = 0, Typeset`show$$ =
+          True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+         "\"untitled\"", Typeset`specs$$ = {{{
+            Hold[Private`e$$], 0, "Eccentricit\[AGrave]:"}, -1.5, 1.5, 0.1}, {{
+            Hold[Private`aaa$$], 0, "Px:"}, -12, 12, 0.1}}, Typeset`size$$ = {
+         360., {229.5, 234.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+         Typeset`skipInitDone$$ = True, Private`e$3726$$ = 0, 
+         Private`aaa$3727$$ = 0}, 
+         DynamicBox[Manipulate`ManipulateBoxes[
+          1, StandardForm, 
+           "Variables" :> {Private`aaa$$ = 0, Private`e$$ = 0}, 
+           "ControllerVariables" :> {
+             Hold[Private`e$$, Private`e$3726$$, 0], 
+             Hold[Private`aaa$$, Private`aaa$3727$$, 0]}, 
+           "OtherVariables" :> {
+            Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+             Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+             Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+             Typeset`initDone$$, Typeset`skipInitDone$$}, 
+           "Body" :> (
+            Private`elems$$ = 
+             Private`eccentricity[Private`aaa$$, Private`e$$]; Column[{
+               Row[
+                If[Private`elems$$ != {}, {
+                  Text["Eccentricit\[AGrave] "], 
+                  HoldForm[Private`PF/Private`Pd], 
+                  Text[": "], EuclideanDistance[{1, 0}, 
+                    Part[Private`elems$$, 1]]/EuclideanDistance[{2, 
+                    Part[
+                    Part[Private`elems$$, 1], 2]}, 
+                   Part[Private`elems$$, 1]], Null, 
+                  Text["PF: "], 
+                  EuclideanDistance[{1, 0}, 
+                   Part[Private`elems$$, 1]], 
+                  Text["PD: "], 
+                  EuclideanDistance[{2, 
+                    Part[
+                    Part[Private`elems$$, 1], 2]}, 
+                   Part[Private`elems$$, 1]]}, {
+                  If[
+                  Private`e$$ == 0, "Non hai disegnato alcuna figura!", 
+                   "Il punto non appartiene alla figura!"]}]], 
+               Row[{
+                 Show[
+                  
+                  ContourPlot[(1 - Private`e$$^2) Private`x^2 + Private`y^2 - 
+                    2 (1 - 2 Private`e$$^2) Private`x + 1 - 4 Private`e$$^2 == 
+                   0, {Private`x, -12, 12}, {Private`y, -6, 6}], 
+                  Graphics[{
+                    Join[{Red, PointSize -> 0.025, 
+                    Point[{1, 0}], 
+                    Text["F", {1.2, 0.5}], Black, 
+                    Line[{{2, -12}, {2, 12}}], 
+                    Text["Direttrice, y=2", {4, 3}]}, 
+                    If[Private`elems$$ != {}, {Brown, PointSize -> 0.025, 
+                    Point[
+                    Part[Private`elems$$, 1]], 
+                    Point[
+                    Part[Private`elems$$, 2]], 
+                    Text["P", 
+                    Map[1 + #& , 
+                    Part[Private`elems$$, 1]]], 
+                    Text["P", 
+                    Map[1 + #& , 
+                    Part[Private`elems$$, 2]]]}, {}], 
+                    If[Private`elems$$ != {}, {
+                    Line[{{1, 0}, 
+                    Part[Private`elems$$, 1]}], 
+                    Line[{{2, 
+                    Part[
+                    Part[Private`elems$$, 1], 2]}, 
+                    Part[Private`elems$$, 1]}], 
+                    Point[{2, 
+                    Part[
+                    Part[Private`elems$$, 1], 2]}], 
+                    Text["d", {3, 
+                    Part[
+                    Part[Private`elems$$, 1], 2]}]}, {}]]}], 
+                  Axes -> {True, True}, ImageSize -> Medium]}], 
+               Row[{
+                 
+                 Grid[{{"Ellisse", "0<|e|<1"}, {"Parabola", "|e|\[Equal]1"}, {
+                   
+                    Tooltip["Punto", "Circonferenza di raggio 0"], 
+                    "|e| = 0"}, {"Iperbole", "|e| > 1"}}, Frame -> All, 
+                  Background -> {Null, 
+                    Private`bgColors[
+                    Private`checkE[Private`e$$], 
+                    PackageProgetto`color[
+                    Private`checkE[Private`e$$]]]}]}]}]), 
+           "Specifications" :> {{{
+              Private`e$$, 0, "Eccentricit\[AGrave]:"}, -1.5, 1.5, 0.1, 
+              Appearance -> "Labeled"}, {{Private`aaa$$, 0, "Px:"}, -12, 12, 
+              0.1, Appearance -> "Labeled"}}, "Options" :> {}, 
+           "DefaultOptions" :> {}],
+          ImageSizeCache->{407., {288., 293.}},
+          SingleEvaluation->True],
+         Deinitialization:>None,
+         DynamicModuleValues:>{},
+         SynchronousInitialization->True,
+         UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+         UnsavedVariables:>{Typeset`initDone$$},
+         UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+        Deployed->True,
+        StripOnInput->False],
+       Manipulate`InterpretManipulate[1]],
+      DynamicModuleValues:>{}], 
      TemplateBox[{"\n","\"\\n\"",StyleBox[
         InterpretationBox[
          Cell[
@@ -285,11 +279,11 @@ Cell[BoxData[
    GridBoxAlignment->{"Columns" -> {Right, Right}, "Rows" -> {Top, Right}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
    GridBoxSpacings->{"Columns" -> {{10}}}],
-  "Grid"]], "Input",
- CellChangeTimes->{{3.7349511991267967`*^9, 3.734951199200305*^9}, 
-   3.734951699794202*^9, 
-   3.7349519577763643`*^9},ExpressionUUID->"335840bd-4a6b-4a36-8cb9-\
-35b9d752cf3f"],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.734967071596987*^9, 
+  3.734967096624423*^9}},ExpressionUUID->"ef515712-dcde-40cd-9aaf-\
+e9c393caddd2"]
+}, {2}]],
 
 Cell[CellGroupData[{
 
@@ -441,7 +435,7 @@ Cell[BoxData[
 \[EGrave] un'ellisse di cui il sole occupa uno dei due fuochi\"\>", 
      TagBox[
       StyleBox[
-       DynamicModuleBox[{$CellContext`i23$$ = 14, Typeset`show$$ = True, 
+       DynamicModuleBox[{$CellContext`i23$$ = 40, Typeset`show$$ = True, 
         Typeset`bookmarkList$$ = {
         "\"min\"" :> {$CellContext`i23$$ = 1}, 
          "\"max\"" :> {$CellContext`i23$$ = 46}}, Typeset`bookmarkMode$$ = 
@@ -462,8 +456,8 @@ Cell[BoxData[
                     AnimatorBox[Dynamic[$CellContext`i23$$], {1, 46, 1},
                     AnimationRate->10.,
                     AnimationRepetitions->DirectedInfinity[1],
-                    AnimationRunTime->5.8413238525390625`,
-                    AnimationTimeIndex->1.3413238525390625`,
+                    AnimationRunTime->65.23332357406616,
+                    AnimationTimeIndex->3.900000000000041,
                     
                     AppearanceElements->{
                     "ProgressSlider", "PlayPauseButton", 
@@ -48061,8 +48055,8 @@ fe0e8bcf83e8"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{2133, 1139},
-WindowMargins->{{0, Automatic}, {1, Automatic}},
+WindowSize->{1366, 716},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -48077,26 +48071,21 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 606, 15, 55, "Input",ExpressionUUID->"2d5febae-4090-4681-9820-f59f6a0e411c"],
 Cell[CellGroupData[{
-Cell[580, 22, 606, 15, 59, "Input",ExpressionUUID->"2d5febae-4090-4681-9820-f59f6a0e411c"],
-Cell[1189, 39, 452, 10, 22, "Message",ExpressionUUID->"dcdaf50b-6f71-468e-8d60-6912552011ed"]
-}, Open  ]],
+Cell[1189, 39, 176, 3, 69, "Chapter",ExpressionUUID->"a95e00ed-c43d-4d31-a453-f98bd61ffd28"],
+Cell[1368, 44, 566, 11, 58, "Text",ExpressionUUID->"c03f99ce-dcf7-46d2-91a6-6de644c0700e"],
 Cell[CellGroupData[{
-Cell[1678, 54, 176, 3, 69, "Chapter",ExpressionUUID->"a95e00ed-c43d-4d31-a453-f98bd61ffd28"],
-Cell[1857, 59, 566, 11, 58, "Text",ExpressionUUID->"c03f99ce-dcf7-46d2-91a6-6de644c0700e"],
+Cell[1959, 59, 195, 4, 68, "Section",ExpressionUUID->"124aad2d-da45-43c0-808d-18e2bb156e50"],
 Cell[CellGroupData[{
-Cell[2448, 74, 175, 3, 31, "Input",ExpressionUUID->"984ff5ab-5b2a-4e46-a479-b43041613b5a"],
-Cell[2626, 79, 2032, 40, 460, "Output",ExpressionUUID->"8d7104ec-ada9-420f-a63f-8b342b227c23"]
-}, Open  ]],
+Cell[2179, 67, 2904, 60, 193, "Input",ExpressionUUID->"7322bc08-b0e7-4918-91ec-3c6768a84c85"],
+Cell[5086, 129, 7054, 155, 600, "Output",ExpressionUUID->"ef515712-dcde-40cd-9aaf-e9c393caddd2"]
+}, {2}]],
 Cell[CellGroupData[{
-Cell[4695, 124, 195, 4, 68, "Section",ExpressionUUID->"124aad2d-da45-43c0-808d-18e2bb156e50"],
-Cell[4893, 130, 2974, 62, 205, "Input",ExpressionUUID->"7322bc08-b0e7-4918-91ec-3c6768a84c85"],
-Cell[7870, 194, 4396, 97, 502, InheritFromParent,ExpressionUUID->"335840bd-4a6b-4a36-8cb9-35b9d752cf3f"],
-Cell[CellGroupData[{
-Cell[12291, 295, 6656, 118, 175, "Input",ExpressionUUID->"858ac8d9-12fc-4af0-a80d-f5b4bd87deef"],
-Cell[18950, 415, 591, 9, 35, "Output",ExpressionUUID->"231b5580-1c47-453b-beb1-0add45d84d14"],
-Cell[19544, 426, 593, 9, 35, "Output",ExpressionUUID->"3274ea60-7405-4312-9ab1-746966315e0a"],
-Cell[20140, 437, 2894415, 47621, 429, "Output",ExpressionUUID->"58364a24-6fcc-4ee3-b6f1-fe0e8bcf83e8"]
+Cell[12174, 289, 6656, 118, 251, "Input",ExpressionUUID->"858ac8d9-12fc-4af0-a80d-f5b4bd87deef"],
+Cell[18833, 409, 591, 9, 35, "Output",ExpressionUUID->"231b5580-1c47-453b-beb1-0add45d84d14"],
+Cell[19427, 420, 593, 9, 35, "Output",ExpressionUUID->"3274ea60-7405-4312-9ab1-746966315e0a"],
+Cell[20023, 431, 2894411, 47621, 429, "Output",ExpressionUUID->"58364a24-6fcc-4ee3-b6f1-fe0e8bcf83e8"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

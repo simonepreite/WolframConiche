@@ -17,7 +17,9 @@ printExercise::usage="Prints the text, equation of an exercise, with the possibl
 rFile::usage="Print all exercices into a passed file";
 NotebookOpeners::usage="Displays different buttons, each one opens a different .nb file";
 buildLabeledGraphic::usage="builds an interactive Panel with the equation of a cone and prints a table with the deatils of the components.Undertanding how to limit the rotation of the Plot is important";
-
+ShowEllisse
+ShowCirconferenza
+ShowIperbole
 Begin["Private`"];
 
 (* disabilito alcuni warning *)
@@ -27,12 +29,12 @@ SetDirectory[NotebookDirectory[]]; (* imposto la cartella attuale come base in c
 
 (*Checks which kind of Shape is defined by the equations parameter*)
 recognizeShape[a_,b_,c_, d_,e_,f_]:=
-(If[d^2/4a+e^2/4c-f<0,"Non \[EGrave] una conica!",flag=b^2-(4*a*c);Which[flag==0,If[a==b && b==c && c==0, "Retta","Parabola"] , LessThan[0][flag], If[a==c && b==0,"Circonferenza","Ellisse"], GreaterThan[0][flag], If[a+c==0,"Iperbole Equilatera","Iperbole"]]]);
 
+((*If[d^2/4a+e^2/4c-f<0,"Non \[EGrave] una conica!",*)flag=b^2-(4*a*c);Which[flag==0,If[a==b && b==c && c==0, "Retta","Parabola"] , LessThan[0][flag], If[a==c && b==0,"Circonferenza","Ellisse"], GreaterThan[0][flag], If[a+c==0,"Iperbole Equilatera","Iperbole"]](*]*));
 (*Assigns a color to the shape*)
 (*AAA: We could choose better colors by using RGB[]*)
 (*AAA: We need to add some words color association here for the graphicPlaneCone*)
-color[text_]:=(Switch[text,"Circonferenza",Brown,"Ellisse",Purple,"Iperbole",Blue ,"Parabola", Yellow, "Retta", Black, "Iperbole Equilatera", Blue, "Non \[EGrave] una conica!", Brown]);
+color[text_]:=(Switch[text,"Circonferenza",Brown,"Ellisse",Purple,"Iperbole",Blue ,"Parabola", Yellow, "Retta", Black, "Iperbole Equilatera", Blue, "Non \[EGrave] una conica!", Brown, "Punto",Pink, "Rette Incidenti",Green]);
 
 (*Builds an interactive Panel with the plots of the Conical equation*)
 (*TODO: Trovare un modo di colorare la Grid*)
@@ -81,7 +83,7 @@ Column[{
 ControlPlacement->Top (*Places the Sliders on the top of the Panel*)
 ]]);
 
-checkFigure[alfa_,beta_, g_]:=(Which[beta==90, "Circonferenza",beta<90 && alfa < beta, "Ellisse",beta<90 && alfa < beta && g==0, "Punto", beta==alfa, "Parabola",beta==alfa && g==0, "Retta",beta<alfa,"Iperbole",beta<alfa && g==0,"Rette Incidenti"]);
+checkFigure[alfa_,beta_, g_]:=(Which[beta<=90 && alfa < beta && g==0, "Punto",beta<alfa && g==0,"Rette Incidenti",beta==alfa && g==0, "Retta",beta<90 && alfa < beta, "Ellisse", beta==alfa, "Parabola",beta<alfa,"Iperbole",beta==90, "Circonferenza"]);
 
 aux[namez_, colorz_,xz_]:=(If[StringMatchQ[namez,xz],colorz,Null]);
 
@@ -91,17 +93,17 @@ bgColorsTwo[name_,color_ ]:=(aux[name, color,#]&/@{"Ellisse","Parabola", "Circon
 
 (*Builds an interactive Panel with the equation of a Plane and a Cone, highligthing te intersection and plotting it inside another plot*)
 (*TODO:individuare il tipo di conica che si va a formare*)
-
 buildGraphicPlaneCone:=(
 Manipulate[
-beta=N[ArcSin[Abs[4*f]/(4*Sqrt[(d^2) + (e^2)+ (f^2)])]/Degree];alfa= 45;
+beta=IntegerPart[N[ArcSin[Abs[4*f]/(4*Sqrt[(d^2) + (e^2)+ (f^2)])]/Degree]];alfa= 45;
 Grid[{{
 Row[{Text["L'angolo tra il piano e l'asse del cono, Beta, \[EGrave]: "],beta}]},
 {Row[{Text["L'angolo tra l'asse del cono e la generatrice, Alfa, \[EGrave]: "],alfa}]},
+{Row[{Text["La figura disegnata \[EGrave]: "],checkFigure[alfa,beta, g]}]},
 {
 Dynamic[
 Show[
-ContourPlot3D[{(d*x)+(e*y)+(f*z)+g==0, (x^2)+(y^2)-(z^2)==0}, {x,-2,2},{y,-2,2},{z,-2,2} , ContourStyle->{Automatic,Opacity[0.8]},
+ContourPlot3D[{(d*x)+(e*y)+(f*z)+g==0, ((x^2))+((y^2))-((z^2))==0}, {x,-2,2},{y,-2,2},{z,-2,2} , ContourStyle->{Automatic,Opacity[0.8]},
 ImageSize->Medium,
 Mesh->None,
 BoundaryStyle->{{1,2}->{Red,Thick}},
@@ -110,7 +112,7 @@ AxesOrigin-> True
 Graphics3D[{Red,Thick, Tooltip[Line[{{0,0,-2}, {0,0,2}}], "Asse di rotazione"]}]
 ]
 ],
-Dynamic[ Show[{ContourPlot[-((d*x)+(e*y)+g)/f==Sqrt[((x^2)/1 )+(( y^2)/1)], {x,-2,2},{y,-2,2}, ImageSize->Medium]},{ContourPlot[-((d*x)+(e*y)+g)/f==-Sqrt[((x^2)/1 )+(( y^2)/1)], {x,-2,2},{y,-2,2}, ImageSize->Medium]}]]
+Dynamic[ Show[{ ContourPlot[{-((d*x)+(e*y)+g)/f==Sqrt[((x^2)/1 )+(( y^2)/1)],-((d*x)+(e*y)+g)/f==-Sqrt[((x^2)/1 )+(( y^2)/1)]}, {x,-2,2},{y,-2,2}, ImageSize->Medium, ContourStyle->color[checkFigure[alfa,beta,g]]]}]]
 }, {
 Grid[
 	{{"Ellisse","Alfa < Beta < 90\[Degree]"},
@@ -118,7 +120,7 @@ Grid[
 	{"Circonferenza","Beta = 90\[Degree]"},
 	{"Iperbole","Beta < 90\[Degree]"},
 	{"Rette Incidenti","Beta parallelo all'asse", "il piano passa per il vertice"},
-	{"Retta","Beta = Alfa", "Il piano passa per il vertice del cono"},
+	{"Retta (due rette coincidenti)","Beta = Alfa", "Il piano passa per il vertice del cono"},
 	{"Punto", "Alfa < Beta <= 90\[Degree]", "Il piano passa per il vertice del cono"}},
 	Frame->All,
 	Background->{Null, bgColors[checkFigure[alfa,beta,g], color[checkFigure[alfa,beta,g]]]}
@@ -131,56 +133,56 @@ Grid[
 {{g,1,"Profondit\[AGrave] del piano:"},0,10,0.1,Appearance->"Labeled"}
 ]);
 
-(*Builds an interactive Panel with the equation of a curve base on its eccentricity*)
-(*Individuare il tipo di conica che si va a formare*)
-buildGraphicEccentricity:=(Manipulate[
-Column[{
-	Row[{
-	Text["Equazione dell'ellisse: "],With[{e=e},HoldForm[((1-e^2)*x^2)+(y^2) -2*(1+e)*x==0]]
-	}],Row[{
-	Text["Retta generata: "<>Which[e>=1,"Parabola",e<=-1,"Iperbole", -1<e<1,"Ellisse"]],
-	}],
-	Row[{
-	Dynamic[ContourPlot[(1-e^2)*x^2+y^2 -(1+e)*x==0,{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True]]
-	}]
-}],
-{{e,0,"Eccentricit\[AGrave]"},-3,3,0.000001,Appearance->"Labeled"}
-]);
+eccentricity[x_, e_]:=(
+result=-1+4 e^2+2 x-4 e^2 x-x^2+e^2 x^2;
+If[result>=0, {{x,Sqrt [result]},{x, -Sqrt [result]}},{} ]
+);
 
-(*Costruisce un grafico interattivo che mostra come, per una conica, sia possibile mantenere costante l'eccentricit\[AGrave] intesa come rapporto di distanze*)
-buildGraphicMovablePoint:=(DynamicModule[{a = 1, b = 0, c = 0, delta, F},
-    delta = b^2-4 a c;
-	F = {0,(1-delta)/4a};  (* Fuoco *)
-	Manipulate[
+checkE[e_]:=(
+If [e<-1,"Iperbole",If[e==-1,"Parabola",If[-1<e<0,"Ellisse",If[e==0,"Circonferenza",If[0<e<1,"Ellisse",If[e==1,"Parabola",If[e>1,"Iperbole"]]]]]]]
+);
+
+(*c \[EGrave] la x del Fuoco, e \[EGrave] l'eccentricit\[AGrave]*)
+buildGraphicEccentricity:=(
+DynamicModule[{elems},
+Manipulate[
+elems=eccentricity[aaa,e];
 Column[{
-		Row[{
-			StringForm["P(``,``)",NumberForm[x0,3],NumberForm[x0^2,3]], (* mostro coordinate del punto *)
-			StringForm["Distanza dal fuoco, PF: ``",NumberForm[Sqrt[(x0^2-F[[2]])^2 + (x0-F[[1]])^2],3]], (* mostro distanza tra P e F *)
-			StringForm["Distanza dalla direttrice, PH: ``",NumberForm[x0^2+(1+delta)/4a,3]],
- (* mostro distanza tra P e la direttrice *)
-		Row[{StringForm["Eccentricit\[AGrave],"],HoldForm[PF/PH],StringForm[": "],NumberForm[(Sqrt[(x0^2-F[[2]])^2 + (x0-F[[1]])^2])/(x0^2+(1+delta)/4a)]}]
-}, "\n"]
-,Row[{
-			(* le 2 distanze saranno uguali *)
-			Show[ (* mostro nel grafico *)
-				Plot[x^2,{x,-2,2},AspectRatio->1, ImageSize->Medium, PlotRange->{-1,2},PlotStyle->{RGBColor[0,0,0.6],Thick}], (* Parabola come equazione di secondo grado *)
-				Plot[-(1+delta)/4a,{x,-2,2},AspectRatio->1, ImageSize->Medium, PlotRange->{-1,2},PlotStyle->{Black}], (* disegna la direttrice *)
-				Graphics[{
-					PointSize[0.02],
-					Red,Point[{x0,x0^2}], (* Punto P a partire dall'angolo a *)
-					Green,Point[F], (* disegno il fuoco *)
-					Dashing[0.02],
-					Blue,Line[{F,{x0,x0^2}}], (* linea tra P e F *)
-					Yellow,Line[{{x0,-(1+delta)/4a},{x0,x0^2}}], (* linea da P alla direttrice *)
-					Text["P",{x0+0.1,x0^2+0.1}],
-					Text["F",{0.1,(1-delta)/4a+0.1}],
-					Text["direttrice",{1,-(1+delta)/4a-0.1}]
-				}] (* end Graphics *)
-			]
-		}, "\n"]}], (* separatore tra ogni elemento della Row *)
-		{{x0,0.,"Muovi P"}, -1.4, 1.4,  0.1}(* coordinata x di P \[EGrave] manipolabile *)
-	]
-  ]);
+Row[
+If[elems!={},
+{Text["Eccentricit\[AGrave] "], HoldForm[PF/Pd],Text[": "],EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]],Text["PF: "],EuclideanDistance[{1,0},elems[[1]]], Text["PD: "],EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]},{If[e==0,"Non hai disegnato alcuna figura!", "Il punto non appartiene alla figura!"]}
+]
+],
+Row[{
+Show[
+ContourPlot[(1-e^2)*x^2 + y^2-2*(1-2*e^2)*x + 1-4*e^2==0, {x,-12,12},{y,-6,6}],
+Graphics[{ 
+Join[
+{Red, PointSize->0.025,Point[{1,0}],Text["F",{1.2,0.5}],Black,Line[{{2,-12}, {2,12}}], Text["Direttrice, y=2",{4, 3}] },
+If[elems!={},
+{Brown, PointSize->0.025,Point[elems[[1]]],Point[elems[[2]]], Text["P",(1+#)&/@elems[[1]]], Text["P",(1+#)&/@elems[[2]]]},
+ {}],
+If[elems!={},
+{Line[{{1,0},elems[[1]]}], Line[{{2,elems[[1]][[2]]},elems[[1]]}],Point[{2,elems[[1]][[2]]}],Text["d",{3,elems[[1]][[2]]}]},{} ]]}
+],
+ Axes->{True, True},
+ImageSize->Medium
+]
+}],
+Row[{
+Grid[
+	{{"Ellisse","0<|e|<1"},
+	{"Parabola","|e|\[Equal]1"},
+	{Tooltip["Punto","Circonferenza di raggio 0"],"|e| = 0"},
+	{"Iperbole","|e| > 1"}},
+	Frame->All,
+	Background->{Null, bgColors[checkE[e], color[checkE[e]]]
+}]
+}]
+}],
+{{e,0,"Eccentricit\[AGrave]:"},-1.5,1.5,0.1,Appearance->"Labeled"},
+{{aaa,0,"Px:"},-12,12,0.1,Appearance->"Labeled"}
+]]); 
 
 (*builds an interactive Panel with the equation of a cone and prints a table with the deatils of the components*)
 (*Undertanding how to limit the rotation of the Plot is important*)
@@ -245,7 +247,7 @@ For[i=1, i<=3, i++,
 	ItemSize->Fit, Frame->None, Alignment->{Left,Center, Right},Spacings->3
 	]
 	);
-
+	
 ShowEllisse:=(Manipulate[
 		ContourPlot[{y==(b/a)*Sqrt[(a^2)-(x^2)],y==-(b/a)*Sqrt[(a^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True],
 		{{a,1,"a"},1,10,1,Appearance->"Labeled"},
@@ -265,14 +267,11 @@ ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)],y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,10
 	ImageSize->Medium, Axes->True],
 {{a,1,"a"},1,10,1,Appearance->"Labeled"},
 {{b,1,"b"},1,10,1,Appearance->"Labeled"}
-]);	
+]);
 	
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
-
-
-
 
 
 
