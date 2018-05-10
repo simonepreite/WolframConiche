@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     16944,        396]
-NotebookOptionsPosition[     15229,        358]
-NotebookOutlinePosition[     15700,        376]
-CellTagsIndexPosition[     15657,        373]
+NotebookDataLength[     16926,        396]
+NotebookOptionsPosition[     15215,        358]
+NotebookOutlinePosition[     15685,        376]
+CellTagsIndexPosition[     15642,        373]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,9 +33,9 @@ Cell[BoxData[{
   RowBox[{"Get", "[", "\"\<PackageProgetto`\>\"", "]"}], ";"}]}], "Code",
  CellChangeTimes->{{3.7343230989134007`*^9, 3.734323113611484*^9}, {
   3.734338788539892*^9, 3.7343387896759787`*^9}, {3.734338832762272*^9, 
-  3.734338876777012*^9}, {3.7343569061801767`*^9, 3.734356909364648*^9}},
- EmphasizeSyntaxErrors->
-  True,ExpressionUUID->"9a4d125a-8988-4dd0-b89b-e942ab0dbba5"],
+  3.734338876777012*^9}, {3.7343569061801767`*^9, 
+  3.734356909364648*^9}},ExpressionUUID->"9a4d125a-8988-4dd0-b89b-\
+e942ab0dbba5"],
 
 Cell[BoxData[
  RowBox[{"(*", "\[IndentingNewLine]", 
@@ -49,15 +49,11 @@ Cell[BoxData[
    RowBox[{
    "questo", " ", "evita", " ", "di", " ", "dover", " ", "valutare", " ", 
     "la", " ", "cella", " ", "di", " ", "caricamento", " ", "del", " ", 
-    "package", " ", "in", " ", "ogni", " ", "notebook", " ", 
-    RowBox[{"(", 
-     RowBox[{
-     "il", " ", "risultao", " ", "dovrebbe", " ", "essere", " ", "quello", 
-      " ", "di", " ", "una", " ", "pagina", " ", "html", " ", "con", " ", 
-      "dei", " ", "\"\<segnalibri\>\""}], ")"}]}]}], "\[IndentingNewLine]", 
-  "*)"}]], "Input",
- CellChangeTimes->{{3.734715009522331*^9, 
-  3.734715121465967*^9}},ExpressionUUID->"fcc4e822-052c-4101-98a2-\
+    "package", " ", "in", " ", "ogni", " ", "notebook"}]}], " ", 
+  "\[IndentingNewLine]", "*)"}]], "Input",
+ CellChangeTimes->{{3.734715009522331*^9, 3.734715121465967*^9}, {
+  3.734969365614056*^9, 
+  3.734969367001225*^9}},ExpressionUUID->"fcc4e822-052c-4101-98a2-\
 6671775fc97d"],
 
 Cell[CellGroupData[{
@@ -112,19 +108,19 @@ Cell[BoxData[
  TemplateBox[{TagBox[
     StyleBox[
      DynamicModuleBox[{
-      Private`theta$$ = 0., Typeset`show$$ = True, 
+      Private`theta$$ = 2.291870361435334, Typeset`show$$ = True, 
        Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
        Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
        "\"untitled\"", Typeset`specs$$ = {{
           Hold[Private`theta$$], 0., 2 Pi}}, 
-       Typeset`size$$ = {67., {2., 12.}}, Typeset`update$$ = 0, 
+       Typeset`size$$ = {180., {98., 101.}}, Typeset`update$$ = 0, 
        Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-       Private`theta$2113$$ = 0}, 
+       Private`theta$2870$$ = 0}, 
       DynamicBox[
        Manipulate`ManipulateBoxes[
        1, StandardForm, "Variables" :> {Private`theta$$ = 0.}, 
         "ControllerVariables" :> {
-          Hold[Private`theta$$, Private`theta$2113$$, 0]}, 
+          Hold[Private`theta$$, Private`theta$2870$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -141,7 +137,7 @@ Cell[BoxData[
          ControlType -> Animator, AppearanceElements -> None, 
           DefaultBaseStyle -> "Animate", DefaultLabelStyle -> "AnimateLabel", 
           SynchronousUpdating -> True, ShrinkingDelay -> 40.}, 
-        "DefaultOptions" :> {}], ImageSizeCache -> {301., {38., 44.}}, 
+        "DefaultOptions" :> {}], ImageSizeCache -> {211., {121., 125.}}, 
        SingleEvaluation -> True], Deinitialization :> None, 
       DynamicModuleValues :> {}, SynchronousInitialization -> True, 
       UndoTrackedVariables :> {Typeset`show$$, Typeset`bookmarkMode$$}, 
@@ -157,39 +153,42 @@ Cell[BoxData[
        RGBColor[1, 1, 0], 
        Opacity[0.8], 
        ConeBox[{{0, 0, -5}, {0, 0, 0}}, 2]}, {
-       GrayLevel[0], PointSize -> 0.05, 
+       GrayLevel[0], 
+       PointSize[0.05], 
        TagBox[
         TooltipBox[
-         Point3DBox[{0, 0, 0}], "\"Vertice del Cono\"", LabelStyle -> 
+         Point3DBox[{0, 0, 0}], "\"Vertice del Cono\"", TooltipStyle -> 
          "TextStyling"], Annotation[#, "Vertice del Cono", "Tooltip"]& ]}, {
        RGBColor[1, 0, 0], 
        Thickness[Large], 
        TagBox[
         TooltipBox[
          Line3DBox[{{0, 0, -8}, {0, 0, 8}}], "\"Asse di rotazione\"", 
-         LabelStyle -> "TextStyling"], 
+         TooltipStyle -> "TextStyling"], 
         Annotation[#, "Asse di rotazione", "Tooltip"]& ]}, {
        RGBColor[0, 0, 1], 
        Thickness[Large], 
        TagBox[
         TooltipBox[
          Line3DBox[{{2, 0, -5}, {-2, 0, 5}}], "\"Generatrice del Cono\"", 
-         LabelStyle -> "TextStyling"], 
+         TooltipStyle -> "TextStyling"], 
         Annotation[#, "Generatrice del Cono", "Tooltip"]& ]}, {
        RGBColor[0, 0, 1], 
        Thickness[Large], 
        TagBox[
         TooltipBox[
          Line3DBox[{{0, -2, -5}, {0, 0, 0}, {0, -2, 5}}], 
-         "\"Generatrice del Cono\"", LabelStyle -> "TextStyling"], 
-        Annotation[#, "Generatrice del Cono", "Tooltip"]& ]}}, {
-     Axes -> True, RotationAction -> "Fit", Background -> GrayLevel[1]}], 
-    Magnification -> 2, StripOnInput -> False]},
+         "\"Generatrice del Cono\"", TooltipStyle -> "TextStyling"], 
+        Annotation[#, "Generatrice del Cono", "Tooltip"]& ]}}, Axes -> True, 
+     Background -> GrayLevel[1], RotationAction -> "Fit", 
+     ViewPoint -> {1.3, -2.4, 2.}, ViewVertical -> {0., 0., 1.}], 
+    StripOnInput -> False, Magnification -> 2]},
   "RowDefault"]], "Output",
  CellChangeTimes->{
   3.734928464142365*^9, 3.734928558432966*^9, {3.73493047222257*^9, 
-   3.734930495821829*^9}},ExpressionUUID->"62445c73-7b2b-4137-9236-\
-af0e49f0e31c"]
+   3.734930495821829*^9}, {3.734969387172737*^9, 
+   3.734969387659412*^9}},ExpressionUUID->"bf16357b-a856-4c9a-9ddd-\
+7650363f5d17"]
 }, Open  ]],
 
 Cell["\<\
@@ -240,15 +239,16 @@ Cell[BoxData["buildGraphicPlaneCone"], "Input",
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Private`d$$ = 1, Private`e$$ = 1, Private`f$$ = 1, 
-    Private`g$$ = 1, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+   DynamicModuleBox[{Private`d$$ = 6.1000000000000005`, Private`e$$ = 7.4, 
+    Private`f$$ = 3.3000000000000003`, Private`g$$ = 0., Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Private`d$$], 1, "Coefficiente x Piano:"}, 0, 10, 0.1}, {{
        Hold[Private`e$$], 1, "Coefficiente y Piano:"}, 0, 10, 0.1}, {{
        Hold[Private`f$$], 1, "Coefficiente z Piano:"}, 0, 10, 0.1}, {{
        Hold[Private`g$$], 1, "Profondit\[AGrave] del piano:"}, 0, 10, 0.1}}, 
-    Typeset`size$$ = {1050., {238., 244.}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {718., {167.5, 171.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, Private`d$4216$$ = 0, 
     Private`e$4217$$ = 0, Private`f$4218$$ = 0, Private`g$4219$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -297,13 +297,13 @@ Cell[BoxData[
            Dynamic[
             Show[{
               
-              ContourPlot[-(Private`d$$ Private`x + Private`e$$ Private`y + 
-                 Private`g$$)/Private`f$$ == 
+              ContourPlot[(-(Private`d$$ Private`x + Private`e$$ Private`y + 
+                  Private`g$$))/Private`f$$ == 
                Sqrt[Private`x^2/1 + Private`y^2/1], {Private`x, -2, 2}, {
                Private`y, -2, 2}, ImageSize -> Medium]}, {
               
-              ContourPlot[-(Private`d$$ Private`x + Private`e$$ Private`y + 
-                 Private`g$$)/Private`f$$ == -
+              ContourPlot[(-(Private`d$$ Private`x + Private`e$$ Private`y + 
+                  Private`g$$))/Private`f$$ == -
                 Sqrt[Private`x^2/1 + Private`y^2/1], {Private`x, -2, 2}, {
                Private`y, -2, 2}, ImageSize -> Medium]}]]}, {
            
@@ -330,7 +330,7 @@ Cell[BoxData[
          Appearance -> "Labeled"}, {{
          Private`g$$, 1, "Profondit\[AGrave] del piano:"}, 0, 10, 0.1, 
          Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{1091., {306., 312.}},
+     ImageSizeCache->{749., {219., 223.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -359,7 +359,7 @@ d7cb89ebff7e"]
 WindowSize->{1366, 716},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
 TaggingRules->{"SlideShow" -> True},
-Magnification:>0.75 Inherited,
+Magnification:>0.5 Inherited,
 FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
 StyleDefinitions->FrontEnd`FileName[{"SlideShow"}, "Earth.nb", 
   CharacterEncoding -> "UTF-8"]
@@ -375,28 +375,28 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 779, 17, 70, "Code",ExpressionUUID->"9a4d125a-8988-4dd0-b89b-e942ab0dbba5"],
-Cell[1340, 39, 996, 21, 137, "Input",ExpressionUUID->"fcc4e822-052c-4101-98a2-6671775fc97d"],
+Cell[558, 20, 751, 17, 51, "Code",ExpressionUUID->"9a4d125a-8988-4dd0-b89b-e942ab0dbba5"],
+Cell[1312, 39, 812, 17, 81, "Input",ExpressionUUID->"fcc4e822-052c-4101-98a2-6671775fc97d"],
 Cell[CellGroupData[{
-Cell[2361, 64, 255, 4, 260, "Title",ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-d60eedc060f7"],
+Cell[2149, 60, 255, 4, 174, "Title",ExpressionUUID->"cd6cd3e6-81ea-4e20-bf84-d60eedc060f7"],
 Cell[CellGroupData[{
-Cell[2641, 72, 148, 3, 87, "Section",ExpressionUUID->"8a795f4f-4b14-4fb9-81f5-6c453a1e5c4a"],
-Cell[2792, 77, 630, 11, 105, "Text",ExpressionUUID->"96557508-74ee-4f36-bc3f-d26323acf2f2"],
+Cell[2429, 68, 148, 3, 59, "Section",ExpressionUUID->"8a795f4f-4b14-4fb9-81f5-6c453a1e5c4a"],
+Cell[2580, 73, 630, 11, 73, "Text",ExpressionUUID->"96557508-74ee-4f36-bc3f-d26323acf2f2"],
 Cell[CellGroupData[{
-Cell[3447, 92, 746, 16, 44, "Code",ExpressionUUID->"453dd2f8-a659-418a-975e-ac7d65750bcc"],
-Cell[4196, 110, 3741, 81, 234, "Output",ExpressionUUID->"62445c73-7b2b-4137-9236-af0e49f0e31c"]
+Cell[3235, 88, 746, 16, 30, "Code",ExpressionUUID->"453dd2f8-a659-418a-975e-ac7d65750bcc"],
+Cell[3984, 106, 3889, 84, 258, "Output",ExpressionUUID->"bf16357b-a856-4c9a-9ddd-7650363f5d17"]
 }, Open  ]],
-Cell[7952, 194, 833, 14, 133, "Text",ExpressionUUID->"f97cf7d1-697a-4321-8381-0fac5da3162a"]
+Cell[7888, 193, 833, 14, 74, "Text",ExpressionUUID->"f97cf7d1-697a-4321-8381-0fac5da3162a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8822, 213, 190, 3, 87, "Section",ExpressionUUID->"85a9090f-5dba-4719-a592-a42d6fdd19b3"],
-Cell[9015, 218, 483, 10, 77, "Text",ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-8dd2dfb59700"],
+Cell[8758, 212, 190, 3, 59, "Section",ExpressionUUID->"85a9090f-5dba-4719-a592-a42d6fdd19b3"],
+Cell[8951, 217, 483, 10, 34, "Text",ExpressionUUID->"6e21aba7-af3a-4cf3-bf7c-8dd2dfb59700"],
 Cell[CellGroupData[{
-Cell[9523, 232, 253, 5, 36, "Input",ExpressionUUID->"301b1722-6f51-44f4-8759-92cdf8e27af9"],
-Cell[9779, 239, 5198, 108, 636, "Output",ExpressionUUID->"918cd92f-4221-42dc-84e8-81062a0cc280"]
+Cell[9459, 231, 253, 5, 18, "Input",ExpressionUUID->"301b1722-6f51-44f4-8759-92cdf8e27af9"],
+Cell[9715, 238, 5248, 109, 456, "Output",ExpressionUUID->"918cd92f-4221-42dc-84e8-81062a0cc280"]
 }, {2}]]
 }, Open  ]],
-Cell[15001, 351, 212, 4, 87, "Section",ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-d7cb89ebff7e"]
+Cell[14987, 351, 212, 4, 59, "Section",ExpressionUUID->"0bcb5c4d-a694-4dc5-a51f-d7cb89ebff7e"]
 }, Open  ]]
 }
 ]

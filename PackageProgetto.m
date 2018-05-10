@@ -17,9 +17,10 @@ printExercise::usage="Prints the text, equation of an exercise, with the possibl
 rFile::usage="Print all exercices into a passed file";
 NotebookOpeners::usage="Displays different buttons, each one opens a different .nb file";
 buildLabeledGraphic::usage="builds an interactive Panel with the equation of a cone and prints a table with the deatils of the components.Undertanding how to limit the rotation of the Plot is important";
-ShowEllisse
-ShowCirconferenza
-ShowIperbole
+ShowEllisse::usage="Display a simple Ellipse plot ";
+ShowCirconferenza::usage="Display a simple Circle Plot";
+ShowIperbole::usage="DIsplay a simple Hyperbole Plot";
+
 Begin["Private`"];
 
 (* disabilito alcuni warning *)

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   2915757,      48087]
-NotebookOptionsPosition[   2914474,      48057]
-NotebookOutlinePosition[   2914812,      48072]
-CellTagsIndexPosition[   2914769,      48069]
+NotebookDataLength[   2915752,      48087]
+NotebookOptionsPosition[   2914466,      48057]
+NotebookOutlinePosition[   2914804,      48072]
+CellTagsIndexPosition[   2914761,      48069]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,9 +31,9 @@ Cell[BoxData[{
    " ", "*)"}]}], "\n", 
  RowBox[{
   RowBox[{"Get", "[", "\"\<PackageProgetto`\>\"", "]"}], ";"}]}], "Input",
- CellChangeTimes->{3.734338991085784*^9},
- EmphasizeSyntaxErrors->
-  True,ExpressionUUID->"2d5febae-4090-4681-9820-f59f6a0e411c"],
+ CellChangeTimes->{
+  3.734338991085784*^9},ExpressionUUID->"2d5febae-4090-4681-9820-\
+f59f6a0e411c"],
 
 Cell[CellGroupData[{
 
@@ -140,14 +140,14 @@ Cell[BoxData[
             Hold[Private`e$$], 0, "Eccentricit\[AGrave]:"}, -1.5, 1.5, 0.1}, {{
             Hold[Private`aaa$$], 0, "Px:"}, -12, 12, 0.1}}, Typeset`size$$ = {
          360., {229.5, 234.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-         Typeset`skipInitDone$$ = True, Private`e$3726$$ = 0, 
-         Private`aaa$3727$$ = 0}, 
+         Typeset`skipInitDone$$ = True, Private`e$3071$$ = 0, 
+         Private`aaa$3072$$ = 0}, 
          DynamicBox[Manipulate`ManipulateBoxes[
           1, StandardForm, 
            "Variables" :> {Private`aaa$$ = 0, Private`e$$ = 0}, 
            "ControllerVariables" :> {
-             Hold[Private`e$$, Private`e$3726$$, 0], 
-             Hold[Private`aaa$$, Private`aaa$3727$$, 0]}, 
+             Hold[Private`e$$, Private`e$3071$$, 0], 
+             Hold[Private`aaa$$, Private`aaa$3072$$, 0]}, 
            "OtherVariables" :> {
             Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
              Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -164,7 +164,7 @@ Cell[BoxData[
                     Part[Private`elems$$, 1]]/EuclideanDistance[{2, 
                     Part[
                     Part[Private`elems$$, 1], 2]}, 
-                   Part[Private`elems$$, 1]], Null, 
+                   Part[Private`elems$$, 1]], 
                   Text["PF: "], 
                   EuclideanDistance[{1, 0}, 
                    Part[Private`elems$$, 1]], 
@@ -280,10 +280,10 @@ Cell[BoxData[
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
    GridBoxSpacings->{"Columns" -> {{10}}}],
   "Grid"]], "Output",
- CellChangeTimes->{{3.734967071596987*^9, 
-  3.734967096624423*^9}},ExpressionUUID->"ef515712-dcde-40cd-9aaf-\
-e9c393caddd2"]
-}, {2}]],
+ CellChangeTimes->{{3.734967071596987*^9, 3.734967096624423*^9}, 
+   3.734969284887494*^9},ExpressionUUID->"8dcd54e8-c560-407a-aeff-\
+91e3c2667c06"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -435,7 +435,7 @@ Cell[BoxData[
 \[EGrave] un'ellisse di cui il sole occupa uno dei due fuochi\"\>", 
      TagBox[
       StyleBox[
-       DynamicModuleBox[{$CellContext`i23$$ = 40, Typeset`show$$ = True, 
+       DynamicModuleBox[{$CellContext`i23$$ = 9, Typeset`show$$ = True, 
         Typeset`bookmarkList$$ = {
         "\"min\"" :> {$CellContext`i23$$ = 1}, 
          "\"max\"" :> {$CellContext`i23$$ = 46}}, Typeset`bookmarkMode$$ = 
@@ -456,8 +456,8 @@ Cell[BoxData[
                     AnimatorBox[Dynamic[$CellContext`i23$$], {1, 46, 1},
                     AnimationRate->10.,
                     AnimationRepetitions->DirectedInfinity[1],
-                    AnimationRunTime->65.23332357406616,
-                    AnimationTimeIndex->3.900000000000041,
+                    AnimationRunTime->4.589200973510742,
+                    AnimationTimeIndex->0.7999999999999999,
                     
                     AppearanceElements->{
                     "ProgressSlider", "PlayPauseButton", 
@@ -48071,21 +48071,21 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 606, 15, 55, "Input",ExpressionUUID->"2d5febae-4090-4681-9820-f59f6a0e411c"],
+Cell[558, 20, 578, 15, 55, "Input",ExpressionUUID->"2d5febae-4090-4681-9820-f59f6a0e411c"],
 Cell[CellGroupData[{
-Cell[1189, 39, 176, 3, 69, "Chapter",ExpressionUUID->"a95e00ed-c43d-4d31-a453-f98bd61ffd28"],
-Cell[1368, 44, 566, 11, 58, "Text",ExpressionUUID->"c03f99ce-dcf7-46d2-91a6-6de644c0700e"],
+Cell[1161, 39, 176, 3, 69, "Chapter",ExpressionUUID->"a95e00ed-c43d-4d31-a453-f98bd61ffd28"],
+Cell[1340, 44, 566, 11, 58, "Text",ExpressionUUID->"c03f99ce-dcf7-46d2-91a6-6de644c0700e"],
 Cell[CellGroupData[{
-Cell[1959, 59, 195, 4, 68, "Section",ExpressionUUID->"124aad2d-da45-43c0-808d-18e2bb156e50"],
+Cell[1931, 59, 195, 4, 68, "Section",ExpressionUUID->"124aad2d-da45-43c0-808d-18e2bb156e50"],
 Cell[CellGroupData[{
-Cell[2179, 67, 2904, 60, 193, "Input",ExpressionUUID->"7322bc08-b0e7-4918-91ec-3c6768a84c85"],
-Cell[5086, 129, 7054, 155, 600, "Output",ExpressionUUID->"ef515712-dcde-40cd-9aaf-e9c393caddd2"]
-}, {2}]],
+Cell[2151, 67, 2904, 60, 193, "Input",ExpressionUUID->"7322bc08-b0e7-4918-91ec-3c6768a84c85"],
+Cell[5058, 129, 7071, 155, 633, "Output",ExpressionUUID->"8dcd54e8-c560-407a-aeff-91e3c2667c06"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[12174, 289, 6656, 118, 251, "Input",ExpressionUUID->"858ac8d9-12fc-4af0-a80d-f5b4bd87deef"],
-Cell[18833, 409, 591, 9, 35, "Output",ExpressionUUID->"231b5580-1c47-453b-beb1-0add45d84d14"],
-Cell[19427, 420, 593, 9, 35, "Output",ExpressionUUID->"3274ea60-7405-4312-9ab1-746966315e0a"],
-Cell[20023, 431, 2894411, 47621, 429, "Output",ExpressionUUID->"58364a24-6fcc-4ee3-b6f1-fe0e8bcf83e8"]
+Cell[12166, 289, 6656, 118, 251, "Input",ExpressionUUID->"858ac8d9-12fc-4af0-a80d-f5b4bd87deef"],
+Cell[18825, 409, 591, 9, 35, "Output",ExpressionUUID->"231b5580-1c47-453b-beb1-0add45d84d14"],
+Cell[19419, 420, 593, 9, 35, "Output",ExpressionUUID->"3274ea60-7405-4312-9ab1-746966315e0a"],
+Cell[20015, 431, 2894411, 47621, 429, "Output",ExpressionUUID->"58364a24-6fcc-4ee3-b6f1-fe0e8bcf83e8"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
