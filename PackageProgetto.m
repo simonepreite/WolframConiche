@@ -41,7 +41,7 @@ color[text_]:=(Switch[text,"Circonferenza",Brown,"Ellisse",Purple,"Iperbole",Blu
 (*TODO: Trovare un modo di colorare la Grid*)
 buildGraphicConicalEquation:=(
 DynamicModule[{text, clr},
-Manipulate[ 
+Manipulate[
 Grid[{{
 Column[{
 	text=recognizeShape[a,b,c,d,e,f];
@@ -55,7 +55,7 @@ Column[{
 	ImageSize->Medium (*Defines the size of the Plot*)
 	],Spacer[40],
 	ContourPlot3D[(a*x^2) +(2b*x*y) +(c*y^2) +(2d*x) + (2e*y)+f==0, {x,-20, 20}, {y, -20, 20}, {z, -20, 20},(*3D Plot of the equation *)
-	ImageSize->Medium, 
+	ImageSize->Medium,
 	Mesh-> None,(*Defines the properties of the grid in the plot*)
 	ContourStyle->clr(*Defines the color of the shape based on the parameters of the equation*)
 	]}]
@@ -75,9 +75,9 @@ Column[{
 	}]
 	}]}
 }, Alignment->{Left, Right}, Frame->All],
-{{a,0, "a"},-10,10,1,  Appearance->"Labeled"}, 
+{{a,0, "a"},-10,10,1,  Appearance->"Labeled"},
 {{b,0, "b"},-10,10,1,  Appearance->"Labeled"},
-{{c,0, "c"},-10,10,1,  Appearance->"Labeled"}, 
+{{c,0, "c"},-10,10,1,  Appearance->"Labeled"},
 {{d,0, "d"},-10,10,1,  Appearance->"Labeled"},
 {{e,0, "e"},-10,10,1, Appearance->"Labeled"},
 {{f,0, "f"},-10,10,1, Appearance->"Labeled"},
@@ -157,7 +157,7 @@ If[elems!={},
 Row[{
 Show[
 ContourPlot[(1-e^2)*x^2 + y^2-2*(1-2*e^2)*x + 1-4*e^2==0, {x,-12,12},{y,-6,6}],
-Graphics[{ 
+Graphics[{
 Join[
 {Red, PointSize->0.025,Point[{1,0}],Text["F",{1.2,0.5}],Black,Line[{{2,-12}, {2,12}}], Text["Direttrice, y=2",{4, 3}] },
 If[elems!={},
@@ -183,7 +183,7 @@ Grid[
 }],
 {{e,0,"Eccentricit\[AGrave]:"},-1.5,1.5,0.1,Appearance->"Labeled"},
 {{aaa,0,"Px:"},-12,12,0.1,Appearance->"Labeled"}
-]]); 
+]]);
 
 (*builds an interactive Panel with the equation of a cone and prints a table with the deatils of the components*)
 (*Undertanding how to limit the rotation of the Plot is important*)
@@ -214,7 +214,7 @@ DynamicModule[{z=1, txt="Ancora da valutare"},
 	Row[{
 		Button["Clicca per controllare il risultato",Dynamic[If[Equal[z,ToExpression[answer]], txt="Corretto", txt="Sbagliato!"]]],
 		Spacer[20],
-		Dynamic[Text["Risultato:"<>txt]] 
+		Dynamic[Text["Risultato:"<>txt]]
 	}]
 	}]
 	]
@@ -236,10 +236,10 @@ NotebookOpeners[]:=(
 bList={};
 For[i=1, i<=3, i++,
 			(*text=Evaluate[Directory[]<>"/notebooks/app"<>ToString[i]<>".nb"];*)
-			Which[i==1,appr="Grafico";img=Import["img/approccioGrafico.png"],i==2,appr="Matematico";img=Import["img/approccioMatematico.png"], i==3,appr="Eccentricit\[AGrave]";img=Import["img/approccioEccentric.png"]];
-			bList=Append[bList, DynamicModule[{},Button[img,NotebookOpen[Evaluate[Directory[]<>"/notebooks/app"<>ToString[i]<>".nb"]]]
+			Which[i==1,appr="Grafico";img=Import["img/approccioGrafico.png"],i==2,appr="Matematico";img=Import["img/approccioMatematico.png"], i==3,appr="Eccentric";img=Import["img/approccioEccentric.png"]];
+			bList=Append[bList, DynamicModule[{},Hyperlink[Button[img],{"slides.nb",appr}]]]
 			(*Row[{Button[img,NotebookOpen[text]]    Button["Approccio "<>appr,NotebookOpen[text]]}]*)
-	]]];
+	];
 	Grid[{
 	{bList[[1]],"",""},
 	{"",bList[[2]],""},
@@ -248,20 +248,20 @@ For[i=1, i<=3, i++,
 	ItemSize->Fit, Frame->None, Alignment->{Left,Center, Right},Spacings->3
 	]
 	);
-	
+
 ShowEllisse:=(Manipulate[
 		ContourPlot[{y==(b/a)*Sqrt[(a^2)-(x^2)],y==-(b/a)*Sqrt[(a^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True],
 		{{a,1,"a"},1,10,1,Appearance->"Labeled"},
 		{{b,1,"b"},1,10,1,Appearance->"Labeled"}
 	]);
-	
+
 ShowCirconferenza:=(
 Manipulate[
 ContourPlot[{y==Sqrt[(r^2)-(x^2)],y==-Sqrt[(r^2)-(x^2)]},{x,-10,10},{y,-10,10},
 	ImageSize->Medium, Axes->True],
 {{r,1,"raggio"},1,10,1,Appearance->"Labeled"}
 	]);
-	
+
 ShowIperbole:=(
 Manipulate[
 ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)],y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,10},{y,-10,10},
@@ -269,10 +269,7 @@ ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)],y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,10
 {{a,1,"a"},1,10,1,Appearance->"Labeled"},
 {{b,1,"b"},1,10,1,Appearance->"Labeled"}
 ]);
-	
+
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
-
-
-
