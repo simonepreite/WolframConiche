@@ -19,7 +19,8 @@ NotebookOpeners::usage="Displays different buttons, each one opens a different .
 buildLabeledGraphic::usage="builds an interactive Panel with the equation of a cone and prints a table with the deatils of the components.Undertanding how to limit the rotation of the Plot is important";
 ShowEllisse::usage="Display a simple Ellipse plot ";
 ShowCirconferenza::usage="Display a simple Circle Plot";
-ShowIperbole::usage="DIsplay a simple Hyperbole Plot";
+ShowIperbole::usage="Display a simple Hyperbole Plot";
+ShowExamples::usage="Display an interactive Panel with the progressive evolution of a numerical example";
 
 Begin["Private`"];
 
@@ -228,6 +229,15 @@ rFile[filename_]:=(
 		val3=StringSplit[rowl[[3]]," "];
 		Print[printExercise[rowl[[2]],rowl[[1]],val3,rowl[[4]]]]
 	]
+);
+
+ShowExamples[list_]:=(
+DynamicModule[{i=1},
+Panel[
+Dynamic[Column[Take[list,i], Frame->All]],
+Dynamic[If[i>=Length[list],"Esempio Terminato!", Button["Avanti", Dynamic[i++]]]]
+]
+]
 );
 
 (*Displays different buttons, each one opens a different .nb file*)
@@ -7343,9 +7353,9 @@ Q/FOQcH9ULxTUHA/FO8UFNwPxTvfwP8HiSD7kw==
 			bList=Append[bList, DynamicModule[{},Hyperlink[Button[img, ImageSize->{Scaled[1], Scaled[1]}],{"slides.nb",appr}]]]
 	];
 	Grid[{
-	{bList[[1]],"",""},
-	{"",bList[[2]],""},
-	{"","",bList[[3]]}
+	{bList[[1]],"Approccio Grafico"},
+	{bList[[2]],"Approccio Matematico"},
+	{bList[[3]],"Approccio Eccentricit\[AGrave]"}
 	},
 	ItemSize->Fit, Frame->None, Alignment->{Left,Center, Right},Spacings->3
 	]
