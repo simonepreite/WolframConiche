@@ -95,11 +95,10 @@ bgColorsTwo[name_,color_ ]:=(aux[name, color,#]&/@{"Ellisse","Parabola", "Circon
 buildGraphicPlaneCone:=(
 Manipulate[
 beta=IntegerPart[N[ArcSin[Abs[4*f]/(4*Sqrt[(d^2) + (e^2)+ (f^2)])]/Degree]];alfa= 45;
-Grid[{{
-Row[{Text["L'angolo tra il piano e l'asse del cono, Beta, \[EGrave]: "],beta}]},
-{Row[{Text["L'angolo tra l'asse del cono e la generatrice, Alfa, \[EGrave]: "],alfa}]},
-{Row[{Text["La figura disegnata \[EGrave]: "],checkFigure[alfa,beta, g]}]},
+Grid[{
+   {Row[{Text["L'angolo tra il piano e l'asse del cono, \[Beta], \[EGrave]: "],beta,Text["  L'angolo tra l'asse del cono e la generatrice, \[Alpha], \[EGrave]: "],alfa,Text["  La figura disegnata \[EGrave]: "],checkFigure[alfa,beta, g]},Frame->All]},
 {
+Row[{
 Dynamic[
 Show[
 ContourPlot3D[{(d*x)+(e*y)+(f*z)+g==0, ((x^2))+((y^2))-((z^2))==0}, {x,-2,2},{y,-2,2},{z,-2,2} , ContourStyle->{Automatic,Opacity[0.8]},
@@ -110,26 +109,26 @@ AxesOrigin-> True
 ],
 Graphics3D[{Red,Thick, Tooltip[Line[{{0,0,-2}, {0,0,2}}], "Asse di rotazione", TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}]}]
 ]
-],
-Dynamic[ Show[{ ContourPlot[{-((d*x)+(e*y)+g)/f==Sqrt[((x^2)/1 )+(( y^2)/1)],-((d*x)+(e*y)+g)/f==-Sqrt[((x^2)/1 )+(( y^2)/1)]}, {x,-2,2},{y,-2,2}, ImageSize->Medium, ContourStyle->color[checkFigure[alfa,beta,g]]]}]]
-}, {
+],Spacer[20],Dynamic[ Show[{ ContourPlot[{-((d*x)+(e*y)+g)/f==Sqrt[((x^2)/1 )+(( y^2)/1)],-((d*x)+(e*y)+g)/f==-Sqrt[((x^2)/1 )+(( y^2)/1)]}, {x,-2,2},{y,-2,2}, ImageSize->Medium, ContourStyle->color[checkFigure[alfa,beta,g]]]}]]
+}]}, {
 Grid[
-	{{"Ellisse","Alfa < Beta < 90\[Degree]"},
-	{"Parabola","Alfa = Beta"},
-	{"Circonferenza","Beta = 90\[Degree]"},
-	{"Iperbole","Beta < 90\[Degree]"},
-	{"Rette Incidenti","Beta parallelo all'asse", "il piano passa per il vertice"},
-	{Tooltip ["Retta","Due Rette Coincidenti",TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}],"Beta = Alfa", "Il piano passa per il vertice del cono"},
-	{Tooltip["Punto","Circonferenza di raggio 0"TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}] "Alfa < Beta <= 90\[Degree]", "Il piano passa per il vertice del cono"}},
+	{{"Ellisse","\[Alpha] < \[Beta] < 90\[Degree]"},
+	{"Parabola","\[Alpha] = \[Beta]"},
+	{"Circonferenza","\[Beta]= 90\[Degree]"},
+	{"Iperbole","\[Beta] < 90\[Degree]"},
+	{"Rette Incidenti","\[Beta] parallelo all'asse", "il piano passa per il vertice"},
+	{Tooltip ["Retta","Due Rette Coincidenti",TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}],"\[Beta] = \[Alpha]", "Il piano passa per il vertice del cono"},
+	{Tooltip["Punto","Circonferenza di raggio 0"TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}] "\[Alpha] < \[Beta] <= 90\[Degree]", "Il piano passa per il vertice del cono"}},
 	Frame->All,
 	Background->{Null, bgColors[checkFigure[alfa,beta,g], color[checkFigure[alfa,beta,g]]]}
 ]
 }
-}],
+}, Frame->All],
 {{d,1,"Coefficiente x Piano:"},0,10,0.1,Appearance->"Labeled"},
 {{e,1,"Coefficiente y Piano:"},0,10,0.1,Appearance->"Labeled"},
 {{f,1,"Coefficiente z Piano:"},0,10,0.1,Appearance->"Labeled"},
-{{g,1,"Profondit\[AGrave] del piano:"},0,10,0.1,Appearance->"Labeled"}
+{{g,1,"Profondit\[AGrave] del piano:"},0,10,0.1,Appearance->"Labeled"},
+ControlPlacement->Top
 ]);
 
 eccentricity[x_, e_]:=(
@@ -7369,36 +7368,35 @@ Q/FOQcH9ULxTUHA/FO8UFNwPxTvfwP8HiSD7kw==
 	ItemSize->{20,10}, Frame->None, Alignment->{Left,Center, Right},FrameStyle->{RGBColor[1,1, 1]}, Spacings->{20,0}
 	]
 	);
-
-ShowEllisse:=(Manipulate[
-		ContourPlot[{Tooltip[y==(b/a)*Sqrt[(a^2)-(x^2)], With[{xs="x", ys="y"},HoldForm[ys==(b/a)*Sqrt[(a^2)-(xs^2)]]],TooltipStyle->{Background -> LightRed, CellFrame -> 3}],
-		Tooltip[y==-(b/a)*Sqrt[(a^2)-(x^2)], With[{xs="x", ys="y"},HoldForm[ys==-(b/a)*Sqrt[(a^2)-(xs^2)]]],TooltipStyle->{Background -> LightBlue, CellFrame -> 3}]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True],
+	
+ShowEllisse[]:=(Manipulate[
+	Show[
+		ContourPlot[{y==(b/a)*Sqrt[(a^2)-(x^2)],y==-(b/a)*Sqrt[(a^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True,ContourLabels->None , PlotLabel->{Style[StandardForm[y==(b/a)*Sqrt[(a^2)-(x^2)]],FontColor->Red],Style[StandardForm[y==-(b/a)*Sqrt[(a^2)-(x^2)]],FontColor->Blue]}]
+		],
 		{{a,1,"a"},1,10,1,Appearance->"Labeled"},
 		{{b,1,"b"},1,10,1,Appearance->"Labeled"}
 	]);
 
-ShowCirconferenza:=(
+ShowCirconferenza[]:=(
 Manipulate[
-ContourPlot[{
-Tooltip[y==Sqrt[(r^2)-(x^2)],With[{xs="x", ys="y"},HoldForm[ys==Sqrt[(r^2)-(xs^2)]]],TooltipStyle->{Background -> LightRed, CellFrame -> 3}],
-Tooltip[y==-Sqrt[(r^2)-(x^2)],With[{xs="x", ys="y"},HoldForm[ys==-Sqrt[(r^2)-(xs^2)]]],TooltipStyle->{Background -> LightBlue, CellFrame -> 3}]
-},{x,-10,10},{y,-10,10},
-	ImageSize->Medium, Axes->True],
+Show[
+ContourPlot[{y==Sqrt[(r^2)-(x^2)], y==-Sqrt[(r^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True, ContourLabels->None , PlotLabel->{Style[StandardForm[y==Sqrt[(r^2)-(x^2)]],FontColor->Red],Style[StandardForm[y==-Sqrt[(r^2)-(x^2)]],FontColor->Blue]}
+	]
+],
 {{r,1,"raggio"},1,10,1,Appearance->"Labeled"}
 	]);
 
-ShowIperbole:=(
+ShowIperbole[]:=(
 Manipulate[
-ContourPlot[{
-Tooltip[y==(b/a)*Sqrt[-(a^2)+(x^2)],With[{xs="x", ys="y"},HoldForm[ys==(b/a)*Sqrt[-(a^2)+(xs^2)]]],TooltipStyle->{Background -> LightRed, CellFrame -> 3}],
-Tooltip[y==-(b/a)*Sqrt[-(a^2)+(x^2)],With[{xs="x", ys="y"},HoldForm[ys==(b/a)*Sqrt[-(a^2)+(xs^2)]]],TooltipStyle->{Background -> LightBlue, CellFrame -> 3}]
-},{x,-10,10},{y,-10,10},
-	ImageSize->Medium, Axes->True],
+Show[
+ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)], y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,10},{y,-10,10},
+	ImageSize->Medium, Axes->True],ContourLabels->None ,PlotLabel->{Style[StandardForm[y==(b/a)*Sqrt[-(a^2)+(x^2)]],FontColor->Red],Style[StandardForm[y==-(b/a)*Sqrt[-(a^2)+(x^2)]],FontColor->Blue]}
+],
 {{a,1,"a"},1,10,1,Appearance->"Labeled"},
 {{b,1,"b"},1,10,1,Appearance->"Labeled"}
 ]);
 
-ShowParabola:=(
+ShowParabola[]:=(
 Manipulate[
 ContourPlot[y==(a*x^2)+b*x,{x,-10,10},{y,-10,10},
 	ImageSize->Medium, Axes->True],
@@ -7406,7 +7404,7 @@ ContourPlot[y==(a*x^2)+b*x,{x,-10,10},{y,-10,10},
 {{b,0,"b"},0,10,1,Appearance->"Labeled"}
 ]);
 
-ShowAnotherParabola:=(
+ShowAnotherParabola[]:=(
 Manipulate[
 ContourPlot[x== (a*y^2)+b*y,{x,-10,10},{y,-10,10},
 	ImageSize->Medium, Axes->True],
