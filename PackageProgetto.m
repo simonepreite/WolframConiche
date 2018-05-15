@@ -7371,25 +7371,49 @@ Q/FOQcH9ULxTUHA/FO8UFNwPxTvfwP8HiSD7kw==
 	);
 
 ShowEllisse:=(Manipulate[
-		ContourPlot[{y==(b/a)*Sqrt[(a^2)-(x^2)],y==-(b/a)*Sqrt[(a^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True],
+		ContourPlot[{Tooltip[y==(b/a)*Sqrt[(a^2)-(x^2)], With[{xs="x", ys="y"},HoldForm[ys==(b/a)*Sqrt[(a^2)-(xs^2)]]],TooltipStyle->{Background -> LightRed, CellFrame -> 3}],
+		Tooltip[y==-(b/a)*Sqrt[(a^2)-(x^2)], With[{xs="x", ys="y"},HoldForm[ys==-(b/a)*Sqrt[(a^2)-(xs^2)]]],TooltipStyle->{Background -> LightBlue, CellFrame -> 3}]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True],
 		{{a,1,"a"},1,10,1,Appearance->"Labeled"},
 		{{b,1,"b"},1,10,1,Appearance->"Labeled"}
 	]);
 
 ShowCirconferenza:=(
 Manipulate[
-ContourPlot[{y==Sqrt[(r^2)-(x^2)],y==-Sqrt[(r^2)-(x^2)]},{x,-10,10},{y,-10,10},
+ContourPlot[{
+Tooltip[y==Sqrt[(r^2)-(x^2)],With[{xs="x", ys="y"},HoldForm[ys==Sqrt[(r^2)-(xs^2)]]],TooltipStyle->{Background -> LightRed, CellFrame -> 3}],
+Tooltip[y==-Sqrt[(r^2)-(x^2)],With[{xs="x", ys="y"},HoldForm[ys==-Sqrt[(r^2)-(xs^2)]]],TooltipStyle->{Background -> LightBlue, CellFrame -> 3}]
+},{x,-10,10},{y,-10,10},
 	ImageSize->Medium, Axes->True],
 {{r,1,"raggio"},1,10,1,Appearance->"Labeled"}
 	]);
 
 ShowIperbole:=(
 Manipulate[
-ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)],y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,10},{y,-10,10},
+ContourPlot[{
+Tooltip[y==(b/a)*Sqrt[-(a^2)+(x^2)],With[{xs="x", ys="y"},HoldForm[ys==(b/a)*Sqrt[-(a^2)+(xs^2)]]],TooltipStyle->{Background -> LightRed, CellFrame -> 3}],
+Tooltip[y==-(b/a)*Sqrt[-(a^2)+(x^2)],With[{xs="x", ys="y"},HoldForm[ys==(b/a)*Sqrt[-(a^2)+(xs^2)]]],TooltipStyle->{Background -> LightBlue, CellFrame -> 3}]
+},{x,-10,10},{y,-10,10},
 	ImageSize->Medium, Axes->True],
 {{a,1,"a"},1,10,1,Appearance->"Labeled"},
 {{b,1,"b"},1,10,1,Appearance->"Labeled"}
 ]);
+
+ShowParabola:=(
+Manipulate[
+ContourPlot[y==(a*x^2)+b*x,{x,-10,10},{y,-10,10},
+	ImageSize->Medium, Axes->True],
+{{a,0,"a"},0,10,1,Appearance->"Labeled"},
+{{b,0,"b"},0,10,1,Appearance->"Labeled"}
+]);
+
+ShowAnotherParabola:=(
+Manipulate[
+ContourPlot[x== (a*y^2)+b*y,{x,-10,10},{y,-10,10},
+	ImageSize->Medium, Axes->True],
+{{a,0,"a"},0,10,1,Appearance->"Labeled"},
+{{b,0,"b"},0,10,1,Appearance->"Labeled"}
+]
+);
 
 ShowButton[prec_, next_]:=(
 forwardButton1 = Hyperlink[Button[Image[CompressedData["

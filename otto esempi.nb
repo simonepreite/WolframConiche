@@ -1,48 +1,17 @@
-Column[{ToExpression["ESEMPI", TraditionalForm]},
-    Background -> LightRed, Frame -> All]
-Column[{ToExpression["UNO",TraditionalForm],HoldForm[4*x^2-8*x+4*y^2+2*y+1=0],HoldForm[4*(x^2-2 x+1)+4*(y^2+y/2+1/16)=-1+4+1/4],HoldForm[4 (x-1)^2+4 (y+1/4)^2=-1+4+1/4],HoldForm[(x-1)^2+(y+1/4)^2=13/16],TraditionalForm["La conica risultante è una circonferenza di centro (1,-1/4) e raggio r √13/4"]},Background->LightRed,Frame->All]
+ShowExamples[{HoldForm[4*x^2-8*x+4*y^2+2*y+1=0],HoldForm[4*(x^2-2 x+1)+4*(y^2+y/2+1/16)=-1+4+1/4],HoldForm[4 (x-1)^2+4 (y+1/4)^2=-1+4+1/4],HoldForm[(x-1)^2+(y+1/4)^2=13/16],TraditionalForm["La conica risultante è una circonferenza di centro (1,-1/4) e raggio r √13/4"]},"Esempio 1"]
 
-Column[{ToExpression["DUE",TraditionalForm],HoldForm[-4*x^2+8*x-2*y^2+12=0],HoldForm[-4*(x^2-2 x+1)-2 y^2=-16],HoldForm[-4 (x-1)^2-2 y^2=-16],HoldForm[(x-1)^2/4+y^2/8=1],HoldForm[a=2],HoldForm[b=Sqrt[8]=2 Sqrt[2]],TraditionalForm["VERTICI (-1,0) (3,0) (1,-2√2) (1,2√2)"],TraditionalForm["FUOCHI(1,-2) (1,2)"]},Background->LightRed,Frame->All]
-Column[{ToExpression["TRE",TraditionalForm],HoldForm[4*x^2+8*x-2*y^2+12=0],HoldForm[4 (x+1)^2-2 y^2=-8],HoldForm[(x+1)^2/2-y^2/4=-1],TraditionalForm["iperbole con i fuochi sull'asse  Oy ,O(-1,0)"],HoldForm[a=Sqrt[2]],HoldForm[b=2],TraditionalForm["VERTICI (-1-√2,0)  (-1+√2,0)  (-1,-2)  (-1,2)"],TraditionalForm["FUOCHI(1,-√6) (-1,√6)"]},Background->LightRed,Frame->All]
-Column[{ToExpression["QUATRO",TraditionalForm],HoldForm[2*y^2-4*x+y-1=0],HoldForm[x=1/2*y^2+1/4*y-1/4],HoldForm[a=1/2],HoldForm[b=1/4],HoldForm[c=-1/4],HoldForm[b^2-4 a*c=9/16],TraditionalForm["ASSE y=-b/2a y=-1/4"],TraditionalForm["FUOCO((1-)/4a,-b/2a)=(7/32,-1/4)"],TraditionalForm["VERTICE (-/4a,-b/2a)=(-9/32,-1/4)"],TraditionalForm["DIRETTRICE x=-(1+)/4a=-25/32"]},Background->LightRed,Frame->All]
-Column[{ToExpression["CINQUE",TraditionalForm],HoldForm[x^2-2*x-y-3=0],HoldForm[y=x^2-2*x-3],HoldForm[a=1],HoldForm[b=-2],HoldForm[c=-3],HoldForm[b^2-4 a*c=16],TraditionalForm["ASSE y=-b/2a x=-1"],TraditionalForm["FUOCO(-b/2a,(1-)/4a)=(-1,-15/4)"],TraditionalForm["VERTICE(-b/2a,-/4a)=(-1,-4)"],TraditionalForm["DIRETTRICE x=-(1+)/4a=-17/4"]},Background->LightRed,Frame->All]
-Column[{ToExpression["SEI",TraditionalForm],HoldForm[4*x^2-y^2-6 x-5 y-4=0],HoldForm[4*x^2-6 x-y^2-5 y-4=0],HoldForm[4*(x^2-3/2*x+9/16)-(y^2+5*y+25/4)=4+9/4-25/4],HoldForm[4 (x-3/4)^2-(y+5/2)^2=0],HoldForm[(2 x-3/2)^2-(y+5/2)^2=0],HoldForm[(2 x-3/2+y+5/2) (2 x-3/2-y-5/2)=0],TraditionalForm["(2x+y+1)(2x--y-4)=0 due rette"]},Background->LightRed,Frame->All]
-Column[{ToExpression["SETTE",TraditionalForm],HoldForm[x^2+2 y^2+2 x-8 y+9=0],HoldForm[(x^2+2*x1)+2 (y^2-4*y+4)=0],HoldForm[(x+1)^2+2 (y-2)^2=0],HoldForm[x+1=0],HoldForm[y-2=0],TraditionalForm["P(-1,2)"]},Background->LightRed,Frame->All]
+ShowExamples[{HoldForm[-4*x^2+8*x-2*y^2+12=0],HoldForm[-4*(x^2-2 x+1)-2 y^2=-16],HoldForm[-4 (x-1)^2-2 y^2=-16],HoldForm[(x-1)^2/4+y^2/8=1],HoldForm[a=2],HoldForm[b=Sqrt[8]=2 Sqrt[2]],TraditionalForm["VERTICI (-1,0) (3,0) (1,-2√2) (1,2√2)"],TraditionalForm["FUOCHI(1,-2) (1,2)"]},"Esempio 2"]
 
-Column[{ToExpression["OTTO",TraditionalForm],HoldForm[y=x^2+6*x-1],HoldForm[a=1],HoldForm[b=6],HoldForm[c=-1],HoldForm[y=(x+3)^2-10],TraditionalForm["VERTICE (-3,-10)"],TraditionalForm["ASSE y=-b/2a x=-3"],TraditionalForm["FUOCO (-3,-39/4)"],TraditionalForm["DIRETTRICE y=-41/4"]},Background->LightRed,Frame->All]
+ShowExample[{HoldForm[4*x^2+8*x-2*y^2+12=0],HoldForm[4 (x+1)^2-2 y^2=-8],HoldForm[(x+1)^2/2-y^2/4=-1],TraditionalForm["iperbole con i fuochi sull'asse  Oy ,O(-1,0)"],HoldForm[a=Sqrt[2]],HoldForm[b=2],TraditionalForm["VERTICI (-1-√2,0)  (-1+√2,0)  (-1,-2)  (-1,2)"],TraditionalForm["FUOCHI(1,-√6) (-1,√6)"]},"Esempio 3"]
 
-ShowExamples[{ToExpression["DUE",TraditionalForm],HoldForm[-4*x^2+8*x-2*y^2+12=0],HoldForm[-4*(x^2-2 x+1)-2 y^2=-16],HoldForm[-4 (x-1)^2-2 y^2=-16],HoldForm[(x-1)^2/4+y^2/8=1],HoldForm[a=2],HoldForm[b=Sqrt[8]=2 Sqrt[2]],TraditionalForm["VERTICI (-1,0) (3,0) (1,-2√2) (1,2√2)"],TraditionalForm["FUOCHI(1,-2) (1,2)"]},"TITOLO"]
-ShowExamples[list_, title_]:=(
-DynamicModule[{i=1},
-Panel[
-Grid[{
-{"",Row[{Style[title, FontSize->Medium, FontWeight->Bold]}, Alignment->Center, Frame->True],""},
-{Column[{
-Row[{Style[
-Dynamic[Column[Take[list,i], Frame->All, Alignment->Center]], Medium]
-}]
-}],"",
-Column[{
-Row[{
-Dynamic[If[i>=Length[list],Button[Style["Esempio Terminato!", Medium, Bold], Enabled->False], Button[Style["Avanti", Medium, Bold], Dynamic[i++], Appearance->"FramedPalette"]]]
-}]
-}]}
-}, Background->White, Frame->True]
-]
-]);
-In[196]:= ShowExamples[{ToExpression["OTTO",TraditionalForm],HoldForm[y=x^2+6*x-1],HoldForm[a=1],HoldForm[b=6],HoldForm[c=-1],HoldForm[y=(x+3)^2-10],TraditionalForm["VERTICE (-3,-10)"],TraditionalForm["ASSE y=-b/2a x=-3"],TraditionalForm["FUOCO (-3,-39/4)"],TraditionalForm["DIRETTRICE y=-41/4"]},"CIAONE"]
+ShowExample[{HoldForm[2*y^2-4*x+y-1=0],HoldForm[x=1/2*y^2+1/4*y-1/4],HoldForm[a=1/2],HoldForm[b=1/4],HoldForm[c=-1/4],HoldForm[b^2-4 a*c=9/16],TraditionalForm["ASSE y=-b/2a y=-1/4"],TraditionalForm["FUOCO((1-)/4a,-b/2a)=(7/32,-1/4)"],TraditionalForm["VERTICE (-/4a,-b/2a)=(-9/32,-1/4)"],TraditionalForm["DIRETTRICE x=-(1+)/4a=-25/32"]},"Esempio 4"]
 
-Out[196]= 	CIAONE	
-OTTO
-y=x^2+6 x-1
-a=1
-b=6
-c=-1
-y=(x+3)^2-10
-VERTICE (-3,-10)
-ASSE y=-b/2a x=-3
-FUOCO (-3,-39/4)
-DIRETTRICE y=-41/4
+ShowExample[{HoldForm[x^2-2*x-y-3=0],HoldForm[y=x^2-2*x-3],HoldForm[a=1],HoldForm[b=-2],HoldForm[c=-3],HoldForm[b^2-4 a*c=16],TraditionalForm["ASSE y=-b/2a x=-1"],TraditionalForm["FUOCO(-b/2a,(1-)/4a)=(-1,-15/4)"],TraditionalForm["VERTICE(-b/2a,-/4a)=(-1,-4)"],TraditionalForm["DIRETTRICE x=-(1+)/4a=-17/4"]},"Esempio 5"]
 
-		Esempio Terminato!
+ShowExample[{HoldForm[4*x^2-y^2-6 x-5 y-4=0],HoldForm[4*x^2-6 x-y^2-5 y-4=0],HoldForm[4*(x^2-3/2*x+9/16)-(y^2+5*y+25/4)=4+9/4-25/4],HoldForm[4 (x-3/4)^2-(y+5/2)^2=0],HoldForm[(2 x-3/2)^2-(y+5/2)^2=0],HoldForm[(2 x-3/2+y+5/2) (2 x-3/2-y-5/2)=0],TraditionalForm["(2x+y+1)(2x--y-4)=0 due rette"]},"Esempio 6"]
+
+ShowExample[{HoldForm[x^2+2 y^2+2 x-8 y+9=0],HoldForm[(x^2+2*x1)+2 (y^2-4*y+4)=0],HoldForm[(x+1)^2+2 (y-2)^2=0],HoldForm[x+1=0],HoldForm[y-2=0],TraditionalForm["P(-1,2)"]},"Esempio 7"]
+
+ShowExample[{HoldForm[y=x^2+6*x-1],HoldForm[a=1],HoldForm[b=6],HoldForm[c=-1],HoldForm[y=(x+3)^2-10],TraditionalForm["VERTICE (-3,-10)"],TraditionalForm["ASSE y=-b/2a x=-3"],TraditionalForm["FUOCO (-3,-39/4)"],TraditionalForm["DIRETTRICE y=-41/4"]},"Esempio 8"]
+
 
