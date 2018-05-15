@@ -227,22 +227,25 @@ rFile[filename_]:=(
 	]
 );
 
-ShowExamples[list_, title_]:=(
-DynamicModule[{i=1},
+ShowExamples[list_,title_, exp_]:=(DynamicModule[{i=1},
 Panel[
 Grid[{
-{"",Row[{Style[title, FontSize->Medium, FontWeight->Bold]}, Alignment->Center, Frame->True],""},
-{Column[{
-Row[{Style[
-Dynamic[Column[Take[list,i], Frame->All, Alignment->Center]], Medium]
+{Style[title,FontSize->Medium,FontWeight->Bold]},
+{Row[{
+Style[
+Dynamic[
+Column[Take[list,i],Frame->All,Alignment->Center]
+],
+Medium
+],"  ",
+Dynamic[Column[{
+If[i>=Length[list],Button[Style["Esempio Terminato!",Medium,Bold],Enabled->False],Button[Style["Avanti",Medium,Bold],Dynamic[i++],Appearance->"FramedPalette"]],
+If[i>=Length[list],Show[ContourPlot[exp,{x,-10,10},{y,-10,10}, ImageSize->Medium]]]
+}]]
 }]
-}],"",
-Column[{
-Row[{
-Dynamic[If[i>=Length[list],Button[Style["Esempio Terminato!", Medium, Bold], Enabled->False], Button[Style["Avanti", Medium, Bold], Dynamic[i++], Appearance->"FramedPalette"]]]
-}]
-}]}
-}, Background->White, Frame->True]
+}
+},
+Background->White,Frame->All]
 ]
 ]);
 

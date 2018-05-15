@@ -1,17 +1,18 @@
-ShowExamples[{HoldForm[4*x^2-8*x+4*y^2+2*y+1=0],HoldForm[4*(x^2-2 x+1)+4*(y^2+y/2+1/16)=-1+4+1/4],HoldForm[4 (x-1)^2+4 (y+1/4)^2=-1+4+1/4],HoldForm[(x-1)^2+(y+1/4)^2=13/16],TraditionalForm["La conica risultante è una circonferenza di centro (1,-1/4) e raggio r √13/4"]},"Esempio 1"]
+In[116]:=
+ShowExamples[{HoldForm[4*x^2-8*x+4*y^2+2*y+1==0],HoldForm[4*(x^2-2 x+1)+4*(y^2+y/2+1/16)=-1+4+1/4],HoldForm[4 (x-1)^2+4 (y+1/4)^2=-1+4+1/4],HoldForm[(x-1)^2+(y+1/4)^2=13/16],TraditionalForm["La conica risultante è una circonferenza di centro (1,-1/4) e raggio r √13/4"]},"Esempio 1",4*x^2-8*x+4*y^2+2*y+1==0]
 
-ShowExamples[{HoldForm[-4*x^2+8*x-2*y^2+12=0],HoldForm[-4*(x^2-2 x+1)-2 y^2=-16],HoldForm[-4 (x-1)^2-2 y^2=-16],HoldForm[(x-1)^2/4+y^2/8=1],HoldForm[a=2],HoldForm[b=Sqrt[8]=2 Sqrt[2]],TraditionalForm["VERTICI (-1,0) (3,0) (1,-2√2) (1,2√2)"],TraditionalForm["FUOCHI(1,-2) (1,2)"]},"Esempio 2"]
+ShowExamples[{HoldForm[-4*x^2+8*x-2*y^2+12==0],HoldForm[-4*(x^2-2 x+1)-2 y^2=-16],HoldForm[-4 (x-1)^2-2 y^2=-16],HoldForm[(x-1)^2/4+y^2/8=1],HoldForm[a=2],HoldForm[b=Sqrt[8]=2 Sqrt[2]],TraditionalForm["VERTICI (-1,0) (3,0) (1,-2√2) (1,2√2)"],TraditionalForm["FUOCHI(1,-2) (1,2)"]},"Esempio 2",-4*x^2+8*x-2*y^2+12==0]
 
-ShowExample[{HoldForm[4*x^2+8*x-2*y^2+12=0],HoldForm[4 (x+1)^2-2 y^2=-8],HoldForm[(x+1)^2/2-y^2/4=-1],TraditionalForm["iperbole con i fuochi sull'asse  Oy ,O(-1,0)"],HoldForm[a=Sqrt[2]],HoldForm[b=2],TraditionalForm["VERTICI (-1-√2,0)  (-1+√2,0)  (-1,-2)  (-1,2)"],TraditionalForm["FUOCHI(1,-√6) (-1,√6)"]},"Esempio 3"]
+ShowExamples[{HoldForm[4*x^2+8*x-2*y^2+12==0],HoldForm[4 (x+1)^2-2 y^2=-8],HoldForm[(x+1)^2/2-y^2/4=-1],TraditionalForm["iperbole con i fuochi sull'asse  Oy ,O(-1,0)"],HoldForm[a=Sqrt[2]],HoldForm[b=2],TraditionalForm["VERTICI (-1-√2,0)  (-1+√2,0)  (-1,-2)  (-1,2)"],TraditionalForm["FUOCHI(1,-√6) (-1,√6)"]},"Esempio 3",4*x^2+8*x-2*y^2+12==0]
 
-ShowExample[{HoldForm[2*y^2-4*x+y-1=0],HoldForm[x=1/2*y^2+1/4*y-1/4],HoldForm[a=1/2],HoldForm[b=1/4],HoldForm[c=-1/4],HoldForm[b^2-4 a*c=9/16],TraditionalForm["ASSE y=-b/2a y=-1/4"],TraditionalForm["FUOCO((1-)/4a,-b/2a)=(7/32,-1/4)"],TraditionalForm["VERTICE (-/4a,-b/2a)=(-9/32,-1/4)"],TraditionalForm["DIRETTRICE x=-(1+)/4a=-25/32"]},"Esempio 4"]
+ShowExamples[{HoldForm[2*y^2-4*x+y-1==0],HoldForm[x=1/2*y^2+1/4*y-1/4],HoldForm[a=1/2],HoldForm[b=1/4],HoldForm[c=-1/4],HoldForm[b^2-4 a*c=9/16],TraditionalForm["ASSE y=-b/2a y=-1/4"],TraditionalForm["FUOCO((1-)/4a,-b/2a)=(7/32,-1/4)"],TraditionalForm["VERTICE (-/4a,-b/2a)=(-9/32,-1/4)"],TraditionalForm["DIRETTRICE x=-(1+)/4a=-25/32"]},"Esempio 4",2*y^2-4*x+y-1==0]
 
-ShowExample[{HoldForm[x^2-2*x-y-3=0],HoldForm[y=x^2-2*x-3],HoldForm[a=1],HoldForm[b=-2],HoldForm[c=-3],HoldForm[b^2-4 a*c=16],TraditionalForm["ASSE y=-b/2a x=-1"],TraditionalForm["FUOCO(-b/2a,(1-)/4a)=(-1,-15/4)"],TraditionalForm["VERTICE(-b/2a,-/4a)=(-1,-4)"],TraditionalForm["DIRETTRICE x=-(1+)/4a=-17/4"]},"Esempio 5"]
+ShowExamples[{HoldForm[x^2-2*x-y-3==0],HoldForm[y=x^2-2*x-3],HoldForm[a=1],HoldForm[b=-2],HoldForm[c=-3],HoldForm[b^2-4 a*c=16],TraditionalForm["ASSE y=-b/2a x=-1"],TraditionalForm["FUOCO(-b/2a,(1-)/4a)=(-1,-15/4)"],TraditionalForm["VERTICE(-b/2a,-/4a)=(-1,-4)"],TraditionalForm["DIRETTRICE x=-(1+)/4a=-17/4"]},"Esempio 5",x^2-2*x-y-3==0]
 
-ShowExample[{HoldForm[4*x^2-y^2-6 x-5 y-4=0],HoldForm[4*x^2-6 x-y^2-5 y-4=0],HoldForm[4*(x^2-3/2*x+9/16)-(y^2+5*y+25/4)=4+9/4-25/4],HoldForm[4 (x-3/4)^2-(y+5/2)^2=0],HoldForm[(2 x-3/2)^2-(y+5/2)^2=0],HoldForm[(2 x-3/2+y+5/2) (2 x-3/2-y-5/2)=0],TraditionalForm["(2x+y+1)(2x--y-4)=0 due rette"]},"Esempio 6"]
+ShowExamples[{HoldForm[4*x^2-y^2-6 x-5 y-4==0],HoldForm[4*x^2-6 x-y^2-5 y-4=0],HoldForm[4*(x^2-3/2*x+9/16)-(y^2+5*y+25/4)=4+9/4-25/4],HoldForm[4 (x-3/4)^2-(y+5/2)^2=0],HoldForm[(2 x-3/2)^2-(y+5/2)^2=0],HoldForm[(2 x-3/2+y+5/2) (2 x-3/2-y-5/2)=0],TraditionalForm["(2x+y+1)(2x--y-4)=0 due rette"]},"Esempio 6",4*x^2-y^2-6 x-5 y-4==0]
 
-ShowExample[{HoldForm[x^2+2 y^2+2 x-8 y+9=0],HoldForm[(x^2+2*x1)+2 (y^2-4*y+4)=0],HoldForm[(x+1)^2+2 (y-2)^2=0],HoldForm[x+1=0],HoldForm[y-2=0],TraditionalForm["P(-1,2)"]},"Esempio 7"]
+ShowExamples[{HoldForm[x^2+2 y^2+2 x-8 y+9==0],HoldForm[(x^2+2*x1)+2 (y^2-4*y+4)=0],HoldForm[(x+1)^2+2 (y-2)^2=0],HoldForm[x+1=0],HoldForm[y-2=0],TraditionalForm["P(-1,2)"]},"Esempio 7",x^2+2 y^2+2 x-8 y+9==0]
 
-ShowExample[{HoldForm[y=x^2+6*x-1],HoldForm[a=1],HoldForm[b=6],HoldForm[c=-1],HoldForm[y=(x+3)^2-10],TraditionalForm["VERTICE (-3,-10)"],TraditionalForm["ASSE y=-b/2a x=-3"],TraditionalForm["FUOCO (-3,-39/4)"],TraditionalForm["DIRETTRICE y=-41/4"]},"Esempio 8"]
+ShowExamples[{HoldForm[y==x^2+6*x-1],HoldForm[a=1],HoldForm[b=6],HoldForm[c=-1],HoldForm[y=(x+3)^2-10],TraditionalForm["VERTICE (-3,-10)"],TraditionalForm["ASSE y=-b/2a x=-3"],TraditionalForm["FUOCO (-3,-39/4)"],TraditionalForm["DIRETTRICE y=-41/4"], Show[ContourPlot[y==x^2+6*x-1,{x,-10,10}, {y,-10,10}]]},"Esempio 8",y==x^2+6*x-1]
 
 
