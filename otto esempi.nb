@@ -10,17 +10,39 @@ Column[{ToExpression["SEI",TraditionalForm],HoldForm[4*x^2-y^2-6 x-5 y-4=0],Hold
 Column[{ToExpression["SETTE",TraditionalForm],HoldForm[x^2+2 y^2+2 x-8 y+9=0],HoldForm[(x^2+2*x1)+2 (y^2-4*y+4)=0],HoldForm[(x+1)^2+2 (y-2)^2=0],HoldForm[x+1=0],HoldForm[y-2=0],TraditionalForm["P(-1,2)"]},Background->LightRed,Frame->All]
 
 Column[{ToExpression["OTTO",TraditionalForm],HoldForm[y=x^2+6*x-1],HoldForm[a=1],HoldForm[b=6],HoldForm[c=-1],HoldForm[y=(x+3)^2-10],TraditionalForm["VERTICE (-3,-10)"],TraditionalForm["ASSE y=-b/2a x=-3"],TraditionalForm["FUOCO (-3,-39/4)"],TraditionalForm["DIRETTRICE y=-41/4"]},Background->LightRed,Frame->All]
-In[1]:= ShowExamples[list_, title_]:=(
+
+ShowExamples[{ToExpression["DUE",TraditionalForm],HoldForm[-4*x^2+8*x-2*y^2+12=0],HoldForm[-4*(x^2-2 x+1)-2 y^2=-16],HoldForm[-4 (x-1)^2-2 y^2=-16],HoldForm[(x-1)^2/4+y^2/8=1],HoldForm[a=2],HoldForm[b=Sqrt[8]=2 Sqrt[2]],TraditionalForm["VERTICI (-1,0) (3,0) (1,-2√2) (1,2√2)"],TraditionalForm["FUOCHI(1,-2) (1,2)"]},"TITOLO"]
+ShowExamples[list_, title_]:=(
 DynamicModule[{i=1},
 Panel[
+Grid[{
+{"",Row[{Style[title, FontSize->Medium, FontWeight->Bold]}, Alignment->Center, Frame->True],""},
+{Column[{
+Row[{Style[
+Dynamic[Column[Take[list,i], Frame->All, Alignment->Center]], Medium]
+}]
+}],"",
 Column[{
 Row[{
-Dynamic[If[i>=Length[list],"Esempio Terminato!", Button["Avanti", Dynamic[i++]]]]
-}],
-Row[{
-Dynamic[Column[Take[list,i], Frame->All]]
-}],
-}],
-title
-]]);
-ShowExamples[{ToExpression["DUE",TraditionalForm],HoldForm[-4*x^2+8*x-2*y^2+12=0],HoldForm[-4*(x^2-2 x+1)-2 y^2=-16],HoldForm[-4 (x-1)^2-2 y^2=-16],HoldForm[(x-1)^2/4+y^2/8=1],HoldForm[a=2],HoldForm[b=Sqrt[8]=2 Sqrt[2]],TraditionalForm["VERTICI (-1,0) (3,0) (1,-2√2) (1,2√2)"],TraditionalForm["FUOCHI(1,-2) (1,2)"]},"TITOLO"]
+Dynamic[If[i>=Length[list],Button[Style["Esempio Terminato!", Medium, Bold], Enabled->False], Button[Style["Avanti", Medium, Bold], Dynamic[i++], Appearance->"FramedPalette"]]]
+}]
+}]}
+}, Background->White, Frame->True]
+]
+]);
+In[196]:= ShowExamples[{ToExpression["OTTO",TraditionalForm],HoldForm[y=x^2+6*x-1],HoldForm[a=1],HoldForm[b=6],HoldForm[c=-1],HoldForm[y=(x+3)^2-10],TraditionalForm["VERTICE (-3,-10)"],TraditionalForm["ASSE y=-b/2a x=-3"],TraditionalForm["FUOCO (-3,-39/4)"],TraditionalForm["DIRETTRICE y=-41/4"]},"CIAONE"]
+
+Out[196]= 	CIAONE	
+OTTO
+y=x^2+6 x-1
+a=1
+b=6
+c=-1
+y=(x+3)^2-10
+VERTICE (-3,-10)
+ASSE y=-b/2a x=-3
+FUOCO (-3,-39/4)
+DIRETTRICE y=-41/4
+
+		Esempio Terminato!
+

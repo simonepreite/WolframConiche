@@ -228,14 +228,24 @@ rFile[filename_]:=(
 	]
 );
 
-ShowExamples[list_]:=(
+ShowExamples[list_, title_]:=(
 DynamicModule[{i=1},
 Panel[
-Dynamic[Column[Take[list,i], Frame->All]],
-Dynamic[If[i>=Length[list],"Esempio Terminato!", Button["Avanti", Dynamic[i++]]]]
+Grid[{
+{"",Row[{Style[title, FontSize->Medium, FontWeight->Bold]}, Alignment->Center, Frame->True],""},
+{Column[{
+Row[{Style[
+Dynamic[Column[Take[list,i], Frame->All, Alignment->Center]], Medium]
+}]
+}],"",
+Column[{
+Row[{
+Dynamic[If[i>=Length[list],Button[Style["Esempio Terminato!", Medium, Bold], Enabled->False], Button[Style["Avanti", Medium, Bold], Dynamic[i++], Appearance->"FramedPalette"]]]
+}]
+}]}
+}, Background->White, Frame->True]
 ]
-]
-);
+]);
 
 (*Displays different buttons, each one opens a different .nb file*)
 (*We could impreove the display of the buttons and put the output of this function into a ChoiceDialog*)
