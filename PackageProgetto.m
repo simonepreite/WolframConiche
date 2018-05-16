@@ -46,7 +46,7 @@ Column[{
 	text=recognizeShape[a,b,c,d,e,f];
 	clr=color[text];
 	Row[{
-	Text["La funzone sta disegnando: "<>text],Spacer[20], "Equazione: ",(*Outputs the name of shape*)
+	Text[ "Equazione: "],(*Outputs the name of shape*)
 	With[{a=a, b=b, c=c, d=d, e=e, f=f, xs="x", ys="y"},HoldForm[(a*xs^2) +(2b*xs*ys) +(c*ys^2) +(2d*xs) + (2e*ys)+f==0]]
 	}],
 	Row[{
@@ -96,7 +96,7 @@ buildGraphicPlaneCone:=(
 Manipulate[
 beta=IntegerPart[N[ArcSin[Abs[4*f]/(4*Sqrt[(d^2) + (e^2)+ (f^2)])]/Degree]];alfa= 45;
 Grid[{
-   {Row[{Text["L'angolo tra il piano e l'asse del cono, \[Beta], \[EGrave]: "],beta,Text["  L'angolo tra l'asse del cono e la generatrice, \[Alpha], \[EGrave]: "],alfa,Text["  La figura disegnata \[EGrave]: "],checkFigure[alfa,beta, g]},Frame->All]},
+   {Row[{Text["L'angolo tra il piano e l'asse del cono, \[Beta], \[EGrave]: "],beta,Text["  L'angolo tra l'asse del cono e la generatrice, \[Alpha], \[EGrave]: "],alfa},Frame->All]},
 {
 Row[{
 Dynamic[
@@ -148,7 +148,7 @@ elems=eccentricity[aaa,e];
 Column[{
 Row[
 If[elems!={},
-{Text["Eccentricit\[AGrave] "], HoldForm[PF/Pd],Text[": "],EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]],Text["PF: "],EuclideanDistance[{1,0},elems[[1]]], Text["PD: "],EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]},{If[e==0,"Non hai disegnato alcuna figura!", "Il punto non appartiene alla figura!"]}
+{Text["Eccentricit\[AGrave] "], TraditionalForm["PF"/"Pd"],Text[": "],EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]],Text["PF: "],EuclideanDistance[{1,0},elems[[1]]], Text["PD: "],EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]},{If[e==0,"Non hai disegnato alcuna figura!", "Il punto non appartiene alla figura!"]}
 ]
 ],
 Row[{
@@ -195,7 +195,7 @@ Show[c1,c2,c3, l1,l2, l3, Axes->True, RotationAction->"Fit", Background->White]
 );
 
 (*Creates the animation of a Line rotating generating a Cone, the animation stars stopped and must be started by hand*)
-buildAnimation:=(Animate[RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,4 Pi},{b,0,theta}],{theta,0.,2*Pi}, DefaultDuration->20, AnimationRunning->False]);
+buildAnimation:=(Animate[RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,4 Pi},{b,0,theta}],{{theta,0.5, "Angolo"}, 0.5, 2*Pi}, DefaultDuration->20, AnimationRunning->False]);
 
 (*Prints the text, equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct*)
 printExercise[expr_, text_, values_, answer_]:=(
@@ -7374,7 +7374,8 @@ Q/FOQcH9ULxTUHA/FO8UFNwPxTvfwP8HiSD7kw==
 	
 ShowEllisse[]:=(Manipulate[
 	Show[
-		ContourPlot[{y==(b/a)*Sqrt[(a^2)-(x^2)],y==-(b/a)*Sqrt[(a^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True,ContourLabels->None , PlotLabel->{Style[StandardForm[y==(b/a)*Sqrt[(a^2)-(x^2)]],FontColor->Red],Style[StandardForm[y==-(b/a)*Sqrt[(a^2)-(x^2)]],FontColor->Blue]}]
+		ContourPlot[{y==(b/a)*Sqrt[(a^2)-(x^2)],y==-(b/a)*Sqrt[(a^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True,ContourLabels->None,
+		 PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Blue]}]
 		],
 		{{a,1,"a"},1,10,1,Appearance->"Labeled"},
 		{{b,1,"b"},1,10,1,Appearance->"Labeled"}
@@ -7383,7 +7384,8 @@ ShowEllisse[]:=(Manipulate[
 ShowCirconferenza[]:=(
 Manipulate[
 Show[
-ContourPlot[{y==Sqrt[(r^2)-(x^2)], y==-Sqrt[(r^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True, ContourLabels->None , PlotLabel->{Style[StandardForm[y==Sqrt[(r^2)-(x^2)]],FontColor->Red],Style[StandardForm[y==-Sqrt[(r^2)-(x^2)]],FontColor->Blue]}
+ContourPlot[{y==Sqrt[(r^2)-(x^2)], y==-Sqrt[(r^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True, ContourLabels->None,
+ PlotLabel->{Style[StandardForm["y"==Sqrt[(r^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-Sqrt[(r^2)-("x"^2)]],FontColor->Blue]}
 	]
 ],
 {{r,1,"raggio"},1,10,1,Appearance->"Labeled"}
@@ -7393,7 +7395,8 @@ ShowIperbole[]:=(
 Manipulate[
 Show[
 ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)], y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,10},{y,-10,10},
-	ImageSize->Medium, Axes->True],ContourLabels->None ,PlotLabel->{Style[StandardForm[y==(b/a)*Sqrt[-(a^2)+(x^2)]],FontColor->Red],Style[StandardForm[y==-(b/a)*Sqrt[-(a^2)+(x^2)]],FontColor->Blue]}
+	ImageSize->Medium, Axes->True],ContourLabels->None,
+	PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[-(a^2)+("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[-(a^2)+("x"^2)]],FontColor->Blue]}
 ],
 {{a,1,"a"},1,10,1,Appearance->"Labeled"},
 {{b,1,"b"},1,10,1,Appearance->"Labeled"}
