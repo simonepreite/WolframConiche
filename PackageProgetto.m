@@ -1,5 +1,17 @@
 (* ::Package:: *)
 
+(* ::Code::Initialization::Plain:: *)
+(* PACKAGE.M
+ * Progetto d'esame di Matematica Computazionale + Calcolo Numerico e Software Didattico
+ * Corsi di laurea magistrale in Informatica e Matematica
+ * Anno accademico 2017/2018
+ * 
+ * Autori:
+ *   Carlo, Simone, Yuan, Aliona, Loredana
+ *
+ * Versione di sviluppo e testing: Wolfram Mathematica 11.2
+ *)
+
 BeginPackage["PackageProgetto`"]
 
 Unprotect["PackageProgetto`*"] (* toglie temporaneamente la protezione per ridefinire le funzioni *)
@@ -7,21 +19,24 @@ ClearAll["PackageProgetto`*"];
 (*USAGE*)
 (*Here are the names and usage messages for the functions and parameters that will be publicly exported from the package.*)
 
-recognizeShape::usage = "Checks which kind of Shape is defined by the equations parameter";
-color::usage = "Assigns a color to the shape";
+recognizeShape::usage = "Checks which kind of shape is defined by the equations parameter";
+color::usage = "Returns a color depending from the shape given in input";
 buildGraphicConicalEquation::usage = "Builds an interactive Panel with the plots of the Conical equation";
-buildGraphicPlaneCone::usage = "Builds an interactive Panel with the equation of a Plane and a Cone, highligthing te intersection and plotting it inside another plot";
-buildGraphicEccentricity::usage = "Builds an interactive Panel with the equation of a curve base on its eccentricity";
-buildAnimation::usage = "Creates the animation of a Line rotating generating a Cone";
+buildGraphicPlaneCone::usage = "Builds an interactive Panel with the equation of a Plane and a Cone and the plot of their intersection";
+buildGraphicEccentricity::usage = "Builds an interactive Panel with the equation of a curve based on its eccentricity";
+buildAnimation::usage = "Creates the animation of a Line rotating, which generates a Cone";
 printExercise::usage="Prints the text, equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct";
-rFile::usage="Print all exercices into a passed file";
-NotebookOpeners::usage="Displays different buttons, each one opens a different .nb file";
-buildLabeledGraphic::usage="builds an interactive Panel with the equation of a cone and prints a table with the deatils of the components.Undertanding how to limit the rotation of the Plot is important";
-ShowEllisse::usage="Display a simple Ellipse plot ";
-ShowCirconferenza::usage="Display a simple Circle Plot";
-ShowIperbole::usage="Display a simple Hyperbole Plot";
+rFile::usage="Print all exercises into a passed file";
+NotebookOpeners::usage="Displays different buttons, each one is a link to a different portion of the presentation";
+buildLabeledGraphic::usage="builds an interactive Panel with the equation of a cone with Tooltips detailing the components";
+ShowEllisse::usage="Display a simple Ellipse plot, with its equation labeled";
+ShowCirconferenza::usage="Display a simple Circle Plot,  with its equation labeled";
+ShowIperbole::usage="Display a simple Hyperbole Plot, with its equation labeled";
+ShowParabola::usage="Display a simple Parabole Plot";
+ShowAnotherParabola::usage="Display a Parabole Plot with the axis parallel to the ordinate axis";
 ShowExamples::usage="Display an interactive Panel with the progressive evolution of a numerical example";
-ShowButton::usage="Dislplay all bottom button slide";
+ShowButton::usage="Dislplay the buttons of the navigation bar at the bottom of the page";
+
 Begin["Private`"];
 
 (* disabilito alcuni warning *)
@@ -29,25 +44,78 @@ Off[Solve::svars]; (* avvisa quando la Solve non riesce a risolvere, nel caso di
 Off[General::shdw]; (* warning di definizioni oscurate *)
 SetDirectory[NotebookDirectory[]]; (* imposto la cartella attuale come base in cui cercare i file *)
 
-(*Checks which kind of Shape is defined by the equations parameter*)
+(*
+*Checks which kind of Shape is defined by the equations parameter
+*@a,@b, @c,@d, @e, @f are the conical equation's parameters
+*)
 recognizeShape[a_,b_,c_, d_,e_,f_]:=
-((*If[d^2/4a+e^2/4c-f<0,"Non \[EGrave] una conica!",*)flag=b^2-(4*a*c);Which[flag==0,If[a==b && b==c && c==0, "Retta","Parabola"] , LessThan[0][flag], If[a==c && b==0,"Circonferenza","Ellisse"], GreaterThan[0][flag], If[a+c==0,"Iperbole Equilatera","Iperbole"]](*]*));
-(*Assigns a color to the shape*)
-(*AAA: We could choose better colors by using RGB[]*)
-(*AAA: We need to add some words color association here for the graphicPlaneCone*)
+(flag=b^2-(4*a*c);Which[flag==0,If[a==b && b==c && c==0, "Retta","Parabola"] , LessThan[0][flag], If[a==c && b==0,"Circonferenza","Ellisse"], GreaterThan[0][flag], If[a+c==0,"Iperbole Equilatera","Iperbole"]]);
+
+(*
+*Checks which kind of Shape is defined by the intersection of a plane and a cone based on the angles of the intersection
+*@alfa is the angle between the cone axis and the plane
+*@beta is the angle between the cone generating line and its axis
+*@g is the y axis of the plane, when g==0 the plane intersects the cone in its vertex  
+*)
+checkFigure[alfa_,beta_, g_]:=(Which[beta<=90 && alfa < beta && g==0, "Punto",beta<alfa && g==0,"Rette Incidenti",beta==alfa && g==0, "Retta",beta<90 && alfa < beta, "Ellisse", beta==alfa, "Parabola",beta<alfa,"Iperbole",beta==90, "Circonferenza"]);
+
+(*
+*Checks which kind of Shape is defined by its eccentricity
+*@e is the eccentricity of the curve
+*)
+checkE[e_]:=(
+If [e<-1,"Iperbole",If[e==-1,"Parabola",If[-1<e<0,"Ellisse",If[e==0,"Circonferenza",If[0<e<1,"Ellisse",If[e==1,"Parabola",If[e>1,"Iperbole"]]]]]]]
+);
+
+(*
+*Assigns a color to the shape
+*@text is the result of a function such as checkFigure or recognizeShape
+*)
 color[text_]:=(Switch[text,"Circonferenza",Brown,"Ellisse",Purple,"Iperbole",Blue ,"Parabola", Yellow, "Retta", Black, "Iperbole Equilatera", Blue, "Non \[EGrave] una conica!", Brown, "Punto",Pink, "Rette Incidenti",Green]);
+
+(*
+*Auxiliary function used in bgColors. 
+*@name is the result of a function such as checkFigure or recognizeShape
+*@color is a color, resulting from the color function
+*@xz is the name of a shape
+*)
+aux[name_, color_,xz_]:=(If[StringMatchQ[name,xz],color,Null]);
+
+(*
+*Creates a list of colors to highlight the Background of a grid
+*@name is the result of a function such as checkFigure or recognizeShape
+*@color is a color, resulting from the color function
+*)
+bgColors[name_,color_ ]:=(aux[name, color,#]&/@{"Ellisse","Parabola", "Circonferenza","Iperbole","Rette Incidenti", "Retta","Punto" });
+
+(*
+*Creates a list of colors to highlight the Background of a grid
+*@name is the result of a function such as checkFigure or recognizeShape
+*@color is a color, resulting from the color function
+*)
+bgColorsTwo[name_,color_ ]:=(aux[name, color,#]&/@{"Ellisse","Parabola", "Circonferenza","Iperbole","Iperbole Equilatera", "Retta","Non \[EGrave] una conica" });
+
+(*
+*Returns the points of the equation, calculated from the ordinate and eccentricity
+*@x is the ordinate of the points
+*@e is the eccentricity of the curve
+*)
+eccentricity[x_, e_]:=(
+result=-1+4 e^2+2 x-4 e^2 x-x^2+e^2 x^2;
+If[result>=0, {{x,Sqrt [result]},{x, -Sqrt [result]}},{} ]
+);
 
 (*Builds an interactive Panel with the plots of the Conical equation*)
 buildGraphicConicalEquation:=(
-DynamicModule[{text, clr},
-Manipulate[ 
-Grid[{{
+DynamicModule[{text, clr}, (*text and clr are local variables*)
+Manipulate[ (*Creates a panel and automatically deploy the controls described at the end*)
+Grid[{{ (*The frame displays a Grid with three rows and one column*)
 Column[{
-	text=recognizeShape[a,b,c,d,e,f];
-	clr=color[text];
+	text=recognizeShape[a,b,c,d,e,f]; (*Checks which shape is defined*)
+	clr=color[text]; (*calculates the color of the shape*)
 	Row[{
 	Text[ "Equazione: "],(*Outputs the name of shape*)
-	With[{a=a, b=b, c=c, d=d, e=e, f=f, xs="x", ys="y"},HoldForm[(a*xs^2) +(2b*xs*ys) +(c*ys^2) +(2d*xs) + (2e*ys)+f==0]]
+	With[{a=a, b=b, c=c, d=d, e=e, f=f, xs="x", ys="y"},HoldForm[(a*xs^2) +(2b*xs*ys) +(c*ys^2) +(2d*xs) + (2e*ys)+f==0]] (*Displays the equation*)
 	}],
 	Row[{
 	ContourPlot[(a*x^2) +(2b*x*y) +(c*y^2) +(2d*x) + (2e*y)+f==0, {x,-20, 20}, {y,-20,20},(*2D Plot of the equation*)
@@ -70,7 +138,7 @@ Column[{
 	{"Retta","Delta = 0", "a = b = c = 0"},
 	{"Non \[EGrave] una conica", "Condizione di esistenza non soddisfatta!"}},
 	Frame->All,
-	Background->{Null,bgColorsTwo[text,clr] }]
+	Background->{Null,bgColorsTwo[text,clr] }] (*creates the list of colors for the grid background*)
 	}]
 	}]}
 }, Alignment->{Left, Right}, Frame->All],
@@ -83,31 +151,24 @@ Column[{
 ControlPlacement->Top (*Places the Sliders on the top of the Panel*)
 ]]);
 
-checkFigure[alfa_,beta_, g_]:=(Which[beta<=90 && alfa < beta && g==0, "Punto",beta<alfa && g==0,"Rette Incidenti",beta==alfa && g==0, "Retta",beta<90 && alfa < beta, "Ellisse", beta==alfa, "Parabola",beta<alfa,"Iperbole",beta==90, "Circonferenza"]);
-
-aux[namez_, colorz_,xz_]:=(If[StringMatchQ[namez,xz],colorz,Null]);
-
-bgColors[name_,color_ ]:=(aux[name, color,#]&/@{"Ellisse","Parabola", "Circonferenza","Iperbole","Rette Incidenti", "Retta","Punto" });
-
-bgColorsTwo[name_,color_ ]:=(aux[name, color,#]&/@{"Ellisse","Parabola", "Circonferenza","Iperbole","Iperbole Equilatera", "Retta","Non \[EGrave] una conica" });
-
 (*Builds an interactive Panel with the equation of a Plane and a Cone, highligthing te intersection and plotting it inside another plot*)
 buildGraphicPlaneCone:=(
 Manipulate[
-beta=IntegerPart[N[ArcSin[Abs[4*f]/(4*Sqrt[(d^2) + (e^2)+ (f^2)])]/Degree]];alfa= 45;
-Grid[{
+beta=IntegerPart[N[ArcSin[Abs[4*f]/(4*Sqrt[(d^2) + (e^2)+ (f^2)])]/Degree]]; (*beta is the angle between the cone generating line and its axis*)
+alfa= 45; (*alfa is the angle between the cone axis and the plane*)
+Grid[{ (*The frame displays a Grid with three rows and one column*)
    {Row[{Text["L'angolo tra il piano e l'asse del cono, \[Beta], \[EGrave]: "],beta,Text["  L'angolo tra l'asse del cono e la generatrice, \[Alpha], \[EGrave]: "],alfa},Frame->All]},
 {
 Row[{
 Dynamic[
 Show[
-ContourPlot3D[{(d*x)+(e*y)+(f*z)+g==0, ((x^2))+((y^2))-((z^2))==0}, {x,-2,2},{y,-2,2},{z,-2,2} , ContourStyle->{Automatic,Opacity[0.8]},
+ContourPlot3D[{(d*x)+(e*y)+(f*z)+g==0, ((x^2))+((y^2))-((z^2))==0}, {x,-2,2},{y,-2,2},{z,-2,2} , ContourStyle->{Automatic,Opacity[0.8]}, (*3D Plot of the plane and cone*)
 ImageSize->Medium,
 Mesh->None,
-BoundaryStyle->{{1,2}->{Red,Thick}},
+BoundaryStyle->{{1,2}->{Red,Thick}}, (*Makes the boundary of the equation Red and Thick, so that the Intersection is highlighted*)
 AxesOrigin-> True
 ],
-Graphics3D[{Red,Thick, Tooltip[Line[{{0,0,-2}, {0,0,2}}], "Asse di rotazione", TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}]}]
+Graphics3D[{Red,Thick, Tooltip[Line[{{0,0,-2}, {0,0,2}}], "Asse di rotazione", TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}]}] (*Cone Axis added at the graphic*)
 ]
 ],Spacer[20],Dynamic[ Show[{ ContourPlot[{-((d*x)+(e*y)+g)/f==Sqrt[((x^2)/1 )+(( y^2)/1)],-((d*x)+(e*y)+g)/f==-Sqrt[((x^2)/1 )+(( y^2)/1)]}, {x,-2,2},{y,-2,2}, ImageSize->Medium, ContourStyle->color[checkFigure[alfa,beta,g]]]}]]
 }]}, {
@@ -120,7 +181,7 @@ Grid[
 	{Tooltip ["Retta","Due Rette Coincidenti",TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}],"\[Beta] = \[Alpha]", "Il piano passa per il vertice del cono"},
 	{Tooltip["Punto","Circonferenza di raggio 0"TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}] "\[Alpha] < \[Beta] <= 90\[Degree]", "Il piano passa per il vertice del cono"}},
 	Frame->All,
-	Background->{Null, bgColors[checkFigure[alfa,beta,g], color[checkFigure[alfa,beta,g]]]}
+	Background->{Null, bgColors[checkFigure[alfa,beta,g], color[checkFigure[alfa,beta,g]]]} (*generates a list of colors for the grid background*)
 ]
 }
 }, Frame->All],
@@ -131,37 +192,28 @@ Grid[
 ControlPlacement->Top
 ]);
 
-eccentricity[x_, e_]:=(
-result=-1+4 e^2+2 x-4 e^2 x-x^2+e^2 x^2;
-If[result>=0, {{x,Sqrt [result]},{x, -Sqrt [result]}},{} ]
-);
-
-checkE[e_]:=(
-If [e<-1,"Iperbole",If[e==-1,"Parabola",If[-1<e<0,"Ellisse",If[e==0,"Circonferenza",If[0<e<1,"Ellisse",If[e==1,"Parabola",If[e>1,"Iperbole"]]]]]]]
-);
-
-(*c \[EGrave] la x del Fuoco, e \[EGrave] l'eccentricit\[AGrave]*)
+(* Builds a interactive panel with the conical equation parametrised on the eccentricity *)
 buildGraphicEccentricity:=(
-DynamicModule[{elems},
+DynamicModule[{elems}, (*elems is local*)
 Manipulate[
-elems=eccentricity[aaa,e];
-Column[{
+elems=eccentricity[aaa,e]; (calculates the point in which the equation is satisfied based on the ordinate of the point and the eccentricity)
+Column[{ (*the content is displayed in a column with three rows*)
 Row[
-If[elems!={},
+If[elems!={}, (*if the equation is solvable depending on x and e, display the distances and the eccentricity, otherwise display a error message*)
 {Text["Eccentricit\[AGrave] "], TraditionalForm["PF"/"Pd"],Text[": "],EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]],Text["PF: "],EuclideanDistance[{1,0},elems[[1]]], Text["PD: "],EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]},{If[e==0,"Non hai disegnato alcuna figura!", "Il punto non appartiene alla figura!"]}
 ]
 ],
 Row[{
 Show[
-ContourPlot[(1-e^2)*x^2 + y^2-2*(1-2*e^2)*x + 1-4*e^2==0, {x,-12,12},{y,-6,6}],
-Graphics[{
+ContourPlot[(1-e^2)*x^2 + y^2-2*(1-2*e^2)*x + 1-4*e^2==0, {x,-12,12},{y,-6,6}], (*2D plot of the equation*)
+Graphics[{ 
 Join[
-{Red, PointSize->0.025,Point[{1,0}],Text["F",{1.2,0.5}],Black,Line[{{2,-12}, {2,12}}], Text["Direttrice, y=2",{4, 3}] },
+{Red, PointSize->0.025,Point[{1,0}],Text["F",{1.2,0.5}],Black,Line[{{2,-12}, {2,12}}], Text["Direttrice, y=2",{4, 3}] }, (*draw a line and the fire of the conical*)
 If[elems!={},
-{Brown, PointSize->0.025,Point[elems[[1]]],Point[elems[[2]]], Text["P",(1+#)&/@elems[[1]]], Text["P",(1+#)&/@elems[[2]]]},
+{Brown, PointSize->0.025,Point[elems[[1]]],Point[elems[[2]]], Text["P",(1+#)&/@elems[[1]]], Text["P",(1+#)&/@elems[[2]]]}, (*if the point exists, add them to the graphic*)
  {}],
 If[elems!={},
-{Line[{{1,0},elems[[1]]}], Line[{{2,elems[[1]][[2]]},elems[[1]]}],Point[{2,elems[[1]][[2]]}],Text["d",{3,elems[[1]][[2]]}]},{} ]]}
+{Line[{{1,0},elems[[1]]}], Line[{{2,elems[[1]][[2]]},elems[[1]]}],Point[{2,elems[[1]][[2]]}],Text["d",{3,elems[[1]][[2]]}]},{} ]]}(*draw lines from the point to other stuff*)
 ],
  Axes->{True, True},
 ImageSize->Medium
@@ -174,7 +226,7 @@ Grid[
 	{Tooltip["Punto","Circonferenza di raggio 0", TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}],"|e| = 0"},
 	{"Iperbole","|e| > 1"}},
 	Frame->All,
-	Background->{Null, bgColors[checkE[e], color[checkE[e]]]
+	Background->{Null, bgColors[checkE[e], color[checkE[e]]] (*creates the background colors for the grid*)
 }]
 }]
 }],
@@ -183,7 +235,6 @@ Grid[
 ]]);
 
 (*builds an interactive Panel with the equation of a cone and prints a table with the deatils of the components*)
-(*Undertanding how to limit the rotation of the Plot is important*)
 buildLabeledGraphic:=(
 c1=Graphics3D[{Yellow, Opacity[0.8],Cone[{{0, 0, 5}, {0,0,0}}, 2]}];
 c2=Graphics3D[{Yellow,Opacity[0.8], Cone[{{0,0,-5}, {0,0,0}}, 2]}];
@@ -194,22 +245,33 @@ l3=Graphics3D[{Blue,Thick, Tooltip[Line[{{0,-2,-5},{0,0,0}, {0,-2,5}}], "Generat
 Show[c1,c2,c3, l1,l2, l3, Axes->True, RotationAction->"Fit", Background->White]
 );
 
-(*Creates the animation of a Line rotating generating a Cone, the animation stars stopped and must be started by hand*)
-buildAnimation:=(Animate[RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,4 Pi},{b,0,theta}],{{theta,0.5, "Angolo"}, 0.5, 2*Pi}, DefaultDuration->20, AnimationRunning->False]);
+(*Creates the animation of a Line rotating generating a Cone, the animation starts paused and must be started by hand*)
+buildAnimation:=(Animate[
+	RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,4 Pi},{b,0,theta}], (*Revolution plot of a line of 45° angle*)
+	{{theta,0.5, "Angolo"}, 0.5, 2*Pi}, 
+	DefaultDuration->20,
+	AnimationRunning->False]
+);
 
-(*Prints the text, equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct*)
+(*
+*Prints the text and equation of an exercise, with the possible solutions in a radio button bar and tests if the answer given is correct
+*@expr is the expression object of the exercise
+*@text is the text of the exercise
+*@values are the possible values for the radiobutton bar, contained in a list
+*@answer is the number reprtesenting the correct answer
+*)
 printExercise[expr_, text_, values_, answer_]:=(
-DynamicModule[{z=1, txt="Ancora da valutare"},
-	Column[{
+DynamicModule[{z=1, txt="Ancora da valutare"}, (*z and txt are local variables*)
+	Column[{ (*The content is displayed in a column with several rows*)
 	Row[{Text[text]}],
 	Row[{ToExpression[expr]} ],
 	"",
 	Row[{
 	RadioButtonBar[Dynamic[z],{1->HoldForm[Evaluate[values[[1]]]],2->HoldForm[Evaluate[values[[2]]]],3->HoldForm[Evaluate[values[[3]]]],4-> HoldForm[Evaluate[values[[4]]]], 5->HoldForm[Evaluate[values[[5]]]]}, Appearance->"Vertical"]
-	}],
+	}], (*radio button bar provides a closed-choice menu for the answer*)
 	"",
 	Row[{
-		Button["Clicca per controllare il risultato",Dynamic[If[Equal[z,ToExpression[answer]], txt="Corretto", txt="Sbagliato!"]]],
+		Button["Clicca per controllare il risultato",Dynamic[If[Equal[z,ToExpression[answer]], txt="Corretto", txt="Sbagliato!"]]], (*Button to evaluate the answer*)
 		Spacer[20],
 		Dynamic[Text["Risultato:"<>txt]]
 	}]
@@ -217,30 +279,40 @@ DynamicModule[{z=1, txt="Ancora da valutare"},
 	]
 );
 
-(*Reads the text of the exercises from a file*)
+(*
+*Reads the text of the exercises from a file
+*@filename is the path of the exercise file
+*)
 rFile[filename_]:=(
-	exerc=ReadList[filename, String];
-	For[i=1, i<=Length[exerc], i++,
-		rowl=StringSplit[exerc[[i]],";"];
-		val3=StringSplit[rowl[[3]]," "];
-		Print[printExercise[rowl[[2]],rowl[[1]],val3,rowl[[4]]]]
+	exerc=ReadList[filename, String]; (*get a list of the elements in the specified directory*)
+	For[i=1, i<=Length[exerc], i++, (*foreach file in the specified directory*)
+		rowl=StringSplit[exerc[[i]],";"]; (*Split the String when a ";" is encountered*)
+		val3=StringSplit[rowl[[3]]," "]; (*Split the String when a " " is encountered*)
+		Print[printExercise[rowl[[2]],rowl[[1]],val3,rowl[[4]]]] (*call to printExercise*)
 	]
 );
 
-ShowExamples[list_,title_, exp_]:=(DynamicModule[{i=1},
+(*
+*Display an example in a column, adding a step of its resolution everytime a button is pressed 
+*@list is the content of the example
+*@title is the title of the example
+*@exp is the expression to plot 
+*)
+ShowExamples[list_,title_, exp_]:=(
+DynamicModule[{i=1}, (*i is a local variable, representing the number of column to display*)
 Panel[
-Grid[{
+Grid[{ (*the content is displayed in a grid with two rows*)
 {Style[title,FontSize->Medium,FontWeight->Bold]},
 {Row[{
 Style[
 Dynamic[
-Column[Take[list,i],Frame->All,Alignment->Center]
+Column[Take[list,i],Frame->All,Alignment->Center] (*this column displays the first i elements from the list*)
 ],
 Medium
 ],"  ",
-Dynamic[Column[{
+Dynamic[Column[{ (*This column displays the button if there is more output to be shown, a disabled button otherwise followed by a plot of the expression*)
 If[i>=Length[list],Button[Style["Esempio Terminato!",Medium,Bold],Enabled->False],Button[Style["Avanti",Medium,Bold],Dynamic[i++],Appearance->"FramedPalette"]],
-If[i>=Length[list],Show[ContourPlot[exp,{x,-10,10},{y,-10,10}, ImageSize->Medium]]]
+If[i>=Length[list] && exp!=Null,Show[ContourPlot[exp,{x,-10,10},{y,-10,10}, ImageSize->Medium]]] (*if there is no output to be shown, eventually display a plot*)
 }]]
 }]
 }
@@ -250,7 +322,6 @@ Background->White,Frame->All]
 ]);
 
 (*Displays different buttons, each one opens a different .nb file*)
-(*We could impreove the display of the buttons and put the output of this function into a ChoiceDialog*)
 NotebookOpeners[]:=(
 bList={};
 For[i=1, i<=3, i++,
@@ -7371,9 +7442,12 @@ Q/FOQcH9ULxTUHA/FO8UFNwPxTvfwP8HiSD7kw==
 	ItemSize->{20,10}, Frame->None, Alignment->{Left,Center, Right},FrameStyle->{RGBColor[1,1, 1]}, Spacings->{20,0}
 	]
 	);
-	
+
+(*
+*Display a simple plot of a ellipse, with controllers to modify the equation parameters
+*)	
 ShowEllisse[]:=(Manipulate[
-	Show[
+	Show[ (*Plots the equations that form the ellipse, adds a PlotLabel with the equations*)
 		ContourPlot[{y==(b/a)*Sqrt[(a^2)-(x^2)],y==-(b/a)*Sqrt[(a^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True,ContourLabels->None,
 		 PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Blue]}]
 		],
@@ -7381,9 +7455,12 @@ ShowEllisse[]:=(Manipulate[
 		{{b,1,"b"},1,10,1,Appearance->"Labeled"}
 	]);
 
+(*
+*Display a simple plot of a circle, with controllers to modify the radius
+*)	
 ShowCirconferenza[]:=(
 Manipulate[
-Show[
+Show[  (*Plots the equations that form the circle, adds a PlotLabel with the equations*)
 ContourPlot[{y==Sqrt[(r^2)-(x^2)], y==-Sqrt[(r^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True, ContourLabels->None,
  PlotLabel->{Style[StandardForm["y"==Sqrt[(r^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-Sqrt[(r^2)-("x"^2)]],FontColor->Blue]}
 	]
@@ -7391,9 +7468,12 @@ ContourPlot[{y==Sqrt[(r^2)-(x^2)], y==-Sqrt[(r^2)-(x^2)]},{x,-10,10},{y,-10,10},
 {{r,1,"raggio"},1,10,1,Appearance->"Labeled"}
 	]);
 
+(*
+*Display a simple plot of a Hyperbole, with controllers to modify the equation parameters
+*)	
 ShowIperbole[]:=(
 Manipulate[
-Show[
+Show[ (*Plots the equations that form the hyperbole, adds a PlotLabel with the equations*)
 ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)], y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,10},{y,-10,10},
 	ImageSize->Medium, Axes->True],ContourLabels->None,
 	PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[-(a^2)+("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[-(a^2)+("x"^2)]],FontColor->Blue]}
@@ -7402,16 +7482,23 @@ ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)], y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,1
 {{b,1,"b"},1,10,1,Appearance->"Labeled"}
 ]);
 
+(*
+*Display a simple plot of a Parabole, with controllers to modify the equation parameters
+*)	
 ShowParabola[]:=(
-Manipulate[
+Manipulate[ (*Plots the equation that form the parabole, adds a PlotLabel with the equation*)
 ContourPlot[y==(a*x^2)+b*x,{x,-10,10},{y,-10,10},
 	ImageSize->Medium, Axes->True],
 {{a,0,"a"},0,10,1,Appearance->"Labeled"},
 {{b,0,"b"},0,10,1,Appearance->"Labeled"}
 ]);
 
+(*
+*Display a simple plot of a Parabole, with the axis parallel to the ordinate
+*and controllers to modify the equation parameters
+*)	
 ShowAnotherParabola[]:=(
-Manipulate[
+Manipulate[ (*Plots the equation that form the parabole, adds a PlotLabel with the equation*)
 ContourPlot[x== (a*y^2)+b*y,{x,-10,10},{y,-10,10},
 	ImageSize->Medium, Axes->True],
 {{a,0,"a"},0,10,1,Appearance->"Labeled"},
@@ -7419,6 +7506,11 @@ ContourPlot[x== (a*y^2)+b*y,{x,-10,10},{y,-10,10},
 ]
 );
 
+(*
+*Creates the buttons placed at the bottom of the presentation's slides
+*@prec pointer to the precedent slide
+*@next pointer to the next slide
+*)
 ShowButton[prec_, next_]:=(
 forwardButton1 = Hyperlink[Button[Image[CompressedData["
 1:eJztnQusX2WV6KHvlld5OJQRcZqiRJ2bNhImAgYoQcvwqLEoRLAFscMoJqUy
