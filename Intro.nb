@@ -1,0 +1,68 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2488,         58]
+NotebookOptionsPosition[      2197,         45]
+NotebookOutlinePosition[      2535,         60]
+CellTagsIndexPosition[      2492,         57]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData["\"\<Introduzione\nTipologia di scuola e classe:\
+\[IndentingNewLine]classe: terzo anno\[IndentingNewLine]Scuola: tutte le \
+scuole superiori di 2\[Degree] grado\[IndentingNewLine]\nCollocazione \
+dell'argomento all'interno della struttura \
+curricolare:\[IndentingNewLine]l'argomento proposto si colloca nel contesto \
+della geometria analitica\n\nObiettivi specifici di apprendimento:\n\
+Competenza: dominare attivamente i concetti e i metodi della geometria \
+analitica\nAbilit\[AGrave]:\nsaper descrivere le coniche come intersezione di \
+un cono indefinito con un piano\nsaper classificare una conica di equazione \
+generica\nsaper determinare la caratteristiche di base di una conica\nsaper \
+definire le coniche usando i fuochi, le direttrici e l'eccentricit\[AGrave]\n\
+\nScopo del progetto\nmettere in evidenza le propriet\[AGrave] che accomuna \
+le coniche\nevitare che le coniche vengano identificate con l aloro equazione \
+canonica\nmotivare gli studenti allo studio dell'argomento\n\nUn p\[OGrave] \
+di storia\nle coniche furono studiate dal matematico Appolonio di Perga sotto \
+la guida di Euclide\nl'opera di Appolonio dedicata alle coniche si chiama \
+Sezioni Coniche\nl'opera di Apollonio fu commentata dalla prima donna \
+matematica della storia: Ipazia\nLe sezioni coniche furono riprese da \
+DesCartes nella sua Geometria in cui diede la loro prima trattazione con i \
+metodi propri della geometria analitica\>\""], "Input",
+ CellChangeTimes->{{3.73547443794034*^9, 3.735474584949037*^9}, {
+  3.7354746787660837`*^9, 
+  3.735474991349691*^9}},ExpressionUUID->"b74d19b9-5f65-4a8a-8b00-\
+9710f04e61e9"]
+},
+WindowSize->{1366, 716},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1635, 23, 630, "Input",ExpressionUUID->"b74d19b9-5f65-4a8a-8b00-9710f04e61e9"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

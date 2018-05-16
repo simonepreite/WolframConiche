@@ -1,0 +1,2 @@
+come deve essere il piano che seziona il cono per trovare le coniche degeneri?;;deve passare per il vertice/deve essere totlamente esterno al cono/deve passare per un punto qualsiasi del cono/deve essere sempre tangente al cono in ogni suo punto;1;Se il piano che seziona il cono passa per il vertice V del cono, allora al variare dell'angolo di incliinazione fra il piano e l'asse del cono, le coniche si riducono a elementi più semplici, detti coniche degeneri
+

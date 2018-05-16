@@ -247,7 +247,7 @@ Show[c1,c2,c3, l1,l2, l3, Axes->True, RotationAction->"Fit", Background->White]
 
 (*Creates the animation of a Line rotating generating a Cone, the animation starts paused and must be started by hand*)
 buildAnimation:=(Animate[
-	RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,4 Pi},{b,0,theta}], (*Revolution plot of a line of 45° angle*)
+	RevolutionPlot3D[{{t,t},{-t,-t}},{t,0,4 Pi},{b,0,theta}], (*Revolution plot of a line of 45\[Degree] angle*)
 	{{theta,0.5, "Angolo"}, 0.5, 2*Pi}, 
 	DefaultDuration->20,
 	AnimationRunning->False]
@@ -260,11 +260,11 @@ buildAnimation:=(Animate[
 *@values are the possible values for the radiobutton bar, contained in a list
 *@answer is the number reprtesenting the correct answer
 *)
-printExercise[expr_, text_, values_, answer_]:=(
+printExercise[expr_, text_, values_, answer_, comment_]:=(
 DynamicModule[{z=1, txt="Ancora da valutare"}, (*z and txt are local variables*)
 	Column[{ (*The content is displayed in a column with several rows*)
 	Row[{Text[text]}],
-	Row[{ToExpression[expr]} ],
+	If[expr!="",Row[{ToExpression[expr]},""]],
 	"",
 	Row[{
 	RadioButtonBar[Dynamic[z],{1->HoldForm[Evaluate[values[[1]]]],2->HoldForm[Evaluate[values[[2]]]],3->HoldForm[Evaluate[values[[3]]]],4-> HoldForm[Evaluate[values[[4]]]], 5->HoldForm[Evaluate[values[[5]]]]}, Appearance->"Vertical"]
@@ -274,7 +274,9 @@ DynamicModule[{z=1, txt="Ancora da valutare"}, (*z and txt are local variables*)
 		Button["Clicca per controllare il risultato",Dynamic[If[Equal[z,ToExpression[answer]], txt="Corretto", txt="Sbagliato!"]]], (*Button to evaluate the answer*)
 		Spacer[20],
 		Dynamic[Text["Risultato:"<>txt]]
-	}]
+	}],
+	Row[{Dynamic[If[txt!="Ancora da valutare",Text["Soluzione: "<>comment],"" ]]}]
+	(*Display the solution if the user evaluated its answer*)
 	}]
 	]
 );
@@ -284,11 +286,11 @@ DynamicModule[{z=1, txt="Ancora da valutare"}, (*z and txt are local variables*)
 *@filename is the path of the exercise file
 *)
 rFile[filename_]:=(
-	exerc=ReadList[filename, String]; (*get a list of the elements in the specified directory*)
-	For[i=1, i<=Length[exerc], i++, (*foreach file in the specified directory*)
+	exerc=ReadList[filename, String]; (*get a list of the elements in the specified file*)
+	For[i=1, i<=Length[exerc], i++, (*foreach line in the specified file*)
 		rowl=StringSplit[exerc[[i]],";"]; (*Split the String when a ";" is encountered*)
-		val3=StringSplit[rowl[[3]]," "]; (*Split the String when a " " is encountered*)
-		Print[printExercise[rowl[[2]],rowl[[1]],val3,rowl[[4]]]] (*call to printExercise*)
+		val3=StringSplit[rowl[[3]],"/"]; (*Split the Solutions when a "/" is encountered*)
+		Print[printExercise[rowl[[2]],rowl[[1]],val3,rowl[[4]],rowl[[5]]]] (*call to printExercise*)
 	]
 );
 
@@ -8475,6 +8477,9 @@ Grid[{{forwardButton3,forwardButton2 forwardButton1}},Alignment->{{Left,Right,Ri
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
 
 
 
