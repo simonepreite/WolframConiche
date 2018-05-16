@@ -260,9 +260,12 @@ buildAnimation:=(Animate[
 *@values are the possible values for the radiobutton bar, contained in a list
 *@answer is the number reprtesenting the correct answer
 *)
-printExercise[expr_, text_, values_, answer_, comment_]:=(
-DynamicModule[{z=1, txt="Ancora da valutare"}, (*z and txt are local variables*)
-	Column[{ (*The content is displayed in a column with several rows*)
+printExercise[i_,expr_, text_, values_, answer_, comment_]:=(
+DynamicModule[{z=1, txt="Ancora da valutare", t=False}, (*z, t and txt are local variables*)
+	Dynamic[
+	Column[ (*The content is displayed in a column with several rows*)
+	Join[{Button["Mostra Esercizio "<>ToString[i], t=!t]},
+	If[t,{
 	Row[{Text[text]}],
 	If[expr!="",Row[{ToExpression[expr]},""]],
 	"",
@@ -277,8 +280,8 @@ DynamicModule[{z=1, txt="Ancora da valutare"}, (*z and txt are local variables*)
 	}],
 	Row[{Dynamic[If[txt!="Ancora da valutare",Text["Soluzione: "<>comment],"" ]]}]
 	(*Display the solution if the user evaluated its answer*)
-	}]
-	]
+	},{}]
+	],Frame->True]]]
 );
 
 (*
@@ -290,7 +293,7 @@ rFile[filename_]:=(
 	For[i=1, i<=Length[exerc], i++, (*foreach line in the specified file*)
 		rowl=StringSplit[exerc[[i]],";"]; (*Split the String when a ";" is encountered*)
 		val3=StringSplit[rowl[[3]],"/"]; (*Split the Solutions when a "/" is encountered*)
-		Print[printExercise[rowl[[2]],rowl[[1]],val3,rowl[[4]],rowl[[5]]]] (*call to printExercise*)
+		Print[printExercise[i,rowl[[2]],rowl[[1]],val3,rowl[[4]],rowl[[5]]]] (*call to printExercise*)
 	]
 );
 
