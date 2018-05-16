@@ -193,10 +193,10 @@ ControlPlacement->Top
 ]);
 
 (* Builds a interactive panel with the conical equation parametrised on the eccentricity *)
-buildGraphicEccentricity:=(
+buildGraphicEccentricity[]:=(
 DynamicModule[{elems}, (*elems is local*)
 Manipulate[
-elems=eccentricity[aaa,e]; (calculates the point in which the equation is satisfied based on the ordinate of the point and the eccentricity)
+elems=eccentricity[aaa,e]; (*calculates the point in which the equation is satisfied based on the ordinate of the point and the eccentricity*)
 Column[{ (*the content is displayed in a column with three rows*)
 Row[
 If[elems!={}, (*if the equation is solvable depending on x and e, display the distances and the eccentricity, otherwise display a error message*)
@@ -270,7 +270,7 @@ DynamicModule[{z=1, txt="Ancora da valutare", t=False}, (*z, t and txt are local
 	If[expr!="",Row[{ToExpression[expr]},""]],
 	"",
 	Row[{
-	RadioButtonBar[Dynamic[z],{1->HoldForm[Evaluate[values[[1]]]],2->HoldForm[Evaluate[values[[2]]]],3->HoldForm[Evaluate[values[[3]]]],4-> HoldForm[Evaluate[values[[4]]]], 5->HoldForm[Evaluate[values[[5]]]]}, Appearance->"Vertical"]
+	RadioButtonBar[Dynamic[z],{1->HoldForm[Evaluate[values[[1]]]],2->HoldForm[Evaluate[values[[2]]]],3->HoldForm[Evaluate[values[[3]]]],4-> HoldForm[Evaluate[values[[4]]]]}, Appearance->"Vertical"]
 	}], (*radio button bar provides a closed-choice menu for the answer*)
 	"",
 	Row[{
@@ -304,7 +304,7 @@ rFile[filename_]:=(
 *@exp is the expression to plot 
 *)
 ShowExamples[list_,title_, exp_]:=(
-DynamicModule[{i=1}, (*i is a local variable, representing the number of column to display*)
+DynamicModule[{i=1, expression=exp}, (*i is a local variable, representing the number of column to display*)
 Panel[
 Grid[{ (*the content is displayed in a grid with two rows*)
 {Style[title,FontSize->Medium,FontWeight->Bold]},
@@ -317,7 +317,7 @@ Medium
 ],"  ",
 Dynamic[Column[{ (*This column displays the button if there is more output to be shown, a disabled button otherwise followed by a plot of the expression*)
 If[i>=Length[list],Button[Style["Esempio Terminato!",Medium,Bold],Enabled->False],Button[Style["Avanti",Medium,Bold],Dynamic[i++],Appearance->"FramedPalette"]],
-If[i>=Length[list] && exp!=Null,Show[ContourPlot[exp,{x,-10,10},{y,-10,10}, ImageSize->Medium]]] (*if there is no output to be shown, eventually display a plot*)
+If[i>=Length[list] && expression!=Null,Show[ContourPlot[expression,{x,-10,10},{y,-10,10}, ImageSize->Medium]]] (*if there is no output to be shown, eventually display a plot*)
 }]]
 }]
 }
@@ -421,7 +421,7 @@ forwardButton3 = Hyperlink[Button[Import["img/pulsanti/house-outline-green.png"]
 Grid[{{forwardButton3,forwardButton2 forwardButton1}},Alignment->{{Left,Right,Right}}, ItemSize->Fit, Frame->None, FrameStyle->RGBColor[0.94,0.94,0.94], Spacings->{10,3}]
 );
 
-observationButton[content_, show_]=(DynamicModule[{f=False },
+(*observationButton[content_, show_]=(DynamicModule[{f=False },
 
 Button[
 Style[show,FontSize->30,RGBColor[0,0.6,0.14]],
@@ -431,7 +431,7 @@ If[f,
 content,
  {}]
 
-]]]);
+]]]);*)
 
 
 
