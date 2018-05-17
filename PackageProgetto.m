@@ -37,6 +37,7 @@ ShowAnotherParabola::usage="Display a Parabole Plot with the axis parallel to th
 ShowExamples::usage="Display an interactive Panel with the progressive evolution of a numerical example";
 ShowButton::usage="Dislplay the buttons of the navigation bar at the bottom of the page";
 observationButton::usage="Toggle cell with graphics and observation";
+
 Begin["Private`"];
 
 (* disabilito alcuni warning *)
@@ -179,7 +180,7 @@ Grid[
 	{"Iperbole","\[Beta] < 90\[Degree]"},
 	{"Rette Incidenti","\[Beta] parallelo all'asse", "il piano passa per il vertice"},
 	{Tooltip ["Retta","Due Rette Coincidenti",TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}],"\[Beta] = \[Alpha]", "Il piano passa per il vertice del cono"},
-	{Tooltip["Punto","Circonferenza di raggio 0"TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}] "\[Alpha] < \[Beta] <= 90\[Degree]", "Il piano passa per il vertice del cono"}},
+	{Tooltip["Punto","Circonferenza di raggio 0"TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}], "\[Alpha] < \[Beta] <= 90\[Degree]", "Il piano passa per il vertice del cono"}},
 	Frame->All,
 	Background->{Null, bgColors[checkFigure[alfa,beta,g], color[checkFigure[alfa,beta,g]]]} (*generates a list of colors for the grid background*)
 ]
@@ -194,13 +195,14 @@ ControlPlacement->Top
 
 (* Builds a interactive panel with the conical equation parametrised on the eccentricity *)
 buildGraphicEccentricity[]:=(
-DynamicModule[{elems}, (*elems is local*)
+DynamicModule[{elems, pf, pd}, (*elems, pf and pd are local*)
 Manipulate[
 elems=eccentricity[aaa,e]; (*calculates the point in which the equation is satisfied based on the ordinate of the point and the eccentricity*)
+If[elems!={},pf=EuclideanDistance[{1,0},elems[[1]]];pd=EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]];];
 Column[{ (*the content is displayed in a column with three rows*)
 Row[
 If[elems!={}, (*if the equation is solvable depending on x and e, display the distances and the eccentricity, otherwise display a error message*)
-{Text["Eccentricit\[AGrave] "], TraditionalForm["PF"/"Pd"],Text[": "],EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]],Text["PF: "],EuclideanDistance[{1,0},elems[[1]]], Text["PD: "],EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]},{If[e==0,"Non hai disegnato alcuna figura!", "Il punto non appartiene alla figura!"]}
+{Text["Eccentricit\[AGrave] "], TraditionalForm["PF"/"Pd"]," = ", HoldForm[EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]],Text[": "],EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]},{If[e==0,"Non hai disegnato alcuna figura!", "Il punto non appartiene alla figura!"]}
 ]
 ],
 Row[{
@@ -238,11 +240,11 @@ Grid[
 buildLabeledGraphic:=(
 c1=Graphics3D[{Yellow, Opacity[0.8],Cone[{{0, 0, 5}, {0,0,0}}, 2]}];
 c2=Graphics3D[{Yellow,Opacity[0.8], Cone[{{0,0,-5}, {0,0,0}}, 2]}];
-c3=Graphics3D[{Black,PointSize->0.05, Tooltip[Point[{0,0,0}],"Vertice del Cono", TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}]}];
+c3=Graphics3D[{Black,PointSize->0.15, Text["Vertice del Cono",{0,0,0}(*, TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}*)]}];
 l1=Graphics3D[{Red,Thick, Tooltip[Line[{{0,0,-8}, {0,0,8}}], "Asse di rotazione",TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}]}];
 l2=Graphics3D[{Blue,Thick, Tooltip[Line[{{2,0,-5}, {-2,0,5}}], "Generatrice del Cono",TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}]}];
 l3=Graphics3D[{Blue,Thick, Tooltip[Line[{{0,-2,-5},{0,0,0}, {0,-2,5}}], "Generatrice del Cono",TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}]}];
-Show[c1,c2,c3, l1,l2, l3, Axes->True, RotationAction->"Fit", Background->White]
+Show[c1,c2,c3, l1,l2, l3, Axes->True, RotationAction->"Fit", Background->White, ImageSize->Medium]
 );
 
 (*Creates the animation of a Line rotating generating a Cone, the animation starts paused and must be started by hand*)
@@ -263,7 +265,7 @@ buildAnimation:=(Animate[
 printExercise[i_,expr_, text_, values_, answer_, comment_]:=(
 DynamicModule[{z=1, txt="Ancora da valutare", t=False}, (*z, t and txt are local variables*)
 	Dynamic[
-	Column[ (*The content is displayed in a column with several rows*)
+	Row[ (*The content is displayed in a column with several rows*)
 	Join[{Button["Mostra Esercizio "<>ToString[i], t=!t]},
 	If[t,{
 	Row[{Text[text]}],
@@ -421,7 +423,7 @@ forwardButton3 = Hyperlink[Button[Import["img/pulsanti/house-outline-green.png"]
 Grid[{{forwardButton3,forwardButton2 forwardButton1}},Alignment->{{Left,Right,Right}}, ItemSize->Fit, Frame->None, FrameStyle->RGBColor[0.94,0.94,0.94], Spacings->{10,3}]
 );
 
-(*observationButton[content_, show_]=(DynamicModule[{f=False },
+observationButton[content_, show_]:=(DynamicModule[{f=False },
 
 Button[
 Style[show,FontSize->30,RGBColor[0,0.6,0.14]],
@@ -431,7 +433,7 @@ If[f,
 content,
  {}]
 
-]]]);*)
+]]]);
 
 
 
