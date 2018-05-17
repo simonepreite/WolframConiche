@@ -195,14 +195,13 @@ ControlPlacement->Top
 
 (* Builds a interactive panel with the conical equation parametrised on the eccentricity *)
 buildGraphicEccentricity[]:=(
-DynamicModule[{elems, pf, pd}, (*elems, pf and pd are local*)
+DynamicModule[{elems}, (*elems, pf and pd are local*)
 Manipulate[
 elems=eccentricity[aaa,e]; (*calculates the point in which the equation is satisfied based on the ordinate of the point and the eccentricity*)
-If[elems!={},pf=EuclideanDistance[{1,0},elems[[1]]];pd=EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]];];
 Column[{ (*the content is displayed in a column with three rows*)
 Row[
 If[elems!={}, (*if the equation is solvable depending on x and e, display the distances and the eccentricity, otherwise display a error message*)
-{Text["Eccentricit\[AGrave] "], TraditionalForm["PF"/"Pd"]," = ", HoldForm[EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]],Text[": "],EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]},{If[e==0,"Non hai disegnato alcuna figura!", "Il punto non appartiene alla figura!"]}
+{Text["Eccentricit\[AGrave] "], TraditionalForm["PF"/"Pd"],Text[": "],EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]],Text["  PF: "],EuclideanDistance[{1,0},elems[[1]]], Text["  PD: "],EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]},{If[e==0,"Non hai disegnato alcuna figura!", "Il punto non appartiene alla figura!"]}
 ]
 ],
 Row[{
@@ -306,9 +305,11 @@ rFile[filename_]:=(
 *@exp is the expression to plot 
 *)
 ShowExamples[list_,title_, exp_]:=(
-DynamicModule[{i=1, expression=exp}, (*i is a local variable, representing the number of column to display*)
+DynamicModule[{i=1, t=False}, (*i is a local variable, representing the number of column to display*)
 Panel[
-Grid[{ (*the content is displayed in a grid with two rows*)
+Column[{
+Button["Mostra "<>title, t=!t],
+Dynamic[If[t, Grid[{ (*the content is displayed in a grid with two rows*)
 {Style[title,FontSize->Medium,FontWeight->Bold]},
 {Row[{
 Style[
@@ -319,12 +320,13 @@ Medium
 ],"  ",
 Dynamic[Column[{ (*This column displays the button if there is more output to be shown, a disabled button otherwise followed by a plot of the expression*)
 If[i>=Length[list],Button[Style["Esempio Terminato!",Medium,Bold],Enabled->False],Button[Style["Avanti",Medium,Bold],Dynamic[i++],Appearance->"FramedPalette"]],
-If[i>=Length[list] && expression!=Null,Show[ContourPlot[expression,{x,-10,10},{y,-10,10}, ImageSize->Medium]]] (*if there is no output to be shown, eventually display a plot*)
+If[i>=Length[list] && exp!=Null,Show[ContourPlot[exp,{x,-10,10},{y,-10,10}, ImageSize->Medium]]] (*if there is no output to be shown, eventually display a plot*)
 }]]
 }]
 }
 },
-Background->White,Frame->All]
+Background->White,Frame->All],""]]
+}]
 ]
 ]);
 
