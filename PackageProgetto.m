@@ -33,7 +33,6 @@ ShowEllisse::usage="Display a simple Ellipse plot, with its equation labeled";
 ShowCirconferenza::usage="Display a simple Circle Plot,  with its equation labeled";
 ShowIperbole::usage="Display a simple Hyperbole Plot, with its equation labeled";
 ShowParabola::usage="Display a simple Parabole Plot";
-ShowAnotherParabola::usage="Display a Parabole Plot with the axis parallel to the ordinate axis";
 ShowExamples::usage="Display an interactive Panel with the progressive evolution of a numerical example";
 ShowButton::usage="Dislplay the buttons of the navigation bar at the bottom of the page";
 observationButton::usage="Toggle cell with graphics and observation";
@@ -115,8 +114,9 @@ Column[{
 	text=recognizeShape[a,b,c,d,e,f]; (*Checks which shape is defined*)
 	clr=color[text]; (*calculates the color of the shape*)
 	Row[{
-	Text[ "Equazione: "],(*Outputs the name of shape*)
-	With[{a=a, b=b, c=c, d=d, e=e, f=f, xs="x", ys="y"},HoldForm[(a*xs^2) +(2b*xs*ys) +(c*ys^2) +(2d*xs) + (2e*ys)+f==0]] (*Displays the equation*)
+	Text["Equazione: "],(*Outputs the name of shape*)
+	With[{a=a, b=b, c=c, d=d, e=e, f=f, xs="x", ys="y"},HoldForm[(a*xs^2) +(2b*xs*ys) +(c*ys^2) +(2d*xs) + (2e*ys)+f==0]], (*Displays the equation*)
+	Text["  \[CapitalDelta] = b^2-4ac = "<>ToString[Evaluate[b^2-4a*c]]]
 	}],
 	Row[{
 	ContourPlot[(a*x^2) +(2b*x*y) +(c*y^2) +(2d*x) + (2e*y)+f==0, {x,-20, 20}, {y,-20,20},(*2D Plot of the equation*)
@@ -136,8 +136,7 @@ Column[{
 	{"Circonferenza","Delta = 0"},
 	{"Iperbole","Delta > 0"},
 	{"Iperbole Equilatera","Delta > 0", "a + c = 0"},
-	{"Retta","Delta = 0", "a = b = c = 0"},
-	{"Non \[EGrave] una conica", "Condizione di esistenza non soddisfatta!"}},
+	{"Retta","Delta = 0", "a = b = c = 0"}},
 	Frame->All,
 	Background->{Null,bgColorsTwo[text,clr] }] (*creates the list of colors for the grid background*)
 	}]
@@ -171,7 +170,9 @@ AxesOrigin-> True
 ],
 Graphics3D[{Red,Thick, Tooltip[Line[{{0,0,-2}, {0,0,2}}], "Asse di rotazione", TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}]}] (*Cone Axis added at the graphic*)
 ]
-],Spacer[20],Dynamic[ Show[{ ContourPlot[{-((d*x)+(e*y)+g)/f==Sqrt[((x^2)/1 )+(( y^2)/1)],-((d*x)+(e*y)+g)/f==-Sqrt[((x^2)/1 )+(( y^2)/1)]}, {x,-2,2},{y,-2,2}, ImageSize->Medium, ContourStyle->color[checkFigure[alfa,beta,g]]]}]]
+],Spacer[20],Dynamic[ Show[Join[{ 
+ContourPlot[{-((d*x)+(e*y)+g)/f==Sqrt[((x^2)/1 )+(( y^2)/1)],-((d*x)+(e*y)+g)/f==-Sqrt[((x^2)/1 )+(( y^2)/1)]}, {x,-2,2},{y,-2,2}, ImageSize->Medium, ContourStyle->color[checkFigure[alfa,beta,g]]]},{
+If[g==0 && alfa==beta, {Graphics[Yellow,Point[{0,0}]]},{}]}], PointSize->0.5]] (*NON FUNZIONA*)
 }]}, {
 Grid[
 	{{"Ellisse","\[Alpha] < \[Beta] < 90\[Degree]"},
@@ -188,7 +189,7 @@ Grid[
 }, Frame->All],
 {{d,1,"Coefficiente x Piano:"},0,10,0.1,Appearance->"Labeled"},
 {{e,1,"Coefficiente y Piano:"},0,10,0.1,Appearance->"Labeled"},
-{{f,1,"Coefficiente z Piano:"},0,10,0.1,Appearance->"Labeled"},
+{{f,1,"Coefficiente z Piano:"},1,10,0.1,Appearance->"Labeled"},
 {{g,1,"Profondit\[AGrave] del piano:"},0,10,0.1,Appearance->"Labeled"},
 ControlPlacement->Top
 ]);
@@ -262,10 +263,11 @@ buildAnimation:=(Animate[
 *@answer is the number reprtesenting the correct answer
 *)
 printExercise[i_,expr_, text_, values_, answer_, comment_]:=(
+Panel[
 DynamicModule[{z=1, txt="Ancora da valutare", t=False}, (*z, t and txt are local variables*)
 	Dynamic[
-	Row[ (*The content is displayed in a column with several rows*)
-	Join[{Button["Mostra Esercizio "<>ToString[i], t=!t]},
+	Column[ (*The content is displayed in a column with several rows*)
+	Join[{Dynamic[Button[If[t,"Nascondi Esercizio ","Mostra Esercizio "]<>ToString[i], t=!t]]},
 	If[t,{
 	Row[{Text[text]}],
 	If[expr!="",Row[{ToExpression[expr]},""]],
@@ -277,12 +279,12 @@ DynamicModule[{z=1, txt="Ancora da valutare", t=False}, (*z, t and txt are local
 	Row[{
 		Button["Clicca per controllare il risultato",Dynamic[If[Equal[z,ToExpression[answer]], txt="Corretto", txt="Sbagliato!"]]], (*Button to evaluate the answer*)
 		Spacer[20],
-		Dynamic[Text["Risultato:"<>txt]]
+		Dynamic[Style[Text["Risultato:"<>txt], FontColor->If[txt=="Corretto", Green, Red]]]
 	}],
 	Row[{Dynamic[If[txt!="Ancora da valutare",Text["Soluzione: "<>comment],"" ]]}]
 	(*Display the solution if the user evaluated its answer*)
 	},{}]
-	],Frame->True]]]
+	],Frame->True]]]]
 );
 
 (*
@@ -290,12 +292,14 @@ DynamicModule[{z=1, txt="Ancora da valutare", t=False}, (*z, t and txt are local
 *@filename is the path of the exercise file
 *)
 rFile[filename_]:=(
+	list={};
 	exerc=ReadList[filename, String]; (*get a list of the elements in the specified file*)
 	For[i=1, i<=Length[exerc], i++, (*foreach line in the specified file*)
 		rowl=StringSplit[exerc[[i]],";"]; (*Split the String when a ";" is encountered*)
 		val3=StringSplit[rowl[[3]],"/"]; (*Split the Solutions when a "/" is encountered*)
-		Print[printExercise[i,rowl[[2]],rowl[[1]],val3,rowl[[4]],rowl[[5]]]] (*call to printExercise*)
-	]
+		list=Join[list,{printExercise[i,rowl[[2]],rowl[[1]],val3,rowl[[4]],rowl[[5]]]}]; (*call to printExercise*)
+	];
+	Return[list]
 );
 
 (*
@@ -308,7 +312,7 @@ ShowExamples[list_,title_, exp_]:=(
 DynamicModule[{i=1, t=False}, (*i is a local variable, representing the number of column to display*)
 Panel[
 Column[{
-Button["Mostra "<>title, t=!t],
+Dynamic[Button[If[t,"Nascondi ","Mostra "]<>title, t=!t]],
 Dynamic[If[t, Grid[{ (*the content is displayed in a grid with two rows*)
 {Style[title,FontSize->Medium,FontWeight->Bold]},
 {Row[{
@@ -318,10 +322,10 @@ Column[Take[list,i],Frame->All,Alignment->Center] (*this column displays the fir
 ],
 Medium
 ],"  ",
-Dynamic[Column[{ (*This column displays the button if there is more output to be shown, a disabled button otherwise followed by a plot of the expression*)
+DynamicModule[{x,y},Dynamic[Column[{ (*This column displays the button if there is more output to be shown, a disabled button otherwise followed by a plot of the expression*)
 If[i>=Length[list],Button[Style["Esempio Terminato!",Medium,Bold],Enabled->False],Button[Style["Avanti",Medium,Bold],Dynamic[i++],Appearance->"FramedPalette"]],
-If[i>=Length[list] && exp!=Null,Show[ContourPlot[exp,{x,-10,10},{y,-10,10}, ImageSize->Medium]]] (*if there is no output to be shown, eventually display a plot*)
-}]]
+If[i>=Length[list] && exp!=Null,Row[{Show[ContourPlot[exp,{x,-10,10},{y,-10,10}, ImageSize->Medium]]}]] (*if there is no output to be shown, eventually display a plot*)
+}]]]
 }]
 }
 },
@@ -355,7 +359,7 @@ For[i=1, i<=3, i++,
 ShowEllisse[]:=(Manipulate[
 	Show[ (*Plots the equations that form the ellipse, adds a PlotLabel with the equations*)
 		ContourPlot[{y==(b/a)*Sqrt[(a^2)-(x^2)],y==-(b/a)*Sqrt[(a^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True,ContourLabels->None,
-		 PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Blue]}]
+		 PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Blue], ContourStyle->{Red, Blue, Thick}}]
 		],
 		{{a,1,"a"},1,10,1,Appearance->"Labeled"},
 		{{b,1,"b"},1,10,1,Appearance->"Labeled"}
@@ -369,7 +373,7 @@ Manipulate[
 Show[  (*Plots the equations that form the circle, adds a PlotLabel with the equations*)
 ContourPlot[{y==Sqrt[(r^2)-(x^2)], y==-Sqrt[(r^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True, ContourLabels->None,
  PlotLabel->{Style[StandardForm["y"==Sqrt[(r^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-Sqrt[(r^2)-("x"^2)]],FontColor->Blue]}
-	]
+	, ContourStyle->{Red, Blue, Thick}]
 ],
 {{r,1,"raggio"},1,10,1,Appearance->"Labeled"}
 	]);
@@ -381,7 +385,7 @@ ShowIperbole[]:=(
 Manipulate[
 Show[ (*Plots the equations that form the hyperbole, adds a PlotLabel with the equations*)
 ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)], y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,10},{y,-10,10},
-	ImageSize->Medium, Axes->True],ContourLabels->None,
+	ImageSize->Medium, Axes->True, ContourStyle->{Red, Blue, Thick}],ContourLabels->None,
 	PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[-(a^2)+("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[-(a^2)+("x"^2)]],FontColor->Blue]}
 ],
 {{a,1,"a"},1,10,1,Appearance->"Labeled"},
@@ -389,24 +393,14 @@ ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)], y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,1
 ]);
 
 (*
-*Display a simple plot of a Parabole, with controllers to modify the equation parameters
+*Display a simple plot of a Parabole with the axis parallel to the ordinate
+*and controllers to modify the equation parameters
 *)	
 ShowParabola[]:=(
 Manipulate[ (*Plots the equation that form the parabole, adds a PlotLabel with the equation*)
-ContourPlot[y==(a*x^2)+b*x,{x,-10,10},{y,-10,10},
-	ImageSize->Medium, Axes->True],
-{{a,0,"a"},0,10,1,Appearance->"Labeled"},
-{{b,0,"b"},0,10,1,Appearance->"Labeled"}
-]);
-
-(*
-*Display a simple plot of a Parabole, with the axis parallel to the ordinate
-*and controllers to modify the equation parameters
-*)	
-ShowAnotherParabola[]:=(
-Manipulate[ (*Plots the equation that form the parabole, adds a PlotLabel with the equation*)
-ContourPlot[x== (a*y^2)+b*y,{x,-10,10},{y,-10,10},
-	ImageSize->Medium, Axes->True],
+Show[
+ContourPlot[x==(a*y^2)+b*y,{x,-10,10},{y,-10,10}, ImageSize->Medium, Axes->True, ContourStyle->{Red, Blue, Thick}],
+	PlotLabel->{Style[StandardForm["x">0],FontColor->Red],Style[StandardForm["z"<0\[Section]],FontColor->Blue]}],
 {{a,0,"a"},0,10,1,Appearance->"Labeled"},
 {{b,0,"b"},0,10,1,Appearance->"Labeled"}
 ]
