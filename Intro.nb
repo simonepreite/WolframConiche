@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     19745,        467]
-NotebookOptionsPosition[     17335,        430]
-NotebookOutlinePosition[     17674,        445]
-CellTagsIndexPosition[     17631,        442]
+NotebookDataLength[     22998,        518]
+NotebookOptionsPosition[     20566,        481]
+NotebookOutlinePosition[     20905,        496]
+CellTagsIndexPosition[     20862,        493]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -52,130 +52,152 @@ Cell[BoxData[
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
-      "\"\<Tipologia di scuola e classe:\>\"", ",", "subsectionintroStyle"}], 
-      "]"}], "}"}], "]"}], "\n", 
+      "\"\<Tipologia di scuola e classe:\>\"", ",", "subsectionintroStyle", 
+       ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "1"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
-      RowBox[{"\"\<classe: terzo anno\>\"", ",", "introStyle"}], "]"}], "}"}],
-     "]"}], "\n", 
+      RowBox[{"\"\<classe: terzo anno\>\"", ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<Scuola: tutte le scuole superiori di 2\[Degree] grado\>\"", ",", 
-       "introStyle"}], "]"}], "}"}], "]"}], "\n", "\n", 
+       "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
+   "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<Collocazione dell'argomento all'interno della struttura \
-curricolare:\>\"", ",", "subsectionintroStyle"}], "]"}], "}"}], "]"}], 
+curricolare:\>\"", ",", "subsectionintroStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "1"}]}], "]"}], "}"}], "]"}], 
    "\[IndentingNewLine]", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<l'argomento proposto si colloca nel contesto della geometria \
-analitica\>\"", ",", "introStyle"}], "]"}], "}"}], "]"}], "\n", "\n", 
+analitica\>\"", ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
+   "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<Obiettivi specifici di apprendimento:\>\"", ",", 
-       "subsectionintroStyle"}], "]"}], "}"}], "]"}], "\n", 
+       "subsectionintroStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "1"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<Competenza: dominare attivamente i concetti e i metodi della \
-geometria analitica\>\"", ",", "introStyle"}], "]"}], "}"}], "]"}], "\n", 
+geometria analitica\>\"", ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
    "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
-      RowBox[{"\"\<Abilit\[AGrave]:\>\"", ",", "subsectionintroStyle"}], 
-      "]"}], "}"}], "]"}], "\n", 
+      RowBox[{
+      "\"\<Abilit\[AGrave]:\>\"", ",", "subsectionintroStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "1"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<Rowsaper descrivere le coniche come intersezione di un cono \
-indefinito con un piano\>\"", ",", "introStyle"}], "]"}], "}"}], "]"}], "\n", 
-   
+indefinito con un piano\>\"", ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<saper classificare una conica di equazione generica\>\"", ",", 
-       "introStyle"}], "]"}], "}"}], "]"}], "\n", 
+       "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<saper determinare la caratteristiche di base di una conica\>\"", 
-       ",", "introStyle"}], "]"}], "}"}], "]"}], "\n", 
+       ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<saper definire le coniche usando i fuochi, le direttrici e \
-l'eccentricit\[AGrave]\>\"", ",", "introStyle"}], "]"}], "}"}], "]"}], "\n", 
+l'eccentricit\[AGrave]\>\"", ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
    "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
-      RowBox[{"\"\<Scopo del progetto: \>\"", ",", "subsectionintroStyle"}], 
-      "]"}], "}"}], "]"}], "\n", 
+      RowBox[{
+      "\"\<Scopo del progetto: \>\"", ",", "subsectionintroStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "1"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<mettere in evidenza le propriet\[AGrave] che accomuna le coniche \
-\>\"", ",", "introStyle"}], "]"}], "}"}], "]"}], "\n", 
+\>\"", ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<evitare che le coniche vengano identificate con l aloro equazione \
-canonica \>\"", ",", "introStyle"}], "]"}], "}"}], "]"}], "\n", 
+canonica \>\"", ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<motivare gli studenti allo studio dell'argomento \>\"", ",", 
-       "introStyle"}], "]"}], "}"}], "]"}], "\n", "\n", 
+       "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
+   "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
-      "\"\<Un p\[OGrave] di storia: \>\"", ",", "subsectionintroStyle"}], 
-      "]"}], "}"}], "]"}], "\n", 
+      "\"\<Un p\[OGrave] di storia: \>\"", ",", "subsectionintroStyle", ",", 
+       " ", 
+       RowBox[{"LineIndent", "\[Rule]", "1"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<le coniche furono studiate dal matematico Appolonio di Perga sotto \
-la guida di Euclide \>\"", ",", "introStyle"}], "]"}], "}"}], "]"}], "\n", 
+la guida di Euclide \>\"", ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<l'opera di Appolonio dedicata alle coniche si chiama Sezioni \
-Coniche \>\"", ",", "introStyle"}], "]"}], "}"}], "]"}], "\n", 
+Coniche \>\"", ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<l'opera di Apollonio fu commentata dalla prima donna matematica \
-della storia: Ipazia \>\"", ",", "introStyle"}], "]"}], "}"}], "]"}], "\n", 
+della storia: Ipazia \>\"", ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], "\n", 
    RowBox[{"Row", "[", 
     RowBox[{"{", 
      RowBox[{"Style", "[", 
       RowBox[{
       "\"\<Le sezioni coniche furono riprese da DesCartes nella sua Geometria \
 in cui diede la loro prima trattazione con i metodi propri della geometria \
-analitica\>\"", " ", ",", "introStyle"}], "]"}], "}"}], "]"}], 
+analitica\>\"", " ", ",", "introStyle", ",", " ", 
+       RowBox[{"LineIndent", "\[Rule]", "2"}]}], "]"}], "}"}], "]"}], 
    "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
    "\[IndentingNewLine]"}]}]], "Input",
  CellChangeTimes->{{3.73547443794034*^9, 3.735474584949037*^9}, {
@@ -187,8 +209,9 @@ analitica\>\"", " ", ",", "introStyle"}], "]"}], "}"}], "]"}],
    3.735538104847734*^9}, {3.7355383504890823`*^9, 3.735538426881572*^9}, {
    3.735539135101317*^9, 3.735539227267221*^9}, {3.735539265139536*^9, 
    3.735539318374238*^9}, 3.735542011884316*^9, {3.735542063332842*^9, 
-   3.735542117774701*^9}, {3.735542180330222*^9, 
-   3.735542402942143*^9}},ExpressionUUID->"b74d19b9-5f65-4a8a-8b00-\
+   3.735542117774701*^9}, {3.735542180330222*^9, 3.735542402942143*^9}, {
+   3.735543035619896*^9, 
+   3.735543140409444*^9}},ExpressionUUID->"b74d19b9-5f65-4a8a-8b00-\
 9710f04e61e9"],
 
 Cell[BoxData[
@@ -197,239 +220,267 @@ Cell[BoxData[
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.73554240355927*^9}},ExpressionUUID->"e1a90fa5-36f5-463c-aea1-\
-2a77c07efc93"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543147925991*^9}},ExpressionUUID->"042e3591-0486-45f2-8e95-\
+919ce8d37e1e"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"Tipologia di scuola e classe:\"", {FontFamily -> "Nimbus Roman", 
-     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, StripOnInput -> False]},
+     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, LineIndent -> 1, StripOnInput -> 
+    False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403561214*^9}},ExpressionUUID->"9a75fbbe-2150-4fd9-93d2-\
-109b7f00b8d3"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.7355431479323797`*^9}},ExpressionUUID->"9f41791a-808d-4d01-ac20-\
+baa7f0229966"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"classe: terzo anno\"", {FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.7355424035632963`*^9}},ExpressionUUID->"128264d4-e224-4be1-bce8-\
-0cb8a2d0bb00"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.7355431479387093`*^9}},ExpressionUUID->"86498bb4-17c2-4889-9ee3-\
+1eac8369170e"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"Scuola: tutte le scuole superiori di 2\[Degree] grado\"", {
     FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403564705*^9}},ExpressionUUID->"3255a007-ecda-4aa2-bdbf-\
-daa998a6a5ca"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.7355431479453297`*^9}},ExpressionUUID->"a4b6775b-7c54-401b-9602-\
+943fcdf7d664"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"Collocazione dell'argomento all'interno della struttura \
 curricolare:\"", {FontFamily -> "Nimbus Roman", 
-     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, StripOnInput -> False]},
+     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, LineIndent -> 1, StripOnInput -> 
+    False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403565846*^9}},ExpressionUUID->"db3d1788-57dd-4c66-9b06-\
-775c1ce5335f"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543147951147*^9}},ExpressionUUID->"9b9a6917-5f6c-4686-b533-\
+35436567567d"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"l'argomento proposto si colloca nel contesto della geometria \
 analitica\"", {FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403566987*^9}},ExpressionUUID->"270ae99d-babc-41dd-9d1c-\
-054c84633f5c"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543147958737*^9}},ExpressionUUID->"593c5a34-1bcc-448f-b50d-\
+144244821342"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"Obiettivi specifici di apprendimento:\"", {
     FontFamily -> "Nimbus Roman", 
-     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, StripOnInput -> False]},
+     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, LineIndent -> 1, StripOnInput -> 
+    False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403568075*^9}},ExpressionUUID->"543b052d-f6c6-44d0-9b52-\
-cd6a085709b5"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543147965246*^9}},ExpressionUUID->"9c3f7085-be0f-4d35-a131-\
+d02d18d2fa4b"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"Competenza: dominare attivamente i concetti e i metodi della \
 geometria analitica\"", {FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403569113*^9}},ExpressionUUID->"27a7d02c-f8dc-4904-9622-\
-6d9ca587713b"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.7355431479706507`*^9}},ExpressionUUID->"e192cf63-d2de-4593-942d-\
+41faced8b00e"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"Abilit\[AGrave]:\"", {FontFamily -> "Nimbus Roman", 
-     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, StripOnInput -> False]},
+     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, LineIndent -> 1, StripOnInput -> 
+    False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403570183*^9}},ExpressionUUID->"52ae9688-d127-451b-956f-\
-1565eabd74ca"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543147977948*^9}},ExpressionUUID->"83e86469-a786-4039-9bc8-\
+2a8b150b11be"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"Rowsaper descrivere le coniche come intersezione di un cono \
 indefinito con un piano\"", {FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.73554240357121*^9}},ExpressionUUID->"b041076f-d5c4-42a2-b1b7-\
-55d644c278c2"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543147984359*^9}},ExpressionUUID->"b7c5f8ed-9c42-4be6-9586-\
+c69f41c9ab74"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"saper classificare una conica di equazione generica\"", {
     FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403572318*^9}},ExpressionUUID->"692f99a5-cf90-486e-9f97-\
-74f7cb096007"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543147992901*^9}},ExpressionUUID->"72e592b7-07d8-401d-8ffe-\
+6ebadfbef194"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"saper determinare la caratteristiche di base di una conica\"", {
     FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.7355424035733767`*^9}},ExpressionUUID->"3b434542-6e0d-4244-979e-\
-99aef91c2035"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.7355431479991913`*^9}},ExpressionUUID->"b79bfe29-8556-4c5e-ba47-\
+7a8eea79e424"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"saper definire le coniche usando i fuochi, le direttrici e \
 l'eccentricit\[AGrave]\"", {FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.7355424035743923`*^9}},ExpressionUUID->"3046bed1-b165-4331-b8af-\
-8d0b35652f83"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543148006225*^9}},ExpressionUUID->"71845b1d-c413-4152-a2ba-\
+ec18487ddda3"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"Scopo del progetto: \"", {FontFamily -> "Nimbus Roman", 
-     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, StripOnInput -> False]},
+     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, LineIndent -> 1, StripOnInput -> 
+    False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.73554240357544*^9}},ExpressionUUID->"ba0ed1a9-2511-4ba5-a246-\
-a4271695ebcd"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543148012046*^9}},ExpressionUUID->"85ba807c-ebb7-4b44-ba42-\
+f86c6e9b0508"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"mettere in evidenza le propriet\[AGrave] che accomuna le \
 coniche \"", {FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403576412*^9}},ExpressionUUID->"d5836fa3-0a37-4649-9c10-\
-b38ecd26ce30"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543148020474*^9}},ExpressionUUID->"6a882955-42c8-4f56-bced-\
+6b911cea0fd8"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"evitare che le coniche vengano identificate con l aloro \
 equazione canonica \"", {FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.7355424035774307`*^9}},ExpressionUUID->"4e6d8a2a-2174-4146-b369-\
-c573e6c980b6"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543148027656*^9}},ExpressionUUID->"092ee4c8-b1f4-408b-9b34-\
+266cf1d5ecdc"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"motivare gli studenti allo studio dell'argomento \"", {
     FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403578453*^9}},ExpressionUUID->"c47d2299-7796-4093-b9ba-\
-df62060c5b0d"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.7355431480334463`*^9}},ExpressionUUID->"ac02e49e-bd8e-4406-ba1e-\
+e18144ee8aaa"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"Un p\[OGrave] di storia: \"", {FontFamily -> "Nimbus Roman", 
-     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, StripOnInput -> False]},
+     RGBColor[0.6, 0.4, 0.2], FontSize -> 40}, LineIndent -> 1, StripOnInput -> 
+    False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403579471*^9}},ExpressionUUID->"a9fe56c8-58f3-43ec-9ab4-\
-da2fd266bcab"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.7355431480424356`*^9}},ExpressionUUID->"e6bcabd2-3cc0-472c-8103-\
+1c287ca95f0c"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"le coniche furono studiate dal matematico Appolonio di Perga \
 sotto la guida di Euclide \"", {FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403580495*^9}},ExpressionUUID->"16962430-9dd5-4646-8734-\
-b8c5b27a52da"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543148048934*^9}},ExpressionUUID->"1f2362e5-6251-4eb3-b41f-\
+12eecccc0182"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"l'opera di Appolonio dedicata alle coniche si chiama Sezioni \
 Coniche \"", {FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.735542403581504*^9}},ExpressionUUID->"45a6e659-4e01-4709-a250-\
-507f7a64ca17"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.7355431480553017`*^9}},ExpressionUUID->"7d0f69bf-3c0b-45a2-9a0f-\
+1ffc4ef420aa"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"l'opera di Apollonio fu commentata dalla prima donna matematica \
 della storia: Ipazia \"", {FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.7355424035825033`*^9}},ExpressionUUID->"5107f24b-3baf-42e3-a01d-\
-613ffbef832b"],
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.735543148062584*^9}},ExpressionUUID->"19dfba41-7958-4441-84d4-\
+321a271c54cf"],
 
 Cell[BoxData[
  TemplateBox[{
   StyleBox["\"Le sezioni coniche furono riprese da DesCartes nella sua \
 Geometria in cui diede la loro prima trattazione con i metodi propri della \
 geometria analitica\"", {FontFamily -> "Nimbus Roman", 
-     GrayLevel[0], FontSize -> 30}, StripOnInput -> False]},
+     GrayLevel[0], FontSize -> 30}, LineIndent -> 2, StripOnInput -> False]},
   "RowDefault"]], "Output",
  CellChangeTimes->{{3.7355422073555593`*^9, 3.735542225331255*^9}, 
    3.7355422731914577`*^9, 3.7355423432578907`*^9, {3.735542379469781*^9, 
-   3.7355424035835323`*^9}},ExpressionUUID->"30b2a645-13c7-4a6d-8d23-\
-a53585f61eda"]
+   3.73554240355927*^9}, 3.735542959036366*^9, {3.735543141340651*^9, 
+   3.7355431480691347`*^9}},ExpressionUUID->"9ea122e3-6131-45f1-a6ac-\
+6c348331a1a5"]
 }, Open  ]]
 },
-WindowSize->{1280, 960},
-WindowMargins->{{4, Automatic}, {Automatic, 29}},
+WindowSize->{2133, 1139},
+WindowMargins->{{0, Automatic}, {1, Automatic}},
 FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -445,29 +496,29 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 6577, 169, 935, "Input",ExpressionUUID->"b74d19b9-5f65-4a8a-8b00-9710f04e61e9"],
-Cell[7160, 193, 406, 7, 68, "Output",ExpressionUUID->"e1a90fa5-36f5-463c-aea1-2a77c07efc93"],
-Cell[7569, 202, 435, 8, 58, "Output",ExpressionUUID->"9a75fbbe-2150-4fd9-93d2-109b7f00b8d3"],
-Cell[8007, 212, 415, 8, 49, "Output",ExpressionUUID->"128264d4-e224-4be1-bce8-0cb8a2d0bb00"],
-Cell[8425, 222, 453, 9, 49, "Output",ExpressionUUID->"3255a007-ecda-4aa2-bdbf-daa998a6a5ca"],
-Cell[8881, 233, 476, 9, 58, "Output",ExpressionUUID->"db3d1788-57dd-4c66-9b06-775c1ce5335f"],
-Cell[9360, 244, 467, 9, 49, "Output",ExpressionUUID->"270ae99d-babc-41dd-9d1c-054c84633f5c"],
-Cell[9830, 255, 448, 9, 58, "Output",ExpressionUUID->"543b052d-f6c6-44d0-9b52-cd6a085709b5"],
-Cell[10281, 266, 477, 9, 49, "Output",ExpressionUUID->"27a7d02c-f8dc-4904-9622-6d9ca587713b"],
-Cell[10761, 277, 422, 8, 58, "Output",ExpressionUUID->"52ae9688-d127-451b-956f-1565eabd74ca"],
-Cell[11186, 287, 479, 9, 49, "Output",ExpressionUUID->"b041076f-d5c4-42a2-b1b7-55d644c278c2"],
-Cell[11668, 298, 451, 9, 49, "Output",ExpressionUUID->"692f99a5-cf90-486e-9f97-74f7cb096007"],
-Cell[12122, 309, 460, 9, 49, "Output",ExpressionUUID->"3b434542-6e0d-4244-979e-99aef91c2035"],
-Cell[12585, 320, 480, 9, 49, "Output",ExpressionUUID->"3046bed1-b165-4331-b8af-8d0b35652f83"],
-Cell[13068, 331, 425, 8, 58, "Output",ExpressionUUID->"ba0ed1a9-2511-4ba5-a246-a4271695ebcd"],
-Cell[13496, 341, 462, 9, 49, "Output",ExpressionUUID->"d5836fa3-0a37-4649-9c10-b38ecd26ce30"],
-Cell[13961, 352, 474, 9, 49, "Output",ExpressionUUID->"4e6d8a2a-2174-4146-b369-c573e6c980b6"],
-Cell[14438, 363, 449, 9, 49, "Output",ExpressionUUID->"c47d2299-7796-4093-b9ba-df62060c5b0d"],
-Cell[14890, 374, 431, 8, 58, "Output",ExpressionUUID->"a9fe56c8-58f3-43ec-9ab4-da2fd266bcab"],
-Cell[15324, 384, 484, 9, 49, "Output",ExpressionUUID->"16962430-9dd5-4646-8734-b8c5b27a52da"],
-Cell[15811, 395, 466, 9, 49, "Output",ExpressionUUID->"45a6e659-4e01-4709-a250-507f7a64ca17"],
-Cell[16280, 406, 484, 9, 49, "Output",ExpressionUUID->"5107f24b-3baf-42e3-a01d-613ffbef832b"],
-Cell[16767, 417, 552, 10, 84, "Output",ExpressionUUID->"30b2a645-13c7-4a6d-8d23-a53585f61eda"]
+Cell[580, 22, 7850, 192, 862, "Input",ExpressionUUID->"b74d19b9-5f65-4a8a-8b00-9710f04e61e9"],
+Cell[8433, 216, 478, 8, 68, "Output",ExpressionUUID->"042e3591-0486-45f2-8e95-919ce8d37e1e"],
+Cell[8914, 226, 530, 10, 58, "Output",ExpressionUUID->"9f41791a-808d-4d01-ac20-baa7f0229966"],
+Cell[9447, 238, 503, 9, 49, "Output",ExpressionUUID->"86498bb4-17c2-4889-9ee3-1eac8369170e"],
+Cell[9953, 249, 543, 10, 49, "Output",ExpressionUUID->"a4b6775b-7c54-401b-9602-943fcdf7d664"],
+Cell[10499, 261, 569, 11, 58, "Output",ExpressionUUID->"9b9a6917-5f6c-4686-b533-35436567567d"],
+Cell[11071, 274, 555, 10, 49, "Output",ExpressionUUID->"593c5a34-1bcc-448f-b50d-144244821342"],
+Cell[11629, 286, 541, 11, 58, "Output",ExpressionUUID->"9c3f7085-be0f-4d35-a131-d02d18d2fa4b"],
+Cell[12173, 299, 567, 10, 49, "Output",ExpressionUUID->"e192cf63-d2de-4593-942d-41faced8b00e"],
+Cell[12743, 311, 515, 10, 58, "Output",ExpressionUUID->"83e86469-a786-4039-9bc8-2a8b150b11be"],
+Cell[13261, 323, 568, 10, 49, "Output",ExpressionUUID->"b7c5f8ed-9c42-4be6-9586-c69f41c9ab74"],
+Cell[13832, 335, 539, 10, 49, "Output",ExpressionUUID->"72e592b7-07d8-401d-8ffe-6ebadfbef194"],
+Cell[14374, 347, 548, 10, 49, "Output",ExpressionUUID->"b79bfe29-8556-4c5e-ba47-7a8eea79e424"],
+Cell[14925, 359, 566, 10, 49, "Output",ExpressionUUID->"71845b1d-c413-4152-a2ba-ec18487ddda3"],
+Cell[15494, 371, 519, 10, 58, "Output",ExpressionUUID->"85ba807c-ebb7-4b44-ba42-f86c6e9b0508"],
+Cell[16016, 383, 550, 10, 49, "Output",ExpressionUUID->"6a882955-42c8-4f56-bced-6b911cea0fd8"],
+Cell[16569, 395, 560, 10, 49, "Output",ExpressionUUID->"092ee4c8-b1f4-408b-9b34-266cf1d5ecdc"],
+Cell[17132, 407, 539, 10, 49, "Output",ExpressionUUID->"ac02e49e-bd8e-4406-ba1e-e18144ee8aaa"],
+Cell[17674, 419, 526, 10, 58, "Output",ExpressionUUID->"e6bcabd2-3cc0-472c-8103-1c287ca95f0c"],
+Cell[18203, 431, 572, 10, 49, "Output",ExpressionUUID->"1f2362e5-6251-4eb3-b41f-12eecccc0182"],
+Cell[18778, 443, 556, 10, 49, "Output",ExpressionUUID->"7d0f69bf-3c0b-45a2-9a0f-1ffc4ef420aa"],
+Cell[19337, 455, 570, 10, 49, "Output",ExpressionUUID->"19dfba41-7958-4441-84d4-321a271c54cf"],
+Cell[19910, 467, 640, 11, 49, "Output",ExpressionUUID->"9ea122e3-6131-45f1-a6ac-6c348331a1a5"]
 }, Open  ]]
 }
 ]
