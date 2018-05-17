@@ -10,42 +10,147 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2488,         58]
-NotebookOptionsPosition[      2197,         45]
-NotebookOutlinePosition[      2535,         60]
-CellTagsIndexPosition[      2492,         57]
+NotebookDataLength[      8285,        166]
+NotebookOptionsPosition[      7977,        150]
+NotebookOutlinePosition[      8312,        165]
+CellTagsIndexPosition[      8269,        162]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData["\"\<Introduzione\nTipologia di scuola e classe:\
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "\"\<\nintroStyle=FontFamily\[Rule]\>\"", "EB", " ", "Garamond", 
+   "\"\<,Black, FontSize\[Rule]30;\n\
+subsectionintroStyle=FontFamily\[Rule]\>\"", "EB", " ", "Garamond", 
+   "\"\<,Brown, FontSize\[Rule]40;\n(*definire stile per sotto sezioni e \
+testo semplice*)\nRow[{Style[\>\"", "Introduzione", 
+   "\"\<,FontFamily\[Rule]\>\"", "EB", " ", "Garamond", 
+   "\"\<,Orange, FontSize\[Rule]50]}]\nRow[{Style[\>\"", "Tipologia", " ", 
+   "di", " ", "scuola", " ", "e", " ", 
+   RowBox[{"classe", ":", 
+    RowBox[{"\"\<],subsectionintroStyle}]\nRow[{Style[\>\"", "classe"}], ":", 
+    " ", 
+    RowBox[{"terzo", " ", "anno", "\"\<],introStyle}]\nRow[{Style[\>\"", 
+     RowBox[{"Scuola", ":", " ", 
+      RowBox[{
+      "tutte", " ", "le", " ", "scuole", " ", "superiori", " ", "di", " ", 
+       "2", "\[Degree]", " ", "grado", 
+       "\"\<],introStyle}]\n\nRow[{Style[\>\"", "Collocazione", " ", 
+       RowBox[{"dell", "'"}], "argomento", " ", 
+       RowBox[{"all", "'"}], "interno", " ", "della", " ", "struttura", " ", 
+       "curricolare"}], ":", 
+      RowBox[{
+      "\"\<],subsectionintroStyle}]\[IndentingNewLine]Row[{Style[\>\"", 
+       RowBox[{"l", "'"}], "argomento", " ", "proposto", " ", "si", " ", 
+       "colloca", " ", "nel", " ", "contesto", " ", "della", " ", "geometria",
+        " ", "analitica", "\"\<],introStyle}]\n\nRow[{Style[\>\"", 
+       "Obiettivi", " ", "specifici", " ", "di", " ", 
+       RowBox[{"apprendimento", ":", 
+        RowBox[{
+        "\"\<],subsectionintroStyle}]\nRow[{Style[\>\"", "Competenza"}], ":", 
+        " ", 
+        RowBox[{
+        "dominare", " ", "attivamente", " ", "i", " ", "concetti", " ", "e", 
+         " ", "i", " ", "metodi", " ", "della", " ", "geometria", " ", 
+         "analitica", "\"\<],introStyle}]\n\nRow[{Style[\>\"", 
+         RowBox[{"Abilit\[AGrave]", ":", 
+          RowBox[{
+          "\"\<],subsectionintroStyle}]\nRow[{Style[\>\"", "Rowsaper", " ", 
+           "descrivere", " ", "le", " ", "coniche", " ", "come", " ", 
+           "intersezione", " ", "di", " ", "un", " ", "cono", " ", 
+           "indefinito", " ", "con", " ", "un", " ", "piano", 
+           "\"\<],introStyle}]\nRow[{Style[\>\"", "saper", " ", 
+           "classificare", " ", "una", " ", "conica", " ", "di", " ", 
+           "equazione", " ", "generica", 
+           "\"\<],introStyle}]\nRow[{Style[\>\"", "saper", " ", "determinare",
+            " ", "la", " ", "caratteristiche", " ", "di", " ", "base", " ", 
+           "di", " ", "una", " ", "conica", 
+           "\"\<],introStyle}]\nRow[{Style[\>\"", "saper", " ", "definire", 
+           " ", "le", " ", "coniche", " ", "usando", " ", "i", " ", 
+           "fuochi"}]}]}]}]}]}]}]}]}], ",", " ", 
+  RowBox[{"le", " ", "direttrici", " ", "e", " ", 
+   RowBox[{"l", "'"}], "eccentricit\[AGrave]", 
+   "\"\<],introStyle}]\n\nRow[{Style[\>\"", "Scopo", " ", "del", " ", 
+   RowBox[{"progetto", ":", " ", 
+    RowBox[{
+    "\"\<],subsectionintroStyle}]\nRow[{Style[\>\"", "mettere", " ", "in", 
+     " ", "evidenza", " ", "le", " ", "propriet\[AGrave]", " ", "che", " ", 
+     "accomuna", " ", "le", " ", "coniche", " ", 
+     "\"\<],introStyle}]\nRow[{Style[\>\"", "evitare", " ", "che", " ", "le", 
+     " ", "coniche", " ", "vengano", " ", "identificate", " ", "con", " ", 
+     "l", " ", "aloro", " ", "equazione", " ", "canonica", " ", 
+     "\"\<],introStyle}]\nRow[{Style[\>\"", "motivare", " ", "gli", " ", 
+     "studenti", " ", "allo", " ", "studio", " ", 
+     RowBox[{"dell", "'"}], "argomento", " ", 
+     "\"\<],introStyle}]\n\nRow[{Style[\>\"", "Un", " ", "p\[OGrave]", " ", 
+     "di", " ", "storia"}], ":", " ", 
+    RowBox[{
+    "\"\<],subsectionintroStyle}]\nRow[{Style[\>\"", "le", " ", "coniche", 
+     " ", "furono", " ", "studiate", " ", "dal", " ", "matematico", " ", 
+     "Appolonio", " ", "di", " ", "Perga", " ", "sotto", " ", "la", " ", 
+     "guida", " ", "di", " ", "Euclide", " ", 
+     "\"\<],introStyle}]\nRow[{Style[\>\"", 
+     RowBox[{"l", "'"}], "opera", " ", "di", " ", "Appolonio", " ", 
+     "dedicata", " ", "alle", " ", "coniche", " ", "si", " ", "chiama", " ", 
+     "Sezioni", " ", "Coniche", " ", "\"\<],introStyle}]\nRow[{Style[\>\"", 
+     RowBox[{"l", "'"}], "opera", " ", "di", " ", "Apollonio", " ", "fu", " ",
+      "commentata", " ", "dalla", " ", "prima", " ", "donna", " ", 
+     "matematica", " ", "della", " ", 
+     RowBox[{"storia", ":", " ", 
+      RowBox[{
+      "Ipazia", " ", "\"\<],introStyle}]\nRow[{Style[\>\"", "Le", " ", 
+       "sezioni", " ", "coniche", " ", "furono", " ", "riprese", " ", "da", 
+       " ", "DesCartes", " ", "nella", " ", "sua", " ", "Geometria", " ", 
+       "in", " ", "cui", " ", "diede", " ", "la", " ", "loro", " ", "prima", 
+       " ", "trattazione", " ", "con", " ", "i", " ", "metodi", " ", "propri",
+        " ", "della", " ", "geometria", " ", "analitica", 
+       "\"\< ],introStyle}]\[IndentingNewLine]\[IndentingNewLine]\
+\[IndentingNewLine]\[IndentingNewLine]\>"}]}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.73547443794034*^9, 3.735474584949037*^9}, {
+  3.7354746787660837`*^9, 3.735474991349691*^9}, {3.7355371548333607`*^9, 
+  3.7355371690311003`*^9}, {3.7355373620997458`*^9, 3.735537376066025*^9}, {
+  3.735537480256418*^9, 3.7355375059853354`*^9}, {3.735537593585844*^9, 
+  3.735537635018201*^9}, {3.73553767747746*^9, 3.7355377486604652`*^9}, {
+  3.735537838373272*^9, 3.7355380579583807`*^9}, {3.735538096591728*^9, 
+  3.735538104847734*^9}, {3.7355383504890823`*^9, 3.735538426881572*^9}, {
+  3.735539135101317*^9, 3.735539227267221*^9}, {3.735539265139536*^9, 
+  3.735539318374238*^9}},
+ ExpressionUUID -> "b74d19b9-5f65-4a8a-8b00-9710f04e61e9"],
+
+Cell[BoxData[
+ RowBox[{"\<\",FontFamily\[Rule]\"\>", 
+  " ", "\<\",Orange, FontSize\[Rule]50]\\nTipologia di scuola e classe:\
 \[IndentingNewLine]classe: terzo anno\[IndentingNewLine]Scuola: tutte le \
-scuole superiori di 2\[Degree] grado\[IndentingNewLine]\nCollocazione \
+scuole superiori di 2\[Degree] grado\[IndentingNewLine]\\nCollocazione \
 dell'argomento all'interno della struttura \
 curricolare:\[IndentingNewLine]l'argomento proposto si colloca nel contesto \
-della geometria analitica\n\nObiettivi specifici di apprendimento:\n\
-Competenza: dominare attivamente i concetti e i metodi della geometria \
-analitica\nAbilit\[AGrave]:\nsaper descrivere le coniche come intersezione di \
-un cono indefinito con un piano\nsaper classificare una conica di equazione \
-generica\nsaper determinare la caratteristiche di base di una conica\nsaper \
-definire le coniche usando i fuochi, le direttrici e l'eccentricit\[AGrave]\n\
-\nScopo del progetto\nmettere in evidenza le propriet\[AGrave] che accomuna \
-le coniche\nevitare che le coniche vengano identificate con l aloro equazione \
-canonica\nmotivare gli studenti allo studio dell'argomento\n\nUn p\[OGrave] \
-di storia\nle coniche furono studiate dal matematico Appolonio di Perga sotto \
-la guida di Euclide\nl'opera di Appolonio dedicata alle coniche si chiama \
-Sezioni Coniche\nl'opera di Apollonio fu commentata dalla prima donna \
-matematica della storia: Ipazia\nLe sezioni coniche furono riprese da \
-DesCartes nella sua Geometria in cui diede la loro prima trattazione con i \
-metodi propri della geometria analitica\>\""], "Input",
- CellChangeTimes->{{3.73547443794034*^9, 3.735474584949037*^9}, {
-  3.7354746787660837`*^9, 
-  3.735474991349691*^9}},ExpressionUUID->"b74d19b9-5f65-4a8a-8b00-\
-9710f04e61e9"]
+della geometria analitica\\n\\nObiettivi specifici di \
+apprendimento:\\nCompetenza: dominare attivamente i concetti e i metodi della \
+geometria analitica\\nAbilit\[AGrave]:\\nsaper descrivere le coniche come \
+intersezione di un cono indefinito con un piano\\nsaper classificare una \
+conica di equazione generica\\nsaper determinare la caratteristiche di base \
+di una conica\\nsaper definire le coniche usando i fuochi, le direttrici e \
+l'eccentricit\[AGrave]\\n\\nScopo del progetto\\nmettere in evidenza le \
+propriet\[AGrave] che accomuna le coniche\\nevitare che le coniche vengano \
+identificate con l aloro equazione canonica\\nmotivare gli studenti allo \
+studio dell'argomento\\n\\nUn p\[OGrave] di storia\\nle coniche furono \
+studiate dal matematico Appolonio di Perga sotto la guida di \
+Euclide\\nl'opera di Appolonio dedicata alle coniche si chiama Sezioni \
+Coniche\\nl'opera di Apollonio fu commentata dalla prima donna matematica \
+della storia: Ipazia\\nLe sezioni coniche furono riprese da DesCartes nella \
+sua Geometria in cui diede la loro prima trattazione con i metodi propri \
+della geometria analitica\"\>", " ", "\<\"\\n\\nStyle[\"\>", " ", "EB", " ", 
+  "Garamond", " ", "Introduzione"}]], "Output",
+ CellChangeTimes->{3.735537379509143*^9}]
+}, Open  ]]
 },
-WindowSize->{1366, 716},
-WindowMargins->{{0, Automatic}, {0, Automatic}},
-FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
+WindowSize->{1280, 960},
+WindowMargins->{{-1, Automatic}, {Automatic, -1}},
+FrontEndVersion->"10.2 for Linux x86 (64-bit) (July 29, 2015)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -59,10 +164,12 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1635, 23, 630, "Input",ExpressionUUID->"b74d19b9-5f65-4a8a-8b00-9710f04e61e9"]
+Cell[CellGroupData[{
+Cell[580, 22, 5707, 99, 803, "Input"],
+Cell[6290, 123, 1671, 24, 649, "Output"]
+}, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
