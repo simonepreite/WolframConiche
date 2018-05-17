@@ -42,7 +42,7 @@ Begin["Private`"];
 (* disabilito alcuni warning *)
 Off[Solve::svars]; (* avvisa quando la Solve non riesce a risolvere, nel caso di sistema ad infinite soluzione *)
 Off[General::shdw]; (* warning di definizioni oscurate *)
-SetDirectory[NotebookDirectory[]]; (* imposto la cartella attuale come base in cui cercare i file *)FFFFFF
+SetDirectory[NotebookDirectory[]]; (* imposto la cartella attuale come base in cui cercare i file *)
 
 (*
 *Checks which kind of Shape is defined by the equations parameter
@@ -308,29 +308,41 @@ rFile[filename_]:=(
 *@title is the title of the example
 *@exp is the expression to plot 
 *)
-ShowExamples[list_,title_, exp_]:=(
-DynamicModule[{i=1, t=False}, (*i is a local variable, representing the number of column to display*)
+(*
+*Display an example in a column, adding a step of its resolution everytime a button is pressed 
+*@list is the content of the example
+*@title is the title of the example
+*)
+ShowExamples[list_,title_,text_]:=(
+DynamicModule[{i=1, t=False, elems={}, current={}, g=False ,plot}, (*i is a local variable, representing the number of column to display*)
 Panel[
 Column[{
-Dynamic[Button[If[t,"Nascondi ","Mostra "]<>title, t=!t]],
+Dynamic[Button[Style[If[t,"Nascondi ","Mostra "]<>title,Medium,Bold, Black], t=!t]],
 Dynamic[If[t, Grid[{ (*the content is displayed in a grid with two rows*)
 {Style[title,FontSize->Medium,FontWeight->Bold]},
+{Style[text,FontSize->Medium,FontWeight->Bold]},
 {Row[{
-Style[
 Dynamic[
-Column[Take[list,i],Frame->All,Alignment->Center] (*this column displays the first i elements from the list*)
-],
-Medium
+Row[{
+Column[{If[current!={},Grid[current,Frame->All,Alignment->Center]]}], (*this column displays the first i elements from the list*)
+Column[{If[g,Show[plot,Graphics[If[elems!={},elems, {}]], PointSize->0.25]]}]
+}]
 ],"  ",
-DynamicModule[{x,y},Dynamic[Column[{ (*This column displays the button if there is more output to be shown, a disabled button otherwise followed by a plot of the expression*)
-If[i>=Length[list],Button[Style["Esempio Terminato!",Medium,Bold],Enabled->False],Button[Style["Avanti",Medium,Bold],Dynamic[i++],Appearance->"FramedPalette"]],
-If[i>=Length[list] && exp!=Null,Row[{Show[ContourPlot[exp,{x,-10,10},{y,-10,10}, ImageSize->Medium]]}]] (*if there is no output to be shown, eventually display a plot*)
-}]]]
+Dynamic[Column[{ (*This column displays the button if there is more output to be shown, a disabled button otherwise followed by a plot of the expression*)
+If[i>=Length[list],Button[Style["Esempio Terminato!",Medium,Bold, Black],Enabled->False],Button[Style["Avanti",Medium,Bold],
+Dynamic[
+i++;
+current=Join[current,{Take[list[[i]],2]}];
+If[Length[list[[i]]]==3,
+If[!g, g=True;plot=list[[i]][[3]],
+elems=Join[elems,list[[i]][[3]]] ]
+]],Appearance->"FramedPalette"]]
+}]]
 }]
 }
 },
-Background->White,Frame->All],""]]
-}]
+Background->White,Frame->All],""], ""]
+}, Alignment->Center, ItemSize->Fit],""
 ]
 ]);
 
@@ -431,17 +443,9 @@ content,
 
 ]]]);
 
-
-
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
-
-
-
-
-
-
 
 
 
