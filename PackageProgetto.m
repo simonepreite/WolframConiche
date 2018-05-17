@@ -1,6 +1,5 @@
 (* ::Package:: *)
 
-(* ::Code::Initialization::Plain:: *)
 (* PACKAGE.M
  * Progetto d'esame di Matematica Computazionale + Calcolo Numerico e Software Didattico
  * Corsi di laurea magistrale in Informatica e Matematica
@@ -148,7 +147,8 @@ Column[{
 {{d,0, "d"},-10,10,1,  Appearance->"Labeled"},
 {{e,0, "e"},-10,10,1, Appearance->"Labeled"},
 {{f,0, "f"},-10,10,1, Appearance->"Labeled"},
-ControlPlacement->Top (*Places the Sliders on the top of the Panel*)
+ControlPlacement->Top, (*Places the Sliders on the top of the Panel*)
+LabelStyle->{Medium,Bold, Black}
 ]]);
 
 (*Builds an interactive Panel with the equation of a Plane and a Cone, highligthing te intersection and plotting it inside another plot*)
@@ -191,7 +191,8 @@ Grid[
 {{e,1,"Coefficiente y Piano:"},0,10,0.1,Appearance->"Labeled"},
 {{f,1,"Coefficiente z Piano:"},1,10,0.1,Appearance->"Labeled"},
 {{g,1,"Profondit\[AGrave] del piano:"},0,10,0.1,Appearance->"Labeled"},
-ControlPlacement->Top
+ControlPlacement->Top,
+LabelStyle->{Medium,Bold, Black}
 ]);
 
 (* Builds a interactive panel with the conical equation parametrised on the eccentricity *)
@@ -233,7 +234,8 @@ Grid[
 }]
 }],
 {{e,0,"Eccentricit\[AGrave]:"},-1.5,1.5,0.1,Appearance->"Labeled"},
-{{aaa,0,"Px:"},-12,12,0.1,Appearance->"Labeled"}
+{{aaa,0,"Px:"},-12,12,0.1,Appearance->"Labeled"},
+LabelStyle->{Medium,Bold, Black}
 ]]);
 
 (*builds an interactive Panel with the equation of a cone and prints a table with the deatils of the components*)
@@ -374,7 +376,8 @@ ShowEllisse[]:=(Manipulate[
 		 PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Blue], ContourStyle->{Red, Blue, Thick}}]
 		],
 		{{a,1,"a"},1,10,1,Appearance->"Labeled"},
-		{{b,1,"b"},1,10,1,Appearance->"Labeled"}
+		{{b,1,"b"},1,10,1,Appearance->"Labeled"},
+		LabelStyle->{Medium,Bold, Black}
 	]);
 
 (*
@@ -387,7 +390,8 @@ ContourPlot[{y==Sqrt[(r^2)-(x^2)], y==-Sqrt[(r^2)-(x^2)]},{x,-10,10},{y,-10,10},
  PlotLabel->{Style[StandardForm["y"==Sqrt[(r^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-Sqrt[(r^2)-("x"^2)]],FontColor->Blue]}
 	, ContourStyle->{Red, Blue, Thick}]
 ],
-{{r,1,"raggio"},1,10,1,Appearance->"Labeled"}
+{{r,1,"raggio"},1,10,1,Appearance->"Labeled"},
+LabelStyle->{Medium,Bold, Black}
 	]);
 
 (*
@@ -401,7 +405,8 @@ ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)], y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,1
 	PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[-(a^2)+("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[-(a^2)+("x"^2)]],FontColor->Blue]}
 ],
 {{a,1,"a"},1,10,1,Appearance->"Labeled"},
-{{b,1,"b"},1,10,1,Appearance->"Labeled"}
+{{b,1,"b"},1,10,1,Appearance->"Labeled"},
+LabelStyle->{Medium,Bold, Black}
 ]);
 
 (*
@@ -414,7 +419,8 @@ Show[
 ContourPlot[x==(a*y^2)+b*y,{x,-10,10},{y,-10,10}, ImageSize->Medium, Axes->True, ContourStyle->{Red, Blue, Thick}],
 	PlotLabel->{Style[StandardForm["x">0],FontColor->Red],Style[StandardForm["z"<0\[Section]],FontColor->Blue]}],
 {{a,0,"a"},0,10,1,Appearance->"Labeled"},
-{{b,0,"b"},0,10,1,Appearance->"Labeled"}
+{{b,0,"b"},0,10,1,Appearance->"Labeled"},
+LabelStyle->{Medium,Bold, Black}
 ]
 );
 
