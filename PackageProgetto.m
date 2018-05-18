@@ -115,8 +115,8 @@ Column[{
 	Row[{
 	Text["Equazione: "],(*Outputs the name of shape*)
 	With[{a=a, b=b, c=c, d=d, e=e, f=f, xs="x", ys="y"},HoldForm[(a*xs^2) +(2b*xs*ys) +(c*ys^2) +(2d*xs) + (2e*ys)+f==0]], (*Displays the equation*)
-	Text["  \[CapitalDelta] = b^2-4ac = "<>ToString[Evaluate[b^2-4a*c]]]
 	}],
+	Row[{Text["  \[CapitalDelta] = b^2-4ac = "<>ToString[Evaluate[b^2-4a*c]]]}],
 	Row[{
 	ContourPlot[(a*x^2) +(2b*x*y) +(c*y^2) +(2d*x) + (2e*y)+f==0, {x,-20, 20}, {y,-20,20},(*2D Plot of the equation*)
 	ImageSize->Medium (*Defines the size of the Plot*)
@@ -353,14 +353,14 @@ NotebookOpeners[]:=(
 bList={};
 For[i=1, i<=3, i++,
 			(*text=Evaluate[Directory[]<>"/notebooks/app"<>ToString[i]<>".nb"];*)
-			Which[i==1,appr="Grafico";img=Import["img/approccioGrafico.png"],
-			i==2,appr="Matematico";img=Import["img/approccioMatematico.png"], 
-			i==3,appr="Eccentric";img=Import["img/approccioEccentric.png"]];
-			bList=Append[bList, DynamicModule[{},Hyperlink[Button[img, ImageSize->{Scaled[1], Scaled[1]}],{"slides.nb",appr}]]]
+			Which[i==1,appr="Grafico";img=Import["img/approccioGrafico.png", ImageSize->1000, Appearance->{None}],
+			i==2,appr="Matematico";img=Import["img/approccioMatematico.png", ImageSize->1000, Appearance->{None}], 
+			i==3,appr="Eccentric";img=Import["img/approccioEccentric.png", ImageSize->1000, Appearance->{None}]];
+			bList=Append[bList, DynamicModule[{},Hyperlink[Button[img],{"slides.nb",appr}]]]
 	];
 	Grid[{
-	{bList[[1]],Style["Approccio Grafico", FontFamily->"EB Garamond",FontSize->50, RGBColor[0,0,0]]},
-	{bList[[2]],Style["Approccio Matematico", FontFamily->"EB Garamond",FontSize->50, RGBColor[0,0,0]]},
+	{bList[[1]],Style["Approccio Sintetico", FontFamily->"EB Garamond",FontSize->50, RGBColor[0,0,0]]},
+	{bList[[2]],Style["Approccio Analitico", FontFamily->"EB Garamond",FontSize->50, RGBColor[0,0,0]]},
 	{bList[[3]],Style["Approccio Eccentricit\[AGrave]", FontFamily->"EB Garamond",FontSize->50, RGBColor[0,0,0]]}
 	},
 	ItemSize->{20,10}, Frame->None, Alignment->{Left,Center, Right},FrameStyle->{RGBColor[1,1, 1]}, Spacings->{20,0}
@@ -373,7 +373,7 @@ For[i=1, i<=3, i++,
 ShowEllisse[]:=(Manipulate[
 	Show[ (*Plots the equations that form the ellipse, adds a PlotLabel with the equations*)
 		ContourPlot[{y==(b/a)*Sqrt[(a^2)-(x^2)],y==-(b/a)*Sqrt[(a^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True,ContourLabels->None,
-		 PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Blue], ContourStyle->{Red, Blue, Thick}}]
+		 PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Blue]}, ContourStyle->{Red, Blue, Thick}]
 		],
 		{{a,1,"a"},1,10,1,Appearance->"Labeled"},
 		{{b,1,"b"},1,10,1,Appearance->"Labeled"},
@@ -452,6 +452,12 @@ content,
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
+
+
+
 
 
 
