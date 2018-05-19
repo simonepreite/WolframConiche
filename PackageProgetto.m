@@ -114,7 +114,7 @@ Column[{
 	clr=color[text]; (*calculates the color of the shape*)
 	Row[{
 	Text["Equazione: "],(*Outputs the name of shape*)
-	With[{a=a, b=b, c=c, d=d, e=e, f=f, xs="x", ys="y"},HoldForm[(a*xs^2) +(2b*xs*ys) +(c*ys^2) +(2d*xs) + (2e*ys)+f==0]], (*Displays the equation*)
+	With[{a=a, b=b, c=c, d=d, e=e, f=f, xs="x", ys="y"},HoldForm[(a*xs^2) +(2b*xs*ys) +(c*ys^2) +(2d*xs) + (2e*ys)+f==0]] (*Displays the equation*)
 	}],
 	Row[{Text["  \[CapitalDelta] = b^2-4ac = "<>ToString[Evaluate[b^2-4a*c]]]}],
 	Row[{
