@@ -5,4 +5,4 @@ Determinare l'equazione dell'iperbole e il valore dell'eccentricita' conoscendo 
 Quale e' l'equazione delle circonferenze p(3,1) e D(0,-2)?;;HoldForm[x^2 + y^2 - 3 x + y + 2 = 0 ]/HoldForm[x^2 + y^2 - 3 x + y - 2 = 0 ]/  HoldForm[x^2 + y^2 + 3 x + y - 2 = 0 ]/HoldForm[x^2 + y^2 - 3 x - y + 2 = 0 ];2;da scrivere
 
 
-Quale e' l'equazione delle perabole di fuoco F(1,-1) e direttrice y=4?;HoldForm[y = 1/10 x^2 + 1/5 x + 7/5 ]/HoldForm[y = -1/10 x^2 + 1/5 x + 7/5]/ HoldForm[y = -x^2 + x + 4]/HoldForm[y = x^2 - x + 4];2;da scrivere
+Quale e' l'equazione delle perabole di fuoco F(1,-1) e direttrice y=4?;;HoldForm[y = 1/10 x^2 + 1/5 x + 7/5 ]/HoldForm[y = -1/10 x^2 + 1/5 x + 7/5]/ HoldForm[y = -x^2 + x + 4]/HoldForm[y = x^2 - x + 4];2;da scrivere
