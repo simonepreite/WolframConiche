@@ -316,7 +316,7 @@ rFile[filename_]:=(
 *@title is the title of the example
 *)
 ShowExamples[list_,title_,text_]:=(
-DynamicModule[{i=1, t=False, elems={}, current={}, g=False ,plot}, (*i is a local variable, representing the number of column to display*)
+DynamicModule[{i=0, t=False, elems={}, current={}, g=False ,plot}, (*i is a local variable, representing the number of column to display*)
 Panel[
 Column[{
 Dynamic[Button[Style[If[t,"Nascondi ","Mostra "]<>title,Medium,Bold, Black], t=!t]],
@@ -326,7 +326,7 @@ Dynamic[If[t, Grid[{ (*the content is displayed in a grid with two rows*)
 {Row[{
 Dynamic[
 Row[{
-Column[{If[current!={},Grid[current,Frame->All,Alignment->Center]]}], (*this column displays the first i elements from the list*)
+Column[{If[current!={},Grid[current,Frame->All,Alignment->Center, ItemSize->Full]]}], (*this column displays the first i elements from the list*)
 Column[{If[g,Show[plot,Graphics[If[elems!={},elems, {}]], PointSize->0.25]]}]
 }]
 ],"  ",
@@ -452,6 +452,9 @@ content,
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
 
 
 
