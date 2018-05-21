@@ -416,8 +416,8 @@ LabelStyle->{Medium,Bold, Black}
 ShowParabola[]:=(
 Manipulate[ (*Plots the equation that form the parabole, adds a PlotLabel with the equation*)
 Show[
-ContourPlot[x==(a*y^2)+b*y,{x,-10,10},{y,-10,10}, ImageSize->Medium, Axes->True, ContourStyle->{Red, Blue, Thick}],
-	PlotLabel->{Style[StandardForm["x">0],FontColor->Red],Style[StandardForm["z"<0\[Section]],FontColor->Blue]}],
+ContourPlot[x==(a*y^2)+b*y ,{x,-10,10},{y,-10,10}, ImageSize->Medium, Axes->True],
+	PlotLabel->{Style[StandardForm["y">0],FontColor->Red],Style[StandardForm["y"<0],FontColor->Blue]}],
 {{a,0,"a"},0,10,1,Appearance->"Labeled"},
 {{b,0,"b"},0,10,1,Appearance->"Labeled"},
 LabelStyle->{Medium,Bold, Black}
@@ -452,6 +452,9 @@ content,
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
 
 
 
