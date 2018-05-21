@@ -281,7 +281,7 @@ DynamicModule[{z=1, txt="Ancora da valutare", t=False}, (*z, t and txt are local
 	Row[{
 		Button["Clicca per controllare il risultato",Dynamic[If[Equal[z,ToExpression[answer]], txt="Corretto", txt="Sbagliato!"]]], (*Button to evaluate the answer*)
 		Spacer[20],
-		Dynamic[Style[Text["Risultato:"<>txt], FontColor->If[txt=="Corretto", Green, Red]]]
+		Dynamic[Style[Text["Risultato:"<>txt], FontColor->If[txt=="Corretto", RGBColor[0.08,0.48,0.], Red]]]
 	}],
 	Row[{Dynamic[If[txt!="Ancora da valutare",Text["Soluzione: "<>comment],"" ]]}]
 	(*Display the solution if the user evaluated its answer*)
