@@ -203,7 +203,7 @@ elems=eccentricity[aaa,e]; (*calculates the point in which the equation is satis
 Column[{ (*the content is displayed in a column with three rows*)
 Row[
 If[elems!={}, (*if the equation is solvable depending on x and e, display the distances and the eccentricity, otherwise display a error message*)
-{Text["Eccentricit\[AGrave] "], TraditionalForm["PF"/"Pd"],Text[": "],EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]],Text["  PF: "],EuclideanDistance[{1,0},elems[[1]]], Text["  PD: "],EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]},{If[e==0,"Non hai disegnato alcuna figura!", "Il punto non appartiene alla figura!"]}
+{Text["Eccentricit\[AGrave] "], TraditionalForm["PF"/"PD"],Text[": "],EuclideanDistance[{1,0},elems[[1]]]/EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]],Text["  PF: "],EuclideanDistance[{1,0},elems[[1]]], Text["  PD: "],EuclideanDistance[{2,elems[[1]][[2]]},elems[[1]]]},{If[e==0,"Non hai disegnato alcuna figura!", "Il punto non appartiene alla figura!"]}
 ]
 ],
 Row[{
@@ -211,12 +211,12 @@ Show[
 ContourPlot[(1-e^2)*x^2 + y^2-2*(1-2*e^2)*x + 1-4*e^2==0, {x,-12,12},{y,-6,6}], (*2D plot of the equation*)
 Graphics[{ 
 Join[
-{Red, PointSize->0.025,Point[{1,0}],Text["F",{1.2,0.5}],Black,Line[{{2,-12}, {2,12}}], Text["Direttrice, y=2",{4, 3}] }, (*draw a line and the fire of the conical*)
+{Red, PointSize->0.025,Point[{1,0}],Text["F",{1.2,0.5}],Black,Line[{{2,-12}, {2,12}}], Text["d: direttrice, y=2",{6, 3}] }, (*draw a line and the fire of the conical*)
 If[elems!={},
 {Brown, PointSize->0.025,Point[elems[[1]]],Point[elems[[2]]], Text["P",(1+#)&/@elems[[1]]], Text["P",(1+#)&/@elems[[2]]]}, (*if the point exists, add them to the graphic*)
  {}],
 If[elems!={},
-{Line[{{1,0},elems[[1]]}], Line[{{2,elems[[1]][[2]]},elems[[1]]}],Point[{2,elems[[1]][[2]]}],Text["d",{3,elems[[1]][[2]]}]},{} ]]}(*draw lines from the point to other stuff*)
+{Line[{{1,0},elems[[1]]}], Line[{{2,elems[[1]][[2]]},elems[[1]]}],Point[{2,elems[[1]][[2]]}],Text["D",{3,elems[[1]][[2]]}]},{} ]]}(*draw lines from the point to other stuff*)
 ],
  Axes->{True, True},
 ImageSize->Medium
