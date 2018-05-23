@@ -1,1 +1,1 @@
-Che tipo di conica rappresenta la seguente equazione;x^2+2y^2-1==0;parabola/ellisse/iperbole/circonferenza;2;È un ellisse
+Che tipo di conica rappresenta la seguente equazione;x^2+2y^2-1==0;parabola@ellisse@iperbole@circonferenza;2;È un ellisse

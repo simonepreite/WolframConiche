@@ -130,12 +130,12 @@ Column[{
 Column[{
 	Row[{
 	Grid[
-	{{"Ellisse","Delta < 0", "a = c, b = 0"},
-	{"Parabola","Delta = 0"},
-	{"Circonferenza","Delta = 0"},
-	{"Iperbole","Delta > 0"},
-	{"Iperbole Equilatera","Delta > 0", "a + c = 0"},
-	{"Retta","Delta = 0", "a = b = c = 0"}},
+	{{"Ellisse","\[CapitalDelta] < 0", "a = c, b = 0"},
+	{"Parabola","\[CapitalDelta] = 0"},
+	{"Circonferenza","\[CapitalDelta] = 0"},
+	{"Iperbole","\[CapitalDelta] > 0"},
+	{"Iperbole Equilatera","\[CapitalDelta] > 0", "a + c = 0"},
+	{"Retta","\[CapitalDelta] = 0", "a = b = c = 0"}},
 	Frame->All,
 	Background->{Null,bgColorsTwo[text,clr] }] (*creates the list of colors for the grid background*)
 	}]
@@ -298,8 +298,8 @@ rFile[filename_]:=(
 	exerc=ReadList[filename, String]; (*get a list of the elements in the specified file*)
 	For[i=1, i<=Length[exerc], i++, (*foreach line in the specified file*)
 		rowl=StringSplit[exerc[[i]],";"]; (*Split the String when a ";" is encountered*)
-		val3=StringSplit[rowl[[3]],"/"]; (*Split the Solutions when a "/" is encountered*)
-		list=Join[list,{printExercise[i,rowl[[2]],rowl[[1]],val3,HoldForm[rowl[[4]]],HoldForm[rowl[[5]]]]}]; (*call to printExercise*)
+		val3=StringSplit[rowl[[3]],"@"]; (*Split the Solutions when a "@" is encountered*)
+		list=Join[list,{printExercise[i,rowl[[2]],rowl[[1]],val3,rowl[[4]],rowl[[5]]]}]; (*call to printExercise*)
 	];
 	Return[list]
 );
@@ -416,7 +416,7 @@ LabelStyle->{Medium,Bold, Black}
 ShowParabola[]:=(
 Manipulate[ (*Plots the equation that form the parabole, adds a PlotLabel with the equation*)
 Show[
-ContourPlot[x==(a*y^2)+b*y ,{x,-10,10},{y,-10,10}, ImageSize->Medium, Axes->True],
+ContourPlot[x==(a*y^2)+b*y ,{x,-10,10},{y,-10,10}, ImageSize->Medium, Axes->True, ContourStyle->Red],ContourPlot[x==(a*y^2)+b*y ,{x,-10,10},{y,-10,0}, ImageSize->Medium, Axes->True, ContourStyle->Blue],
 	PlotLabel->{Style[StandardForm["y">0],FontColor->Red],Style[StandardForm["y"<0],FontColor->Blue]}],
 {{a,0,"a"},0,10,1,Appearance->"Labeled"},
 {{b,0,"b"},0,10,1,Appearance->"Labeled"},
@@ -452,6 +452,9 @@ content,
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
 
 
 

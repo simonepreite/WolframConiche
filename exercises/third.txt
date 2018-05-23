@@ -1,8 +1,4 @@
-Quale e' l'equazione dell'ellisse fuoco F(0,5/3) ed eccentricita' e=2/3?;;HoldForm[x^2/(25/9) + y^2/(25/4) = 1]/HoldForm[x^2/(125/36) + y^2/(25/4) = 1 ]/HoldForm[x^2/(25/4) + y^2/(125/36) = 1]/HoldForm[x^2/(25/4) + y^2/(25/9) = 1];2;da scrivere
-
-Determinare l'equazione dell'iperbole e il valore dell'eccentricita' conoscendo il fuoco F(4,0) e a=5;;HoldForm[x^2/(25/4) - y^2/(39/4) = 1;e = 8/5 ]/HoldForm[x^2/(25/4) + y^2/(39/4) = 1; e = 8/5]/HoldForm[x^2/(39/4) + y^2/(25/4) = 1; e = 1/10]/HoldForm[x^2/(39/4) - y^2/(25/4) = 1; e = 1/10];1;da scrivere
-
-Quale e' l'equazione delle circonferenze p(3,1) e D(0,-2)?;;HoldForm[x^2 + y^2 - 3 x + y + 2 = 0 ]/HoldForm[x^2 + y^2 - 3 x + y - 2 = 0 ]/  HoldForm[x^2 + y^2 + 3 x + y - 2 = 0 ]/HoldForm[x^2 + y^2 - 3 x - y + 2 = 0 ];2;da scrivere
-
-
-Quale e' l'equazione delle perabole di fuoco F(1,-1) e direttrice y=4?;;HoldForm[y = 1/10 x^2 + 1/5 x + 7/5 ]/HoldForm[y = -1/10 x^2 + 1/5 x + 7/5]/ HoldForm[y = -x^2 + x + 4]/HoldForm[y = x^2 - x + 4];2;da scrivere
+Quale e' l'equazione dell'ellisse fuoco F(0,5/3) ed eccentricita' e=2/3?;;HoldForm[x^2/(25/9) + y^2/(25/4) = 1]@HoldForm[x^2/(125/36) + y^2/(25/4) = 1 ]@HoldForm[x^2/(25/4) + y^2/(125/36) = 1]@HoldForm[x^2/(25/4) + y^2/(25/9) = 1];2;da scrivere
+Determinare l'equazione dell'iperbole e il valore dell'eccentricita' conoscendo il fuoco F(4,0) e a=5;;HoldForm[x^2/(25/4) - y^2/(39/4) = 1;e = 8/5 ]@HoldForm[x^2/(25/4) + y^2/(39/4) = 1; e = 8/5]@HoldForm[x^2/(39/4) + y^2/(25/4) = 1; e = 1/10]@HoldForm[x^2/(39/4) - y^2/(25/4) = 1; e = 1/10];1;da scrivere
+Quale e' l'equazione delle circonferenze p(3,1) e D(0,-2)?;;HoldForm[x^2 + y^2 - 3 x + y + 2 = 0 ]@HoldForm[x^2 + y^2 - 3 x + y - 2 = 0 ]/  HoldForm[x^2 + y^2 + 3 x + y - 2 = 0 ]@HoldForm[x^2 + y^2 - 3 x - y + 2 = 0 ];2;da scrivere
+Quale e' l'equazione delle perabole di fuoco F(1,-1) e direttrice y=4?;;HoldForm[y = 1/10 x^2 + 1/5 x + 7/5 ]@HoldForm[y = -1/10 x^2 + 1/5 x + 7/5]/ HoldForm[y = -x^2 + x + 4]@HoldForm[y = x^2 - x + 4];2;da scrivere
