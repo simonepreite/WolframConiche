@@ -299,7 +299,7 @@ rFile[filename_]:=(
 	For[i=1, i<=Length[exerc], i++, (*foreach line in the specified file*)
 		rowl=StringSplit[exerc[[i]],";"]; (*Split the String when a ";" is encountered*)
 		val3=StringSplit[rowl[[3]],"/"]; (*Split the Solutions when a "/" is encountered*)
-		list=Join[list,{printExercise[i,rowl[[2]],rowl[[1]],val3,rowl[[4]],rowl[[5]]]}]; (*call to printExercise*)
+		list=Join[list,{printExercise[i,rowl[[2]],rowl[[1]],val3,HoldForm[rowl[[4]]],HoldForm[rowl[[5]]]]}]; (*call to printExercise*)
 	];
 	Return[list]
 );
@@ -452,6 +452,9 @@ content,
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
 
 
 
