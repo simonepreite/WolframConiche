@@ -48,7 +48,10 @@ SetDirectory[NotebookDirectory[]]; (* imposto la cartella attuale come base in c
 *@a,@b, @c,@d, @e, @f are the conical equation's parameters
 *)
 recognizeShape[a_,b_,c_, d_,e_,f_]:=
-(flag=b^2-(4*a*c);Which[flag==0,If[a==b && b==c && c==0, "Retta","Parabola"] , LessThan[0][flag], If[a==c && b==0,"Circonferenza","Ellisse"], GreaterThan[0][flag], If[a+c==0,"Iperbole Equilatera","Iperbole"]]);
+(Module[
+{flag=b^2-(4*a*c)}, (*flag is a local variable*)
+Which[flag==0,If[a==b && b==c && c==0, "Retta","Parabola"] , LessThan[0][flag], If[a==c && b==0,"Circonferenza","Ellisse"], GreaterThan[0][flag], If[a+c==0,"Iperbole Equilatera","Iperbole"]]
+]);
 
 (*
 *Checks which kind of Shape is defined by the intersection of a plane and a cone based on the angles of the intersection
@@ -63,7 +66,7 @@ checkFigure[alfa_,beta_, g_]:=(Which[beta<=90 && alfa < beta && g==0, "Punto",be
 *@e is the eccentricity of the curve
 *)
 checkE[e_]:=(
-If [e<-1,"Iperbole",If[e==-1,"Parabola",If[-1<e<0,"Ellisse",If[e==0,"Circonferenza",If[0<e<1,"Ellisse",If[e==1,"Parabola",If[e>1,"Iperbole"]]]]]]]
+If[e<-1,"Iperbole",If[e==-1,"Parabola",If[-1<e<0,"Ellisse",If[e==0,"Punto",If[0<e<1,"Ellisse",If[e==1,"Parabola",If[e>1,"Iperbole"]]]]]]]
 );
 
 (*
@@ -85,23 +88,30 @@ aux[name_, color_,xz_]:=(If[StringMatchQ[name,xz],color,Null]);
 *@name is the result of a function such as checkFigure or recognizeShape
 *@color is a color, resulting from the color function
 *)
-bgColors[name_,color_ ]:=(aux[name, color,#]&/@{"Ellisse","Parabola", "Circonferenza","Iperbole","Rette Incidenti", "Retta","Punto" });
+bgColors[name_,color_ ]:=(aux[name, color,#]&/@{"Ellisse","Punto","Circonferenza","Iperbole","Parabola","Rette Incidenti","Retta"});
 
 (*
 *Creates a list of colors to highlight the Background of a grid
 *@name is the result of a function such as checkFigure or recognizeShape
 *@color is a color, resulting from the color function
 *)
-bgColorsTwo[name_,color_ ]:=(aux[name, color,#]&/@{"Ellisse","Parabola", "Circonferenza","Iperbole","Iperbole Equilatera", "Retta","Non \[EGrave] una conica" });
+bgColorsTwo[name_,color_ ]:=(aux[name, color,#]&/@{"Circonferenza","Ellisse","Parabola","Retta","Iperbole","Iperbole Equilatera"});
 
+(*
+*Creates a list of colors to highlight the Background of a grid
+*@name is the result of a function such as checkFigure or recognizeShape
+*@color is a color, resulting from the color function
+*)
+bgColorsThree[name_,color_ ]:=(aux[name, color,#]&/@{"Ellisse","Punto","Parabola","Iperbole"});
 (*
 *Returns the points of the equation, calculated from the ordinate and eccentricity
 *@x is the ordinate of the points
 *@e is the eccentricity of the curve
 *)
 eccentricity[x_, e_]:=(
-result=-1+4 e^2+2 x-4 e^2 x-x^2+e^2 x^2;
-If[result>=0, {{x,Sqrt [result]},{x, -Sqrt [result]}},{} ]
+Module[
+{result=-1+4 e^2+2 x-4 e^2 x-x^2+e^2 x^2}, (*result is a local variable*)
+If[result>=0, {{x,Sqrt [result]},{x, -Sqrt [result]}},{} ]]
 );
 
 (*Builds an interactive Panel with the plots of the Conical equation*)
@@ -116,10 +126,11 @@ Column[{
 	Text["Equazione: "],(*Outputs the name of shape*)
 	With[{a=a, b=b, c=c, d=d, e=e, f=f, xs="x", ys="y"},HoldForm[(a*xs^2) +(2b*xs*ys) +(c*ys^2) +(2d*xs) + (2e*ys)+f==0]] (*Displays the equation*)
 	}],
-	Row[{Text["  \[CapitalDelta] = b^2-4ac = "<>ToString[Evaluate[b^2-4a*c]]]}],
+	Row[{Text["  \[CapitalDelta] = b^2 - 4 a c = "<>ToString[Evaluate[b^2-4a*c]]]}],
 	Row[{
 	ContourPlot[(a*x^2) +(2b*x*y) +(c*y^2) +(2d*x) + (2e*y)+f==0, {x,-20, 20}, {y,-20,20},(*2D Plot of the equation*)
-	ImageSize->Medium (*Defines the size of the Plot*)
+	ImageSize->Medium, (*Defines the size of the Plot*)
+	ContourLabels -> {None,None}(*No Tooltip is displayed*)
 	],Spacer[40],
 	ContourPlot3D[(a*x^2) +(2b*x*y) +(c*y^2) +(2d*x) + (2e*y)+f==0, {x,-20, 20}, {y, -20, 20}, {z, -20, 20},(*3D Plot of the equation *)
 	ImageSize->Medium, 
@@ -130,12 +141,12 @@ Column[{
 Column[{
 	Row[{
 	Grid[
-	{{"Ellisse","\[CapitalDelta] < 0", "a = c, b = 0"},
+	{{"Circonferenza","\[CapitalDelta] < 0", "a = c, b = 0"},
+	{"Ellisse","\[CapitalDelta] < 0"},
 	{"Parabola","\[CapitalDelta] = 0"},
-	{"Circonferenza","\[CapitalDelta] = 0"},
+	{"Retta","\[CapitalDelta] = 0", "a = b = c = 0"},
 	{"Iperbole","\[CapitalDelta] > 0"},
-	{"Iperbole Equilatera","\[CapitalDelta] > 0", "a + c = 0"},
-	{"Retta","\[CapitalDelta] = 0", "a = b = c = 0"}},
+	{"Iperbole Equilatera","\[CapitalDelta] > 0", "a + c = 0"}},
 	Frame->All,
 	Background->{Null,bgColorsTwo[text,clr] }] (*creates the list of colors for the grid background*)
 	}]
@@ -153,9 +164,9 @@ LabelStyle->{Medium,Bold, Black}
 
 (*Builds an interactive Panel with the equation of a Plane and a Cone, highligthing te intersection and plotting it inside another plot*)
 buildGraphicPlaneCone:=(
-Manipulate[
-beta=IntegerPart[N[ArcSin[Abs[4*f]/(4*Sqrt[(d^2) + (e^2)+ (f^2)])]/Degree]]; (*beta is the angle between the cone generating line and its axis*)
-alfa= 45; (*alfa is the angle between the cone axis and the plane*)
+Manipulate[ 
+Module[{beta=IntegerPart[N[ArcSin[Abs[4*f]/(4*Sqrt[(d^2) + (e^2)+ (f^2)])]/Degree]], (*beta is the angle between the cone generating line and its axis*)
+alfa= 45(*alfa is the angle between the cone axis and the plane*)},
 Grid[{ (*The frame displays a Grid with three rows and one column*)
    {Row[{Text["L'angolo tra il piano e l'asse del cono, \[Beta], \[EGrave]: "],beta,Text["  L'angolo tra l'asse del cono e la generatrice, \[Alpha], \[EGrave]: "],alfa},Frame->All]},
 {
@@ -170,23 +181,22 @@ AxesOrigin-> True
 ],
 Graphics3D[{Red,Thick, Tooltip[Line[{{0,0,-2}, {0,0,2}}], "Asse di rotazione", TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}]}] (*Cone Axis added at the graphic*)
 ]
-],Spacer[20],Dynamic[ Show[Join[{ 
-ContourPlot[{-((d*x)+(e*y)+g)/f==Sqrt[((x^2)/1 )+(( y^2)/1)],-((d*x)+(e*y)+g)/f==-Sqrt[((x^2)/1 )+(( y^2)/1)]}, {x,-2,2},{y,-2,2}, ImageSize->Medium, ContourStyle->color[checkFigure[alfa,beta,g]]]},{
-If[g==0 && alfa==beta, {Graphics[Yellow,Point[{0,0}]]},{}]}], PointSize->0.5]] (*NON FUNZIONA*)
-}]}, {
+],Spacer[20], ContourPlot[{-((d*x)+(e*y)+g)/f==Sqrt[((x^2)/1 )+(( y^2)/1)],-((d*x)+(e*y)+g)/f==-Sqrt[((x^2)/1 )+(( y^2)/1)]}, {x,-2,2},{y,-2,2}, ImageSize->Medium,ContourLabels -> {None,None}, ContourStyle->color[checkFigure[alfa,beta,g] ] 
+]}]}, {
 Grid[
 	{{"Ellisse","\[Alpha] < \[Beta] < 90\[Degree]"},
-	{"Parabola","\[Alpha] = \[Beta]"},
+	{Tooltip["Punto","Circonferenza di raggio 0",TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}], "\[Alpha] < \[Beta] <= 90\[Degree]", "Il piano passa per il vertice del cono"},
 	{"Circonferenza","\[Beta]= 90\[Degree]"},
 	{"Iperbole","\[Beta] < 90\[Degree]"},
+	{"Parabola","\[Alpha] = \[Beta]"},
 	{"Rette Incidenti","\[Beta] parallelo all'asse", "il piano passa per il vertice"},
-	{Tooltip ["Retta","Due Rette Coincidenti",TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}],"\[Beta] = \[Alpha]", "Il piano passa per il vertice del cono"},
-	{Tooltip["Punto","Circonferenza di raggio 0"TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}], "\[Alpha] < \[Beta] <= 90\[Degree]", "Il piano passa per il vertice del cono"}},
+	{Tooltip ["Retta","Due Rette Coincidenti",TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}],"\[Beta] = \[Alpha]", "Il piano passa per il vertice del cono"}
+	},
 	Frame->All,
 	Background->{Null, bgColors[checkFigure[alfa,beta,g], color[checkFigure[alfa,beta,g]]]} (*generates a list of colors for the grid background*)
 ]
 }
-}, Frame->All],
+}, Frame->All]],
 {{d,1,"Coefficiente x Piano:"},0,10,0.1,Appearance->"Labeled"},
 {{e,1,"Coefficiente y Piano:"},0,10,0.1,Appearance->"Labeled"},
 {{f,1,"Coefficiente z Piano:"},1,10,0.1,Appearance->"Labeled"},
@@ -225,13 +235,12 @@ ImageSize->Medium
 Row[{
 Grid[
 	{{"Ellisse","0<|e|<1"},
-	{"Parabola","|e|\[Equal]1"},
 	{Tooltip["Punto","Circonferenza di raggio 0", TooltipStyle->{Background -> LightRed, CellFrame -> 3, FontSize->Medium}],"|e| = 0"},
+	{"Parabola","|e|=1"},
 	{"Iperbole","|e| > 1"}},
 	Frame->All,
-	Background->{Null, bgColors[checkE[e], color[checkE[e]]] (*creates the background colors for the grid*)
-}]
-}]
+	Background->{Null, bgColorsThree[checkE[e], color[checkE[e]]]} (*creates the background colors for the grid*) ]
+	}]
 }],
 {{e,0,"Eccentricit\[AGrave]:"},-1.5,1.5,0.1,Appearance->"Labeled"},
 {{aaa,0,"Px:"},-12,12,0.1,Appearance->"Labeled"},
@@ -372,7 +381,7 @@ For[i=1, i<=3, i++,
 *)	
 ShowEllisse[]:=(Manipulate[
 	Show[ (*Plots the equations that form the ellipse, adds a PlotLabel with the equations*)
-		ContourPlot[{y==(b/a)*Sqrt[(a^2)-(x^2)],y==-(b/a)*Sqrt[(a^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True,ContourLabels->None,
+		ContourPlot[{Tooltip[y==(b/a)*Sqrt[(a^2)-(x^2)],""],Tooltip[y==-(b/a)*Sqrt[(a^2)-(x^2)],""]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True,ContourLabels->None,
 		 PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[(a^2)-("x"^2)]],FontColor->Blue]}, ContourStyle->{Red, Blue, Thick}]
 		],
 		{{a,1,"a"},1,10,1,Appearance->"Labeled"},
@@ -386,7 +395,7 @@ ShowEllisse[]:=(Manipulate[
 ShowCirconferenza[]:=(
 Manipulate[
 Show[  (*Plots the equations that form the circle, adds a PlotLabel with the equations*)
-ContourPlot[{y==Sqrt[(r^2)-(x^2)], y==-Sqrt[(r^2)-(x^2)]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True, ContourLabels->None,
+ContourPlot[{Tooltip[y==Sqrt[(r^2)-(x^2)],""], Tooltip[y==-Sqrt[(r^2)-(x^2)],""]},{x,-10,10},{y,-10,10},ImageSize->Medium, Axes->True, ContourLabels->None,
  PlotLabel->{Style[StandardForm["y"==Sqrt[(r^2)-("x"^2)]],FontColor->Red],Style[StandardForm["y"==-Sqrt[(r^2)-("x"^2)]],FontColor->Blue]}
 	, ContourStyle->{Red, Blue, Thick}]
 ],
@@ -400,7 +409,7 @@ LabelStyle->{Medium,Bold, Black}
 ShowIperbole[]:=(
 Manipulate[
 Show[ (*Plots the equations that form the hyperbole, adds a PlotLabel with the equations*)
-ContourPlot[{y==(b/a)*Sqrt[-(a^2)+(x^2)], y==-(b/a)*Sqrt[-(a^2)+(x^2)]},{x,-10,10},{y,-10,10},
+ContourPlot[{Tooltip[y==(b/a)*Sqrt[-(a^2)+(x^2)], ""], Tooltip[y==-(b/a)*Sqrt[-(a^2)+(x^2)], ""]},{x,-10,10},{y,-10,10},
 	ImageSize->Medium, Axes->True, ContourStyle->{Red, Blue, Thick}],ContourLabels->None,
 	PlotLabel->{Style[StandardForm["y"==(b/a)*Sqrt[-(a^2)+("x"^2)]],FontColor->Red],Style[StandardForm["y"==-(b/a)*Sqrt[-(a^2)+("x"^2)]],FontColor->Blue]}
 ],
@@ -416,7 +425,7 @@ LabelStyle->{Medium,Bold, Black}
 ShowParabola[]:=(
 Manipulate[ (*Plots the equation that form the parabole, adds a PlotLabel with the equation*)
 Show[
-ContourPlot[x==(a*y^2)+b*y ,{x,-10,10},{y,-10,10}, ImageSize->Medium, Axes->True, ContourStyle->Red],ContourPlot[x==(a*y^2)+b*y ,{x,-10,10},{y,-10,0}, ImageSize->Medium, Axes->True, ContourStyle->Blue],
+ContourPlot[x==(a*y^2)+b*y,{x,-10,10},{y,-10,10}, ImageSize->Medium, Axes->True, ContourStyle->Red,ContourLabels -> {None,None}],ContourPlot[x==(a*y^2)+b*y ,{x,-10,10},{y,-10,0}, ImageSize->Medium, Axes->True, ContourStyle->Blue],
 	PlotLabel->{Style[StandardForm["y">0],FontColor->Red],Style[StandardForm["y"<0],FontColor->Blue]}],
 {{a,0,"a"},0,10,1,Appearance->"Labeled"},
 {{b,0,"b"},0,10,1,Appearance->"Labeled"},
@@ -452,6 +461,18 @@ content,
 End[]; (* Fine spazio privato *)
 Protect["PackageProgetto`*"] (* protegge i nomi del package *)
 EndPackage[]; (* Fine del Package *)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
